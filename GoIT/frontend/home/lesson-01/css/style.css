@@ -1,0 +1,84 @@
+div {
+    font-size: 18px;
+}
+.whole-page {
+    height: 750px;
+    margin-left: auto;
+    margin-right: auto;  
+    width: 512px;
+}
+.name {
+    font-size: 22px;
+    font-weight: bold;    
+    margin-top: 53px;
+    text-align: center;
+}
+.photo {
+    background: url(../img/img-1.jpg) no-repeat;  
+    height: 128px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+    width: 134px;
+}
+.occupation{
+    border-bottom: 1px solid #7b7b7b;
+    height: 34px;  
+    margin-left: auto;
+    margin-right: auto;    
+    padding-left: 13px;
+    padding-top: 15px;
+    width: 400px;
+}
+ul {
+    border-bottom: 1px solid #7b7b7b;    
+    margin-bottom: 0px;    
+    margin-left: auto;
+    margin-right: auto;    
+    padding-left: 13px;
+    margin-top: 0px;
+    padding-bottom: 12px;
+    padding-top: 28px;
+    width: 400px;
+}
+li{
+    list-style: disc;
+    list-style-position: inside;
+    padding: 6px 0px 6px 6px;    
+}
+li:first-child{
+    margin-top: 29px;
+}
+.contacts {
+    border-bottom: 1px solid #7b7b7b;    
+    margin-left: auto;
+    margin-right: auto;     
+    width: 400px;
+    padding-left: 13px;
+}
+.my-tel{
+    margin-top: 28px;
+    padding-bottom: 8px;
+}
+.tel-number{
+    margin-bottom: 37px;
+}
+.vk-profile{
+    padding-bottom: 9px;    
+}
+.vk-ref {
+    padding-bottom: 18px;
+}
+.feedback {
+    margin-left: auto;
+    margin-right: auto;  
+    padding-left: 13px;
+    padding-top: 28px;
+    width: 400px;
+}
+.response {
+    margin-top: 9px;
+}
+a {
+    color: blue;
+}
