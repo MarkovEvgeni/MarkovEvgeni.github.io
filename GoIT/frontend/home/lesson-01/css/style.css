@@ -20,9 +20,8 @@ div {
 body {
     background-color: #efefef;
 }
-.photo {
-    background: url(../img/img-1.jpg) no-repeat;  
-    height: 128px;
+.photo { 
+    height: 134px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 25px;
