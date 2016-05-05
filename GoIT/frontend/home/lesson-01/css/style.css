@@ -5,8 +5,10 @@ div {
     background-color: white;
     height: 803px;
     margin-left: auto;
-    margin-right: auto;  
-    width: 512px;
+    margin-right: auto;
+    padding-left: 50px;
+    padding-right: 50px;
+    width: 412px;
     -webkit-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.75);
     box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.75);
@@ -20,28 +22,24 @@ div {
 body {
     background-color: #efefef;
 }
+.photo img {
+    background: white;
+    border-radius: 5px;    
+}
 .photo { 
     height: 134px;
-    margin-left: auto;
-    margin-right: auto;
     margin-top: 25px;
-    width: 134px;
+    text-align: center;
 }
 .desire-list {
-    margin-left: auto;
-    margin-right: auto;
-    width: 400px;
     padding-left: 13px;
     border-bottom: 1px solid #7b7b7b; 
 }
 .occupation{
     border-bottom: 1px solid #7b7b7b;
-    height: 34px;  
-    margin-left: auto;
-    margin-right: auto;    
+    height: 34px;   
     padding-left: 13px;
     padding-top: 15px;
-    width: 400px;
 }
 .desire-list p {
     padding: 28px 0px 24px 0px;
@@ -59,9 +57,6 @@ body {
 }
 .contacts {
     border-bottom: 1px solid #7b7b7b;    
-    margin-left: auto;
-    margin-right: auto;     
-    width: 400px;
     padding-left: 13px;
 }
 .my-tel{
@@ -82,11 +77,8 @@ body {
     padding-bottom: 18px;
 }
 .feedback {
-    margin-left: auto;
-    margin-right: auto;  
     padding-left: 13px;
     padding-top: 28px;
-    width: 400px;
 }
 .response {
     margin-top: 9px;
