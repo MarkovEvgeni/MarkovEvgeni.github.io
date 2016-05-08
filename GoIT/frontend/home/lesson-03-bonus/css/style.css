@@ -26,6 +26,7 @@ header {
     position: absolute;
     top: 56px;
     width: 125px;
+    z-index: 100;
 }
 .logo {
     background: url(../img/logo.png);
@@ -33,6 +34,8 @@ header {
     margin-left: 70px;
     margin-top: 131px;
     width: 263px;
+    z-index: 200;
+    position: relative;
 }
 .logo a {
     display: block;
