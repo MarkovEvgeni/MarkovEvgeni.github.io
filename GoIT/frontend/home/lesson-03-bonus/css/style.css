@@ -1,0 +1,138 @@
+body { 
+    background-color: #eee;
+    padding: 40px 0 40px 0;
+}
+.border {
+    border: 1px solid grey; 
+    margin-left: auto;
+    margin-right: auto;
+    width: 962px;
+}
+.wrapper {
+    background: url(../img/background.png);
+    border: 1px solid white;
+    box-sizing: content-box;
+    height: 883px;
+    position: relative;
+    width: 960px;
+}
+header {
+    border: 1px solid transparent;
+    height: 195px; 
+}
+.palm {
+    height: 147px;
+    left: 211px;
+    position: absolute;
+    top: 56px;
+    width: 125px;
+}
+.logo {
+    background: url(../img/logo.png);
+    height: 37px;
+    margin-left: 70px;
+    margin-top: 131px;
+    width: 263px;
+}
+.logo a {
+    display: block;
+    height: 37px;
+}
+.slogan {
+    margin-left: 70px;
+    width: 263px;
+}
+.slogan p {
+    color: #e6e6e6;
+    font-family: "Tahoma";
+    font-size: 10;
+    text-align: center;
+}
+.contacts {
+    left: 783px;
+    position: absolute;
+    top: 151px;
+    width: 90px;
+}
+.contacts .head p {
+    color: #e6e6e6;
+    font-family: "Tahoma";
+    font-size: 10;
+    margin-bottom: 5px;
+}
+.contacts .phone a,
+.contacts .mail a {
+    color: #e6e6e6;
+    font-family: "Tahoma";
+    font-size: 8;
+    text-decoration: none;
+}
+.content {
+    margin-left: auto;
+    margin-right: auto;
+    width: 830px;
+}
+.country {
+    background-position: 4px 5px;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    float:left;
+    margin-bottom: 50px;
+    margin-right: 10px;
+    width: 270px;
+}
+.frame {
+    background-image: url(../img/frame.png);
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    height: 205px;
+    width: 270px;
+}
+.country:nth-child(3n) {
+    margin-right: 0px;
+}
+.country a {
+    box-sizing: border-box;
+    color: #e6e6e6;
+    display: block;
+    font-family: "Tahoma";
+    font-size: 15;
+    height: 205px;
+    padding-top: 187px;
+    text-align: center;
+    text-decoration: none;   
+}
+.india {
+    background-image: url(../img/India.png);
+}
+.nepal {
+    background-image: url(../img/Nepal.png);
+}
+.tibet {
+    background-image: url(../img/Tibet.png);
+}
+.bhutan {
+    background-image: url(../img/Bhutan.png);
+}
+.sri-lanka {
+    background-image: url(../img/Sri-Lanka.png);
+}
+.maldives {
+    background-image: url(../img/Maldives.png);
+}
+.clearfix {
+    clear:both;
+    height: 0px;
+}
+.copyright {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 140px;
+    padding-left: 10px;
+    width: 167px;   
+}
+.copyright p {
+    color: #e6e6e6;
+    font-family: "Tahoma";
+    font-size: 10;
+}
