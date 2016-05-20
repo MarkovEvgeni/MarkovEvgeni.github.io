@@ -1,0 +1,221 @@
+body {
+    background-color: gainsboro;
+}
+.outter_border {
+    border: 2px solid grey;
+    margin: 0 auto;
+    width: 1219px;
+}
+.wrapper{
+    background-image: url(../img/background.jpg);
+    background-repeat: no-repeat;
+    background-position: 0 36px;
+    border: 2px solid white;
+    height: 1064px;
+    
+    width: 1215px;
+}
+.header {
+    background-image: url(../img/header_background.png);
+    background-repeat: no-repeat;
+    height: 36px;
+    padding-left: 456px;
+}
+.first_menu {
+    float: left;
+}
+.first_menu>ul>li {
+    float: left;
+}
+.header a {
+    box-sizing: border-box;
+    color: #60b5ed;
+    display: block;
+    font-family: "Helvetica";
+    font-size: 14px;
+    height: 36px;
+    padding: 10px 12px;
+    text-decoration: none;
+}
+.first_menu>ul>li>a:hover {
+    background-color: #4eabda;
+    color: #ffffff;
+}
+.border {
+    float:left;
+    background-image: url(../img/border_1px.png);
+    background-position: 0px 2px;
+    background-repeat: no-repeat;
+    height: 36px;
+    width: 1px;
+}
+.clearfix:after {
+    clear: both;
+    content: "";
+    display: block;
+}
+.ofertas {
+    background-image: url(../img/flag.png);
+    background-repeat: no-repeat;
+    background-position: 19px 6px;
+    float: left;
+    width: 160px;
+}
+.ofertas a {
+    color: #ffffff;
+    padding-left: 50px;
+}
+.ola {
+    float: left;
+}
+.ola a{
+    padding-left: 14px;
+}
+.active a>span,
+.ola a:hover>span {
+    text-decoration: underline;
+}
+.header>.active a,
+.header>.ola>a:hover {
+    background-image: url(../img/background_ola.png);
+    color: #feffff;
+}
+.main_form {
+    margin-top: 207px;
+}
+.cadastra {
+    background-color: rgba(0,0,0,0.63);
+    margin: 0 auto;
+    padding: 20px 0px 15px 0px;
+    text-align: center;
+    width: 560px;
+}
+.cadastra p {
+    color: #ffffff;
+    font-family: "Helvetica";
+    font-size: 24px; 
+}
+.form {
+    background-color: rgba(0,0,0,0.63);
+    margin: 2px auto 0 auto;
+    width: 560px;
+}
+.facebook {
+    padding-top: 36px;
+}
+.facebook a {
+    background-image: url(../img/facebook.png);
+    background-repeat: no-repeat;
+    border-radius: 5px;
+    display: block;
+    height: 35px;
+    margin: 0 auto;
+    width: 276px;
+}
+.lines {
+    background-image: url(../img/lines.png);
+    background-position: 0 36px;
+    background-repeat: no-repeat;
+    height: 44px;
+    margin: 0 auto;
+    padding-top: 29px;
+    width: 276px;
+}
+.lines>p {
+    color: #999999;
+    font-family: "Helvetica";
+    font-size: 14px;
+    text-align: center;
+}
+.datas {
+    padding-bottom: 20px;
+    text-align: center;
+}
+.datas input {
+    background-image: url(../img/form.png);
+    border: none;
+    border-bottom: 1px solid #474747;
+    box-shadow: 0px 0px 2px 0px rgba(75,75,75,1);
+    color: #fffbfb;
+    font-family: "Helvetica";
+    font-size: 14px;
+    height: 35px;
+    padding-left: 17px;
+    width: 276px;
+    -webkit-box-shadow: 0px 0px 2px 0px rgba(75,75,75,1);
+    -moz-box-shadow: 0px 0px 2px 0px rgba(75,75,75,1);
+    -moz-placeholder:
+}
+.datas input:focus {
+    background-image: url(../img/active.png);
+    border-bottom: 1px solid transparent;
+    box-shadow: 0px 0px 7px 0px rgba(47,123,197,1);
+    color: #fffbfb;
+    font-family: "Helvetica";
+    font-size: 14px;
+    height: 35px;
+    width: 276px;
+    -webkit-box-shadow: 0px 0px 7px 0px rgba(47,123,197,1);
+    -moz-box-shadow: 0px 0px 7px 0px rgba(47,123,197,1);
+}
+.datas .checkbox input[type="checkbox"] {
+    display: none;
+}
+input[type="submit"] {
+    background-image: url(../img/buttonsubmit.png);
+    background-repeat: no-repeat;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px 0px rgba(66,153,210,1);
+    color: #ffffff;
+    cursor: hand;
+    font-family: "Helvetica";
+    font-size: 14px;
+    font-weight: 600;
+    height: 35px;
+    padding: 0;
+    -webkit-box-shadow: 1px 1px 1px 0px rgba(66,153,210,1);
+    -moz-box-shadow: 1px 1px 1px 0px rgba(66,153,210,1);
+    width: 149px;
+}
+.checkbox input[type="checkbox"]:checked,
+.datas .submit input:focus {
+    outline: none;
+}
+form .acknowl {
+    padding-bottom: 16px;
+}
+form .acknowl p {
+    color: #cccccc;
+    font-family: "Helvetica";
+    font-size: 11px;
+    padding-bottom: 2px;
+    text-align: center;   
+}
+.checkbox label {
+    display: block;
+    margin: 0 auto;
+    text-align: left;
+    width: 276px;
+}
+.checkbox label p {
+    font-family: "Helvetica";
+    font-size: 14px;
+    color: #cccccc;
+    display: inline;
+}
+.checkbox label:before {
+    background-image: url(../img/checkbox.png);
+    content: "";
+    display: inline-block;
+    height: 13px;
+    margin-left: 1px;
+    margin-right: 2px;
+    width: 13px;
+}
+.checkbox input[type="checkbox"]:checked + label:before {
+    background-image: url(../img/checkbox.png);
+    background-position: -13px 0;
+    background-repeat: no-repeat;
+    display: inline-block;
+}
