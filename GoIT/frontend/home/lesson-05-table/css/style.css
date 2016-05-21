@@ -1,0 +1,90 @@
+body {
+    background-color: gainsboro;
+    padding: 40px 0;
+}
+table {
+    background-color: white;
+    border: 1px solid black;
+    border-collapse: separate;
+    margin: 0 auto;
+    padding: 3px;
+}
+table td {
+    border: 4px solid black;
+}
+.first td {
+    border-top: none;
+}
+.one {
+    border-left: none;
+}
+.four[colspan="3"],
+.six,
+.five {
+    border-right: none;
+}
+.five+.six {
+    border-left: 8px solid black;
+}
+.seventh td[rowspan="3"],
+.eight td[rowspan="2"],
+.ninth td {
+    border-bottom: none;
+}
+.white {
+    background: white
+}
+.yellow {
+    background: yellow;
+}
+.red {
+    background: red;
+}
+.black {
+    background-color: #111111;
+}
+.blue {
+    background: blue;
+}
+table .first {
+    border-top: none;
+}
+.first td,
+.second {
+    height: 54px;
+}
+.third {
+    height: 84px;
+}
+.fourth,
+.fifth,
+.sixth td {
+    height: 70px;
+}
+.seventh td {
+    height: 66px;
+}
+.eight td {
+    height: 40px;
+}
+.ninth td {
+    height: 34px;
+}
+table .one {
+    width: 54px;
+}
+.two {
+    width: 66px;
+}
+.three {
+    width: 76px;
+}
+.four {
+    width: 134px;
+}
+.five {
+    width: 88px;
+}
+.six {
+    width: 82px;
+}
