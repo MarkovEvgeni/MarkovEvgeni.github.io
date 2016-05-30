@@ -3,16 +3,17 @@ body {
 }
 .wrapper{
     background-image: url(../img/background.jpg);
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-position: 0 36px;
     height: 1064px;
     margin: 0 auto;
-    width: 1215px;
+/*    width: 1215px;*/
 }
 .header {
     background-image: url(../img/header_background.png);
-    background-repeat: no-repeat;
+    background-repeat: repeat-x;
     height: 36px;
+    min-width: 1215px;
     padding-left: 456px;
 }
 .first_menu {
@@ -150,6 +151,7 @@ body {
     padding-top: 29px;
     width: 276px;
 }
+
 .line-top {
     border-bottom: 1px solid #666666;
     box-sizing: border-box;
@@ -177,7 +179,27 @@ body {
     font-family: "Helvetica";
     font-size: 14px;
     text-align: center;
-    width: 30px;
+    width: 276px;
+}
+.lines>p:before {
+    border-bottom: 1px solid #000000;
+    content: "";
+    display: block;
+    margin: 7px 0px 0px 0px;
+    background: #666666;
+    height: 1px;
+    width: 123px;
+    float: left;   
+}
+.lines>p:after {
+    border-bottom: 1px solid #000000;
+    content: "";
+    display: block;
+    margin: 7px 0px 0px 0px;
+    background: #666666;
+    height: 1px;
+    width: 123px;
+    float: right;   
 }
 .datas {
     padding-bottom: 20px;
