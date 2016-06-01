@@ -3,7 +3,7 @@ body {
 }
 .wrapper{
     background-image: url(../img/background.jpg);
-    background-repeat: repeat;
+    background-size: cover;
     background-position: 0 36px;
     height: 1064px;
     margin: 0 auto;
@@ -12,6 +12,7 @@ body {
 .header {
     background-image: url(../img/header_background.png);
     background-repeat: repeat-x;
+    box-sizing: border-box;
     height: 36px;
     min-width: 1215px;
     padding-left: 456px;
