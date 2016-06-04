@@ -1,6 +1,7 @@
 .wrapper {
     background-color: white;
     box-sizing: border-box;
+    width: 910px;
     margin: 0 auto;
 }
 header {
