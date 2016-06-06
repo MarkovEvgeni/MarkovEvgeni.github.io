@@ -13,7 +13,7 @@ body {
 }
 .menu_wrapper {
     display: inline-block;
-    min-width: 734px;
+    min-width: 1024px;
 }
 .main_form_wrapper:before {
 	content:''; /* и */
@@ -28,7 +28,7 @@ body {
     vertical-align: middle;
 }
 .first_menu {
-    float: left;
+    float: right;
 }
 .first_menu>ul>li {
     float: left;
@@ -48,7 +48,7 @@ body {
     color: #ffffff;
 }
 .border {
-    float:left;
+    float:right;
     background-image: url(../img/border_1px.png);
     background-position: 0px 2px;
     background-repeat: no-repeat;
@@ -64,7 +64,7 @@ body {
     background-image: url(../img/flag.png);
     background-repeat: no-repeat;
     background-position: 19px 6px;
-    float: left;
+    float: right;
     width: 160px;
 }
 .ofertas a {
@@ -72,7 +72,7 @@ body {
     padding-left: 50px;
 }
 .ola {
-    float: left;
+    float: right;
 }
 .ola a{
     padding-left: 14px;
@@ -81,8 +81,8 @@ body {
 .ola a:hover>span {
     text-decoration: underline;
 }
-.header>.active a,
-.header>.ola>a:hover {
+.header>.menu_wrapper>.active a,
+.header>.menu_wrapper>.ola>a:hover {
     background-image: url(../img/background_ola.png);
     color: #feffff;
 }
