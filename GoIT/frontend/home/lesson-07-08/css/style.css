@@ -174,7 +174,9 @@ a.active_menu_item {
 .right_arrow {
     background-image: url(../img/right_arrow.png);
     position: absolute;
-    margin: 179px 0px 0px 1253px;
+    left: 1253px;
+    top: 179px;
+/*    margin: 179px 0px 0px 1253px;*/
     width: 30px;
     height: 42px;
 }
@@ -182,7 +184,9 @@ a.active_menu_item {
     background-image: url(../img/left_arrow.png);
     margin-left: 4px;
     position: absolute;
-    margin: 179px 0px 0px -320px;
+    left: -326px;
+    top: 179px;
+/*    margin: 179px 0px 0px -320px;*/
     width: 30px;
     height: 42px;
 }
@@ -600,10 +604,10 @@ a.designed_item {
         display: block;
     }
     .right_arrow {
-        margin: 179px 0px 0px 745px;
+        left: 718px;
     }
     .left_arrow {
-        margin: 179px 0px 0px -22px;
+        left: -27px;
     }
     ul.slider_menu {
         margin: 508px 0px 0px 524px;
@@ -704,11 +708,12 @@ a.designed_item {
     a.article_preview_item {
         margin: 24px 3px 0px 0px;
     }
-    ul.slider_menu {
+    .third_screen ul.slider_menu {
         margin: 47px 0px 0px 115px;
     }
     .logos {
         margin: 26px 0px 0px 24px;
+        width: 744px;
     }
     li.logos_item:first-child {
         margin-right: 54px;
@@ -867,10 +872,12 @@ a.designed_item {
         width: 190px;
     }
     .right_arrow {
-        margin: 102px 0px 0px 435px;
+        top: 102px;
+        left: 430px;
     }
     .left_arrow {
-        margin: 102px 0px 0px -23px;
+        top: 102px;
+        left: -24px;
     }
     div.iphone_item {
         background: none; 
@@ -904,7 +911,7 @@ a.designed_item {
         background-position: 0px 2px;
         float: none;
         margin: 0px 0px 0px 34px;
-        width: 100%;
+        width: auto;
     }
     div.article_preview:first-child {
         margin-top: 77px;
@@ -914,7 +921,7 @@ a.designed_item {
         background-position: 2px 2px;
     }
     div.article_preview:nth-child(2) a.article_preview_item {
-        margin: 14px 57px 0px 0px;
+        margin: 14px 26px 0px 0px;
     }
     h1.article_preview_item,
     div.article_preview p.article_preview_item {
@@ -927,14 +934,14 @@ a.designed_item {
         background-position: 4px 2px;
     }
     div.article_preview:last-child a.article_preview_item {
-        margin: 14px 55px 0px 0px;
+        margin: 14px 26px 0px 0px;
     }
     div.article_preview p.article_preview_item {
         height: 70px;
     }
     div.article_preview:first-child a.article_preview_item,
     a.article_preview_item {
-        margin: 14px 60px 0px 0px;
+        margin: 14px 26px 0px 0px;
     }
     .second_screen {
         height: 598px;
@@ -962,7 +969,7 @@ a.designed_item {
     p.testimonials_item {
         width: 355px;
     }
-    ul.slider_menu {
+    .third_screen ul.slider_menu {
         margin: 60px 0px 0px 161px;
     }
     article.blog {
@@ -1015,7 +1022,7 @@ a.designed_item {
     article.fifth_screen_item:nth-child(4),
     article.fifth_screen_item:last-child {
         float: none;
-        width: 100%;
+        width: auto;
         margin: 0px 0px 57px 0px;
     }
     article.fifth_screen_item:nth-child(4) {
@@ -1063,10 +1070,10 @@ a.designed_item {
         width: 205px;
     }
     .left_arrow {
-        margin: 102px 0px 0px -28px;
+        left: -29px;
     }
     .right_arrow {
-        margin: 102px 0px 0px 267px;
+        left: 265px;
     }
     ul.slider_menu {
         margin: 255px 0px 0px 98px;
@@ -1085,19 +1092,19 @@ a.designed_item {
     }
     div.article_preview:first-child a.article_preview_item,
     a.article_preview_item {
-        margin: 14px 59px 0px 0px;
+        margin: 14px 27px 0px 0px;
     }
     div.article_preview:nth-child(2) {
         margin: 25px 0px 0px 29px;
     }
     div.article_preview:nth-child(2) a.article_preview_item {
-        margin: 14px 56px 0px 0px;
+        margin: 14px 27px 0px 0px;
     }
     div.article_preview:last-child {
         margin: 41px 0px 0px 27px;
     }
     div.article_preview:last-child a.article_preview_item {
-        margin: 14px 54px 0px 0px;
+        margin: 14px 27px 0px 0px;
     }
     second_screen {
         height: 598px;
