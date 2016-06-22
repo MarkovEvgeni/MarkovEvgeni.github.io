@@ -15,6 +15,9 @@ console.log(user);
 if (user === '') {
     alert('Ошибка. Введенное имя пользователя не существует в массиве');
     t = 6;
+} else if (user === null) {
+    alert('Ошибка. Введенное имя пользователя не существует в массиве');
+    t = 6;
 } else {
     while (t < arrayLenght) {
         if (user === arr[t]) {
