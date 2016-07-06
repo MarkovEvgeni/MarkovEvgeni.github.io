@@ -73,6 +73,11 @@ function timerStart() {
         m = Math.floor(globalTime / 60000) % 60;
         s = Math.floor(globalTime / 1000) % 60;
         ms = Math.floor(globalTime % 1000);
+        if (ms < 10) {
+            ms = "0" + "0" + ms;
+        } else if (ms < 100) {
+            ms = "0" + ms;
+        }
         hours.innerHTML = h;
         minutes.innerHTML = m;
         seconds.innerHTML = s;
