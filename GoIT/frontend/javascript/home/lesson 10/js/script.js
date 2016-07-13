@@ -39,18 +39,24 @@ console.log($hoverItem);
 $hoverItem.hover(
     function () {
         var $hidenMenu = $(this).children("ul");
-        console.log($hidenMenu);
-        $hidenMenu.slideDown(300);
-        $hidenMenu.animate({
-            backgroundColor: "rgb(225,75,75)"
-        }, 300)
+        if ($hidenMenu.hasClass("opened")) {
+            console.log("oops. It's already opened.");
+        } else {
+            console.log($hidenMenu);
+            $hidenMenu.addClass("opened");
+            $hidenMenu.slideDown(600);
+            $hidenMenu.animate({
+                backgroundColor: "rgb(225,75,75)"
+            }, 300);
+        }
     },
     function () {
         var $hidenMenu = $(this).children("ul");
-        console.log($hidenMenu);
-        $hidenMenu.slideUp(300);
+        $hidenMenu.stop(true, false).slideUp(600, function () {
+            $hidenMenu.removeClass("opened");
+        });
         $hidenMenu.animate({
             backgroundColor: "rgb(255,100,100)"
-        }, 100)
+        }, 100);
     }
 );
