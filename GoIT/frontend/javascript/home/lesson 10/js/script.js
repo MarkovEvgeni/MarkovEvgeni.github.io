@@ -40,15 +40,15 @@ $hoverItem.hover(
     function () {
         var $hidenMenu = $(this).children("ul");
         console.log($hidenMenu);
-        $hidenMenu.slideDown(1000);
+        $hidenMenu.slideDown(300);
         $hidenMenu.animate({
             backgroundColor: "rgb(225,75,75)"
-        }, 1500)
+        }, 300)
     },
     function () {
         var $hidenMenu = $(this).children("ul");
         console.log($hidenMenu);
-        $hidenMenu.slideUp([1000]);
+        $hidenMenu.slideUp(300);
         $hidenMenu.animate({
             backgroundColor: "rgb(255,100,100)"
         }, 100)
