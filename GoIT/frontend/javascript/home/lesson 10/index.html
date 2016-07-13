@@ -1,0 +1,96 @@
+<!DOCTYPE=html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Задание Javascript урок 10</title>
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/select2.css">
+        <link rel="stylesheet" href="css/yellow.css">
+        <link rel="stylesheet" href="css/style.css">  
+    </head>
+    <body>
+        <ul class="main_menu clearfix">
+            <li><a href="">Nav 1</a></li>
+            <li><a href="">Nav 2</a></li>
+            <li class="hidenMenu"><a href="">Nav 3</a>
+                <ul class="dropdown_menu">
+                    <li><a href="">Nav 3.1</a></li>
+                    <li><a href="">Nav 3.2</a></li>
+                    <li><a href="">Nav 3.3</a></li>
+                    <li class="hidenMenu"><a href="">Nav 3.4</a>
+                        <ul class="sub_dropdown_menu">
+                            <li><a href="">Nav 3.4.1</a></li>
+                            <li class="hidenMenu"><a href="">Nav 3.4.2</a>
+                                <ul class="sub_sub_dropdown_menu">
+                                    <li><a href="">Nav 3.4.2.1</a></li>
+                                    <li><a href="">Nav 3.4.2.2</a></li>
+                                    <li><a href="">Nav 3.4.2.3</a></li>
+                                    <li><a href="">Nav 3.4.2.4</a></li>
+                                    <li><a href="">Nav 3.4.2.5</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="">Nav 3.4.3</a></li>
+                            <li><a href="">Nav 3.4.4</a></li>
+                            <li><a href="">Nav 3.4.5</a></li>
+                        </ul>      
+                    </li>
+                    <li><a href="">Nav 3.5</a></li>
+                </ul>
+            </li>
+            <li><a href="">Nav 4</a></li>
+            <li><a href="">Nav 5</a></li>
+        </ul>
+        <div class="jcarousel-wrapper">
+             <a class="jcarousel-prev" href="#">&#60;</a>
+             <div class="jcarousel">
+                 <ul>
+                     <li>
+                         <img src="img/image-01.jpg" alt="">
+                     </li>
+                     <li>
+                        <img src="img/image-02.jpg" alt="">
+                     </li>
+                     <li>
+                         <img src="img/image-03.jpg" alt="">
+                     </li>
+                 </ul>
+             </div>
+             <a class="jcarousel-next" href="#">&#62;</a>
+             <div class="jcarousel-pagination"></div>
+        </div>
+        <div class="wrapper_for_select">
+            <select name="best_player" id="hart_trophy">
+                <option disabled>Выберите самого полезного игрока плей-офф НХЛ 2016</option>
+                <option value="Sidney Crosby">Sidney Crosby</option>
+                <option selected value="Evgeni Malkin">Evgeni Malkin</option>
+                <option value="Phil Kessel">Phil Kessel</option>
+                <option value="Kris Letang">Kris Letang</option>
+            </select>
+        </div>
+        <div class="wrapper_for_select">
+        <div class="checkbox_jquery_wrapper">
+           <h3>jQuery</h3>
+            <label><input type="checkbox" class="icheck">&#160;Checkbox 1</label><br>
+            <label><input type="checkbox" class="icheck" checked>&#160;Checkbox 2</label><br> 
+            <label><input type="checkbox" class="icheck" checked disabled>&#160;Checkbox 3</label><br>     
+        </div>
+        <div class="checkbox_css_wrapper">
+           <h3>CSS</h3>
+            <input id="number1" type="checkbox">
+            <label for="number1">&#160;Checkbox 1</label><br>
+            <input id="number2" type="checkbox" checked>
+            <label for="number2">&#160;Checkbox 2</label><br>
+            <input id="number3" type="checkbox" checked disabled>
+            <label for="number3">&#160;Checkbox 3</label><br>
+        </div>
+        </div>
+      <script src="js/jquery-3.0.0.js"></script>
+      <script src="js/jquery.jcarousel.js"></script>
+      <script src="js/select2.js"></script>
+      <script src="js/jquery.color-2.1.2.js"></script>
+      <script src="js/icheck.js"></script>
+      <script src="js/script.js"></script> 
+    </body>
+</html>
