@@ -110,7 +110,8 @@
 #number3 {
     display: none;
 }
-.main_menu a {
+.main_menu a,
+.main_menu2 a {
     display: block;
     text-decoration: none;
     color: #fff;
@@ -118,28 +119,36 @@
     padding: 0 12px;
     margin: 0 12px;
 }
-.main_menu {
+.main_menu,
+.main_menu2 {
     background-color: rgb(255,100,100);
     padding: 10px 0;
     
 }
-.main_menu>li {
+.main_menu>li,
+.main_menu2>li {
     float: left;
 }
 .dropdown_menu,
 .sub_dropdown_menu,
-.sub_sub_dropdown_menu {
+.sub_sub_dropdown_menu,
+.dropdown_menu2,
+.sub_dropdown_menu2,
+.sub_sub_dropdown_menu2 {
     background-color: rgb(255,100,100);
     position: absolute;
     left: 20px;
     top: 40px;
     width: 200px;    
 }
+.sub_dropdown_menu2,
+.sub_sub_dropdown_menu2,
 .sub_dropdown_menu,
 .sub_sub_dropdown_menu {
     top: 0;
     left: 200px;
 }
+.dropdown_menu2 li a,
 .dropdown_menu li a {
     border-bottom: solid 1px rgb(200,50,50);
     margin: 0 10px;
@@ -154,11 +163,13 @@
 .sub_dropdown_menu,
 .sub_sub_dropdown_menu {
     display: none;
-    z-index: 2;
+    z-index: 3;
 }
+.main_menu2>li:nth-child(3),
 .main_menu>li:nth-child(3) {
     position: relative;
 }
+.main_menu2>li:nth-child(3)>a,
 .main_menu>li:nth-child(3)>a {
     background-image: url('../img/arrow-down.png');
     background-position: right 20px;
@@ -171,20 +182,45 @@
     display: block;  
 }
 */
+.dropdown_menu2>li:nth-child(4),
 .dropdown_menu>li:nth-child(4) {
     position: relative;
 }
+.dropdown_menu2>li:nth-child(4)>a,
+.sub_dropdown_menu2>li:nth-child(2)>a,
 .dropdown_menu>li:nth-child(4)>a,
 .sub_dropdown_menu>li:nth-child(2)>a {
     background-image: url('../img/arrow-right.png');
     background-position: right 16px;
     background-repeat: no-repeat;
 }
-.sub_dropdown_menu>li:nth-child(2) {
+.sub_dropdown_menu>li:nth-child(2),
+.sub_dropdown_menu2>li:nth-child(2) {
     position: relative;
 }
+.main_menu2 a:hover,
+.main_menu2 a:focus,
+.main_menu2 a:active,
 .main_menu a:hover,
 .main_menu a:focus,
 .main_menu a:active {
     color:rgb(50,50,50);
+}
+.native {
+    font-size: 18;
+    padding-left: 600px;
+    color: black;
+    box-sizing: border-box;
+    padding-top: 8px;
+}
+.dropdown_menu2 {
+    z-index: 2;
+    height: 0px;
+    overflow: hidden;
+}
+.sub_dropdown_menu2,
+.sub_sub_dropdown_menu2 {
+    overflow: hidden;
+    z-index: 4;
+    height: 0px;
 }
