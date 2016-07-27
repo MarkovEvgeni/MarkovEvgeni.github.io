@@ -1,0 +1,101 @@
+.carousel-hider p {
+    font-family:sans-serif;
+    font-size: 14px;
+}
+.whole-page div {
+    font-size: 18px;
+}
+.whole-page {
+    background-color: white;
+    height: 803px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 50px;
+    padding-right: 50px;
+    width: 512px;
+    -webkit-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.75);
+}
+.name {
+    font-size: 22px;
+    font-weight: bold;    
+    padding-top: 53px;
+    text-align: center;
+}
+body {
+    background-color: #efefef;
+}
+.photo img {
+    background: white;
+    border-radius: 5px;    
+}
+.photo { 
+    height: 134px;
+    margin-top: 25px;
+    text-align: center;
+}
+.desire-list {
+    padding-left: 13px;
+    border-bottom: 1px solid #7b7b7b; 
+}
+.occupation{
+    border-bottom: 1px solid #7b7b7b;
+    height: 34px;   
+    padding-left: 13px;
+    padding-top: 15px;
+}
+.desire-list p {
+    padding: 28px 0px 24px 0px;
+    margin: 0px;
+}
+.desire-list ul {
+    margin: 0px;
+    padding: 0px 0px 12px 2px;
+    margin-left: 13px;
+    width: 387px;
+}
+.desire-list li{
+    list-style: disc;
+    padding: 4px 0px;    
+}
+.contacts {
+    border-bottom: 1px solid #7b7b7b;    
+    padding-left: 13px;
+}
+.my-tel{
+    margin-top: 28px;
+    padding-bottom: 8px;
+}
+.tel-number{
+    margin-bottom: 37px;
+}
+.tel-number a {
+    color: black;
+    text-decoration: none;
+}
+.vk-profile{
+    padding-bottom: 9px;    
+}
+.vk-ref {
+    padding-bottom: 18px;
+}
+.feedback {
+    padding-left: 13px;
+    padding-top: 28px;
+}
+.response {
+    margin-top: 9px;
+}
+a {
+    color: blue;
+}
+.clearfix:after {
+    clear: both;
+    content: "";
+    display: block;
+}
+.lodash {
+    color: red;
+    text-align: center;
+}

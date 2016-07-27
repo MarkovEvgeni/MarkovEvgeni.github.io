@@ -1,0 +1,134 @@
+<!DOCTYPE=html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Задание Javascript урок 12</title>
+        <link rel="stylesheet" href="css/reset.css">
+<!--        <link rel="stylesheet" href="css/bootstrap.min.css">-->
+        <link rel="stylesheet" href="css/style.css">  
+    </head>
+    <body>
+     <div class="first_task clearfix">
+      <div class="carousel-arrow-left"><span>Влево</span></div>
+      <div class="carousel-hider">
+            <ul class="carousel-list clearfix">
+                <li class="carousel-element">
+                    <img src="img/image01.jpg" alt="Cavaliers 2016">
+                    <p>Сhampions 2016</p>
+                </li>
+                <li class="carousel-element">
+                    <img src="img/image02.jpg" alt="Warriors 2015">
+                    <p>Сhampions 2015</p>
+                </li>
+                <li class="carousel-element">
+                    <img src="img/image03.jpg" alt="Spurs 2014">
+                    <p>Сhampions 2014</p>
+                </li>
+                <li class="carousel-element">
+                    <img src="img/image04.jpg" alt="Heat 2013">
+                    <p>Сhampions 2013</p>
+                </li>
+                <li class="carousel-element">
+                    <img src="img/image05.jpg" alt="Heat 2012">
+                    <p>Сhampions 2012</p>
+                </li>
+                <li class="carousel-element">
+                    <img src="img/image06.jpg" alt="Mavericks 2011">
+                    <p>Сhampions 2011</p>
+                </li>
+                <li class="carousel-element">
+                    <img src="img/image07.jpg" alt="Lakers 2010">
+                    <p>Сhampions 2010</p>
+                </li>
+                <li class="carousel-element">
+                    <img src="img/image08.jpg" alt="Lakers 2009">
+                    <p>Сhampions 2009</p>
+                </li>
+                <li class="carousel-element">
+                    <img src="img/image09.jpg" alt="Celtics 2008">
+                    <p>Сhampions 2008</p>
+                </li>
+                <li class="carousel-element">
+                    <img src="img/image10.jpg" alt="Spurs 2007">
+                    <p>Сhampions 2007</p>
+                </li>
+                <li class="carousel-element">
+                    <img src="img/image11.jpg" alt="Heat 2006">
+                    <p>Сhampions 2006</p>
+                </li>
+                <li class="carousel-element">
+                    <img src="img/image12.jpg" alt="Spurs 2005">
+                    <p>Сhampions 2005</p>
+                </li>
+            </ul>
+        </div>
+        <div class="carousel-arrow-right clearfix"><span>Вправо</span></div>
+        </div>
+        
+<!--                ВТОРАЯ ЧАСТЬ ЗАДАНИЯ С ШАБЛОНИЗАТОРАМИ        -->
+    
+      <script type="text/template" id="template1">  
+            <div class="whole-page">
+                <div class="lodash">Шаблонизатор John Resig</div>
+                <div class="name"><%= data[0].name %></div>
+                <div class="photo"><img height=134px src="<%= data[0].image %>"></div>
+                <div class="occupation"><%= data[0].proffesion %></div>
+                <div class="desire-list">
+                    <p>Хочу учить фронтенд, потому что</p>
+                    <ul>
+                    <% for (var i = 0; i<3; i++) { %>
+                        <li><%= data[i].reason %></li>
+                    <% } %>
+                    </ul>
+                </div>
+                <div class="contacts">
+                    <div class="my-tel">Мой контактный телефон</div>
+                    <div class="tel-number"><a href="tel:<%= data[0].telephone %>"><%= data[0].telephone2 %></a></div>
+                    <div class="vk-profile">Мой профиль вконтакте</div>
+                    <div class="vk-ref"><a href="http://vk.com/<%= data[0].vk %>"><%= data[0].vkName %></a></div>
+                </div>
+                <div class="feedback">
+                    <div class="my-feedback">Мой фидбек:</div>
+                    <div class="response"><%= data[0].response %></div>  
+                </div>
+            </div>
+        </script>
+                
+<!--        ТРЕТЬЯ ЧАСТЬ ЗАДАНИЯ ШАБЛОНИЗАТОР LoDash-->
+        
+        <script type="text/template" id="template2">
+        <br>
+        <div class="whole-page">
+                <div class="lodash">Шаблонизатор LoDash</div>
+                <div class="name"><%= name %></div>
+                <div class="photo"><img height=134px src="<%= image %>"></div>
+                <div class="occupation"><%= proffesion %></div>
+                <div class="desire-list">
+                    <p>Хочу учить фронтенд, потому что</p>
+                        <ul>
+                            <% reasons.forEach(function(reason) { %>
+                            <li><%-reason%></li>
+                            <% }); %>
+                        </ul>
+                </div>
+                <div class="contacts">
+                    <div class="my-tel">Мой контактный телефон</div>
+                    <div class="tel-number"><a href="tel:<%= telephone %>"><%= telephone2 %></a></div>
+                    <div class="vk-profile">Мой профиль вконтакте</div>
+                    <div class="vk-ref"><a href="http://vk.com/<%= vk %>"><%= vkName %></a></div>
+                </div>
+                <div class="feedback">
+                    <div class="my-feedback">Мой фидбек:</div>
+                    <div class="response"><%= response %></div>  
+                </div>
+            </div>
+        </script>    
+    
+     <script src="js/jquery-3.0.0.js"></script>
+     <script src="js/jquery.carousel.js"></script>
+     <script src="js/resig.js"></script>
+     <script src="js/lodash.min.js"></script>
+     <script src="js/script.js"></script>
+    </body>
+</html>
