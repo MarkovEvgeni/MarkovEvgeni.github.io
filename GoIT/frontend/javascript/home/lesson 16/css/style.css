@@ -1,0 +1,36 @@
+.search_form {
+    text-align: center;
+}
+.search_form:before {
+	content:''; /* и */
+	height: 100%; /* вот */
+	display: inline-block; /* оно! */
+    vertical-align: middle;
+}
+.search_inside {
+    display: inline-block;
+    vertical-align: middle;
+}
+.search_inside_2 {
+    display: block;
+}
+.search_inside_2 form {
+    padding: 10px;
+    text-align: center;
+}
+.search_inside_2 form input {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+form a {
+    display: block;
+}
+form a.inline {
+    display: inline-block;
+    vertical-align: middle;
+}
+li {
+    float: left;
+    padding: 10px;
+}
