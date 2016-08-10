@@ -15,7 +15,7 @@ $(function () {
         $('body').append('<div class="search_form_2 removable">');
         $('.search_form_2').append('<div class="search_inside_2">');
         $('.search_inside_2').append('<form>');
-        $('form').append('<a href="#" class="inline"><img height="40px" src="img/pixabay.png" alt="Pixabay"></a>');
+        $('form').append('<a href="http://markovevgeni.github.io/GoIT/frontend/javascript/home/lesson%2016/index.html" class="inline"><img height="40px" src="img/pixabay.png" alt="Pixabay"></a>');
         $('form').append('<input type="text">');
         $('form').append('<input id="button" type="submit">');
         $('body').append('<ul class="removable">');
