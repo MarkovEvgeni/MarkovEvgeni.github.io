@@ -1,0 +1,39 @@
+@import 'info';
+
+footer {
+    background-color: $servicesgray;
+    .background {
+        background-color: rgba($white, 0.05);
+        .wrapper {
+            box-sizing: border-box;
+            padding: 19px 40px 20px;
+            a {
+                box-sizing: border-box;
+                color: rgba($white, 0.2);
+                display: inline-block;
+                font-family: Arial, sans-serif;
+                font-size: 12px;
+                height: 22px;
+                padding-top: 6px;
+                text-decoration: none;
+            }
+            a:first-child {
+                margin-right: 29px;
+                padding-left: 23px;
+                background: url(../img/icons.png) no-repeat 0px 4px;
+            }
+            a:nth-child(2) {
+                margin-right: 37px;
+                padding-left: 19px;
+                background: url(../img/icons.png) no-repeat 0px -19px;
+            }
+            a:nth-child(3) {
+                padding-left: 28px;
+                background: url(../img/icons.png) no-repeat 0px -40px;
+            }
+            a:last-child {
+                float: right;
+            }
+        }
+    }
+}

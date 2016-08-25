@@ -1,0 +1,59 @@
+@import 'articles';
+
+.services {
+    background-color: $servicesgray;
+    .wrapper {
+        box-sizing: border-box;
+        padding: 0 40px;
+        h1 {
+            color: $white;
+            font-family: "ubuntumedium", sans-serif;
+            font-size: 24px;
+            padding-bottom: 54px;
+            padding-top: 45px;    
+        }
+        article {
+            background: url(../img/services.jpg) no-repeat;
+            float: left;
+            margin-bottom: 71px;
+            margin-right: 40px;
+            width: 260px;
+            a {
+                color: $white;
+                display: block;
+                font-family: "ubuntumedium", sans-serif;
+                font-size: 16px;
+                height: 306px;
+                text-align: center;
+                text-decoration: none;
+                .mask {
+                    background-color: rgba($blue, 0.9);
+                    background-image: url(../img/plus.png);
+                    background-position: 112px 112px;
+                    background-repeat: no-repeat;
+                    height: 260px;
+                    visibility: hidden;
+                }
+                h2 {
+                    margin-top: 32px;
+                }
+            }
+            a:hover {
+                color: $golden;
+                .mask {
+                    visibility: visible;
+                }
+            }
+        }
+        article:nth-child(3) {
+            background-position: -300px 0px;
+        }
+        article:nth-child(4) {
+            background-position: -600px 0px;
+        }
+        article:last-child {
+            background-position: -900px 0px;
+            margin-right: 0;
+        }
+    }
+}

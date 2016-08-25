@@ -1,0 +1,160 @@
+@import 'services';
+
+.newssection {
+    background-color: $lightgray;
+    .wrapper {
+        box-sizing: border-box;
+        padding: 0 38px 79px 38px;
+        h1 {
+            color: $servicesgray;
+            font-family: 'ubuntumedium', sans-serif;
+            font-size: 24px;
+            margin-bottom: 46px;
+            margin-top: 60px;
+        }
+        section {
+            float: left;
+            width: 560px;
+        }
+        section.news {
+            margin-right: 40px;
+            div.news_item {
+                margin-bottom: 29px;
+                .image {
+                    background-image: url(../img/back-1.jpg);
+                    float: left;
+                    height: 150px;
+                    position: relative;
+                    width: 150px;
+                    div {
+                        box-sizing: border-box;
+                        font-family: "ubuntumedium", sans-serif;
+                        height: 40px;
+                        position: absolute;
+                        text-align: center;
+                        width: 40px;
+                    }
+                    .month {
+                        background-color: $blue;
+                        color: $white;
+                        font-size: 15px;
+                        left: -17px;
+                        padding-top: 13px;
+                        top: 12px;
+                    }
+                    .date {
+                        background-color: $golden;
+                        color: $skygray;
+                        font-size: 18px;
+                        left: -17px;
+                        padding-top: 11px;
+                        top: 52px;
+                    }
+                }
+                .content {
+                    box-sizing: border-box;
+                    border-top: 1px solid transparent;
+                    margin-left: 180px;
+                    h2 {
+                        font-family: "ubuntumedium", sans-serif;
+                        font-size: 16px;
+                        margin-top: 4px;
+                        padding-left: 5px;
+                        a {
+                            color: $servicesgray;
+                        }
+                        a:hover {
+                            color: $blue;
+                        }
+                    }
+                    p {
+                        color: $textcolor;
+                        font-family: Arial, sans-serif;
+                        font-size: 13px;
+                        a {
+                            color: $blue;
+                        }
+                        a:hover {
+                            color: $golden;
+                        }
+                    }
+                    p.author {
+                        margin-bottom: 28px;
+                        margin-top: 9px;
+                        padding-left: 4px;
+                    }
+                    p.text {
+                        line-height: 1.6;
+                    }
+                    a {
+                        text-decoration: none;  
+                    }
+                }
+            }
+            div.news_item:nth-child(3) {
+                margin-bottom: 0px;
+                .image {
+                    background-image: url(../img/back-2.jpg);
+                }
+            }
+        }
+        .panels {
+            .plusminus {
+                box-sizing: border-box;
+                background-image: url(../img/plusminus.png);
+                background-repeat: no-repeat;
+                float: left;
+                height: 39px;
+                width: 39px;
+            }
+            .panel {
+                box-sizing: border-box;
+                font-family: "ubuntumedium", sans-serif;
+                font-size: 13px;
+                height: 39px;
+                margin-bottom: 5px;
+                margin-left: 39px;
+                padding-left: 14px;
+                padding-top: 13px;
+                a {
+                    display: block;
+                    height: 100%;
+                    text-decoration: none;
+                }   
+            }
+            .yellowback {
+                background-color: $golden;
+                padding-left: 14px;
+                padding-top: 13px;
+                a {
+                    color: $white;
+                }
+            }
+            p {
+                color: $textcolor;
+                font-family: Arial, sans-serif;
+                font-size: 13px;
+                line-height: 1.6;
+                margin: 26px 2px 37px 39px;
+            }
+            p.hiden {
+                display: none;
+            }
+            .minus {
+                border-right: 1px solid rgba($white,0.2);
+                background-position: 15px 19px;
+            }
+            .whiteback {
+                border: 1px solid $whitegray;
+                padding-left: 13px;
+                padding-top: 12px;
+                a {
+                    color: $servicesgray;
+                }
+            }
+            .plus {
+                background-position: 15px -5px;
+            }
+        }
+    }
+}

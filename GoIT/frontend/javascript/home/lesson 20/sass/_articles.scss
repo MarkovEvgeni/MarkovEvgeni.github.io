@@ -1,0 +1,63 @@
+@import 'slider';
+
+section.articles {
+    .wrapper {
+        box-sizing: border-box;
+        padding: 58px 46px 86px 34px;
+    }
+    article {
+        float: left;
+        margin-right: 40px;
+        width: 360px;
+        h1 {
+            font-family: "ubuntumedium", sans-serif;
+            font-size: 90px;
+            float: left;
+            color: $skygray;
+            @include opacity(0.1);
+        }
+        h2 {
+            background: url(../img/images.png) no-repeat 24px 14px;
+            font-family: "ubuntumedium", sans-serif;
+            font-size: 20px;
+            box-sizing: border-box;
+            color: $skygray;
+            height: 90px;
+            margin-left: 103px;
+            padding: 60px 0px 0px 24px;
+        }
+        h3 {
+            font-family: "Arial", sans-serif;
+            font-size: 13px;
+            color: $anothergray;
+            line-height: 1.6;
+            margin-left: 124px;
+            margin-top: 12px;
+            width: 240px;
+        }
+        a {
+            background: url(../img/arrow.png) no-repeat 74px 3px;
+            color: $skygray;
+            display: block;
+            font-family: "ubuntumedium", sans-serif;
+            font-size: 13px;
+            margin-left: 124px;
+            margin-top: 18px;
+            text-decoration: none;
+            width: 90px;
+        }
+        a:hover {
+            color: $blue;
+            background: url(../img/arrow.png) no-repeat 79px 3px;
+        }
+        h2.second {
+            background-position: -376px 14px;
+        }
+        h2.third {
+            background-position: -776px 14px;
+        }
+    }
+    article:last-child {
+        margin-right: 0px;
+    }
+}

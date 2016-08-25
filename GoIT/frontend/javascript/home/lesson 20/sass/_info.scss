@@ -1,0 +1,38 @@
+@import 'links';
+
+.info {
+    background-color: $servicesgray;
+    .wrapper {
+        padding: 60px 0 70px;
+        article {
+            float: left;
+            margin-left: 40px;
+            h1 {
+                color: $white;
+                font-family: "ubuntumedium", sans-serif;
+                margin-bottom: 34px;
+            }
+            ul {
+                li {
+                    border-bottom: 1px solid rgba($white, 0.07);
+                    box-sizing: border-box;
+                    font-family: Arial, sans-serif;
+                    font-size: 13px;
+                    height: 36px;
+                    padding-top: 12px;
+                    width: 260px;
+                    a {
+                        color: rgba($white, 0.3);
+                        text-decoration: none; 
+                    }
+                    a:hover {
+                        color: $blue;
+                    }
+                }
+                li:last-child {
+                    border-bottom: none;
+                }
+            }
+        }
+    }
+}

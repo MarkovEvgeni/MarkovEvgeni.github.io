@@ -1,0 +1,73 @@
+@import 'header';
+
+.main_menu_part {
+    padding-bottom: 40px;
+    .wrapper {
+        box-sizing: border-box;      
+    }
+}
+
+.main_menu_container {
+    background-color: $servicesgray;
+    margin-left: 38px;
+    width: 1160px;
+    ul {
+        float: left;
+        li {
+            float: left;
+            a {
+                box-sizing: border-box;
+                border-right: 1px solid $menuborder;
+                color: $white;
+                display: block;
+                font-family: "ubuntu_condensedregular", sans-serif;
+                font-size: 14px;
+                text-decoration: none;
+                padding: 21px 37px 21px 40px;
+                height: 56px;
+            }
+            a.active {
+                background-color: $blue;
+            }
+            a:hover {
+                color: $golden;
+            }
+        }
+    }
+    form {
+        margin-left: 600px;
+        padding-top: 8px;
+        padding-right: 8px;
+        input[type="text"] {
+            background-color: $inputback;
+            border: 1px solid $inputborder;
+            border-right: none;
+            color: rgba(255,255,255,0.15);
+            display: block;
+            float: right;
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            height: 40px;
+            outline: none;
+            padding-left: 14px;
+            width: 201px;
+            @include placeholder {
+                color: rgba($white,0.15);
+            };
+            
+        }
+        input[type="submit"] {
+            background-color: $inputback;
+            background-image: url(../img/search.png);
+            background-position: 12px 12px;
+            background-repeat: no-repeat;
+            border: 1px solid $inputborder;
+            border-left: none;
+            cursor: pointer;
+            height: 40px;
+            float: right;
+            outline: none;
+            width: 40px;
+        }
+    }
+}

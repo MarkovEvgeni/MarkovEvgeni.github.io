@@ -1,0 +1,58 @@
+@import 'mainmenu';
+
+section.slider {
+    .wrapper {
+        position: relative;
+        box-sizing: border-box;
+        padding: 0 38px;
+        .link {
+            background: url(../img/linkback.png) no-repeat;
+            font-family: "ubuntumedium", sans-serif;
+            font-size: 54px;
+            height: 197px;
+            left: 74px;
+            line-height: 0.98;
+            padding: 20px 0px 0px 25px;
+            position: absolute;
+            text-decoration: none;
+            top: 233px;
+            width: 308px;
+            z-index: 20;
+            a {
+                color: $white;
+                text-decoration: none;
+                wrap {
+                    color: $golden;
+                }
+            }
+        }
+        .fotorama {
+            position: relative;
+            .fotorama__nav--dots {
+                position: absolute;
+                top: 438px;
+                .fotorama__nav--dots,
+                .fotorama__nav__frame {
+                    background-color: $white;
+                    height: 15px;
+                    margin: 0 7px;
+                    width: 15px;
+                    .fotorama__dot {
+                        border: none;
+                        border-radius: 0px;
+                        box-sizing: border-box;
+                        height: 9px;
+                        left: 3px;
+                        top: 3px;
+                        width: 9px;
+                    }
+                }
+                .fotorama__active {
+                    .fotorama__dot {
+                        background-color: $slider;
+                    }
+                }
+            }
+        }
+    }
+}
