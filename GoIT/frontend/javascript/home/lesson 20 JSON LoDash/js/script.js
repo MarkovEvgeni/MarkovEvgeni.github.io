@@ -3,12 +3,14 @@ document.addEventListener('DOMContentLoaded', function () {
     
     console.log('Привет');
     
-    var data = $.ajax({
+    var crosby = $.ajax({
         url: 'js/data.json',
         dataType: "json"
     });
     
-    console.log(data);
+    var crosby1 = crosby.resoponseJSON;
+    
+    console.log(crosby1);
     
 
 });
