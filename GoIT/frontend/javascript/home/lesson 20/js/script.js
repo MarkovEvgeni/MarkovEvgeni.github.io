@@ -31,6 +31,7 @@ document.addEventListener('DOMContentLoaded', function () {
     
     var data = $.ajax({
         url: 'js/data.json',
+        async: false,
         dataType: "json"
     });
     
