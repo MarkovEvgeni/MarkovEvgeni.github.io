@@ -1,13 +1,13 @@
 document.addEventListener('DOMContentLoaded', function () {
     'use strict';
     
-    var $headersection = $('.main_menu li a');
+    var $headersection = $('.main_menu li.main_menu_item a');
     $headersection.on("click", function (e) {
         e.preventDefault();
         $headersection.removeClass("active");
         $(this).addClass("active");
     });
-    var $accordion = $('.panels .panel');
+    var $accordion = $('.panel .panel_item');
     $accordion.on("click", function (e) {
         e.preventDefault();
         if ($(this).hasClass("yellowback")) {

@@ -11,9 +11,9 @@
     background-color: $servicesgray;
     margin-left: 38px;
     width: 1160px;
-    ul {
+    ul.main_menu {
         float: left;
-        li {
+        li.main_menu_item {
             float: left;
             a {
                 box-sizing: border-box;
