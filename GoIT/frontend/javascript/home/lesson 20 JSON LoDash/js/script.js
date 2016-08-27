@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
     
     var crosby = $.ajax({
         url: 'js/data.json',
+        async: false,
         dataType: "json"
     });
     
