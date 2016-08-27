@@ -6,9 +6,9 @@ document.addEventListener('DOMContentLoaded', function () {
     var data = $.ajax({
         url: 'js/data.json',
         dataType: "json"
-    }).responseJSON;
+    });
     
-    console.log(data);
+    console.log(data.responseJSON);
     
 
 });
