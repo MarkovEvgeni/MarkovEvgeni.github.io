@@ -35,6 +35,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
     
     var testing = data.responseJSON;
+    console.log(testing);
     
     // 1. Массив скиллов (поле skills) всех людей, не должно быть повторяющихся скиллов, так же они должны быть отсортированы по алфавиту;
     var skills = _.map(testing, 'skills');
