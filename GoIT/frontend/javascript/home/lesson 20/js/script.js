@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function () {
     
     // 1. Массив скиллов (поле skills) всех людей, не должно быть повторяющихся скиллов, так же они должны быть отсортированы по алфавиту;
     var skills = _.map(testing, 'skills');
-    var skills2 =_.flatten(skills);
+    var skills2 = _.flatten(skills);
     skills = _.uniq(skills2).sort(function (a,b) {
         return a.localeCompare(b, 'en', {'sensitivity': 'base'});
     });
@@ -54,8 +54,8 @@ document.addEventListener('DOMContentLoaded', function () {
     });
     friends = _.toArray(friends);
     var full = _.zip(name, friends).sort(function (a, b) {
-        if (a[1] > b[1]) {return -1; }
-             else {return 1;}
+        if (a[1] > b[1]) {return -1;}
+            else {return 1;}
     });
     full = _.map(full, 0);
     console.log(full);
@@ -63,11 +63,10 @@ document.addEventListener('DOMContentLoaded', function () {
 //3. Массив всех друзей всех пользователей, не должно быть повторяющихся людей
     
     var buddys =_.map(testing, 'friends');
-    buddys =_.flattenDeep(buddys);
+    buddys = _.flattenDeep(buddys);
     buddys = _.map(buddys, 'name');
     buddys = _.uniq(buddys);
     console.log(buddys);
-    
-    
+   
 });
 
