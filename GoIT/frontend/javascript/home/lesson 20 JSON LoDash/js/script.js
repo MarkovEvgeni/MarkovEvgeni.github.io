@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
         dataType: "json"
     });
     
-    var crosby1 = crosby.resoponseJSON;
+    var crosby1 = crosby.responseJSON;
     
     console.log(crosby1);
     
