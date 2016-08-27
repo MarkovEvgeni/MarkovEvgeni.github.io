@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
         dataType: "json"
     });
     
-    console.log(data.responseJSON);
+    console.log(data);
     
 
 });
