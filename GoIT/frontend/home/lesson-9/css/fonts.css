@@ -12,7 +12,6 @@
     font-family: 'Open Sans Light';
     src: url('../fonts/OpenSans-Light.eot');
     src: url('../fonts/OpenSans-Light.eot?#iefix') format('embedded-opentype'),
-	src: url("OpenSans-Light.eot?") format("eot"),
 	url('../fonts/OpenSans-Light.woff') format('woff'),
 	url('../fonts/OpenSans-Light.ttf') format('truetype');
 	font-weight: normal;
