@@ -540,13 +540,15 @@ select#tyre_car_year {
 select#tyre_size,
 select#tyre_size_x {
     display: inline-block;
-    width: 50px;
     margin: 5px 1px 6px 1px;
+    padding-left: 3px;
+    width: 50px;
 }
 select#tyre_size_x {
     margin-left: 4px;
 }
 select#tyre_diameter {
+    padding-left: 3px;
     width: 45px;
     margin-bottom: 9px;
 }
@@ -554,8 +556,9 @@ select#tyre_diameter {
     display: none;
 }
 select#openings_quantity {
-    width: 49px;
+    padding-left: 3px;
     margin: 16px 0px 17px 0px;
+    width: 49px;
 }
 .value div label:before {
     background-image: url(../img/checkbox.png);
@@ -627,6 +630,7 @@ select#openings_quantity {
 select#disk_diameter,
 select#openings_diameter {
     width: 56px;
+    padding-left: 3px;
 }
 .disk .right {
     float: right;
