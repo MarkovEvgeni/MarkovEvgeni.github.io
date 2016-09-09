@@ -239,7 +239,14 @@ a.slider_menu_item--active {
     background: -webkit-linear-gradient(rgba(255,255,255,1) 0%, rgba(212,212,212,1) 100%);
     background: -o-linear-gradient(rgba(255,255,255,1) 0%, rgba(212,212,212,1) 100%);
     background: linear-gradient(rgba(255,255,255,1) 0%, rgba(212,212,212,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#d4d4d4', GradientType=0 );
+/*    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#d4d4d4', GradientType=0 );*/
+}
+@media screen and (-ms-high-contrast: active) {
+    a.slider_menu_item:hover,
+    a.slider_menu_item:active,
+    a.slider_menu_item--active {
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#d4d4d4', GradientType=0 );    
+    }
 }
 @media \0screen\,screen\9\,screen\9 {
     li.slider_menu_item {
