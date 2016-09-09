@@ -66,7 +66,7 @@ a {
     -webkit-background-clip: text;
     text-shadow: none;
 }
-@media \0screen {
+@media \0screen\,screen\9\,screen\9 {
     .logo--top--left_item {
         color: rgb(116,80,131);
     }
@@ -99,7 +99,7 @@ a {
     border-bottom: 1px solid #33253a;
     height: 846px;    
 }
-@media \0screen {
+@media \0screen\,screen\9\,screen\9 {
     .first_screen {
         background: url(../img/background1.jpg);
         height: 846px; 
@@ -177,7 +177,7 @@ p.section_preview_item {
     -moz-box-shadow: 0px 0px 0px 5px rgba(70,50,79,1), 0px 0px 0px 8px rgba(0,0,0,0.2);
     box-shadow: 0px 0px 0px 5px rgba(70,50,79,1), 0px 0px 0px 8px rgba(0,0,0,0.2);
 }
-@media \0screen {
+@media \0screen\,screen\9\,screen\9 {
     .section_image_item {
         box-sizing: border-box;
         border: 3px solid rgba(0,0,0,0.2);
@@ -195,7 +195,7 @@ p.section_preview_item {
     display: block;
     height: 100%;
 }
-@media \0screen {
+@media \0screen\,screen\9\,screen\9 {
     .white_border {
         display: block;
         height: 90%;
@@ -238,7 +238,7 @@ a.slider_menu_item--active {
     background: linear-gradient(rgba(255,255,255,1) 0%, rgba(212,212,212,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#d4d4d4', GradientType=0 );
 }
-@media \0screen {
+@media \0screen\,screen\9\,screen\9 {
     li.slider_menu_item {
         background-color: rgb(255,255,255);
         box-sizing: border-box;
@@ -276,7 +276,7 @@ a.slider_menu_item--active {
     text-shadow: 1px 1px 0px rgba(15, 21, 24, 1);
     width: 290px;   
 }
-@media \0screen {
+@media \0screen\,screen\9\,screen\9 {
     .article_preview {
         box-sizing: border-box;
         background-repeat: no-repeat;
@@ -304,7 +304,7 @@ h2.article_preview_item {
     margin-right: 0px;
     padding-left: 67px;
 }
-@media \0screen { 
+@media \0screen\,screen\9 { 
     .second_screen {
         border-bottom: 1px solid #1d2f37;
         background: rgb(116,80,131);
@@ -483,7 +483,7 @@ li.logos_item:nth-child(2) {
     width: 73px;
     margin-right: 62px;
 }
-@media \0screen {
+@media \0screen\,screen\9 {
     .logo2 {
        background-position: -72px 0px;
         width: 73px;
@@ -495,7 +495,7 @@ li.logos_item:nth-child(3) {
     width: 66px;
     margin-right: 74px;
 }
-@media \0screen {
+@media \0screen\,screen\9 {
     .logo3 {
         background-position: -146px 0px;
         width: 66px;
@@ -507,7 +507,7 @@ li.logos_item:nth-child(4) {
     width: 52px;
     margin-right: 64px;
 }
-@media \0screen {
+@media \0screen\,screen\9 {
     .logo4 {
         background-position: -212px 0px;
         width: 52px;
@@ -519,7 +519,7 @@ li.logos_item:nth-child(5) {
     width: 105px;
     margin-right: 60px;
 }
-@media \0screen {
+@media \0screen\,screen\9 {
     .logo5 {
         background-position: -266px 0px;
         width: 105px;
@@ -530,7 +530,7 @@ li.logos_item:last-child {
     background-position: -371px 0px;
     width: 85px;
 }
-@media \0screen {
+@media \0screen\,screen\9 {
     .logo6 {
         background-position: -371px 0px;
         width: 85px;
@@ -550,7 +550,7 @@ div.fifth_screen_item:nth-child(3) {
     margin-left: 1px;
     margin-right: 0px;
 }
-@media \0screen {
+@media \0screen\,screen\9 {
     div.item813 {
         margin-left: 1px;
         margin-right: 0px;
@@ -619,7 +619,7 @@ p.fifth_screen_item {
     box-sizing: border-box;
     height: 114px;
 }
-@media \0screen {
+@media \0screen\,screen\9 {
     .footer .wrapper {
         height: auto;
     }
@@ -630,7 +630,7 @@ p.designed_item {
     margin: 53px 0px 0px 824px;
     text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.4);
 }
-@media \0screen {
+@media \0screen\,screen\9 {
     p.designed_item {
         margin: 53px 0px 0px 820px;
     }
@@ -680,7 +680,7 @@ a.designed_item {
         margin-left: 20px;
         padding-left: 1px;
     }
-    @media \0screen {
+    @media \0screen\,screen\9 {
         li.menu_item_lastchild {
             margin-left: 20px;
             padding-left: 1px;
@@ -742,7 +742,7 @@ a.designed_item {
         padding-left: 82px;
         width: 235px;
     }
-    @media \0screen {
+    @media \0screen\,screen\9 {
         .article_previewfirstchild {
             background-position: 33px 2px;
             margin-right: 32px;
@@ -762,7 +762,7 @@ a.designed_item {
         background-image: url(../img/tool.png);
         background-position: 18px 2px;
     }
-    @media \0screen {
+    @media \0screen\,screen\9 {
         .nth_child_2 {
             background-image: url(../img/tool.png);
             background-position: 18px 2px;
@@ -774,7 +774,7 @@ a.designed_item {
         padding-left: 59px;
         width: 215px;
     }
-    @media \0screen {
+    @media \0screen\,screen\9 {
         .nth_child_3 {
             background-image: url(../img/tool.png);
             background-position: 10px 2px;
@@ -827,7 +827,7 @@ a.designed_item {
     div.blog_item:nth-child(4) {
         margin-top: -2px;
     }
-    @media \0screen {
+    @media \0screen\,screen\9 {
         .blogitem4 {
             margin-top: -2px;
         }
@@ -839,7 +839,7 @@ a.designed_item {
     li.logos_item:first-child {
         margin-right: 54px;
     }
-    @media \0screen {
+    @media \0screen\,screen\9 {
         .logo1 {
             margin-right: 54px;
         }
@@ -847,7 +847,7 @@ a.designed_item {
     li.logos_item:nth-child(2) {
         margin-right: 53px;
     }
-    @media \0screen {
+    @media \0screen\,screen\9 {
         .logo2 {
             margin-right: 53px;
         }
@@ -855,7 +855,7 @@ a.designed_item {
     li.logos_item:nth-child(3) {
         margin-right: 63px;
     }
-    @media \0screen {
+    @media \0screen\,screen\9 {
         .logo3 {
             margin-right: 63px;
         }
@@ -863,7 +863,7 @@ a.designed_item {
     li.logos_item:nth-child(4) {
         margin-right: 55px;
     }
-    @media \0screen {
+    @media \0screen\,screen\9 {
         .logo4 {
             margin-right: 55px;
         }
@@ -871,7 +871,7 @@ a.designed_item {
     li.logos_item:nth-child(5) {
         margin-right: 50px;
     }
-    @media \0screen {
+    @media \0screen\,screen\9 {
         .logo5 {
             margin-right: 50px;
         }
@@ -886,7 +886,7 @@ a.designed_item {
     div.fifth_screen_item:first-child {
         display: none;
     }
-    @media \0screen {
+    @media \0screen\,screen\9 {
         div.item811 {
             display: none;
         }
@@ -894,7 +894,7 @@ a.designed_item {
     div.fifth_screen_item:nth-child(2) {
         display: none;
     }
-    @media \0screen {
+    @media \0screen\,screen\9 {
         div.item812 {
             display: none;
         }
@@ -911,7 +911,7 @@ a.designed_item {
         margin-left: 21px;
         margin-right: 56px;
     }
-    @media \0screen {
+    @media \0screen\,screen\9 {
         div.item813 {
             margin-left: 21px;
             margin-right: 56px;
@@ -920,7 +920,7 @@ a.designed_item {
     div.fifth_screen_item:last-child {
         margin-right: 0px;
     }
-    @media \0screen {
+    @media \0screen\,screen\9 {
         div.item815 {
             margin-right: 0px;
         }
@@ -975,7 +975,7 @@ a.designed_item {
         padding: 8px 5px 4px 5px;
         width: 47px;
     }
-    @media \0screen {
+    @media \0screen\,screen\9 {
         li.menu_item_lastchild {
             box-sizing: border-box;
             display: block;
@@ -1030,7 +1030,7 @@ a.designed_item {
     .menu--top_item:last-child:hover {
         border-bottom: 2px solid transparent;
     }
-    @media \0screen {
+    @media \0screen\,screen\9 {
         li.menu_item_lastchild:hover {
             border-bottom: 2px solid transparent;
         }
@@ -1089,7 +1089,7 @@ a.designed_item {
         margin-right: 16px;
         width: 460px;   
     }
-    @media \0screen {
+    @media \0screen\,screen\9 {
         .article_previewfirstchild,
         .nth_child_2,
         .nth_child_3 {
@@ -1111,7 +1111,7 @@ a.designed_item {
         margin-top: 25px;
         background-position: 33px 2px;    
     }
-    @media \0screen {
+    @media \0screen\,screen\9 {
         .nth_child_2 {
             margin-top: 25px;
             background-position: 33px 2px;
@@ -1121,7 +1121,7 @@ a.designed_item {
         margin-top: 29px;
         background-position: 33px 2px; 
     }
-    @media \0screen {
+    @media \0screen\,screen\9 {
         .nth_child_3 {
             margin-top: 29px;
             background-position: 33px 2px;
@@ -1176,7 +1176,7 @@ a.designed_item {
         margin-left: 19px;
         margin-right: 54px;
     }
-    @media \0screen {
+    @media \0screen\,screen\9 {
         li.logo1 {
             margin-left: 19px;
             margin-right: 54px;
@@ -1185,7 +1185,7 @@ a.designed_item {
     li.logos_item:nth-child(2) {
         margin-right: 53px;
     }
-    @media \0screen {
+    @media \0screen\,screen\9 {
         li.logo2 {
             margin-right: 53px;
         }
@@ -1193,7 +1193,7 @@ a.designed_item {
     li.logos_item:nth-child(3) {
         margin-right: 0px;
     }
-    @media \0screen {
+    @media \0screen\,screen\9 {
         li.logo3 {
             margin-right: 0px;
         }
@@ -1203,7 +1203,7 @@ a.designed_item {
         margin-right: 55px;
         margin-top: 26px;
     }
-    @media \0screen {
+    @media \0screen\,screen\9 {
         li.logo4 {
             margin-left: 3px;
             margin-right: 55px;
@@ -1214,7 +1214,7 @@ a.designed_item {
         margin-right: 50px;
         margin-top: 26px;
     }
-    @media \0screen {
+    @media \0screen\,screen\9 {
         li.logo5 {
             margin-right: 50px;
             margin-top: 26px;
@@ -1223,7 +1223,7 @@ a.designed_item {
     li.logos_item:nth-child(6) {
         margin-top: 26px;
     }
-    @media \0screen {
+    @media \0screen\,screen\9 {
         li.logo6 {
             margin-top: 26px;
         }
@@ -1241,7 +1241,7 @@ a.designed_item {
         margin-left: 19px;
         margin-right: 0px; 
     }
-    @media \0screen {
+    @media \0screen\,screen\9 {
         div.item812 {
             margin-left: 19px;
             margin-right: 0px; 
@@ -1300,7 +1300,7 @@ a.designed_item {
         margin-right: 16px;
         width: 299px;
     }
-    @media \0screen {
+    @media \0screen\,screen\9 {
         .article_preview, .article_previewfirstchild, .nth_child_2, .nth_child_3 {
             background-position: 31px 2px;
             padding-left: 80px;
@@ -1311,7 +1311,7 @@ a.designed_item {
     .article_preview:last-child {
         margin-top: 41px;
     }
-    @media \0screen {
+    @media \0screen\,screen\9 {
         .nth_child_3 {
             margin-top: 41px;
         }
@@ -1355,7 +1355,7 @@ a.designed_item {
         margin-top: -3px;
         margin-bottom: 28px;
     }
-    @media \0screen {
+    @media \0screen\,screen\9 {
         div.blogitem3 {
             margin-top: -3px;
             margin-bottom: 28px;
@@ -1376,7 +1376,7 @@ a.designed_item {
         margin-left: 19px;
         margin-right: 54px;
     }
-    @media \0screen {
+    @media \0screen\,screen\9 {
         li.logo1 {
             margin-left: 19px;
             margin-right: 54px;
@@ -1385,7 +1385,7 @@ a.designed_item {
     li.logos_item:nth-child(2) {
         margin-right: 0px;
     }
-    @media \0screen {
+    @media \0screen\,screen\9 {
         li.logo2 {
             margin-right: 0px;
         }
@@ -1395,7 +1395,7 @@ a.designed_item {
         margin-right: 60px;
         margin-top: 61px;
     }
-    @media \0screen {
+    @media \0screen\,screen\9 {
         li.logo3 {
             margin-left: 27px;
             margin-right: 60px;
@@ -1406,7 +1406,7 @@ a.designed_item {
         margin-right: 0px;
         margin-top: 61px;
     }
-    @media \0screen {
+    @media \0screen\,screen\9 {
         li.logo4 {
             margin-right: 0px;
             margin-top: 61px;
@@ -1417,7 +1417,7 @@ a.designed_item {
         margin-right: 50px;
         margin-top: 42px;
     }
-    @media \0screen {
+    @media \0screen\,screen\9 {
         li.logo5 {
             margin-left: -3px;
             margin-right: 50px;
@@ -1427,7 +1427,7 @@ a.designed_item {
     li.logos_item:nth-child(6) {
         margin-top: 42px;
     }
-    @media \0screen {
+    @media \0screen\,screen\9 {
         li.logo6 {
             margin-top: 42px;
         }
