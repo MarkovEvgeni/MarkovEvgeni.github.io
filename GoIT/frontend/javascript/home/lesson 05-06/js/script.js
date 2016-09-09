@@ -236,7 +236,19 @@ function timerPause2() {
     var check = document.createElement('div');
     check.classList.add('check');
     check.classList.add('check' + "_" + x);
-    var ms3 = ms2 + 4;
+    ms2 = parseInt(ms2);
+    var ms3 = 4 + ms2;
+    if (ms3 === 1000) {
+        ms3 = "000"
+    } else if (ms3 < 10) {
+        ms3 = "0" + "0" + ms3;
+        } else if (ms3 < 100) {
+            ms3 = "0" + ms3;
+        } else {
+            ms3 = ms3
+        }
+    console.log('ms2', ms2);
+    console.log('ms3', ms3);
     check.innerHTML = (x + "." + "STOP" + " " + h2 + ":" + m2 + ":" + s2 + "." + ms3);
     body.appendChild(check);
     console.log(check);
@@ -244,22 +256,13 @@ function timerPause2() {
 function split2() {
     x = x + 1;
     'use strict';
-    if (ms2 === 0) {
-        ms3 = "000"
-    } else if (ms2 < 10) {
-        ms3 = "0" + "0" + ms2;
-        } else if (ms2 < 100) {
-            ms3 = "0" + ms2;
-        } else {
-            ms3 = ms2
-        }
     var check = document.createElement('div');
     console.log(x);
-    console.log(s2);
+    console.log(ms2);
     console.log("SPLIT");
     check.classList.add('check');
     check.classList.add('check' + "_" + x);
-    check.innerHTML = (x + "." + "SPLIT" + " " + h2 + ":" + m2 + ":" + s2 + "." + ms3);
+    check.innerHTML = (x + "." + "SPLIT" + " " + h2 + ":" + m2 + ":" + s2 + "." + ms2);
     body.appendChild(check);
     console.log(check);    
 }
