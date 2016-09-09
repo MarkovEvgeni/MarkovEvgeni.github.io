@@ -135,6 +135,7 @@ function closeEnclosedMenu (el, t, f) {
                 steps -= 1;
                 } else {
                     clearInterval(interval);
+                    enclosedMenu.style.overflow = 'hidden';
                     }   
             }, time / steps);
            }
