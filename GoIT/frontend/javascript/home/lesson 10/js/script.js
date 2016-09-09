@@ -108,19 +108,17 @@ function openEnclosedMenu(el, t, f) {
            }
 }
 function closeEnclosedMenu (el, t, f) {
-    t = 240;
+    t = 960;
     f = 24;
     var fps = f;
     var time = t;
     steps = time / fps;
-    var visota = 205;
     el.preventDefault();
     var enclosedMenu = this.lastElementChild;
     enclosedMenu.style.backgroundColor = "rgb(255,100,100)";
+    var height = parseFloat(enclosedMenu.style.height);
     enclosedMenu.style.overflow = 'hidden';
-    var blokirator = parseFloat(enclosedMenu.style.height);
-    console.log('blokirator', blokirator);
-    if (blokirator < 205) {
+    if (height < 205) {
         steps = 0;
         setTimeout(function () {
             enclosedMenu.style.overflow = 'hidden';
@@ -128,18 +126,17 @@ function closeEnclosedMenu (el, t, f) {
             enclosedMenu.style.backgroundColor = "rgb(255,100,100)";
         }, 40);
         enclosedMenu.style.height = 0 + 'px';
-        console.log(steps);
     } else {var interval = setInterval(function () {
-        if (steps > 0) {
-            var step = 205 / (time / fps);
-            visota -= step;
-            enclosedMenu.style.height = visota + "px";
-            steps -= 1;
-        } else {
-            clearInterval(interval);
-            enclosedMenu.style.overflow = 'hidden';
-        }
-    }, time / steps);
+        console.log('steps', steps);
+        if (height > 0) {
+                var step = 205 / (time / fps);
+                height -= step;
+                enclosedMenu.style.height = height + "px";
+                steps -= 1;
+                } else {
+                    clearInterval(interval);
+                    }   
+            }, time / steps);
            }
 }
 var hoverItem2 = document.querySelectorAll('.hidenMenu2');
