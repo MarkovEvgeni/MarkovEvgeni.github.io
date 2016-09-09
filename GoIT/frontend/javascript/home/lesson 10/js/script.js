@@ -71,8 +71,6 @@ function openEnclosedMenu(el, t, f) {
     el.preventDefault();
     var enclosedMenu = this.lastElementChild;
     var blokirator = parseFloat(enclosedMenu.style.height);
-    console.log('blokirator', blokirator);
-    console.log('NAVELI');
     if (blokirator > 0) {
         console.log("oops. It's already opened.");
     } else {interval = setInterval(function () {
@@ -81,15 +79,14 @@ function openEnclosedMenu(el, t, f) {
             visota += step;
             enclosedMenu.style.height = visota + "px";
             steps -= 1;
-            console.log("steps", steps);
         } else {
             clearInterval(interval);
+            console.log('pizdec');
             enclosedMenu.style.overflow = 'visible';
             var color1 = 255;
             var color2 = 100;
             var color3 = 100;
             colors = color1 + color2;
-            console.log(colors);
             interval2 = setInterval(function () {
                 if (colors > 150) {
                     color1 -= 6;
@@ -97,8 +94,6 @@ function openEnclosedMenu(el, t, f) {
                     color3 -= 5;
                     colors = color2 + color3;
                     enclosedMenu.style.backgroundColor = "rgb(" + color1 + "," + color2 + "," + color3 + ")";
-                    console.log(enclosedMenu.style.backgroundColor);
-                    console.log(colors);
                 } else {
                     clearInterval(interval2);
                 }
@@ -112,7 +107,7 @@ function closeEnclosedMenu (el, t, f) {
     f = 24;
     var fps = f;
     var time = t;
-    steps = time / fps;
+    steps2 = time / fps;
     el.preventDefault();
     var enclosedMenu = this.lastElementChild;
     enclosedMenu.style.backgroundColor = "rgb(255,100,100)";
@@ -121,23 +116,23 @@ function closeEnclosedMenu (el, t, f) {
     if (height < 205) {
         steps = 0;
         setTimeout(function () {
+            console.log('OOPS');
             enclosedMenu.style.overflow = 'hidden';
             colors = 100;
             enclosedMenu.style.backgroundColor = "rgb(255,100,100)";
         }, 40);
         enclosedMenu.style.height = 0 + 'px';
     } else {var interval = setInterval(function () {
-        console.log('steps', steps);
         if (height > 0) {
                 var step = 205 / (time / fps);
                 height -= step;
                 enclosedMenu.style.height = height + "px";
-                steps -= 1;
+                steps2 -= 1;
                 } else {
                     clearInterval(interval);
                     enclosedMenu.style.overflow = 'hidden';
                     }   
-            }, time / steps);
+            }, time / steps2);
            }
 }
 var hoverItem2 = document.querySelectorAll('.hidenMenu2');
