@@ -186,6 +186,9 @@ p.section_preview_item {
         width: 60px;
     }
 }
+.white_border {
+    height: 100%;
+}
 .section_image_item_link {
     background-color: rgba(203,165,218,0.8);
     background-image: url(../img/play_ico.png);
