@@ -1,0 +1,76 @@
+.wrapper {
+    margin: 0 auto;
+    padding: 10px;
+    width: 800px;
+}
+.container {
+    margin-bottom: 10px;
+}
+h2 {
+    cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+}
+.task {
+    float: left;
+    font-family: 'Ubuntu', sans-serif;
+    padding: 5px;
+    width: 380px;
+}
+.task p {
+    margin-bottom: 5px;    
+}
+.task ul {
+    list-style: disc;
+    list-style-position: inside;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    font-style: italic;
+}
+.solution {
+    float: right;
+    width: 380px;
+    font-family: 'Ubuntu', sans-serif;
+    padding: 5px;
+}
+.solution p {
+    margin-left: 20px;
+    padding-bottom: 5px;
+}
+.open {
+    background-image: url(../img/arrow.png);
+    background-repeat: no-repeat;
+    background-position: 690px -40px;
+}
+.close {
+    background-image: url(../img/arrow.png);
+    background-repeat: no-repeat;
+    background-position: 740px 5px;
+}
+.module-description p {
+    font-family: 'PT Serif Caption', serif;
+    font-style: italic;
+    font-size: 18px;
+    border-top: 3px solid rgba(59,60,54,0.3);
+    padding: 5px;
+}
+.container {
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 5px;
+}
+.clearfix:after {
+    clear: both;
+    content: "";
+    display: block;
+}
+h3 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 5px;
+    text-align: center;
+}
