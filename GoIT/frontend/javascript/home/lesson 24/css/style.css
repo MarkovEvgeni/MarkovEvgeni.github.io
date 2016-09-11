@@ -1,9 +1,78 @@
+body {
+    cursor: url(../img/cursor.png), default;
+}
+.wrapper {
+    font-family: "ClassicConsole", "webpixel_bitmapbold";
+    margin: 0 auto;
+    min-width: 500px;
+}
+h1 {
+    background-color: #008081;
+    font-family: "webpixel_bitmapbold";
+    font-size: 120px;
+    width: 500px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding: 10px;
+}
 span {
     padding-left: 5px;
+    cursor: url(../img/cursor-pointer.png), default;
+}
+.item-delete {
+    background-image: url(../img/close.gif);
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    margin-left: 30px;
+    padding-left: 0px;
+}
+body {
+    background: url(../img/small_steps.png);
+}
+input[type="text"] {
+    border-width: 5px;
+    background-color: #010080;
+    color: #4cd4fa;
+    padding: 10px;
+}
+input:focus,
+button:focus {
+    outline: none;
+}
+.controls {
+    padding: 5px;
+}
+button {
+    color: blue;
+    font-family: "ClassicConsole", "webpixel_bitmapbold";
+    background-color: peachpuff;
+    border-width: 5px;
+    font-size: 70px;
+    margin-top: 0px;
+    padding: 10px;
+    text-decoration: underline;
+}
+button:hover {
+    cursor: url(../img/cursor-pointer.png), pointer;
+}
+button:active {
+    color: white;
+    background-color: #010080;
 }
 ul {
-    list-style: circle;
+    font-size: 80px;
+    list-style: url(../img/star.gif);
+    margin-bottom: 20px;
+    margin-top: 20px;
 }
-span:hover {
-    cursor: pointer;
+input {
+    font-family: "ClassicConsole";
+    font-size: 70px;
+}
+input.temp {
+    font-size: 80px;
+    background-color: #010080;
+    color: #4cd4fa;
 }

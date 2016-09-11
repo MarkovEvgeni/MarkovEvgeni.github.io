@@ -1,0 +1,19 @@
+@font-face {
+    font-family: 'webpixel_bitmapbold';
+	src: url('../fonts/webpixel_bitmap_boldt.eot');
+	src: url('../fonts/webpixel_bitmap_bold.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/webpixel_bitmap_bold.woff2') format('woff2'),
+	url('../fonts/webpixel_bitmap_bold.woff2') format('woff2'),
+	url('../fonts/webpixel_bitmap_bold.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+    font-family: 'ClassicConsole';
+	src: url('../fonts/ClassicConsole.eot');
+	src: url('../fonts/ClassicConsole.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/ClassicConsole.woff') format('woff'),
+	url('../fonts/ClassicConsole.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}

@@ -17,6 +17,9 @@ define(
                         return;
                     }
                     self.data.push(item);
+                    
+                    localStorage.setItem('data', JSON.stringify(self.data));
+                    
                     return self.data;
                 };
 
@@ -29,6 +32,8 @@ define(
                     }
 
                     self.data.splice(index, 1);
+                    
+                    localStorage.setItem('data', JSON.stringify(self.data));
 
                     return self.data;
                 };
@@ -42,6 +47,9 @@ define(
                     }
 
                     self.data.splice(index, 1, item2);
+                    
+                    localStorage.setItem('data', JSON.stringify(self.data));
+                    
                     return self.data;
 
                 };

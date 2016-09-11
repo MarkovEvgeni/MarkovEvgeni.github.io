@@ -4,26 +4,26 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
         <title>Задание Javascript урок 24</title>
+        <link rel="stylesheet" href="css/fonts.css">
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
-<!--       <script data-main="js/script" src="js/require.js"></script>-->
        <script src="js/script-built.js"></script>
 <!--        requirejs включена в сборку билд-файла-->
        <script type="text/template" id="wrapper-template">
            <div class="wrapper">
-               <h1>Simple Todo List</h1>
+               <h1>To-Do List</h1>  
                <ul class="item-list">
                </ul>
                <div class="controls">
                    <input type="text" class="item-value">
-                   <button class="item-add">Add</button>
+                   <button class="item-add">Add task</button>
                </div>
            </div>
        </script>
        <script type="text/template" id="list-template">
        <% for (var i=0; i<data.length; i++) { %>
-            <li><span class="item"><%= data[i] %></span><span data-value="<%= data[i] %>" class="item-delete">x</span></li>
+            <li><span class="item"><%= data[i] %></span><span data-value="<%= data[i] %>" class="item-delete"></span></li>
         <% }; %>
        </script>
     </body>

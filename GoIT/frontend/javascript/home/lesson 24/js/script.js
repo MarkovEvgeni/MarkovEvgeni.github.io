@@ -7,16 +7,17 @@ require(
         'Controller'
     ],
     function ($, _, Model, View, Controller) {
-        
-//        console.log($);
-//        console.log(_);
-//        console.log(Model);
-//        console.log(View);
-//        console.log(Controller);
 
         "use strict";
     
-        var firstToDoList = ['do the job', 'get paid'];
+        var firstToDoList = localStorage.getItem('data');
+        
+        firstToDoList = JSON.parse(firstToDoList);
+        
+        if (firstToDoList.length === 0) {
+            firstToDoList = ['PHASE 1: Collect underpants', 'PHASE 2: ?', 'PHASE 3: PROFIT !!!']
+            } else {};
+        
         var model = new Model(firstToDoList);
         var view = new View(model);
         var controller = new Controller(model, view);
