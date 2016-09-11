@@ -14,7 +14,7 @@ require(
         
         firstToDoList = JSON.parse(firstToDoList);
         
-        if (firstToDoList.length === 0) {
+        if (firstToDoList === null) {
             firstToDoList = ['PHASE 1: Collect underpants', 'PHASE 2: ?', 'PHASE 3: PROFIT !!!']
             } else {};
         
