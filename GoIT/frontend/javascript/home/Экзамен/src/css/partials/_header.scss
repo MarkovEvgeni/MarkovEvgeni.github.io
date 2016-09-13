@@ -1,0 +1,47 @@
+.clearfix:after {
+    clear: both;
+    content: "";
+    display: block;
+}
+header {
+    background-image: url(../../img/cover.jpg);
+    background-size: cover;
+    height: 700px;
+    .wrapper {
+        box-sizing: border-box;
+        height: 100%;
+        margin: 0 auto;
+        width: 940px;
+        .authorization {
+            padding-top: 38px;
+            font-family: "Montserrat", "Arial", serif;
+            font-weight: bold;
+            a.main {
+                color: $white;
+                display: block;
+                float: left;
+                font-size: 20px;
+                padding-top: 10px;
+                text-decoration: none;
+            }
+            a.login,
+            a.signup {
+                color: $white;
+                float: right;
+                font-size: 14px;
+                text-decoration: none;
+            }
+            a.login {
+                margin-top: 11px;
+                margin-right: 20px;
+            }
+            a.signup {
+                border: 2px solid $white;
+                border-radius: 20px;
+                padding: 9px;
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+        }
+    }
+}
