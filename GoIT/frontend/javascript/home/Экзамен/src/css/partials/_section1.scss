@@ -1,0 +1,33 @@
+.wrapper2 {
+    width: 940px;
+    margin: 0 auto;
+}
+.how_it_works {
+    box-sizing: border-box;
+    border-top: 1px solid transparent;
+    height: 580px;
+    .title {
+        color: $coal;
+        font-family: 'montserrat', 'Arial', sans-serif;
+        font-size: 22px;
+        font-weight: bold;
+        margin-top: 96px;
+        text-align: center;
+    }
+    .carousels {
+        margin-top: 36px;
+        .carousels_item {
+            border: 1px solid red;
+            border-radius: 3px;
+            box-sizing: border-box;
+            display: block;
+            float: left;
+            margin-right: 20px;
+            height: 400px;
+            width: 300px;
+        }
+        .carousels_item:last-child {
+            margin-right: 0px;
+        }
+    }
+}

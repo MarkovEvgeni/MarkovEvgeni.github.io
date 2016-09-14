@@ -1,0 +1,17 @@
+.ideas {
+    border-top: 1px solid transparent;
+    text-align: center;
+    .title {
+        color: $coal;
+        font-family: 'montserrat', "arial", sans-serif;
+        font-size: 22px;
+        font-weight: bold;
+        margin-top: 98px;
+    }
+    .mosaic {
+        border: 1px solid black;
+        box-sizing: border-box;
+        height: 970px;
+        margin-top: 36px;
+    }
+}

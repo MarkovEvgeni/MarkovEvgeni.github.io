@@ -1,0 +1,61 @@
+footer {
+    border-top: 4px solid $raspberry;
+    padding-top: 39px;
+    .main {
+        color: $raspberry;
+        display: block;
+        float: left;
+        font-family: "montserrat", "arial", "sans-serif";
+        font-size: 16px;
+        font-weight: bold;
+        margin-right: 60px;
+        text-align: left;
+        text-decoration: none;
+        width: 160px;
+    }
+    .footer_list {
+        float: left;
+        margin-right: 60px;
+        padding-left: 20px;
+        width: 80px;
+        .footer_list_item {
+            color: $coal;
+            font-family: "montserrat", "arial", "sans-serif";
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 9px;
+            a {
+                color: $grey;
+                font-family: "roboto", "arial", "sans-serif";
+                font-size: 14px;
+                font-weight: lighter; 
+                text-decoration: none;
+            }
+        }
+        .footer_list_item:first-child {
+            margin-bottom: 15px;
+        }
+    }
+    .designed {
+        float: right;
+        width: 110px;
+        .designed_header {
+            color: $designed;
+            font-family: "montserrat", "arial", "sans-serif";
+            font-size: 10px;
+            font-weight: bold;
+            letter-spacing: 0.1em;
+            margin-bottom: 8px;
+            text-align: right;
+        }
+        .designed_link {
+            background-image: url(../img/areto.png);
+            background-repeat: no-repeat;
+            display: block;
+            height: 24px;
+        }
+//        .designed_link:hover {
+//            background-position: 0px -24px;
+//        }
+    }
+}

@@ -5,7 +5,7 @@
 }
 .wrapper {
     margin: 0 auto;
-    width: 1440px;
+    max-width: 1440px;
 }
 header {
     background-image: url(../img/cover.jpg);
@@ -18,13 +18,14 @@ header {
         width: 940px;
         .authorization {
             padding-top: 38px;
-            font-family: "Montserrat", "Arial", serif;
+            font-family: "montserrat", "Arial", serif;
             font-weight: bold;
             a.main {
                 color: $white;
                 display: block;
                 float: left;
                 font-size: 20px;
+                letter-spacing: 0.05em;
                 padding-top: 10px;
                 text-decoration: none;
             }
@@ -33,6 +34,7 @@ header {
                 color: $white;
                 float: right;
                 font-size: 14px;
+                letter-spacing: 0.025em;
                 text-decoration: none;
             }
             a.login {
@@ -46,6 +48,35 @@ header {
                 padding-left: 15px;
                 padding-right: 15px;
             }
+        }
+    }
+    .promo {
+        color: $white;
+        font-family: "montserrat", "Arial", sans-serif;
+        font-weight: bold;
+        margin: 142px auto 0px;
+        text-align: center;
+        width: 500px;
+        .promo_title {
+            line-height: 1.2;
+            font-size: 52px;   
+        }
+        .promo_text {
+            font-family: "robotolight", sans-serif;
+            font-size: 24px;
+            font-weight: normal;
+            margin-top: 27px;
+        }
+        .promo_link {
+            background-color: $raspberry;
+            border-radius: 20px;
+            color: $white;
+            display: block;
+            font-size: 14px;
+            margin: 35px auto;
+            padding: 13px 0px;
+            text-decoration: none;
+            width: 225px;
         }
     }
 }
