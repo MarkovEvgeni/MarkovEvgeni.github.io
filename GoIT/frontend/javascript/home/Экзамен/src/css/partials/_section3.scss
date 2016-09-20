@@ -9,9 +9,30 @@
         margin-top: 98px;
     }
     .mosaic {
-        border: 1px solid black;
         box-sizing: border-box;
-        height: 970px;
         margin-top: 36px;
+        .masonry_item {
+            margin: 5px;
+        }
+        .text_container:before {
+            content:'';
+            height: 100%;
+            display: inline-block; 
+            vertical-align: middle;
+        }
+        .text_container {
+            background-color: darkorange;
+            color: $white;
+            font-family: 'montserrat', "arial", sans-serif;
+            font-size: 20px;
+            font-weight: bold;
+            height: 310px;
+            text-align: center;
+            .inner_text {
+                display: inline-block;
+                vertical-align: middle;
+                width: 98%;
+            }
+        }
     }
 }
