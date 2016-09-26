@@ -1,9 +1,7 @@
 $(function () {
     
     var hiddenFriends = $('.hidden-list')[0];
-    console.log(hiddenFriends);
     var showButton = $('.partners__link')[0];
-    console.log(showButton);
     $(showButton).on("click", function (e) {
         e.preventDefault();
         if ($(hiddenFriends).hasClass("open")) {
@@ -40,14 +38,12 @@ $(function () {
         var blocks = document.querySelectorAll('.masonry__item');
         if (blocks.length > 6) {
             var delElem = document.querySelector('.masonry__item');
-            console.log(delElem);
             delElem.remove();     
         } else {}
     };
    
     // Функция, которая добавляет блок с новым запросом
     function addBlock () {
-        console.log(textValue);
         var mosaic = document.getElementsByClassName('mosaic');
         var div = document.createElement('div');
         currentDiv = div;
@@ -79,8 +75,6 @@ $(function () {
         
         var urlQuery = "https://www.googleapis.com/customsearch/v1?q=" + textValue + "&cx=016732624816471061428:3gt2rcxo7lk&imgSize=medium&fileType=jpg&num=1&searchType=image&imgDominantColor=pink&key=AIzaSyBncOk0OKD0p7SEqpnCnj68lZAl0zqxxvo";
         
-        console.log(urlQuery);
-        
         var xmlRequest = new XMLHttpRequest();
         xmlRequest.open('GET', urlQuery, true);
         xmlRequest.send();
@@ -89,7 +83,7 @@ $(function () {
           if (xmlRequest.readyState != 4) return;
 
           if (xmlRequest.status != 200) {
-            alert("Изображение по данному запросу не получено " + xmlRequest.status + ': ' + xmlRequest.statusText);
+            console.log("Изображение по данному запросу не получено " + xmlRequest.status + ': ' + xmlRequest.statusText);
           } else {
               var data = JSON.parse(xmlRequest.responseText);
               var imageLink = data.items[0].link;
@@ -123,7 +117,6 @@ $(function () {
             url: requestStr,
             dataType: "jsonp",
             success: function (response) {
-                console.log(response);
                 textValue = response.Word;
                 removeBLock();
                 addBlock();
@@ -134,7 +127,6 @@ $(function () {
     
     
     var button = document.getElementsByClassName('search__btn');
-    console.log(button);
     button[0].addEventListener('click', addElement)
     
     function addElement (event) {
