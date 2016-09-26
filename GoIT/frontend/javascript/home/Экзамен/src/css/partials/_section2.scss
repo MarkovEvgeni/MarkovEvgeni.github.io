@@ -2,22 +2,25 @@
     border-top: 1px solid transparent;
     box-sizing: border-box;
     text-align: center;
-    .partners_title {
+    .hidden-list {
+        display: none;
+    }
+    .partners__title {
         color: $coal;
         font-family: 'montserrat', 'Arial', sans-serif;
         font-size: 22px;
         font-weight: bold;
-        margin-top: 72px;
+        line-height: 1.2;
+        margin-top: 35px;
+        padding-right: 8px;
         text-align: center;
     }
     .partners-list {
-        margin-top: 34px;
-        .partners-item {
-            float: left;
-            margin-right: 20px;
+        .partners__item {
+            margin: 14px auto 26px;
             text-align: center;
             width: 220px;
-            .partners-item_photo {
+            .partners__item__photo {
                 background-image: url(../img/photo.png);
                 background-repeat: no-repeat;
                 margin: 0 auto;
@@ -25,7 +28,7 @@
                 border-radius: 60px;
                 height: 120px;
                 width: 120px;
-                .partners-item_photo_icon {
+                .partners__item__photo__icon {
                     border: 4px solid $white;
                     background-color: $raspberry;
                     background-image: url(../img/icons.png);
@@ -40,7 +43,7 @@
                     width: 40px;
                 }
             }
-            .partners-item_name {
+            .partners__item__name {
                 color: $coal;
                 display: inline-block;
                 font-family: "montserrat", "arial", sans-serif;
@@ -49,7 +52,7 @@
                 margin-top: 21px;
                 text-decoration: none;
             }
-            .partners-item_quote {
+            .partners__item__quote {
                 color: $grey;
                 display: inline-block;
                 font-family: "roboto", "arial", sans-serif;
@@ -61,45 +64,130 @@
                 text-decoration: none;
             }
         }
-        .partners-item:nth-child(2) {
-            .partners-item_photo {
+        .partners__item:nth-child(2) {
+            .partners__item__photo {
                 background-position: -120px 0px;
-                .partners-item_photo_icon {
+                .partners__item__photo__icon {
                     background-color: $turquoise;
                     background-position: -40px -4px;
                 }
             }
         }
-        .partners-item:nth-child(3) {
-            .partners-item_photo {
+        .partners__item:nth-child(3) {
+            margin-bottom: 25px;
+            .partners__item__photo {
                 background-position: -240px 0px;
-                .partners-item_photo_icon {
+                .partners__item__photo__icon {
                     background-color: $orange;
                     background-position: -75px -4px;
                 }
             }
         }
-        .partners-item:last-child {
-            margin-right: 0px;
-            .partners-item_photo {
+        .partners__item:last-child {
+            .partners__item__photo {
                 background-position: -360px 0px;
-                .partners-item_photo_icon {
+                .partners__item__photo__icon {
                     background-color: $blue;
                     background-position: -115px -4px;
                 }
             }
         }
     }
-    .partners_link {
+    .partners__link {
         border: 2px solid $raspberry;
         border-radius: 20px;
+        box-sizing: border-box;
         color: $raspberry;
         display: inline-block;
         font-family: "montserrat", "arial", sans-serif;
         font-weight: bold;
         font-size: 14px;
-        margin-top: 35px;
-        padding: 12px 28px 10px 25px;
+        margin-right: 5px;
+        padding: 12px 1px 10px 2px;
+        width: 280px;
         text-decoration: none;
     }
+    .partners__link:hover {
+        background-color: $raspberry; 
+        color: $coal;
+    }
+}
+@media all and (min-width: 768px) {
+    .partners {
+        .partners__title {
+            margin-top: 61px;
+            padding-right: 6px;
+        }
+        .partners-list {
+            margin-top: 17px;
+            .partners__item {
+                float: left;
+                margin-left: 129px;
+                margin-right: 20px;
+                margin-bottom: 42px;
+                text-align: center;
+                width: 236px;
+                .partners__item__photo {
+                    .partners__item__photo__icon {
+                    }
+                }
+                .partners__item__name {
+                }
+                .partners__item__quote {
+                    width: 92%;
+                }
+            }
+            .partners__item:nth-child(2) {
+                margin-left: 0px;
+                margin-right: 109px;
+            }
+            .partners__item:nth-child(3) {
+                margin-left: 129px;
+                margin-right: 20px;
+            }
+            .partners__item:last-child {
+                margin-left: 0px;
+                margin-right: 109px;
+            }
+        }
+        .partners__link {
+            margin-left: 2px;
+            margin-top: 10px;
+            padding: 12px 28px 10px 27px;
+            width: 192px;
+        }
+    }    
+}
+@media all and (min-width: 940px) {
+    .partners {
+        .partners__title {
+            margin-top: 70px;
+            padding-right: 3px;
+        }
+        .partners-list {
+            margin-top: 32px;
+            .partners__item {
+                margin-bottom: 0;
+                margin-left: 0px;
+                margin-right: 20px;
+                margin-top: 0;
+                width: 220px;
+                .partners__item__quote {
+                    width: 100%;
+                }
+            }
+            .partners__item:nth-child(2) {
+                margin-right: 20px;
+            }
+            .partners__item:nth-child(3) {
+                margin-left: 0px;
+            }
+            .partners__item:last-child {
+                margin-right: 0px;
+            }
+        }
+        .partners__link {
+            margin-left: 5px;
+        }
+    }      
 }

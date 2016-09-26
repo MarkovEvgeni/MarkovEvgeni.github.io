@@ -1,64 +1,54 @@
 .wrapper2 {
-    width: 940px;
+    box-sizing: border-box;
     margin: 0 auto;
+    padding: 10px;
+    width: 320px;
 }
 .how_it_works {
     box-sizing: border-box;
     border-top: 1px solid transparent;
-    height: 580px;
+    height: 804px;
     .title {
         color: $coal;
         font-family: 'montserrat', 'Arial', sans-serif;
         font-size: 22px;
         font-weight: bold;
-        margin-top: 96px;
+        margin-top: 26px;
         text-align: center;
     }
     .carousels {
-        margin-top: 36px;
-        .carousels_item {
+        margin-top: 6px;
+        .carousels__item {
             box-sizing: border-box;
             display: block;
             float: left;
-            margin-right: 20px;
+            margin-top: 10px;
             overflow: hidden;
             position: relative;
-            height: 400px;
+            height: 240px;
             width: 300px;
             .next,
             .prev {
-                background-repeat: no-repeat;
                 width: 80px;
                 opacity: 0.5;
                 position: absolute;
                 height: 100%;
                 z-index: 2;
             }
-            .prev {
-                background-image: url(../img/prev.png);
-                background-position: 21px 153px;
-            }
             .next {
-                background-image: url(../img/next.png);
-                background-position: 29px 153px;
                 margin-left: 220px;
             }
-//            .prev:hover,
-//            .next:hover {
-//                cursor: pointer;
-//                opacity: 1;
-//            }
-            .carousels_item--slides {
+            .carousels__item--slides {
+                height: 240px;
                 position: absolute;
-                height: 400px;
                 width: 900px;
-                .carousels_item--slides--slide:before {
+                .carousels__item--slides--slide:before {
                     content:'';
 	                height: 100%;
 	                display: inline-block;
                     vertical-align: bottom;
                 }
-                .carousels_item--slides--slide {
+                .carousels__item--slides--slide {
                     background-position: 0 0;
                     background-repeat: no-repeat;
                     display: block;
@@ -110,18 +100,213 @@
                     }
                 }
                 .slide1 {
-                    background-image: url(../img/step-1.jpg)
+                    background-image: url(../img/step-1-mob.jpg)
                 }
                 .slide2 {
-                    background-image: url(../img/step-2.jpg)
+                    background-image: url(../img/step-2-mob.jpg)
                 }
                 .slide3 {
-                    background-image: url(../img/step-3.jpg)
+                    background-image: url(../img/step-3-mob.jpg)
                 }
             }
         }
-        .carousels_item:last-child {
-            margin-right: 0px;
+    }
+}
+@media all and (min-width: 768px) {
+    .wrapper2 {
+        width: 768px;
+    }
+    .how_it_works {
+        box-sizing: border-box;
+        border-top: 1px solid transparent;
+        height: 580px;
+        .title {
+            margin-top: 86px;
+            padding-left: 6px;
+        }
+        .carousels {
+            margin-top: 26px;
+            .carousels__item {
+                height: 400px;
+                margin-right: 20px;
+                width: 236px;
+                .next,
+                .prev {
+                    background-repeat: no-repeat;
+                    width: 80px;
+                    opacity: 0.5;
+                    position: absolute;
+                    height: 100%;
+                    z-index: 2;
+                }
+                .prev {
+                    background-image: url(../img/prev.png);
+                    background-position: 21px 40px;
+                }
+                .next {
+                    background-image: url(../img/next.png);
+                    background-position: 29px 40px;
+                    margin-left: 156px;
+                }
+                .carousels__item--slides {
+                    position: absolute;
+                    height: 400px;
+                    width: 708px;
+                    .carousels__item--slides--slide:before {
+                        content:'';
+                        height: 100%;
+                        display: inline-block;
+                        vertical-align: bottom;
+                    }
+                    .carousels__item--slides--slide {
+                        background-position: 0 0;
+                        background-repeat: no-repeat;
+                        display: block;
+                        float: left;
+                        height: 100%;
+                        width: 236px;
+                        .info {
+                            padding-bottom: 18px;
+                            width: 98%;
+                        }
+                    }
+                    .slide1 {
+                        background-image: url(../img/step-1-tablet.jpg)
+                    }
+                    .slide2 {
+                        background-image: url(../img/step-2-tablet.jpg)
+                    }
+                    .slide3 {
+                        background-image: url(../img/step-3-tablet.jpg)
+                    }
+                }
+            }
+            .carousels__item:last-child {
+                margin-right: 0px;
+            }
         }
     }
+}
+@media all and (min-width: 940px) {
+    .wrapper2 {
+        width: 940px;
+        margin: 0 auto;
+        padding: 0;
+    }
+    .how_it_works {
+        box-sizing: border-box;
+        border-top: 1px solid transparent;
+        height: 580px;
+        .title {
+            margin-top: 96px;
+            padding-right: 2px;
+            padding-left: 0px;
+            text-align: center;
+        }
+        .carousels {
+            margin-top: 26px;
+            .carousels__item {
+                box-sizing: border-box;
+                display: block;
+                float: left;
+                margin-right: 20px;
+                overflow: hidden;
+                position: relative;
+                height: 400px;
+                width: 300px;
+                .next,
+                .prev {
+                    background-repeat: no-repeat;
+                    width: 80px;
+                    opacity: 0.5;
+                    position: absolute;
+                    height: 100%;
+                    z-index: 2;
+                }
+                .prev {
+                    background-image: url(../img/prev.png);
+                    background-position: 21px 153px;
+                }
+                .next {
+                    background-image: url(../img/next.png);
+                    background-position: 29px 153px;
+                    margin-left: 220px;
+                }
+                .carousels__item--slides {
+                    position: absolute;
+                    height: 400px;
+                    width: 900px;
+                    .carousels__item--slides--slide:before {
+                        content:'';
+                        height: 100%;
+                        display: inline-block;
+                        vertical-align: bottom;
+                    }
+                    .carousels__item--slides--slide {
+                        background-position: 0 0;
+                        background-repeat: no-repeat;
+                        display: block;
+                        float: left;
+                        height: 100%;
+                        width: 300px;
+                        .info {
+                            box-sizing: border-box;
+                            display: inline-block;
+                            padding-left: 15px;
+                            padding-right: 15px;
+                            padding-bottom: 17px;
+                            width: 98%;
+                            .step {
+                                background-color: $raspberry;
+                                border-radius: 20px;
+                                box-sizing: border-box;
+                                color: $white;
+                                font-family: 'montserrat', 'Arial', sans-serif;
+                                font-size: 10px;
+                                font-weight: normal;
+                                height: 20px;
+                                letter-spacing: 0.2em;
+                                margin-left: 2px;
+                                text-align: center;
+                                padding-top: 5px;
+                                padding-left: 3px;
+                                text-transform: uppercase;
+                                width: 70px;
+                            }
+                            h3 {
+                                box-sizing: border-box;
+                                color: $white;
+                                font-family: 'montserrat', 'Arial', sans-serif;
+                                font-size: 24px;
+                                font-weight: bold;
+                                line-height: 1.22;
+                                margin: 15px 0 13px 0;
+                                width: 98%;
+                            }
+                            p {
+                                box-sizing: border-box;
+                                color: $designed;
+                                display: inline-block;
+                                font-family: 'robotolight', 'Arial', sans-serif;
+                                font-size: 14px;
+                                line-height: 1.2;
+                            }
+                        }
+                    }
+                    .slide1 {
+                        background-image: url(../img/step-1.jpg)
+                    }
+                    .slide2 {
+                        background-image: url(../img/step-2.jpg)
+                    }
+                    .slide3 {
+                        background-image: url(../img/step-3.jpg)
+                    }
+                }
+            }
+            .carousels__item:last-child {
+                margin-right: 0px;
+            }
+        }
+    }    
 }

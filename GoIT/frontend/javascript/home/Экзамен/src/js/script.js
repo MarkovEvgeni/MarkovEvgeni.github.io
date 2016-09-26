@@ -1,5 +1,22 @@
 $(function () {
     
+    var hiddenFriends = $('.hidden-list')[0];
+    console.log(hiddenFriends);
+    var showButton = $('.partners__link')[0];
+    console.log(showButton);
+    $(showButton).on("click", function (e) {
+        e.preventDefault();
+        if ($(hiddenFriends).hasClass("open")) {
+            $(hiddenFriends).removeClass("open");
+            $(hiddenFriends).slideUp(300);
+            $(this).html('See other partners');
+        } else {
+            $(hiddenFriends).addClass("open");
+            $(hiddenFriends).slideDown(300);
+            $(this).html('Hide partners');
+        }
+    });
+    
     var textValue; //Объявлем глобальное значение в рамках document.Ready
     var currentDiv;
     
@@ -9,7 +26,7 @@ $(function () {
       RandomWord();
       i++;
       if (i < 5) {
-        timerId = setTimeout(tick, 2000);    
+        timerId = setTimeout(tick, 3000);    
       }  else {
           clearTimeout;
       }
@@ -20,9 +37,9 @@ $(function () {
     
     // Функция, которая удаляет предыдущий блок с запросом
     function removeBLock () {
-        var blocks = document.querySelectorAll('.masonry_item');
-        if (blocks.length > 5) {
-            var delElem = document.querySelector('.masonry_item');
+        var blocks = document.querySelectorAll('.masonry__item');
+        if (blocks.length > 6) {
+            var delElem = document.querySelector('.masonry__item');
             console.log(delElem);
             delElem.remove();     
         } else {}
@@ -34,10 +51,10 @@ $(function () {
         var mosaic = document.getElementsByClassName('mosaic');
         var div = document.createElement('div');
         currentDiv = div;
-        div.className = "text_container masonry_item";
+        div.className = "text__container masonry__item";
         mosaic[0].appendChild(div);
         var divText = document.createElement('div');
-        divText.className = "inner_text";
+        divText.className = "inner__text";
         divText.innerHTML = textValue;
         div.appendChild(divText);
         image();
@@ -48,7 +65,7 @@ $(function () {
         var elem = document.querySelector('.mosaic');
         var msnry = new Masonry( elem, {
             // options
-            itemSelector: '.masonry_item',
+            itemSelector: '.masonry__item',
             columnWidth: 5,
             isAnimated: true,
             animationOptions: { 
@@ -60,7 +77,7 @@ $(function () {
     
     function image () {
         
-        var urlQuery = "https://www.googleapis.com/customsearch/v1?q=" + textValue + "&cx=016732624816471061428:3gt2rcxo7lk&imgSize=medium&fileType=jpg&num=1&searchType=image&key=AIzaSyBncOk0OKD0p7SEqpnCnj68lZAl0zqxxvo";
+        var urlQuery = "https://www.googleapis.com/customsearch/v1?q=" + textValue + "&cx=016732624816471061428:3gt2rcxo7lk&imgSize=medium&fileType=jpg&num=1&searchType=image&imgDominantColor=pink&key=AIzaSyBncOk0OKD0p7SEqpnCnj68lZAl0zqxxvo";
         
         console.log(urlQuery);
         
@@ -116,7 +133,7 @@ $(function () {
     };
     
     
-    var button = document.getElementsByClassName('search_btn');
+    var button = document.getElementsByClassName('search__btn');
     console.log(button);
     button[0].addEventListener('click', addElement)
     
@@ -126,7 +143,7 @@ $(function () {
         
         //Получаем рисунок согласно запросу
         
-        textValue = document.getElementsByClassName('search_input')[0].value;
+        textValue = document.getElementsByClassName('search__input')[0].value;
         
         if (textValue == 0) {
             RandomWord(); 

@@ -1,3 +1,7 @@
+input:focus,
+button:focus {
+    outline: none;
+}
 .search {
     border-top: 1px solid transparent;
     text-align: center;
@@ -6,20 +10,24 @@
         font-family: "montserrat", "Arial", sans-serif;
         font-size: 22px;
         font-weight: bold;
-        margin-top: 97px;
+        line-height: 1.2;
+        margin-right: 2px;
+        margin-top: 31px;
     }
-    .search_text {
+    .search__text {
         color: $coal;
         font-family: "roboto", "Arial", sans-serif;
         font-size: 18px;
         font-weight: lighter;
         letter-spacing: -0.01em;
-        margin-top: 35px;
+        margin-right: 2px;
+        margin-top: 12px;
     }
     form {
-        margin-top: 40px;
-        margin-bottom: 100px;
-        .search_input {
+        margin-bottom: 30px;
+        margin-right: 5px;
+        margin-top: 18px;
+        .search__input {
             border: 1px solid #cccccc;
             border-radius: 3px;
             box-sizing: border-box;
@@ -27,8 +35,8 @@
             font-size: 14px;
             font-weight: lighter;
             letter-spacing: -0.01em;
-            padding: 10px 14px 9px;
-            width: 240px;
+            padding: 9px 14px 10px;
+            width: 280px;
             -webkit-box-shadow: 0px 1px 0px 0px rgba(46,44,46,0.1);
             -moz-box-shadow: 0px 1px 0px 0px rgba(46,44,46,0.1);
             box-shadow: 0px 1px 0px 0px rgba(46,44,46,0.1);
@@ -40,18 +48,65 @@
             }
             
         }
-        .search_btn {
+        .search__btn {
             background-color: $raspberry;
             border: none;
             border-radius: 20px;
             color: $white;
             cursor: pointer;
+            display: block;
             font-family: "montserrat", "Arial", sans-serif;
             font-size: 14px;
             font-weight: bold;
-            margin-left: 10px;
-            padding: 13px 0px 10px 0px;
-            width: 160px;
+            margin: 10px auto;
+            padding: 12px 0px 11px 0px;
+            width: 280px;
+        }
+        .search__btn:hover {
+            color: $raspberry;
+            background-color: $coal;
+        }
+    }
+}
+@media all and (min-width: 768px) {
+    .search {
+        border-top: 1px solid transparent;
+        text-align: center;
+        .title {
+            line-height: 1;
+            margin-right: 3px;
+            margin-top: 87px;
+        }
+        .search__text {
+            letter-spacing: -0.012em;
+            margin-top: 34px;
+        }
+        form {
+            margin: 30px 2px 80px 0px;
+            .search__input {
+                padding: 9px 14px 10px;
+                width: 240px;
+            }
+            .search__btn {
+                display: inline-block;
+                margin-left: 6px;
+                padding: 12px 0px 11px 0px;
+                width: 160px;
+            }
+        }
+    }    
+}
+@media all and (min-width: 940px) {
+    .search {
+        .title {
+            margin-top: 87px;
+        }
+        form {
+            margin: 31px 0 90px;
+            .search__btn {
+                margin-right: 2px;
+                margin-left: 6px;
+            }
         }
     }
 }

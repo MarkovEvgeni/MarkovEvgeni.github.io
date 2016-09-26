@@ -1,7 +1,3 @@
-@mixin hoversocial($height) {
-    background-position-y: $height;
-}
-
 @mixin opacity($opacity) {
   opacity: $opacity;
   $opacity-ie: $opacity * 100;

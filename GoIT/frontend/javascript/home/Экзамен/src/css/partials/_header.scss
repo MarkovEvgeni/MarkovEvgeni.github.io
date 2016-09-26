@@ -10,43 +10,57 @@
 header {
     background-image: url(../img/cover.jpg);
     background-size: cover;
-    height: 700px;
+    height: 540px;
     .wrapper {
         box-sizing: border-box;
         height: 100%;
         margin: 0 auto;
-        width: 940px;
+        width: 320px;
         .authorization {
-            padding-top: 38px;
+            padding-top: 20px;
             font-family: "montserrat", "Arial", serif;
             font-weight: bold;
-            a.main {
+            a.authorization__item--main {
                 color: $white;
                 display: block;
-                float: left;
+                margin: 107px auto 0;
                 font-size: 20px;
                 letter-spacing: 0.05em;
                 padding-top: 10px;
+                text-align: center;
                 text-decoration: none;
             }
-            a.login,
-            a.signup {
-                color: $white;
-                float: right;
-                font-size: 14px;
-                letter-spacing: 0.025em;
-                text-decoration: none;
+            a.authorization__item--main:hover {
+                color: $coal;
             }
-            a.login {
-                margin-top: 11px;
-                margin-right: 20px;
-            }
-            a.signup {
-                border: 2px solid $white;
-                border-radius: 20px;
-                padding: 9px;
-                padding-left: 15px;
-                padding-right: 15px;
+            .authorization__item--signup {
+                margin: 0 auto;
+                a.login,
+                a.signup {
+                    color: $white;
+                    font-size: 14px;
+                    text-decoration: none;
+                }
+                a.login:hover,
+                a.signup:hover {
+                    color: $coal;
+                }
+                a.login {
+                    float: left;
+                    margin-top: 12px;
+                    margin-left: 82px;
+                }
+                a.signup {
+                    border: 2px solid $white;
+                    border-radius: 20px;
+                    float: right;
+                    letter-spacing: 0.025em;
+                    margin-right: 85px;
+                    padding-bottom: 8px;
+                    padding-top: 10px;
+                    padding-left: 15px;
+                    padding-right: 15px;
+                }
             }
         }
     }
@@ -54,18 +68,19 @@ header {
         color: $white;
         font-family: "montserrat", "Arial", sans-serif;
         font-weight: bold;
-        margin: 142px auto 0px;
+        margin: 30px auto 0px;
         text-align: center;
-        width: 500px;
         .promo_title {
             line-height: 1.2;
-            font-size: 52px;   
+            font-size: 30px;   
         }
         .promo_text {
             font-family: "robotolight", sans-serif;
-            font-size: 24px;
+            font-size: 18px;
             font-weight: normal;
-            margin-top: 27px;
+            line-height: 1.2;
+            margin: 9px auto 0;
+            width: 70%;
         }
         .promo_link {
             background-color: $raspberry;
@@ -73,10 +88,134 @@ header {
             color: $white;
             display: block;
             font-size: 14px;
-            margin: 35px auto;
-            padding: 13px 0px;
+            margin: 16px auto 0;
+            padding: 14px 0px 12px;
             text-decoration: none;
-            width: 225px;
+            width: 280px;
+        }
+        .promo_link:hover {
+            background-color: $coal;
+            color: $raspberry;
         }
     }
+}
+
+@media all and (min-width: 768px) {
+    header {    
+        height: 700px;
+        .wrapper {
+            width: 748px;
+            .authorization {
+                padding-top: 38px;
+                a.authorization__item--main {
+                    float: left;
+                    margin: 0 0 0 47px;
+                }
+                .authorization__item--signup {
+                    float: right;
+                    margin-right: 32px;
+                    a.login {
+                        margin-left: 0px;
+                        margin-top: 11px;
+                        margin-right: 19px;
+                    }
+                    a.signup {
+                        margin-right: 0px;
+                        padding-bottom: 8px;
+                        padding-left: 16px;
+                        padding-right: 14px;
+                        padding-top: 10px;
+                    }
+                }
+            }
+        }
+        .promo {
+            margin: 142px auto 0px;
+            padding-left: 13px;
+            text-align: center;
+            width: 500px;
+            .promo_title {
+                line-height: 1.22;
+                font-size: 52px;   
+            }
+            .promo_text {
+                font-family: "robotolight", sans-serif;
+                font-size: 24px;
+                font-weight: normal;
+                margin-top: 22px;
+                width: 100%;
+            }
+            .promo_link {
+                margin: 34px auto;
+                padding: 14px 0px 12px;
+                text-decoration: none;
+                width: 225px;
+            }
+        }
+    }   
+}
+
+@media all and (min-width: 940px) {
+    header {    
+        height: 700px;
+        .wrapper {
+            width: 940px;
+            .authorization {
+                padding-top: 38px;
+                font-family: "montserrat", "Arial", serif;
+                font-weight: bold;
+                a.authorization__item--main {
+                    color: $white;
+                    display: block;
+                    float: left;
+                    font-size: 20px;
+                    letter-spacing: 0.05em;
+                    margin: 0;
+                    padding-top: 10px;
+                    text-decoration: none;
+                }
+                .authorization__item--signup {
+                    margin: 0;
+                    a.login,
+                    a.signup {
+                        color: $white;
+                        float: right;
+                        font-size: 14px;
+                        letter-spacing: 0.025em;
+                        text-decoration: none;
+                    }
+                    a.login {
+                        margin-top: 12px;
+                        margin-right: 18px;
+                    }
+                    a.signup {
+                        border: 2px solid $white;
+                        border-radius: 20px;
+                        padding-top: 10px;
+                        padding-left: 17px;
+                        padding-right: 14px;
+                    }   
+                }
+            }
+        }
+        .promo {
+            margin: 142px auto 0px;
+            padding: 0;
+            .promo_title {
+                line-height: 1.2;
+                font-size: 52px;   
+            }
+            .promo_text {
+                line-height: 1;
+                margin-top: 26px;
+            }
+            .promo_link {
+                font-size: 14px;
+                margin: 36px auto;
+                padding: 14px 0px 12px;
+                text-decoration: none;
+                width: 225px;
+            }
+        }
+    }   
 }
