@@ -225,7 +225,7 @@ document.addEventListener('DOMContentLoaded', function () {
         function jsonp(url, callback) {
             var callbackName = 'jsonp_callback_' + Math.round(100000 * Math.random());
             window[callbackName] = function(data) {
-                delete window[callbackName];
+                window[callbackName] = null;
                 document.body.removeChild(script);
                 callback(data);
             };
