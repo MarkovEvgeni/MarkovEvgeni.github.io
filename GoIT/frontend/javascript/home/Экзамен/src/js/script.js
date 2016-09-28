@@ -53,7 +53,15 @@ if (!Array.prototype.forEach) {
     }
     // 8. Вернём undefined.
   };
-}
+};
+
+if (!('remove' in Element.prototype)) {
+    Element.prototype.remove = function() {
+        if (this.parentNode) {
+            this.parentNode.removeChild(this);
+        }
+    };
+};
 
 
 document.addEventListener('DOMContentLoaded', function () {
