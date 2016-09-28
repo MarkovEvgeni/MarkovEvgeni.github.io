@@ -16,7 +16,6 @@ document.addEventListener('DOMContentLoaded', function () {
     
     
     var nextArr = document.querySelectorAll('.next');
-    console.log(nextArr);
     var prevArr = document.querySelectorAll('.prev');
     
     for (var i = 0; i < nextArr.length; ++i) {
@@ -110,7 +109,6 @@ document.addEventListener('DOMContentLoaded', function () {
         var left = parseInt(getComputedStyle(tape).left);
         if (left == 0) {
             left = - wholeTape;
-            console.log(left);
 //            this.style.opacity = 0.5;
 //            this.style.cursor = 'default';
         } else {
