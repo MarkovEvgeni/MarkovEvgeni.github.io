@@ -1,19 +1,66 @@
-$(function () {
+document.addEventListener('DOMContentLoaded', function () {
     
-    var hiddenFriends = $('.hidden-list')[0];
-    var showButton = $('.partners__link')[0];
-    $(showButton).on("click", function (e) {
-        e.preventDefault();
-        if ($(hiddenFriends).hasClass("open")) {
-            $(hiddenFriends).removeClass("open");
-            $(hiddenFriends).slideUp(300);
-            $(this).html('See other partners');
+    var hiddenFriends = document.querySelector('.hidden-list');
+    var showButton = document.querySelector('.partners__link');
+    var etalon = document.querySelector('.etalon');
+    
+    showButton.addEventListener("click", showHideBlock);
+    
+    function showHideBlock (el, t, f) {
+        t = 400;
+        f = 24;
+        var fps = f;
+        var time = t;
+        var steps = time / fps;
+        el.preventDefault();
+        var height = hiddenFriends.offsetHeight;
+        var etalonHeight = etalon.offsetHeight;
+        if (height == 0) {
+            hiddenFriends.style.height = height + "px";
+            hiddenFriends.classList.remove('non-visible');
+            var interval = setInterval(function () {
+                if (steps>0) {
+                    var step = etalonHeight / (time/fps);
+                    height += step;
+                    hiddenFriends.style.height = height + "px";
+                    steps -= 1;
+                } else {
+                    clearInterval(interval);
+                    showButton.innerHTML = 'Hide partners';
+                }
+            }, time/fps)
         } else {
-            $(hiddenFriends).addClass("open");
-            $(hiddenFriends).slideDown(300);
-            $(this).html('Hide partners');
-        }
-    });
+            var interval = setInterval(function () {
+                if (steps>0) {
+                    var step = etalonHeight / (time/fps);
+                    height -= step;
+                    hiddenFriends.style.height = height + "px";
+                    steps -= 1;
+                } else {
+                    clearInterval(interval);
+                    hiddenFriends.classList.add('non-visible');
+                    showButton.innerHTML = 'See other partners';
+                }
+            }, time/fps)
+        }  
+    }
+    
+
+// Реализация с помощью jQuery    
+//    var hiddenFriends = $('.hidden-list')[0];
+//    var showButton = $('.partners__link')[0];
+//    $(showButton).on("click", function (e) {
+//        e.preventDefault();
+//        if ($(hiddenFriends).hasClass("open")) {
+//            $(hiddenFriends).removeClass("open");
+//            $(hiddenFriends).slideUp(300);
+//            $(this).html('See other partners');
+//        } else {
+//            $(hiddenFriends).addClass("open");
+//            $(hiddenFriends).slideDown(300);
+//            $(this).html('Hide partners');
+//        }
+//    });
     
     var textValue; //Объявлем глобальное значение в рамках document.Ready
     var currentDiv;
@@ -30,8 +77,6 @@ $(function () {
       }
     }, 2000);
 
-    
-    
     
     // Функция, которая удаляет предыдущий блок с запросом
     function removeBLock () {
@@ -108,22 +153,50 @@ $(function () {
     
     
     // Функция, которая применяется для поиска случайных картинок
+    
     function RandomWord() {
-        
-        var requestStr = "http://randomword.setgetgo.com/get.php";
-        
-        $.ajax({
-            type: "GET",
-            url: requestStr,
-            dataType: "jsonp",
-            success: function (response) {
-                textValue = response.Word;
-                removeBLock();
-                addBlock();
-                masonry();
-            }
-        });
+      
+        function jsonp(url, callback) {
+            var callbackName = 'jsonp_callback_' + Math.round(100000 * Math.random());
+            window[callbackName] = function(data) {
+                delete window[callbackName];
+                document.body.removeChild(script);
+                callback(data);
+            };
+
+            var script = document.createElement('script');
+            script.src = url + (url.indexOf('?') >= 0 ? '&' : '?') + 'callback=' + callbackName;
+            document.body.appendChild(script);
+        }
+
+        jsonp('http://randomword.setgetgo.com/get.php', function(data) {
+           textValue = data.Word;
+            removeBLock();
+            addBlock();
+            masonry();
+        });   
     };
+    
+    
+    
+    
+    
+//    function RandomWord() {
+//        
+//        var requestStr = "http://randomword.setgetgo.com/get.php";
+//        
+//        $.ajax({
+//            type: "GET",
+//            url: requestStr,
+//            dataType: "jsonp",
+//            success: function (response) {
+//                textValue = response.Word;
+//                removeBLock();
+//                addBlock();
+//                masonry();
+//            }
+//        });
+//    };
     
     
     var button = document.getElementsByClassName('search__btn');

@@ -2,7 +2,7 @@
     border-top: 1px solid transparent;
     box-sizing: border-box;
     text-align: center;
-    .hidden-list {
+    .non-visible {
         display: none;
     }
     .partners__title {
@@ -16,6 +16,7 @@
         text-align: center;
     }
     .partners-list {
+        overflow: hidden;
         .partners__item {
             margin: 14px auto 26px;
             text-align: center;
@@ -115,11 +116,11 @@
 @media all and (min-width: 768px) {
     .partners {
         .partners__title {
+            margin-bottom: 17px;
             margin-top: 61px;
             padding-right: 6px;
         }
         .partners-list {
-            margin-top: 17px;
             .partners__item {
                 float: left;
                 margin: 14px 20px 42px 129px;
@@ -171,11 +172,11 @@
 @media all and (min-width: 940px) {
     .partners {
         .partners__title {
+            margin-bottom: 32px;
             margin-top: 70px;
             padding-right: 3px;
         }
         .partners-list {
-            margin-top: 32px;
             .partners__item {
                 margin: 0 20px 0 0;
                 width: 220px;
