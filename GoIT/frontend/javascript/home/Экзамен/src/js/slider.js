@@ -16,10 +16,19 @@ document.addEventListener('DOMContentLoaded', function () {
     
     
     var nextArr = document.querySelectorAll('.next');
+    console.log(nextArr);
     var prevArr = document.querySelectorAll('.prev');
     
-    nextArr.forEach(calculateNext);
-    prevArr.forEach(calculatePrev);
+    for (var i = 0; i < nextArr.length; ++i) {
+        calculateNext(nextArr[i]);
+    };   
+    
+    for (var i = 0; i < prevArr.length; ++i) {
+        calculatePrev(prevArr[i]);
+    };   
+    
+//    nextArr.forEach(calculateNext); forEach не рабоает с объектами NodeList в IE8
+//    prevArr.forEach(calculatePrev); forEach не рабоает с объектами NodeList в IE8
         
     function calculateNext (item) {
         var parent = item.parentNode;
