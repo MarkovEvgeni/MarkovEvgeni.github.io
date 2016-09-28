@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function () {
       RandomWord();
       i++;
       if (i < 5) {
-        timerId = setTimeout(tick, 3000);    
+        timerId = setTimeout(tick, 2000);    
       }  else {
           clearTimeout;
       }
@@ -89,11 +89,11 @@ document.addEventListener('DOMContentLoaded', function () {
    
     // Функция, которая добавляет блок с новым запросом
     function addBlock () {
-        var mosaic = document.getElementsByClassName('mosaic');
+        var mosaic = document.querySelector('.mosaic');
         var div = document.createElement('div');
         currentDiv = div;
         div.className = "text__container masonry__item";
-        mosaic[0].appendChild(div);
+        mosaic.appendChild(div);
         var divText = document.createElement('div');
         divText.className = "inner__text";
         divText.innerHTML = textValue;
@@ -199,8 +199,8 @@ document.addEventListener('DOMContentLoaded', function () {
 //    };
     
     
-    var button = document.getElementsByClassName('search__btn');
-    button[0].addEventListener('click', addElement)
+    var button = document.querySelector('.search__btn');
+    button.addEventListener('click', addElement)
     
     function addElement (event) {
         
@@ -208,7 +208,7 @@ document.addEventListener('DOMContentLoaded', function () {
         
         //Получаем рисунок согласно запросу
         
-        textValue = document.getElementsByClassName('search__input')[0].value;
+        textValue = document.querySelector('.search__input').value;
         
         if (textValue == 0) {
             RandomWord(); 
