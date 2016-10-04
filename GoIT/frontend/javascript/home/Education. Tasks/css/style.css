@@ -10,6 +10,9 @@
     padding: 10px;
     height: 200px;
 }
+a {
+    color: rgb(70,130,180);
+}
 .container h1 {
     font-family: 'Open Sans', serif;
     font-size: 24px;
@@ -30,12 +33,45 @@
     font-weight: bold;
 }
 h2 {
+    box-sizing: border-box;
     cursor: pointer;
+    display: block;
     font-family: 'Open Sans', sans-serif;
     font-size: 20px;
     font-weight: bold;
     padding: 10px;
-    text-align: center;
+    position: relative;
+    text-align: center;   
+}
+h2::before {
+    border-top: 1px solid rgb(70,130,180);
+    border-bottom: 1px solid rgb(70,130,180);
+    content: "";
+    display: block;
+    height: 39px;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    transition: transform 0.5s ease-in-out;
+    transform: scale(0,1);
+    width: 100%;
+}
+h2::after {
+    border-left: 1px solid rgb(70,130,180);
+    border-right: 1px solid rgb(70,130,180);
+    content: "";
+    display: block;
+    height: 40px;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    transition: transform 0.5s ease-in-out;
+    transform: scale(1,0);
+    width: 786px;
+}
+h2:hover::before,
+h2:hover::after {
+    transform: scale(1);
 }
 .task {
     float: left;
@@ -66,22 +102,23 @@ h2 {
 .open {
     background-image: url(../img/arrow.png);
     background-repeat: no-repeat;
-    background-position: 690px -40px;
+    background-position: 692px -37px;
 }
 .close {
     background-image: url(../img/arrow.png);
     background-repeat: no-repeat;
-    background-position: 740px 5px;
+    background-position: 744px 7px;
 }
 .module-description p {
     font-family: 'PT Serif Caption', serif;
     font-style: italic;
     font-size: 18px;
-    border-top: 3px solid rgba(59,60,54,0.3);
+    border-top: 1px solid rgba(59,60,54,0.3);
+    margin-top: 5px;
     padding: 5px;
 }
 .container {
-    border: 2px solid black;
+    border: 1px solid black;
     border-radius: 5px;
     padding: 5px;
 }
@@ -98,7 +135,7 @@ h3 {
     text-align: center;
 }
 .contents_list {
-    border: 2px solid rgb(70,130,180);
+    border: 1px solid rgb(70,130,180);
     border-radius: 5px;
     left: 10px;
     padding: 15px;
@@ -114,6 +151,7 @@ h3 {
 }
 .contents_list li:first-child {
     list-style: none;
+    padding-bottom: 10px;
     text-align: center;
     text-transform: uppercase;
 }
