@@ -1,0 +1,217 @@
+.clearfix:after {
+    clear: both;
+    content: "";
+    display: block;
+}
+.wrapper {
+    margin: 0 auto;
+    max-width: 1440px;
+}
+header {
+//    position: relative;
+//    z-index: 2;
+    .header__background {
+        background-image: url(../img/anthracite.jpg);
+        -webkit-box-shadow: 0px 2px 10px 1px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 2px 10px 1px rgba(0,0,0,0.75);
+        box-shadow: 0px 2px 10px 1px rgba(0,0,0,0.75);
+    }
+    .contact {
+        background-color: rgba(255,255,255,0.5);
+    }
+    .wrapper {
+        width: 960px;
+        .logo {
+            border: 5px solid red;
+            color: black;
+            float: left;
+            font-family: sans-serif;
+            font-size: 40px;
+            font-weight: bold;
+            padding: 20px;
+            height: 200px;
+            width: 300px;
+        }
+        .contact_information {
+            color: white;
+            float: right;
+            height: 200px;
+            padding: 20px;
+            width: 500px;
+            div {
+                margin-top: 10px;
+                text-align: right;
+                a {
+                    color: black;
+                    font-family: 'Roboto Condensed', sans-serif;
+                    font-size: 30px;
+                    font-weight: bold;
+                    text-decoration: none;
+                }
+                a:hover {
+                    color: orange;
+                    text-shadow: 3px 1px 2px rgba(0, 0, 0, 1);
+                }
+            }
+            h1 {
+                color: orange;
+                font-family: 'Roboto Condensed', sans-serif;
+                font-size: 40px;
+                font-weight: bold;
+                text-align: right;
+                margin-bottom: 10px;
+                text-shadow: 3px 1px 2px rgba(0, 0, 0, 1);
+            }
+            h3 {
+                color: black;
+                font-family: 'Roboto', sans-serif;
+                font-size: 16px;
+                font-weight: bold;
+                text-align: right;
+//                text-shadow: 1px 1px 1px rgba(255, 255, 255, 1);
+            }
+        }
+        .main-menu {
+                background-color: rgba(0,0,0,0.6);
+            ul {
+                width: 820px;
+                margin: 0 auto;
+                li {
+                    float: left;
+                    margin-left: 10px;
+                    a {
+                        color: white;
+                        display: block;
+                        font-family: sans-serif;
+                        font-weight: bold;
+                        text-decoration: none;
+                        padding: 16px;
+                    }
+                    a:hover {
+                        color: orange;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//@media all and (min-width: 768px) {
+//    header {    
+//        height: 700px;
+//        .wrapper {
+//            width: 748px;
+//            .authorization {
+//                padding-top: 38px;
+//                a.authorization__item--main {
+//                    float: left;
+//                    margin: 0 0 0 47px;
+//                }
+//                .authorization__item--signup {
+//                    float: right;
+//                    margin-right: 32px;
+//                    a.login {
+//                        margin-left: 0px;
+//                        margin-top: 11px;
+//                        margin-right: 19px;
+//                    }
+//                    a.signup {
+//                        margin-right: 0px;
+//                        padding-bottom: 8px;
+//                        padding-left: 16px;
+//                        padding-right: 14px;
+//                        padding-top: 10px;
+//                    }
+//                }
+//            }
+//        }
+//        .promo {
+//            margin: 142px auto 0px;
+//            padding-left: 13px;
+//            text-align: center;
+//            width: 500px;
+//            .promo_title {
+//                line-height: 1.22;
+//                font-size: 52px;   
+//            }
+//            .promo_text {
+//                font-family: "robotolight", sans-serif;
+//                font-size: 24px;
+//                font-weight: normal;
+//                margin-top: 22px;
+//                width: 100%;
+//            }
+//            .promo_link {
+//                margin: 34px auto;
+//                padding: 14px 0px 12px;
+//                text-decoration: none;
+//                width: 225px;
+//            }
+//        }
+//    }   
+//}
+//
+//@media all and (min-width: 940px) {
+//    header {    
+//        height: 700px;
+//        .wrapper {
+//            width: 940px;
+//            .authorization {
+//                padding-top: 38px;
+//                font-family: "montserrat", "Arial", serif;
+//                font-weight: bold;
+//                a.authorization__item--main {
+//                    color: $white;
+//                    display: block;
+//                    float: left;
+//                    font-size: 20px;
+//                    letter-spacing: 0.05em;
+//                    margin: 0;
+//                    padding-top: 10px;
+//                    text-decoration: none;
+//                }
+//                .authorization__item--signup {
+//                    margin: 0;
+//                    a.login,
+//                    a.signup {
+//                        color: $white;
+//                        float: right;
+//                        font-size: 14px;
+//                        letter-spacing: 0.025em;
+//                        text-decoration: none;
+//                    }
+//                    a.login {
+//                        margin-top: 12px;
+//                        margin-right: 18px;
+//                    }
+//                    a.signup {
+//                        border: 2px solid $white;
+//                        border-radius: 20px;
+//                        padding-top: 10px;
+//                        padding-left: 17px;
+//                        padding-right: 14px;
+//                    }   
+//                }
+//            }
+//        }
+//        .promo {
+//            margin: 142px auto 0px;
+//            padding: 0;
+//            .promo_title {
+//                line-height: 1.2;
+//                font-size: 52px;   
+//            }
+//            .promo_text {
+//                line-height: 1;
+//                margin-top: 26px;
+//            }
+//            .promo_link {
+//                font-size: 14px;
+//                margin: 36px auto;
+//                padding: 14px 0px 12px;
+//                text-decoration: none;
+//                width: 225px;
+//            }
+//        }
+//    }   
+//}
