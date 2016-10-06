@@ -1,0 +1,41 @@
+section {
+    .goods {
+        display: inline-block;
+        font-family: 'Roboto Condensed', sans-serif;
+        font-size: 30px;
+        font-weight: bold;
+        text-align: center;
+    }
+    .goods::before {
+        display: inline-block;
+        content: "";
+        height: 3px;
+        width: 336px;
+        background: black;
+        margin: 0px 10px 9px 10px;
+    }
+    .goods::after {
+        display: inline-block;
+        content: "";
+        height: 3px;
+        width: 336px;
+        background: black;
+        margin: 0px 10px 9px 10px;
+    }
+    p {
+        font-family: 'Roboto Condensed', sans-serif;
+        font-size: 20px;
+        padding: 15px;
+        text-align: justify;
+        text-indent: 10px;
+    }
+    .images{
+        text-align: center;
+        img {
+            display: inline-block;
+            height: 200px;
+            margin: 8px;
+            width: 300px;
+        }
+    }
+}

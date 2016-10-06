@@ -4,19 +4,30 @@ section {
     .wrapper {
         width: 960px;
         margin: 0 auto;
-        background-color: rgba(0,0,0,0.05);
+        background-color: rgba(0,0,0,0.02);
         h1 {
-            background: rgba(255,175,75,1);
-background: -webkit-linear-gradient(rgba(255,175,75,1) 0%, rgba(255,146,10,1) 100%);
-background: -o-linear-gradient(rgba(255,175,75,1) 0%, rgba(255,146,10,1) 100%);
-background: linear-gradient(rgba(255,175,75,1) 0%, rgba(255,146,10,1) 100%);
-//            border-radius: 10px;
-            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffaf4b', endColorstr='#ff920a', GradientType=0 );
-            text-align: center;
+            display: inline-block;
             font-size: 30px;
             font-family: 'Roboto Condensed', sans-serif;
             font-weight: 900;
             padding: 10px;
+            text-align: center;
+        }
+        h1::before {
+            display: inline-block;
+            content: "";
+            height: 3px;
+            width: 336px;
+            background: black;
+            margin: 0px 10px 9px 10px;
+        }
+        h1::after {
+            display: inline-block;
+            content: "";
+            height: 3px;
+            width: 336px;
+            background: black;
+            margin: 0px 10px 9px 10px;
         }
         h3 {
             font-family: 'Roboto Condensed', sans-serif;
