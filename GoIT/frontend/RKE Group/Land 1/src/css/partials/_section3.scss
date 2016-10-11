@@ -25,9 +25,19 @@ section {
         margin: 0px 10px 9px 10px;
     }
     .grades_container {
-        div.grade:nth-child(2n) {
+        div.grade:nth-child(6) {
             .image {
                 background-image: url(../img/ako.jpeg);
+            }
+        }
+        div.grade:nth-child(3) {
+            .image {
+                background-image: url(../img/am.jpg);
+            }
+        }
+        div.grade:nth-child(4) {
+            .image {
+                background-image: url(../img/ao.jpg);
             }
         }
         div.grade {
@@ -46,6 +56,9 @@ section {
                 font-family: 'Roboto Condensed', sans-serif;
                 font-size: 20px;
                 margin: 10px;
+                span {
+                    font-weight: bold;
+                }
             }
             button {
                 display: block;

@@ -1,0 +1,31 @@
+footer {
+    background-image: url(../img/footer_back.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 20px;
+    -webkit-box-shadow: 0px -2px 10px 1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px -2px 10px 1px rgba(0,0,0,0.75);
+    box-shadow: 0px -2px 10px 1px rgba(0,0,0,0.75);
+    .wrapper {
+        width: 960px;
+        text-align: center;
+        .main-menu {
+            display: inline-block;
+            li {
+                float: left;
+                margin: 0 10px;
+                padding: 10px;
+                a {
+                    color: white;
+                    font-family: 'Roboto Condensed', sans-serif;
+                    text-shadow: 1px 0 2px #000,0 1px 2px #000,-1px 0 2px #000,0 -1px 2px #000;
+                    display: block;
+                    text-decoration: none;
+                }
+                a:hover {
+                    color: orange;
+                }
+            }
+        }
+    }
+}
