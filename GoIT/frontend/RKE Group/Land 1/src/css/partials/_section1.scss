@@ -37,4 +37,40 @@ section {
             text-indent: 10px;
         }
     }
+    .updown {
+        .arrow {
+            background-image: url(../img/arrow.png);
+            height: 45px;
+            width: 50px;
+            margin: 0 auto;
+        }
+        p {
+            display: inline-block;
+            font-size: 15px;
+            margin-top: 7px;
+            padding: 0px;
+            text-align: center;
+            text-indent: 0;
+        }
+        background-color: rgba(255,255,255,.5);
+        text-align: center;
+        position: fixed;
+        height: 70px;
+        width: 70px;
+        border: 2px solid black;
+        border-radius: 10px;
+        padding: 3px;
+        right: 5px;
+        bottom: 100px;
+        opacity: 0.3;
+        overflow: hidden;
+        -webkit-box-shadow: 3px 2px 5px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 3px 2px 5px 0px rgba(0,0,0,0.75);
+        box-shadow: 3px 2px 5px 0px rgba(0,0,0,0.75);
+    }
+    .updown:hover {
+        opacity: 1;
+        cursor: pointer;
+        background-color: rgba(200,200,200,.5);
+    }
 }

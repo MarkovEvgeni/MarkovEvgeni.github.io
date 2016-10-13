@@ -7,6 +7,9 @@
     margin: 0 auto;
     max-width: 1440px;
 }
+.hidden {
+    display: none;
+}
 header {
 //    position: relative;
 //    z-index: 2;
@@ -22,7 +25,9 @@ header {
     .wrapper {
         width: 960px;
         .logo {
-            border: 5px solid red;
+            background-image: url(../img/logo.png);
+            background-repeat: no-repeat;
+            background-position: 60px 40px;
             color: black;
             float: left;
             font-family: sans-serif;
