@@ -12,7 +12,9 @@ document.addEventListener('DOMContentLoaded', function () {
     
 //    Вешаем появление кнопки "НАВЕРХ" при прокрутке страницы
 
-    window.onscroll = function() {
+    
+    
+    function scrolledUpButton() {
         
         var displayHeight = document.documentElement.clientHeight; // Размер окна пользователя
         var scrolled = window.pageYOffset || document.documentElement.scrollTop;
@@ -21,10 +23,11 @@ document.addEventListener('DOMContentLoaded', function () {
         } else {
             upButtonHide(upButton);
         }
+    };
         
-    
+    document.addEventListener("scroll", scrolledUpButton);
+        
 //      document.getElementById('showScroll').innerHTML = scrolled + 'px';
-    }
     
 //    Создаем функцию для эффект плавной прокрутки окна
     

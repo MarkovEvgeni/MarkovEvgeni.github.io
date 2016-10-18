@@ -25,9 +25,9 @@ section {
         margin: 0px 10px 9px 10px;
     }
     .grades_container {
-        div.grade:nth-child(6) {
+        div.grade:nth-child(1) {
             .image {
-                background-image: url(../img/ako.jpeg);
+                background-image: url(../img/asha.jpg);
             }
         }
         div.grade:nth-child(3) {
@@ -38,6 +38,16 @@ section {
         div.grade:nth-child(4) {
             .image {
                 background-image: url(../img/ao.jpg);
+            }
+        }
+        div.grade:nth-child(5) {
+            .image {
+                background-image: url(../img/ak.jpg);
+            }
+        }
+        div.grade:nth-child(6) {
+            .image {
+                background-image: url(../img/ako.jpeg);
             }
         }
         div.grade {
