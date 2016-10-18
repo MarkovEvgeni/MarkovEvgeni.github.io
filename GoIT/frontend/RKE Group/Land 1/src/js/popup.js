@@ -127,8 +127,7 @@ document.addEventListener('DOMContentLoaded', function () {
 //        var grade = document.forms[0][3].value;
 //        var value = document.forms[0][4].value;
 //        console.log('Данные формы', name, telephone, email, grade, value);
-        var formData = new FormData(document.forms[0]);
-        console.log(document.forms[0]);
+        var formData = 'name=' + document.forms[0][0].value + '&telephone=' + document.forms[0][1].value + '&email=' + document.forms[0][2].value + '&grade=' + document.forms[0][3].value + '&tonnage=' +  document.forms[0][4].value;
         console.log(formData);
         
         
