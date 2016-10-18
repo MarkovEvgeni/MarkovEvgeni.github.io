@@ -132,7 +132,7 @@ document.addEventListener('DOMContentLoaded', function () {
         
         
         var xmlRequest = new XMLHttpRequest();
-        xmlRequest.open('POST', '../send.php', true);
+        xmlRequest.open('POST', 'send.php', true);
         xmlRequest.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded')
         xmlRequest.send(formData);
         
