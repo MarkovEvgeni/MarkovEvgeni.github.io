@@ -109,7 +109,7 @@ document.addEventListener('DOMContentLoaded', function () {
         var submit = document.createElement('input');
         form.appendChild(submit);
         submit.type = 'submit';
-        submit.innerHTML = 'ОФОРМИТЬ';
+        submit.value = 'ОФОРМИТЬ';
         submit.addEventListener('click', sendForm);
         var cancellation = document.createElement('div');
         form.appendChild(cancellation);
