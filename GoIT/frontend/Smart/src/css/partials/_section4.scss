@@ -1,0 +1,363 @@
+section.team {
+    border-bottom: 1px solid transparent;
+    border-top: 1px solid transparent;
+    .wrapper {
+        h1 {
+            margin-top: 138px;
+            letter-spacing: 0.005em;
+            padding-left: 2px;
+        }
+        p {
+            letter-spacing: 0;
+            margin-top: 12px;
+        }
+        .our_team {
+            margin-top: 128px;
+            margin-bottom: 177px;
+            .our_team__member {
+                position: relative;
+                float: left;
+                width: 31.5%;
+                margin: 0 1.3%;
+                -webkit-box-shadow: 0px 0px 3px 0px rgba(20,20,21,0.6);
+                -moz-box-shadow: 0px 0px 3px 0px rgba(20,20,21,0.6);
+                box-shadow: 0px 0px 3px 0px rgba(20,20,21,0.6);
+                .our_team__member__photo {
+                    background-image: url(../img/crew1.jpg);
+                    background-size: cover;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    .our_team__member__skills {
+                        background-color: #fff3f0;
+//                        display: none;
+                        height: 100%;
+                        width: 100%;
+                        text-align: center;
+                        opacity: 0;
+                        .our_team__member__skills__graphs {
+                            display: inline-block;
+                            padding: 0 15px 5px 0;
+                            vertical-align: middle;
+                            width: 42%;
+                            .skill {
+                                color: $black;
+                                font-size: 11px;
+                                line-height: 20px;
+                                margin: 5px 0 10px;
+                                text-transform: capitalize;
+                                width: 100%;
+                            }
+                            .skill:after {
+                                background-color: #ff6e47;
+                                border-right: 27px solid #817f7e;
+                                box-sizing: border-box;
+                                content: "";
+                                display: block;
+                                height: 4px;
+                                margin-top: 2px; 
+                                width: 100%;
+                            }
+                            .skill:first-child:after {
+                                border-right: 20px solid #817f7e;
+                            }
+                            .skill:last-child:after {
+                                border-right: 34px solid #817f7e;
+                            }
+                        }
+                    }
+                    .our_team__member__skills:before {
+                        content:'';
+                        height: 100%;
+                        display: inline-block;
+                        vertical-align: middle;
+                    }
+                }
+                .our_team__member__name {
+                    background-color: $white;
+                    border-radius: 3px;
+                    bottom: -24px;
+                    left: 14%;
+                    position: absolute;
+                    width: 72%;
+                    -webkit-box-shadow: 3px 6px 16px 0px rgba(20,20,21,0.08);
+                    -moz-box-shadow: 3px 6px 16px 0px rgba(20,20,21,0.08);
+                    box-shadow: 3px 6px 16px 0px rgba(20,20,21,0.08);
+                    .name {
+                        font-family: 'Open Sans', sans-serif;
+                        font-size: 30px;
+                        font-weight: 600;
+                        opacity: 0.7;
+                        padding: 18px 0 13px;
+                        text-align: center;
+                        text-transform: capitalize;
+                    }
+                    .profession {
+                        color: $black;
+                        font-size: 16px;
+                        font-weight: 300;
+                        margin: 0;
+                        opacity: 0.7;
+                        padding-bottom: 18px;
+                        text-transform: capitalize;
+                        width: 100%;
+                    }
+                    .contact {
+                        margin: 0 auto 8px;
+                        width: 90px;
+                        .icon {
+                            float: left;
+                            background-image: url(../img/fb.png);
+                            background-position: 0px 1px;
+                            background-repeat: no-repeat;
+                            border-radius: 1px;
+                            height: 20px;
+                            margin: 5px;
+                            width: 20px;
+                        }
+                        .icon:first-child,
+                        .icon:last-child {
+                            background-image: url(../img/twit.png);
+                            background-position: 0px 0px;
+                        }
+                        .icon:hover {
+                            background-color: $coral;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+            .our_team__member:hover {
+                -webkit-box-shadow: 0px 0px 38px 10px rgba(20,20,21,0.11);
+                -moz-box-shadow: 0px 0px 38px 10px rgba(20,20,21,0.11);
+                box-shadow: 0px 0px 38px 10px rgba(20,20,21,0.11);
+//                .our_team__member__skills {
+//                    opacity: 1;
+//                }
+                .our_team__member__name {
+//                    background: transparent;
+//                    bottom: 0px;
+                    border: none;
+                    -webkit-box-shadow: none;
+                    -moz-box-shadow: none;
+                    box-shadow: none;
+                    .name {
+                        padding-bottom: 9px;
+                    }
+                    .profession {
+                        color: #ff724c;
+                        padding-bottom: 11px;
+                    }
+                }
+            }
+            .our_team__member:nth-child(2) {
+                .our_team__member__photo {
+                    background-image: url(../img/crew2.jpg);
+                }
+            }
+            .our_team__member:nth-child(3) {
+                .our_team__member__photo {
+                    background-image: url(../img/crew3.jpg);
+                }
+            }
+            .our_team__member:before {
+                content: "";
+                display: block;
+                padding-top: 123.6%;
+            }
+            .our_team__member:first-child {
+                margin-left: 0;
+            }
+            .our_team__member:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+}
+@media screen and (max-width: 1169px) {
+    section.team {
+        border-bottom: 1px solid transparent;
+        border-top: 1px solid transparent;
+        .wrapper {
+            min-width: 738px;
+            margin: 0 auto;
+            h1 {
+                margin-top: 88px;
+                letter-spacing: 0.005em;
+                padding-left: 2px;
+            }
+            p {
+                letter-spacing: 0;
+                margin-top: 12px;
+            }
+            .our_team {
+                margin-top: 100px;
+                margin-bottom: 100px;
+                .our_team__member {
+                    position: relative;
+                    float: left;
+                    width: 31.5%;
+                    margin: 0 1.3%;
+                    -webkit-box-shadow: 0px 0px 3px 0px rgba(20,20,21,0.6);
+                    -moz-box-shadow: 0px 0px 3px 0px rgba(20,20,21,0.6);
+                    box-shadow: 0px 0px 3px 0px rgba(20,20,21,0.6);
+                    .our_team__member__photo {
+                        background-image: url(../img/crew1.jpg);
+                        background-size: cover;
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        .our_team__member__skills {
+                            background-color: #fff3f0;
+    //                        display: none;
+                            height: 100%;
+                            width: 100%;
+                            text-align: center;
+                            opacity: 0;
+                            .our_team__member__skills__graphs {
+                                display: inline-block;
+                                padding: 0 15px 5px 0;
+                                vertical-align: middle;
+                                width: 42%;
+                                .skill {
+                                    color: $black;
+                                    font-size: 11px;
+                                    line-height: 20px;
+                                    margin: 5px 0 10px;
+                                    text-transform: capitalize;
+                                    width: 100%;
+                                }
+                                .skill:after {
+                                    background-color: #ff6e47;
+                                    border-right: 27px solid #817f7e;
+                                    box-sizing: border-box;
+                                    content: "";
+                                    display: block;
+                                    height: 4px;
+                                    margin-top: 2px; 
+                                    width: 100%;
+                                }
+                                .skill:first-child:after {
+                                    border-right: 20px solid #817f7e;
+                                }
+                                .skill:last-child:after {
+                                    border-right: 34px solid #817f7e;
+                                }
+                            }
+                        }
+                        .our_team__member__skills:before {
+                            content:'';
+                            height: 100%;
+                            display: inline-block;
+                            vertical-align: middle;
+                        }
+                    }
+                    .our_team__member__name {
+                        background-color: $white;
+                        border-radius: 3px;
+                        bottom: -24px;
+                        left: 14%;
+                        position: absolute;
+                        width: 72%;
+                        -webkit-box-shadow: 3px 6px 16px 0px rgba(20,20,21,0.08);
+                        -moz-box-shadow: 3px 6px 16px 0px rgba(20,20,21,0.08);
+                        box-shadow: 3px 6px 16px 0px rgba(20,20,21,0.08);
+                        .name {
+                            font-family: 'Open Sans', sans-serif;
+                            font-size: 20px;
+                            font-weight: 600;
+                            opacity: 0.7;
+                            padding: 12px 0 8px;
+                            text-align: center;
+                            text-transform: capitalize;
+                        }
+                        .profession {
+                            color: $black;
+                            font-size: 16px;
+                            font-weight: 300;
+                            margin: 0;
+                            opacity: 0.7;
+                            padding-bottom: 10px;
+                            text-transform: capitalize;
+                            width: 100%;
+                        }
+                        .contact {
+                            margin: 0 auto;
+                            width: 90px;
+                            .icon {
+                                float: left;
+                                background-image: url(../img/fb.png);
+                                background-position: 0px 1px;
+                                background-repeat: no-repeat;
+                                border-radius: 1px;
+                                height: 20px;
+                                margin: 5px;
+                                width: 20px;
+                            }
+                            .icon:first-child,
+                            .icon:last-child {
+                                background-image: url(../img/twit.png);
+                                background-position: 0px 0px;
+                            }
+                            .icon:hover {
+                                background-color: $coral;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+                .our_team__member:hover {
+                    -webkit-box-shadow: 0px 0px 38px 10px rgba(20,20,21,0.11);
+                    -moz-box-shadow: 0px 0px 38px 10px rgba(20,20,21,0.11);
+                    box-shadow: 0px 0px 38px 10px rgba(20,20,21,0.11);
+//                    .our_team__member__skills {
+//                        opacity: 1;
+//                    }
+                    .our_team__member__name {
+//                        background: transparent;
+                        bottom: 0px;
+                        border: none;
+                        -webkit-box-shadow: none;
+                        -moz-box-shadow: none;
+                        box-shadow: none;
+                        .name {
+                            padding-bottom: 5px;
+                        }
+                        .profession {
+                            color: #ff724c;
+                            padding-bottom: 5px;
+                        }
+//                        .contact {
+//                            display: block;
+//                        }
+                    }
+                }
+                .our_team__member:nth-child(2) {
+                    .our_team__member__photo {
+                        background-image: url(../img/crew2.jpg);
+                    }
+                }
+                .our_team__member:nth-child(3) {
+                    .our_team__member__photo {
+                        background-image: url(../img/crew3.jpg);
+                    }
+                }
+                .our_team__member:before {
+                    content: "";
+                    display: block;
+                    padding-top: 123.6%;
+                }
+                .our_team__member:first-child {
+                    margin-left: 0;
+                }
+                .our_team__member:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+    }    
+}
