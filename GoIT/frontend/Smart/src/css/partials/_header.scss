@@ -18,6 +18,7 @@ header {
         position: relative;
         z-index: 1;
         .wrapper {
+            position: relative;
             padding: 82px 17px 385px 15px;
             .header__first_line {
                 .header__first_line__logo {
@@ -72,6 +73,60 @@ header {
                     margin: 0 auto 107px;
                     opacity: 0.65;
                     width: 60%;
+                }
+            }
+            .menu_wrapper{
+                background: $white;
+                opacity: 0.8;
+                overflow: hidden;
+                position: fixed;
+                right: 0px;
+                top:0px;
+                height: 100%;
+                width: 0px;
+                .side_menu {
+                    position: absolute;
+                    right: 10px;
+                    top: 110px;
+                    .side_menu__item {
+                        border: 1px solid transparent;
+                        a,
+                        p {
+                            border: 3px solid #000;
+                            color: #000;
+                            display:block;
+                            font-family: 'Open Sans',sans-serif;
+                            font-size: 28px;
+                            font-weight: 600;
+                            height: 100%;
+                            padding: 10px;
+                            text-decoration: none;
+                            text-transform: capitalize;
+                        }
+                        a::first-letter {
+                            color: #fc6744;
+                        }
+                        a:hover {
+                            background: rgba(0,0,0,0.2);
+                        }
+                    }
+                    .close_menu {
+                        margin: 0 auto;
+                        text-align: center;
+                        width: 60%;
+                    }
+                    .close_menu:hover {
+                        margin: 0 auto;
+                        text-align: center;
+                        width: 60%;
+                        p {
+                            color: #fc6744;
+                            border: 3px solid #fc6744; 
+                        }
+                        p:hover {
+                            cursor: pointer;
+                        }
+                    }
                 }
             }
             form {

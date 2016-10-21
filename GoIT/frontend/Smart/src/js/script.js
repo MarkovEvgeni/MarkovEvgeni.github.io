@@ -148,6 +148,33 @@ document.addEventListener('DOMContentLoaded', function () {
             })
     })
     
+    
+    function menuOpen (element) {
+        $(element).animate({"width": "210px", "padding": "5px"}, 3000, "easeOutElastic", function() {
+            $(element).addClass('open');
+        })
+    };
+    
+    function menuClose (element) {
+        $(element).animate({"width": "0px", "padding": "0px"}, 3000, "easeOutBounce", function() {
+            $(element).removeClass('open');
+        })
+    };
+    
+    
+    var menuOpener = $('.header__first_line__menu_icon');
+    menuOpener.click(function () {
+        var menu = $('.menu_wrapper')[0];
+        menuOpen(menu);
+    });
+    
+    var menuCloser = $('.close_menu');
+    menuCloser.click(function () {
+        var menu = $('.menu_wrapper')[0];
+        menuClose(menu);
+    });
+    
+    
     $('.our_team__member').each(function () {
         $(this).mouseleave(function () {
             
