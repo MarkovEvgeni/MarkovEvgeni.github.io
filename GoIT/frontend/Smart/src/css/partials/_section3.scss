@@ -43,7 +43,6 @@ section.provided_services {
             .services__selector__container {
                 margin-left: 19.64%;
                 padding: 0 7px 0;
-//                max-width: 79%;
                 .services__selector__container__item {
                     position: relative;
                     .services__selector__container__item__info {
@@ -145,7 +144,6 @@ section.provided_services {
 }
 @media screen and (max-width: 1169px) {
     section.provided_services {
-        border-bottom: 1px solid transparent;
         .wrapper {
             min-width: 738px;
             h1 {
@@ -156,127 +154,46 @@ section.provided_services {
                 margin-top: 14px;
             }
             .services {
-                box-sizing: border-box;
                 margin: 112px 0 120px 0;
                 .services__selector {
-                    float: left;
-                    width: 103px;
                     .services__selector__item {
-                        background-image: url(../img/selector_icons.png);
-                        background-position: 15px 13px;
-                        background-repeat: no-repeat;
-                        border: 1px solid rgba(20,20,21,.05);
-                        border-radius: 3px;
-                        box-sizing: border-box;
-                        margin: 7px auto;
-                        height: 92px;
-                        z-index: 3;
                     }
                     .services__selector__item:first-child, 
                     .services__selector__item:last-child {
-                        background-position: 15px -186px;
                     }
                     .services__selector__item:nth-child(3) {
-                        background-position: 15px -86px;
                     }
                     .services__selector__item:hover {
-                        -webkit-box-shadow: 0px 0px 36px 0px rgba(20,20,21,0.2);
-                        -moz-box-shadow: 0px 0px 36px 0px rgba(20,20,21,0.2);
-                        box-shadow: 0px 0px 36px 0px rgba(20,20,21,0.2);
-                        cursor: pointer;
-                        z-index: 5;
                     }
                 }
                 .services__selector__container {
-                    margin-left: 19.64%;
-                    padding: 0 7px 0;
-    //                max-width: 79%;
                     .services__selector__container__item {
-                        position: relative;
                         .services__selector__container__item__info {
-                            position: relative;
-                            z-index: 5;
-                            max-width: 530px;
                             h2 {
-                                color: $black;
-                                font-family: 'Open Sans', sans-serif;
-                                font-size: 30px;
-                                padding-top: 3px;
-                                padding-bottom: 5px;
-                                vertical-align: top;
-                                opacity: 0.75;
                             }
                             h2:after {
-                                background-color: #ff5c36;
-                                content: "";
-                                display: block;
-                                height: 3px;
-                                margin-left: 1px;
-                                margin-top: 14px;
-                                width: 57px;
                             }
                             p {
-                                background-color: $white;
-                                border-radius: 20px;
-                                color: $black;
-                                font-size: 16px;
-                                line-height: 25px;
-                                margin: 8px 3px 8px;
-                                opacity: 0.7;
-                                text-align: left;
-                                width: 100%;
                             }
                             .services__selector__container__item__info__button {
-                                background-color: $white;
-                                background-image: url(../img/plus.png);
-                                background-position: 54px 18px;
-                                background-repeat: no-repeat;
-                                bottom: -24px;
-                                border: 1px solid rgba(1,2,2,0.07);
-                                border-radius: 26px;
-                                box-sizing: border-box;
-                                margin: 28px 6px 0;
-                                width: 236px;
                                 p {
-                                    background-color: transparent;
-                                    border-radius: 0;
-                                    color: $black;
-                                    font-family: 'Open Sans', sans-serif;
-                                    font-size: 16px;
-                                    line-height: 25px;
-                                    letter-spacing: 0;
-                                    margin: 0;
-                                    padding: 15px 0 15px 19px;
-                                    text-align: center;
-                                    text-transform: capitalize;
-                                    opacity: 0.8;
                                 }
                             }
                         }
                         .services__selector__container__item__image {
-                            bottom: -46px;
-                            background-image: url(../img/iwatch.png);
-                            background-repeat: no-repeat;
                             right: -21px;
-                            position: absolute;
-                            height: 410px;
-                            width: 365px;
-                            z-index: 1;
                         }
                     }
                     .show2 {
                         .services__selector__container__item__image {
-                            background-image: url(../img/phone1.png);
                         }
                     }
                     .show3 {
                         .services__selector__container__item__image {
-                            background-image: url(../img/phone2.png);
                         }
                     }
                     .show4 {
                         .services__selector__container__item__image {
-                            background-image: url(../img/phone3.png);
                         }
                     }
                 }
