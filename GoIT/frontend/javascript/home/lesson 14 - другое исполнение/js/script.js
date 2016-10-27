@@ -147,7 +147,7 @@ document.addEventListener('DOMContentLoaded', function () {
         modal.style.display = "inline-block";
         background.appendChild(modal); // Добавляем модальное окно
         var head = document.createElement('h4');
-        head.innerHTML = 'Yuot result';
+        head.innerHTML = 'Results';
         modal.appendChild(head);
         var result1 = document.createElement('p');
         result1.innerHTML = 'You have checked answers: ' + checkedAnswers;
@@ -159,7 +159,7 @@ document.addEventListener('DOMContentLoaded', function () {
         result3.innerHTML = 'Right answers in this quiz: ' + rightAnswersQuantity;
         modal.appendChild(result3);
         var result4 = document.createElement('h4');
-        result4.innerHTML = 'You result: ' + conclusiveResult;
+        result4.innerHTML = 'Your result: ' + conclusiveResult;
         modal.appendChild(result4);
         var refresh = document.createElement('input'); // Создаем кнопку обновления страницы и сброса результата
         refresh.type = ('button');
