@@ -11,7 +11,7 @@
         <script src="js/lodash.min.js"></script>
         <script src="js/script.js"></script>                     
         <script type="text/template" id="template">
-            <h1>Тест по программированию</h1>
+            <h1>Quiz example</h1>
             <form>
             <% for (var i=0; i < name['questionsQuantity']; i++) { %>
             <h3 class="Question <%-i+1 %>"><%= name[i]['title'] %></h3>
@@ -23,7 +23,7 @@
                     <% } %>
                 <% } %>
                 <br>
-                <input type="submit" id="button" value="Проверить мои результаты">
+                <input type="submit" id="button" value="Check my results">
             </form>
         </script> 
 

@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function () {
             'check': 1
         },
         3: {
-            'title': 'Select the CMS',
+            'title': 'Select only the CMS if any',
             'answers': [
                 'Wordpress',
                 'Pure',
@@ -147,24 +147,24 @@ document.addEventListener('DOMContentLoaded', function () {
         modal.style.display = "inline-block";
         background.appendChild(modal); // Добавляем модальное окно
         var head = document.createElement('h4');
-        head.innerHTML = 'Ваш результат';
+        head.innerHTML = 'Yuot result';
         modal.appendChild(head);
         var result1 = document.createElement('p');
-        result1.innerHTML = 'Вы отметили ответов: ' + checkedAnswers;
+        result1.innerHTML = 'You have checked answers: ' + checkedAnswers;
         modal.appendChild(result1);
         var result2 = document.createElement('p');
-        result2.innerHTML = 'В том числе отметили верно: ' + usersRightAnswers;
+        result2.innerHTML = 'You have checked right answers: ' + usersRightAnswers;
         modal.appendChild(result2);
         var result3 = document.createElement('p');
-        result3.innerHTML = 'В тесте было правильных ответов: ' + rightAnswersQuantity;
+        result3.innerHTML = 'Right answers in this quiz: ' + rightAnswersQuantity;
         modal.appendChild(result3);
         var result4 = document.createElement('h4');
-        result4.innerHTML = 'Ваш результат: ' + conclusiveResult;
+        result4.innerHTML = 'You result: ' + conclusiveResult;
         modal.appendChild(result4);
         var refresh = document.createElement('input'); // Создаем кнопку обновления страницы и сброса результата
         refresh.type = ('button');
         refresh.id = ('reload');
-        refresh.value = ('Попробовать снова')
+        refresh.value = ('Try again')
         modal.appendChild(refresh);
         function rel (el) { // Функция обновления страницы
             el.preventDefault(); // Предотвращаем выполнение функции по умолчанию.
