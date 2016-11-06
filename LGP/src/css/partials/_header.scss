@@ -1,0 +1,279 @@
+body {
+    font-size: 16px;
+    font-size: 1rem;
+}
+
+h1 {
+    font-size: 2.4em;
+}
+h2 {
+    font-size: 2.2em;
+}
+h3 {
+    font-size: 2em;
+}
+h4 {
+    font-size: 1.8em;
+}
+h5 {
+    font-size: 1.6em;
+}
+h6 {
+    font-size: 1.4em;
+} 
+p {
+    font-family: 'Scada', sans-serif;
+}
+.wrapper {
+    margin: 0 auto;
+    max-width: 1140px;
+    min-width: 320px;
+}
+header {
+    .wall_of_honour {
+        background-color: $grey;
+        text-align: center;
+        input {
+            margin: 1rem auto;
+        }
+        p,
+        input{
+            display: inline-block;
+            font-size: 3em;
+        }
+        p {
+            padding: 1rem;
+        }
+        .cup1,
+        .cup2,
+        .cup3,
+        .cup4 {
+            display: none;
+        }
+    }
+    .blacktop {
+        background-color: $lightblack;
+        font-family: 'Kanit', sans-serif;
+        font-weight: 800;
+        position: relative;
+        p {
+            color: $white;
+            font-size: 5em;
+            font-style: italic;
+            letter-spacing: 0.02em;
+            margin-left: 6rem;
+            padding: 2rem;
+            text-align: right;
+        }
+        .small_logo {
+            background-image: url(../img/logo.svg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: absolute;
+            height: 14em;
+            width: 18em;
+            top: 0;
+        }
+    }
+    .main_menu {
+        background-color: $yellowgold;
+        font-family: 'Scada', sans-serif;
+        font-size: 5em;
+        position: relative;
+        .menu_button {
+            border-bottom: 0.5rem solid $lightblack;
+            text-align: center;
+            padding: 2rem;
+            font-weight: 700;
+        }
+        ul {
+            background-color: $yellowgold;
+            position: absolute;
+            top: 152px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            li {
+                border-bottom: 0.5rem solid $lightblack;
+                a {
+                    box-sizing: border-box;
+                    color: $lightblack;
+                    display: block;
+                    height: 100%;
+                    text-decoration: none;
+                    padding: 2rem;
+                }
+                a:active {
+                    background-color: $white;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width : 768px) {
+    body {
+        font-size: 8px;
+        header {
+            .wall_of_honour {
+                .wrapper {
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                }
+            }
+            .blacktop {
+                p {
+                    padding: 1rem;
+                }
+                .small_logo {
+                    z-index: 2;
+                    left: -15px;
+                }
+            }
+            .main_menu {
+                font-size: 3.5em;
+                .menu_button {
+                    display: none;
+                }
+                ul {
+                    position: relative;
+                    top: 0;
+                    flex-direction: row;
+                    justify-content: flex-end;
+                    li {
+                        border-bottom: 0;
+                        a {
+                            padding: 1rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//.clearfix:after {
+//    clear: both;
+//    content: "";
+//    display: block;
+//}
+//.hidden {
+//    display: none;
+//}
+//.wrapper {
+//    box-sizing: border-box;
+//    margin: 0 auto;
+//    max-width: 1170px; 
+//}
+//header {
+//    position: relative;
+//    .header__background {
+//        background-color: $headerwhite;
+//        position: relative;
+//        z-index: 1;
+//        .greytop {
+//            background-color: #eee;
+//            padding: 5px;
+//            font-family: 'Scada', sans-serif;
+//            text-align: center;
+//            .wrapper {
+//                display: flex;
+//                justify-content: flex-end;
+//                align-items: center;
+//                input {
+//                    margin-right: auto;
+//                    padding: 1px;
+//                    padding-left: 3px;
+//                    margin-left: 70px;
+//                    font-size: 1.1em;
+//                    font-weight: 400;
+//                    font-family: 'Scada', sans-serif;
+//                }
+//                
+//            }
+//            p {
+//                display: inline-block;
+//                margin: 0 10px;
+//                font-size: 1.1em;
+//                font-weight: 400;
+//            }
+//            .cup {
+//                margin: 0 10px;
+//                display: inline-block;
+//                height: 70px;
+//                width: 27px;
+//                background-image: url(../img/cup.svg);
+//                background-size: cover;
+//            }
+//        }
+//        .blacktop {
+//            color: #fff;
+//            font-family: 'Kanit', sans-serif;
+//            font-weight: 800;
+//            font-style: italic;
+//            font-size: 2.5em;
+//            height: 45px;
+//            background-color: #111;
+//            padding-left: 370px;
+//            letter-spacing: 0.04em;
+//        }
+//        ul {
+//            background-color: #FFB81C;
+//            .wrapper    {
+//                display: flex;
+//                justify-content: center;
+//            height: 40px;
+//            }
+//            li {
+//                position: relative;
+//                padding: 0 1em;
+//                box-sizing: border-box;
+//                border-top: 2px solid transparent;
+//                a {
+//                    color: #111;
+//                    display: block;
+//                    font-size: 1.3em;
+//                    font-family: 'Scada', sans-serif;
+////                    font-family: 'Rubik', sans-serif;
+////                    font-family: 'Cuprum', sans-serif;
+//                    font-weight: 400;
+//                    padding: 0.4em;
+//                    text-decoration: none;
+//                }
+//                .hidden_menu {
+//                    display: none;
+//                    position: absolute;
+//                    left: 0;
+//                    top: 40px;
+//                }
+//            }
+//            li:hover {
+//                border-top: 2px solid #111;
+//                background-color: white;
+//                .hidden_menu {
+//                    display: block;
+//                    flex-direction: column;
+//                    justify-content: flex-start;
+//                    background-color: white;
+//                    li {
+//                        border-top: none;
+//                        a:hover {
+//                            text-decoration: underline;
+//                        }
+//                    }
+//                }
+//            }
+//        }
+//        .logo {
+//            background-image: url(../img/logo.svg);
+//            background-repeat: no-repeat;
+//            background-size: cover;
+//            height: 74px;
+//            width: 110px;
+//            position: absolute;
+//            top: 57px;
+//            left: 260px;
+//        }
+//    }
+//}
