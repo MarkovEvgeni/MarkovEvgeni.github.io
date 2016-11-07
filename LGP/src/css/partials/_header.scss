@@ -1,7 +1,6 @@
 body {
     font-size: 16px;
     font-size: 1rem;
-    background-color: aqua;
 }
 
 h1 {
@@ -29,21 +28,22 @@ p {
     margin: 0 auto;
     max-width: 1140px;
     min-width: 320px;
+    overflow: hidden;
 }
 header {
     .wall_of_honour {
         background-color: $grey;
         text-align: center;
         input {
-            margin: 1rem auto;
+            margin: .5rem auto;
         }
         p,
         input{
             display: inline-block;
-            font-size: 3em;
+            font-size: .8em;
         }
         p {
-            padding: 1rem;
+            padding: .5rem;
         }
         .cup1,
         .cup2,
@@ -54,106 +54,242 @@ header {
     }
     .blacktop {
         background-color: $lightblack;
-        font-family: 'Kanit', sans-serif;
         font-weight: 800;
         position: relative;
-        p {
+        a {
+            box-sizing: border-box;
             color: $white;
-            font-size: 5em;
+            display: block;
+            font-family: 'Kanit', sans-serif;
+            font-size: 2em;
             font-style: italic;
+            height: 100%;
             letter-spacing: 0.02em;
-            margin-left: 6rem;
-            padding: 2rem;
+            margin-left: 2em;
+            padding: .5rem .8rem;
+            text-decoration: none;
             text-align: right;
+            width: auto;
         }
         .small_logo {
             background-image: url(../img/logo.svg);
             background-repeat: no-repeat;
             background-size: cover;
+            height: 5em;
             position: absolute;
-            height: 14em;
-            width: 18em;
             top: 0;
+            width: 7em;
+            z-index: 3;
+            a {
+                margin: 0;
+                padding: 0;
+            }
         }
     }
     .main_menu {
         background-color: $yellowgold;
         font-family: 'Scada', sans-serif;
-        font-size: 5em;
+        font-size: 1.2em;
         position: relative;
         .menu_button {
-            border-bottom: 0.5rem solid $lightblack;
+            border-bottom: 1px solid $lightblack;
             text-align: center;
-            padding: 2rem;
+            padding: .7rem;
             font-weight: 700;
+        }
+        .menu_button:hover,
+        .menu_button:focus {
+            cursor: pointer;
         }
         ul {
             background-color: $yellowgold;
             position: absolute;
-            top: 152px;
+            top: 42px;
             width: 100%;
             display: flex;
             flex-direction: column;
             li {
-                border-bottom: 0.5rem solid $lightblack;
+                border-bottom: 1px solid $lightblack;
                 a {
                     box-sizing: border-box;
                     color: $lightblack;
                     display: block;
                     height: 100%;
                     text-decoration: none;
-                    padding: 2rem;
+                    padding: .7rem .7rem .7rem .9rem;
                 }
                 a:active {
                     background-color: $white;
+                }
+            }
+            li:hover,
+            li:focus {
+                background-color: #fff;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 430px) {
+    header {
+        .blacktop {
+            a {
+                font-size: 2.5em;
+            }
+            .small_logo {
+                height: 5.8em;
+                width: 7.6em;
+            }
+        }
+        .main_menu {
+            .menu_button {
+                padding: 1rem;
+            }
+            font-size: 1.5em;
+            ul {
+                top: 57px;
+                li {
+                    a {
+                        padding: 1rem 1rem 1rem 1.4rem;
+                    }   
                 }
             }
         }
     }
 }
 
-@media screen and (min-width: 768px) {
-    body {
-        font-size: 8px;
-        background-color: red;
-    }
+@media screen and (min-width: 480px) {
     header {
         .wall_of_honour {
-            .wrapper {
-                display: flex;
-                justify-content: space-around;
-                align-items: center;
+            text-align: center;
+            input {
+                margin: .7rem auto;
+            }
+            p,
+            input{
+                display: inline-block;
+                font-size: .9em;
+            }
+            p {
+                padding: .7rem 0;
             }
         }
+    }
+}
+
+@media screen and (min-width: 530px) {
+    header {
         .blacktop {
-            p {
-                padding: 1rem;
+            a {
+                font-size: 3em;
+                margin-left: 5em;
             }
             .small_logo {
-                z-index: 2;
-                left: -15px;
+                height: 6.7em;
+                width: 8.8em;
             }
         }
         .main_menu {
-            font-size: 3.5em;
             .menu_button {
                 display: none;
             }
             ul {
+                flex-direction: row;
+                font-size: .8em;
+                justify-content: center;
                 position: relative;
                 top: 0;
-                flex-direction: row;
-                justify-content: flex-end;
                 li {
-                    border-bottom: 0;
+                    border-top: 2px solid transparent;
+                    box-sizing: border-box;
+                    border-bottom: none;
                     a {
-                        padding: 1rem;
-                    }
+                        padding: .8rem .6rem .9rem;
+                        text-align: center;
+                        
+                    }   
+                }
+                li:hover {
+                    border-top: 2px solid $lightblack;
                 }
             }
         }
     }
 }
+
+
+@media screen and (min-width: 768px) {
+    header {
+        .wall_of_honour {
+            p {
+                font-size: 1em;
+            }
+            input{
+                font-size: 1.2rem;
+            }
+            input {
+                margin: 1rem;
+            }
+        }
+        .blacktop {
+            a {
+                margin-left: 3em;
+                padding: 0em;
+                text-align: left;
+            }
+            .small_logo {
+                top: -25px;
+            }
+        }
+        .main_menu {
+            ul {
+                font-size: 1.3rem;
+                margin-left: 6rem;
+                justify-content: flex-start;
+            }
+        }
+    }
+}
+@media screen and (min-width: 1024px) {
+     header {
+        .wall_of_honour {
+            .wrapper {
+                align-items: center;
+                display: flex;
+                justify-content: center;
+                .cup1,
+                .cup2,
+                .cup3,
+                .cup4 {
+                    display: inline-block;
+                    margin: 0.1em 1em;
+                    height: 100px;
+                    width: 38px;
+                    background-image: url(../img/cup.svg);
+                    background-size: cover;
+                }
+            }
+        }
+        .blacktop {
+            a {
+                margin-left: 3em;
+                text-align: left;
+            }
+            .small_logo {
+                top: -25px;
+            }
+        }
+        .main_menu {
+            ul {
+                font-size: 1.3rem;
+                margin-left: 6rem;
+                justify-content: flex-start;
+            }
+        }
+    }
+    
+}
+
 
 //.clearfix:after {
 //    clear: both;
