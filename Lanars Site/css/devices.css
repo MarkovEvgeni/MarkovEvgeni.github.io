@@ -1,0 +1,200 @@
+.clean * {
+  animation: none;
+  transition: none !important; }
+
+.navigation-left, .navigation-right {
+  border: none;
+  height: 87px;
+  outline: none;
+  position: absolute;
+  top: 50%;
+  width: 47px;
+  z-index: 10; }
+  .navigation-left:hover, .navigation-right:hover {
+    opacity: 0.8; }
+  .navigation-left:active, .navigation-right:active {
+    opacity: 1; }
+
+.navigation-left {
+  background: url(http://f.cl.ly/items/2u0l2R3U3T0K420r2Y33/left.png);
+  left: 2em; }
+
+.navigation-right {
+  background: url(http://f.cl.ly/items/2x27331n430I0j1t0G0T/right.png);
+  right: 2em; }
+
+.products {
+  animation: fadein 3s;
+  bottom: 0;
+  height: 40em;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 70em; }
+
+.products-ipad, .products-iphone, .products-macbook {
+  animation-fill-mode: forwards !important;
+  position: absolute;
+  transition: all, 0.75s; }
+  .products-ipad .products-screenshot, .products-iphone .products-screenshot, .products-macbook .products-screenshot {
+    position: absolute;
+    transition: opacity 0.75s; }
+
+.products-ipad {
+  bottom: 1.5em;
+  z-index: 0; }
+  .products-ipad .products-screenshot {
+    left: 41px;
+    top: 47px;
+    z-index: 1; }
+
+.products-iphone {
+  bottom: 0;
+  z-index: 5; }
+  .products-iphone .products-screenshot {
+    left: 50px;
+    top: 89px;
+    z-index: 6; }
+
+.products-macbook {
+  bottom: 2em;
+  z-index: 3; }
+  .products-macbook .products-screenshot {
+    left: 189px;
+    top: 64px;
+    z-index: 4; }
+
+.products.is-first .products-ipad {
+  animation: ipad-show 0.75s; }
+  .products.is-first .products-ipad .screenshot-1 {
+    opacity: 1; }
+  .products.is-first .products-ipad .screenshot-2, .products.is-first .products-ipad .screenshot-3 {
+    opacity: 0; }
+.products.is-first .products-iphone {
+  animation: iphone-show 0.75s; }
+  .products.is-first .products-iphone .screenshot-1 {
+    opacity: 1; }
+  .products.is-first .products-iphone .screenshot-2, .products.is-first .products-iphone .screenshot-3 {
+    opacity: 0; }
+.products.is-first .products-macbook {
+  animation: macbook-right 0.75s; }
+  .products.is-first .products-macbook .screenshot-1 {
+    opacity: 1; }
+  .products.is-first .products-macbook .screenshot-2, .products.is-first .products-macbook .screenshot-3 {
+    opacity: 0; }
+
+.products.is-second .products-ipad {
+  animation: ipad-hide 0.75s; }
+  .products.is-second .products-ipad .screenshot-2 {
+    opacity: 1; }
+  .products.is-second .products-ipad .screenshot-1, .products.is-second .products-ipad .screenshot-3 {
+    opacity: 0; }
+.products.is-second .products-iphone {
+  animation: iphone-slide 0.75s; }
+  .products.is-second .products-iphone .screenshot-2 {
+    opacity: 1; }
+  .products.is-second .products-iphone .screenshot-1, .products.is-second .products-iphone .screenshot-3 {
+    opacity: 0; }
+.products.is-second .products-macbook {
+  animation: macbook-left 0.75s; }
+  .products.is-second .products-macbook .screenshot-2 {
+    opacity: 1; }
+  .products.is-second .products-macbook .screenshot-1, .products.is-second .products-macbook .screenshot-3 {
+    opacity: 0; }
+
+.products.is-third .products-ipad {
+  left: 20em; }
+  .products.is-third .products-ipad .screenshot-3 {
+    opacity: 1; }
+  .products.is-third .products-ipad .screenshot-1, .products.is-third .products-ipad .screenshot-2 {
+    opacity: 0; }
+.products.is-third .products-iphone {
+  animation: iphone-hide 0.75s; }
+.products.is-third .products-macbook {
+  animation: macbook-center 0.75s; }
+  .products.is-third .products-macbook .screenshot-3 {
+    opacity: 1; }
+  .products.is-third .products-macbook .screenshot-1, .products.is-third .products-macbook .screenshot-2 {
+    opacity: 0; }
+
+@keyframes fadein {
+  0% {
+    opacity: 0; }
+  25% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@keyframes ipad-show {
+  0% {
+    left: 20em;
+    transform: scale(0.8) rotate(2.5deg); }
+  50% {
+    left: 1em;
+    transform: scale(0.95) rotate(-2.5deg); }
+  100% {
+    left: 2em;
+    transform: scale(1); } }
+@keyframes ipad-hide {
+  0% {
+    left: 2em; }
+  100% {
+    left: 15em; } }
+@keyframes iphone-hide {
+  0% {
+    left: 3em; }
+  50% {
+    bottom: 4em;
+    left: -1em;
+    transform: scale(0.9) rotate(-5deg); }
+  100% {
+    bottom: 6em;
+    left: 9em;
+    transform: scale(0.8) rotate(5deg);
+    z-index: 0; } }
+@keyframes iphone-show {
+  0% {
+    bottom: 6em;
+    left: 9em;
+    transform: scale(0.8) rotate(5deg);
+    z-index: 0; }
+  50% {
+    bottom: 4em;
+    left: -1em;
+    transform: scale(0.9) rotate(-5deg); }
+  100% {
+    bottom: 0;
+    left: 11em;
+    transform: scale(1) rotate(0deg);
+    z-index: 5; } }
+@keyframes iphone-slide {
+  0% {
+    left: 11em; }
+  100% {
+    left: 4em; } }
+@keyframes macbook-center {
+  0% {
+    right: 1em;
+    transform: rotate(0); }
+  50% {
+    right: -3em;
+    transform: rotate(1deg); }
+  100% {
+    right: 2em;
+    transform: rotate(0); } }
+@keyframes macbook-left {
+  0% {
+    right: -5em; }
+  100% {
+    right: 1em; } }
+@keyframes macbook-right {
+  0% {
+    right: 2em;
+    transform: rotate(0); }
+  50% {
+    right: -6em;
+    transform: rotate(1deg); }
+  100% {
+    right: -5em;
+    transform: rotate(0); } }
