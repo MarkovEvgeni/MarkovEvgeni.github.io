@@ -85,6 +85,37 @@
   .products.is-first .products-macbook .screenshot-2, .products.is-first .products-macbook .screenshot-3 {
     opacity: 0; }
 
+
+
+/*First back*/
+
+.products.is-first-back .products-ipad {
+  animation: ipad-show 0.75s; }
+  .products.is-first-back .products-ipad .screenshot-1 {
+    opacity: 1; }
+  .products.is-first-back .products-ipad .screenshot-2, .products.is-first-back .products-ipad .screenshot-3 {
+    opacity: 0; }
+.products.is-first-back .products-iphone {
+  animation: iphone-show 0.75s; }
+  .products.is-first-back .products-iphone .screenshot-1 {
+    opacity: 1; }
+  .products.is-first-back .products-iphone .screenshot-2, .products.is-first-back .products-iphone .screenshot-3 {
+    opacity: 0; }
+.products.is-first-back .products-macbook {
+  animation: macbook-right 0.75s; }
+  .products.is-first-back .products-macbook .screenshot-1 {
+    opacity: 1; }
+  .products.is-first-back .products-macbook .screenshot-2, .products.is-first-back .products-macbook .screenshot-3 {
+    opacity: 0; }
+
+
+
+
+
+
+
+
+
 .products.is-second .products-ipad {
   animation: ipad-hide 0.75s; }
   .products.is-second .products-ipad .screenshot-2 {
@@ -103,6 +134,32 @@
     opacity: 1; }
   .products.is-second .products-macbook .screenshot-1, .products.is-second .products-macbook .screenshot-3 {
     opacity: 0; }
+
+/*is-second-back*/
+
+.products.is-second-back .products-ipad {
+    left: 15em;
+}
+  .products.is-second-back .products-ipad .screenshot-2 {
+    opacity: 1; }
+  .products.is-second-back .products-ipad .screenshot-1, .products.is-second .products-ipad .screenshot-3 {
+    opacity: 0; }
+.products.is-second-back .products-iphone {
+  animation: iphone-show 0.75s; }
+  .products.is-second-back .products-iphone .screenshot-2 {
+    opacity: 1; }
+  .products.is-second-back .products-iphone .screenshot-1, .products.is-second .products-iphone .screenshot-3 {
+    opacity: 0; }
+.products.is-second-back .products-macbook {
+  animation: macbook-center-2 0.75s; }
+  .products.is-second-back .products-macbook .screenshot-2 {
+    opacity: 1; }
+  .products.is-second-back .products-macbook .screenshot-1, .products.is-second-back .products-macbook .screenshot-3 {
+    opacity: 0; }
+
+
+
+
 
 .products.is-third .products-ipad {
   left: 20em; }
@@ -155,6 +212,20 @@
     z-index: 0; } }
 @keyframes iphone-show {
   0% {
+      bottom: 6em;
+    left: 9em;
+    transform: scale(0.8) rotate(5deg);
+    z-index: 0;
+     }
+  50% {
+    bottom: 4em;
+    left: -1em;
+    transform: scale(0.9) rotate(-5deg); }
+  100% {
+      left: 3em;
+    } }
+@keyframes iphone-show {
+  0% {
     bottom: 6em;
     left: 9em;
     transform: scale(0.8) rotate(5deg);
@@ -173,6 +244,16 @@
     left: 11em; }
   100% {
     left: 4em; } }
+@keyframes macbook-center-2 {
+  0% {
+    right: 2em;
+    transform: rotate(0); }
+  50% {
+    right: -3em;
+    transform: rotate(1deg); }
+  100% {
+    right: 1em;
+    transform: rotate(0);} }
 @keyframes macbook-center {
   0% {
     right: 1em;

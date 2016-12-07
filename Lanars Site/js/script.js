@@ -111,11 +111,14 @@ document.addEventListener('DOMContentLoaded', function () {
     })();
     
     
-    //    Находим объект, который будет подвержен вращению.
+    
+//    Вращение элемента при перемещении курсора мыши
+       
+//    Находим объект, который будет подвержен вращению.
     
     var rotatedObject = $('.ms-device');
     
-//    Определяем переменные, которые будут определять угол вращения объекта.
+//    Определяем переменные, которые будут определять угол вращения объекта. Значения по умолчанию указаны исходя из css свойств после завершения анимации модели.
     
 //    Вращение вокруг оси абсцисс.
     var rotateAngleX = 90;
@@ -130,8 +133,6 @@ document.addEventListener('DOMContentLoaded', function () {
     
     function rotateObject() {
         
-        console.log(rotatedObject);
-        
         var angleX = rotateAngleX + 'deg';
         var angleY = rotateAngleY + 'deg';
         var angleZ = rotateAngleZ + 'deg';
@@ -140,41 +141,71 @@ document.addEventListener('DOMContentLoaded', function () {
             transform: 'rotateY(' + angleY + ') rotateX(' + angleX + ') translateZ(-124px)',
             MozTransform: 'rotateY(' + angleY + ') rotateX(' + angleX + ') translateZ(-124px)',
             WebkitTransform: 'rotateY(' + angleY + ') rotateX(' + angleX + ') translateZ(-124px)',
-            msTransform: 'rotateY(' + angleY + ') rotateX(' + angleX + ') translateZ(-124px)'
+            msTransform: 'rotateY(' + angleY + ') rotateX(' + angleX + ') translateZ(-124px)',
+            WebkitTransition: 'none',
+            MozTransition: 'none',
+            transition: 'none'
         });
     };
     
     
-    $('.second_screen .container').mousedown(receiveCoordinates);
-    $('body').mouseout(function () {
-        $('.second_screen .container').unbind("mousemove");
-    });
-    $('body').mouseup(function () {
-        $('.second_screen .container').unbind("mousemove");
+    $('.second_screen').mouseenter(receiveCoordinates);
+    $('.second_screen').mouseleave(function () {
+        console.log('mouseout');
+        $('.second_screen').unbind("mousemove");
     });
     
     
 //    Определяем модель которая будет перезаписывать переменные определяющие угол вращения.
     
     function receiveCoordinates () {
-        var initialXCoordinate = event.clientX;
-        var initialYCoordinate = event.clientY;
         
-        $('.second_screen .container').mousemove(function() {
+//    Задаем начальные координаты для вычислений. Сейчас это центр окна браузера.
+        
+        
+        var initialXCoordinate = document.documentElement.clientWidth / 2;
+        var initialYCoordinate = document.documentElement.clientHeight / 2;
+        
+//     Привязываем изменение переменных к перемещению мыши.
+        
+        $('.second_screen').mousemove(function() {
             
             var biasX = event.clientX - initialXCoordinate;
-            console.log('Bias X = ', biasX);
-            console.log('x = ', event.clientX);
-            
             var biasY = event.clientY - initialYCoordinate;
-            console.log('Bias Y = ', biasY);
-            console.log('y = ', event.clientY);
             
-//            var angleBiasX = -biasY / 300;
-            var angleBiasY = biasX / 50;
+            var angleBiasX = -biasY / 500;
+            var angleBiasY = biasX / 500;
             
-//            rotateAngleX += angleBiasX;
+//      Определим ограничения для вращения модели           
+//      Вращение в горизонтальной плоскости от 70 до 90 градусов
+            
+            var angleRestrictionX = rotateAngleX + angleBiasX;
+            
+            if (angleRestrictionX > 90) {
+                rotateAngleX = 90;
+            } else if (angleRestrictionX < 70) {
+                rotateAngleX = 70;
+            } else {
+                rotateAngleX += angleBiasX;
+            }
+            
+//      Определим ограничения для вращения модели           
+//      Вращение в горизонтальной плоскости от -30 до +30 градусов
+            
+            var angleRestrictionY = rotateAngleY + angleBiasY;
+            
+            if (angleRestrictionY > 30) {
+                rotateAngleY = 30;
+            } else if (angleRestrictionY < -30) {
+                rotateAngleY = -30;
+            } else {
+                rotateAngleY += angleBiasY;
+            }
+            
             rotateAngleY += angleBiasY;
+            
+            
+//        Вызываем функцию-контроллер, которая изменит углы отображения объекта. 
             
             rotateObject();
             
@@ -182,48 +213,167 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     
     
+//-------------------------------------------------------------------------------    
+//      События связанные со скроллом мыши.    
+    
+    document.addEventListener("wheel", scrollScreen);    
+        
+    
+//    Объявляем переменную которая будет счетчком текущего экрана, для определения логики взаимодействия с ними.
+    
+    var displayCounter;    
+    
+//    Создаем функцию, которая будет определять номер текущего экрана 
+    
+    function countCurrentDisplay () {
+        displayCounter = parseInt(window.pageYOffset / window.innerHeight) + 1; 
+    }
+ 
+// Создаем ограничение, чтобы скроллить экраны можно было не чаще чем один раз в полсекунды.  
+    
+    var throttled = false;
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-//    3 devices
-    
+//Создаем функцию, которая определяет направление скролла и в зависимости от направления запускает либо одну, либо другую функцию.
+
+function scrollScreen (el) {
+    el = el || window.event;
+    el.preventDefault ? el.preventDefault() : (el.returnValue = false);
 
     
-    $('.navigation-right').on('click', function() {
-          if ($('.products').hasClass('is-first')) {
-            $('.products').removeClass('is-first').addClass('is-second');
-          } else if($('.products').hasClass('is-second')) {
-            $('.products').removeClass('is-second').addClass('is-third');
-          } else {
-            $('.products').removeClass('is-third').addClass('is-first');
-          }
-        });
+    if (!throttled) {
+        var scrollDelta = el.deltaY || el.detail || el.wheelDelta;
+        if (scrollDelta < 0) {
+            scrollScreenUp();
+        } else if (scrollDelta > 0) {
+            scrollScreenDown();
+        }
+        
+        throttled = true;
+        
+        setTimeout(function() {
+            throttled = false;
+        }, 500)
+    } else {
+        console.log('Too fast, cowboy!')
+    }
+    
+};    
+    
 
-        $('.navigation-left').on('click', function() {
-          if ($('.products').hasClass('is-first')) {
-            $('.products').removeClass('is-first').addClass('is-third');
-          } else if($('.products').hasClass('is-second')) {
-            $('.products').removeClass('is-second').addClass('is-first');
-          } else {
-            $('.products').removeClass('is-third').addClass('is-second');
-          }
-        });
+//Объявим переменную, которая будет показывать количество текущих устройств на третьем экране. 
+    
+    var thirdScreenDevice = 1;
+    
+function scrollScreenDown () {
+    
+    var displayHeight = window.innerHeight;
+    var currentOffset = window.pageYOffset;
+    
+    countCurrentDisplay();
+    
+    var currentDisplay = displayHeight * displayCounter;
+    
+    if (displayCounter == 3) {
+        if (thirdScreenDevice < 3) {
+            nextDevice();
+        } else {
+            var intervalDown = setInterval(function () {
+                if (currentDisplay - currentOffset > 20) {
+                    window.scrollBy(0,20);
+                    currentOffset += 20;
+                } else {
+                    clearInterval(intervalDown);
+                    displayHeight +
+                    window.scrollTo(0, currentDisplay);
+                }
+            })
+        }
+    } else {
+        var intervalDown = setInterval(function () {
+                if (currentDisplay - currentOffset > 20) {
+                    window.scrollBy(0,20);
+                    currentOffset += 20;
+                } else {
+                    clearInterval(intervalDown);
+                    console.log(currentOffset);
+                    displayHeight +
+                    window.scrollTo(0, currentDisplay);
+                }
+            })
+    }
+};
+    
+    
+function nextDevice () {
+    if ($('.products').hasClass('is-first')) {
+      $('.products').removeClass('is-first').addClass('is-third');
+    } else if($('.products').hasClass('is-second')) {
+      $('.products').removeClass('is-second').addClass('is-first-back');
+    } else if($('.products').hasClass('is-second-back')) {
+      $('.products').removeClass('is-second-back').addClass('is-first-back');
+    } else if($('.products').hasClass('is-third')) {
+      $('.products').removeClass('is-third').addClass('is-second-back');
+    } else if($('.products').hasClass('is-second-back')) {
+      $('.products').removeClass('is-second').addClass('is-first-back');  
+    }
+    thirdScreenDevice += 1;
+}
+    
+function previousDevice () {
+    if ($('.products').hasClass('is-first')) {
+      $('.products').removeClass('is-first').addClass('is-second');
+    } else if($('.products').hasClass('is-first-back')) {
+      $('.products').removeClass('is-first-back').addClass('is-second');
+    } else if($('.products').hasClass('is-second')) {
+      $('.products').removeClass('is-second').addClass('is-third');
+    } else if($('.products').hasClass('is-second-back')) {
+      $('.products').removeClass('is-second-back').addClass('is-third');
+    } else {
+      $('.products').removeClass('is-third').addClass('is-first');
+    } 
+    thirdScreenDevice -= 1;
+}    
+
+function scrollScreenUp () {
+    
+    var displayHeight = window.innerHeight;
+    var currentOffset = window.pageYOffset;
+    
+    countCurrentDisplay();
+    
+    var currentDisplay = displayHeight * displayCounter;
+    var previousDisplay = displayHeight * (displayCounter - 2);
+    
+    if (displayCounter == 3) {
+        if (thirdScreenDevice > 1) {
+            previousDevice();
+        } else {
+            var intervalUp = setInterval(function () {
+                if (currentOffset - previousDisplay > 20) {
+                    window.scrollBy(0,-20);
+                    currentOffset -= 20;
+                } else {
+                    clearInterval(intervalUp);
+                    displayHeight +
+                    window.scrollTo(0, previousDisplay);
+                }
+            })
+        }
+    } else {
+        var intervalUp = setInterval(function () {
+            if (currentOffset - previousDisplay > 20) {
+                window.scrollBy(0,-20);
+                currentOffset -= 20;
+            } else {
+                clearInterval(intervalUp);
+                displayHeight +
+                window.scrollTo(0, previousDisplay);
+            }
+        })
+    }
+     
+};  
     
     //    Slick initialization
     
@@ -241,8 +391,6 @@ document.addEventListener('DOMContentLoaded', function () {
         prevArrow: '<div class="first_screen_prev"><span class="arrow"></span><span class="pagination_left"></span><div>',
         pauseOnHover: false
       });
-    
-    console.log($('.slider').slick.swipeStart);
     
     var slidesTotal = $('.slider_item_container:not(.slick-cloned)').length;
     var currentSlide = $('.slider').slick('slickCurrentSlide') + 1;

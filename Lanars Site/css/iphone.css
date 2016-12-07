@@ -384,6 +384,7 @@ body {
 .ms-screens > a:hover .ms-label {
     border-color: #687fa7;
     color: #687fa7;
+    transform: rotateX(-90deg) rotateY(10deg);
 }
 
 .ms-label::after {
