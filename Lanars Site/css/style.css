@@ -4,9 +4,12 @@
 @import "slick.css";
 
 /*First screen (slider styles) */
-
+.menu_placeholder {
+    width: 100%;
+    height: 54px;
+}
 .maincontent .first_screen {
-    height: calc(100vh - 54px);
+    height: 100vh;
     box-sizing: border-box;
     position: relative;
 /*    border-top: 1px solid transparent;*/
@@ -40,7 +43,7 @@
     background: rgba(255, 248, 240, 1);
     height: 11px;
     position: absolute;
-    top: 0;
+    top: 54px;
     z-index: 10;
 }
 .slide1 {
@@ -143,6 +146,12 @@
 
 header {
     height: 54px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 20;
 }
 .clearfix:after {
     clear: both;
@@ -161,7 +170,7 @@ h4 {
     margin: 0 auto;
     position: absolute;
     text-align: center;
-    top: 28px;
+    top: 84px;
     width: 100%;
 }
 .main_menu__item {
@@ -234,6 +243,7 @@ h4 {
 .third_screen {
     position: relative;
     height: 100vh;
+    background: #1f608d;
 }
 .third_screen h4 {
     color: rgba(255, 255, 255, 1);
@@ -244,7 +254,7 @@ h4 {
     font-family: 'sf_ui_displayregular';
     position: absolute;
     text-align: center;
-    top: 83px;
+    top: 137px;
     width: 100%;
     z-index: 10;
 }

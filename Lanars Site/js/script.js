@@ -279,28 +279,37 @@ function scrollScreenDown () {
             nextDevice();
         } else {
             var intervalDown = setInterval(function () {
-                if (currentDisplay - currentOffset > 20) {
+                if (currentDisplay - currentOffset > 600) {
+                    window.scrollBy(0,5);
+                    currentOffset += 5;
+                } else if (currentDisplay - currentOffset > 200) {
                     window.scrollBy(0,20);
                     currentOffset += 20;
+                } else if (currentDisplay - currentOffset > 10) {
+                    window.scrollBy(0,5);
+                    currentOffset += 5;
                 } else {
                     clearInterval(intervalDown);
-                    displayHeight +
                     window.scrollTo(0, currentDisplay);
                 }
-            })
+            }, 10)
         }
     } else {
         var intervalDown = setInterval(function () {
-                if (currentDisplay - currentOffset > 20) {
-                    window.scrollBy(0,20);
-                    currentOffset += 20;
-                } else {
-                    clearInterval(intervalDown);
-                    console.log(currentOffset);
-                    displayHeight +
-                    window.scrollTo(0, currentDisplay);
-                }
-            })
+            if (currentDisplay - currentOffset > 600) {
+                window.scrollBy(0,5);
+                currentOffset += 5;
+            } else if (currentDisplay - currentOffset > 200) {
+                window.scrollBy(0,20);
+                currentOffset += 20;
+            } else if (currentDisplay - currentOffset > 10) {
+                window.scrollBy(0,5);
+                currentOffset += 5;
+            } else {
+                clearInterval(intervalDown);
+                window.scrollTo(0, currentDisplay);
+            }
+        }, 10)
     }
 };
     
@@ -350,27 +359,37 @@ function scrollScreenUp () {
             previousDevice();
         } else {
             var intervalUp = setInterval(function () {
-                if (currentOffset - previousDisplay > 20) {
+                if (currentOffset - previousDisplay > 600) {
+                    window.scrollBy(0,-5);
+                    currentOffset -= 5;
+                } else if (currentOffset - previousDisplay > 200) {
                     window.scrollBy(0,-20);
                     currentOffset -= 20;
+                } else if (currentOffset - previousDisplay > 10) {
+                    window.scrollBy(0,-5);
+                    currentOffset -= 5;
                 } else {
                     clearInterval(intervalUp);
-                    displayHeight +
                     window.scrollTo(0, previousDisplay);
                 }
-            })
+            }, 10)
         }
     } else {
         var intervalUp = setInterval(function () {
-            if (currentOffset - previousDisplay > 20) {
+            if (currentOffset - previousDisplay > 600) {
+                window.scrollBy(0,-5);
+                currentOffset -= 5;
+            } else if (currentOffset - previousDisplay > 200) {
                 window.scrollBy(0,-20);
                 currentOffset -= 20;
+            } else if (currentOffset - previousDisplay > 10) {
+                window.scrollBy(0,-5);
+                currentOffset -= 5;
             } else {
                 clearInterval(intervalUp);
-                displayHeight +
                 window.scrollTo(0, previousDisplay);
             }
-        })
+        }, 10)
     }
      
 };  
