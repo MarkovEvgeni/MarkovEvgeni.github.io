@@ -73,14 +73,37 @@ document.addEventListener('DOMContentLoaded', function () {
         
         var scrolled = window.pageYOffset || document.documentElement.scrollTop;
         if (scrolled < 600 || scrolled > 1200) {
+            setTimeout(function () {
+                $('.glass_inactive_mouse').css('display', 'block');
+            }, 1500);
+            $('.glass_inactive_mouse').css('display', 'block');
+            rotatedObject.css({
+                transform: 'rotateY(17deg) rotateX(10deg)',
+                MozTransform: 'rotateY(17deg) rotateX(10deg)',
+                WebkitTransform: 'rotateY(17deg) rotateX(10deg)',
+                msTransform: 'rotateY(17deg) rotateX(10deg)'
+            });
             [].slice.call( document.querySelectorAll( '.ms-wrapper' ) ).forEach( function( el, i ) {
                 classie.remove( el, 'ms-view-layers' );
                 
             })
         } else {
-            [].slice.call( document.querySelectorAll( '.ms-wrapper' ) ).forEach( function( el, i ) {
-                classie.add( el, 'ms-view-layers' );
-            })
+            setTimeout(openScreens, 400);
+            
+            function openScreens () {
+                rotatedObject.css({
+                    transform: 'rotateY(-30deg) rotateX(90deg)  translateZ(-124px)',
+                    MozTransform: 'rotateY(-30deg) rotateX(90deg)  translateZ(-124px)',
+                    WebkitTransform: 'rotateY(-30deg) rotateX(90deg)  translateZ(-124px)',
+                    msTransform: 'rotateY(-30deg) rotateX(90deg)  translateZ(-124px)',
+                    WebkitTransition: 'transform 0.7s ease-in-out',
+                    MozTransition: 'transform 0.7s ease-in-out',
+                    transition: 'transform 0.7s ease-in-out'
+                });
+                [].slice.call( document.querySelectorAll( '.ms-wrapper' ) ).forEach( function( el, i ) {
+                    classie.add( el, 'ms-view-layers' );
+                })
+            }
         }
     };
         
@@ -142,74 +165,83 @@ document.addEventListener('DOMContentLoaded', function () {
             MozTransform: 'rotateY(' + angleY + ') rotateX(' + angleX + ') translateZ(-124px)',
             WebkitTransform: 'rotateY(' + angleY + ') rotateX(' + angleX + ') translateZ(-124px)',
             msTransform: 'rotateY(' + angleY + ') rotateX(' + angleX + ') translateZ(-124px)',
-            WebkitTransition: 'none',
-            MozTransition: 'none',
-            transition: 'none'
+            WebkitTransition: 'transform 0.1s linear',
+            MozTransition: 'transform 0.1s linear',
+            transition: 'transform 0.1s linear'
         });
     };
     
     
+    
     $('.second_screen').mouseenter(receiveCoordinates);
     $('.second_screen').mouseleave(function () {
-        console.log('mouseout');
+        console.log('mouseleave');
         $('.second_screen').unbind("mousemove");
+        setTimeout(function () {
+            $('.second_screen').unbind("mousemove");
+        }, 1500)
     });
-    
     
 //    Определяем модель которая будет перезаписывать переменные определяющие угол вращения.
     
     function receiveCoordinates () {
         
-//    Задаем начальные координаты для вычислений. Сейчас это центр окна браузера.
-        
-        
-        var initialXCoordinate = document.documentElement.clientWidth / 2;
-        var initialYCoordinate = document.documentElement.clientHeight / 2;
-        
-//     Привязываем изменение переменных к перемещению мыши.
-        
-        $('.second_screen').mousemove(function() {
+        setTimeout(function () {
+        //    Задаем начальные координаты для вычислений. Сейчас это точка где находится курсор.
             
-            var biasX = event.clientX - initialXCoordinate;
-            var biasY = event.clientY - initialYCoordinate;
+                var initialXCoordinate = document.documentElement.clientWidth / 2;
+                var initialYCoordinate = document.documentElement.clientHeight / 2;
+
+                $('.glass_inactive_mouse').css('display', 'none');
+
+
+
+        //     Привязываем изменение переменных к перемещению мыши.
+
+                $('.second_screen').mousemove(function() {
+
+                    var biasX = event.clientX - initialXCoordinate;
+                    var biasY = event.clientY - initialYCoordinate;
+
+                    var angleBiasX = -biasY / 500;
+                    var angleBiasY = biasX / 500;
+
+        //      Определим ограничения для вращения модели           
+        //      Вращение в горизонтальной плоскости от 70 до 90 градусов
+
+                    var angleRestrictionX = rotateAngleX + angleBiasX;
+
+                    if (angleRestrictionX > 90) {
+                        rotateAngleX = 90;
+                    } else if (angleRestrictionX < 70) {
+                        rotateAngleX = 70;
+                    } else {
+                        rotateAngleX += angleBiasX;
+                    }
+
+        //      Определим ограничения для вращения модели           
+        //      Вращение в горизонтальной плоскости от -30 до +30 градусов
+
+                    var angleRestrictionY = rotateAngleY + angleBiasY;
+
+                    if (angleRestrictionY > 30) {
+                        rotateAngleY = 30;
+                    } else if (angleRestrictionY < -30) {
+                        rotateAngleY = -30;
+                    } else {
+                        rotateAngleY += angleBiasY;
+                    }
+
+                    rotateAngleY += angleBiasY;
+
+
+        //        Вызываем функцию-контроллер, которая изменит углы отображения объекта. 
+
+                    rotateObject();
+
+                });
             
-            var angleBiasX = -biasY / 500;
-            var angleBiasY = biasX / 500;
-            
-//      Определим ограничения для вращения модели           
-//      Вращение в горизонтальной плоскости от 70 до 90 градусов
-            
-            var angleRestrictionX = rotateAngleX + angleBiasX;
-            
-            if (angleRestrictionX > 90) {
-                rotateAngleX = 90;
-            } else if (angleRestrictionX < 70) {
-                rotateAngleX = 70;
-            } else {
-                rotateAngleX += angleBiasX;
-            }
-            
-//      Определим ограничения для вращения модели           
-//      Вращение в горизонтальной плоскости от -30 до +30 градусов
-            
-            var angleRestrictionY = rotateAngleY + angleBiasY;
-            
-            if (angleRestrictionY > 30) {
-                rotateAngleY = 30;
-            } else if (angleRestrictionY < -30) {
-                rotateAngleY = -30;
-            } else {
-                rotateAngleY += angleBiasY;
-            }
-            
-            rotateAngleY += angleBiasY;
-            
-            
-//        Вызываем функцию-контроллер, которая изменит углы отображения объекта. 
-            
-            rotateObject();
-            
-        });
+        }, 1500)
     }
     
     
@@ -278,38 +310,46 @@ function scrollScreenDown () {
         if (thirdScreenDevice < 3) {
             nextDevice();
         } else {
+            $('h4').css({top: '124px', opacity: '0.2'});
+            $('h6').css({top: '207px', opacity: '0.2'});
             var intervalDown = setInterval(function () {
                 if (currentDisplay - currentOffset > 600) {
-                    window.scrollBy(0,5);
-                    currentOffset += 5;
+                    window.scrollBy(0,8);
+                    currentOffset += 8;
                 } else if (currentDisplay - currentOffset > 200) {
-                    window.scrollBy(0,20);
-                    currentOffset += 20;
+                    window.scrollBy(0,12);
+                    currentOffset += 12;
                 } else if (currentDisplay - currentOffset > 10) {
-                    window.scrollBy(0,5);
-                    currentOffset += 5;
+                    window.scrollBy(0,8);
+                    currentOffset += 8;
                 } else {
                     clearInterval(intervalDown);
                     window.scrollTo(0, currentDisplay);
+                    $('h4').css({top: '84px', opacity: '1'});
+                    $('h6').css({top: '137px', opacity: '1'});
                 }
-            }, 10)
+            }, 6)
         }
     } else {
+        $('h4').css({top: '124px', opacity: '0.2'});
+        $('h6').css({top: '207px', opacity: '0.2'});
         var intervalDown = setInterval(function () {
             if (currentDisplay - currentOffset > 600) {
-                window.scrollBy(0,5);
-                currentOffset += 5;
+                window.scrollBy(0,8);
+                currentOffset += 8;
             } else if (currentDisplay - currentOffset > 200) {
-                window.scrollBy(0,20);
-                currentOffset += 20;
+                window.scrollBy(0,12);
+                currentOffset += 12;
             } else if (currentDisplay - currentOffset > 10) {
-                window.scrollBy(0,5);
-                currentOffset += 5;
+                window.scrollBy(0,8);
+                currentOffset += 8;
             } else {
                 clearInterval(intervalDown);
                 window.scrollTo(0, currentDisplay);
+                $('h4').css({top: '84px', opacity: '1'});
+                $('h6').css({top: '137px', opacity: '1'});
             }
-        }, 10)
+        }, 6)
     }
 };
     
@@ -358,41 +398,53 @@ function scrollScreenUp () {
         if (thirdScreenDevice > 1) {
             previousDevice();
         } else {
+            $('h4').css({top: '124px', opacity: '0.2'});
+            $('h6').css({top: '207px', opacity: '0.2'});
             var intervalUp = setInterval(function () {
                 if (currentOffset - previousDisplay > 600) {
-                    window.scrollBy(0,-5);
-                    currentOffset -= 5;
+                    window.scrollBy(0,-8);
+                    currentOffset -= 8;
                 } else if (currentOffset - previousDisplay > 200) {
-                    window.scrollBy(0,-20);
-                    currentOffset -= 20;
+                    window.scrollBy(0,-12);
+                    currentOffset -= 12;
                 } else if (currentOffset - previousDisplay > 10) {
-                    window.scrollBy(0,-5);
-                    currentOffset -= 5;
+                    window.scrollBy(0,-8);
+                    currentOffset -= 8;
                 } else {
                     clearInterval(intervalUp);
                     window.scrollTo(0, previousDisplay);
+                    $('h4').css({top: '84px', opacity: '1'});
+                    $('h6').css({top: '137px', opacity: '1'});
                 }
-            }, 10)
+            }, 6)
         }
     } else {
+        $('h4').css({top: '124px', opacity: '0.2'});
+        $('h6').css({top: '207px', opacity: '0.2'});
         var intervalUp = setInterval(function () {
             if (currentOffset - previousDisplay > 600) {
-                window.scrollBy(0,-5);
-                currentOffset -= 5;
+                window.scrollBy(0,-8);
+                currentOffset -= 8;
             } else if (currentOffset - previousDisplay > 200) {
-                window.scrollBy(0,-20);
-                currentOffset -= 20;
+                window.scrollBy(0,-12);
+                currentOffset -= 12;
             } else if (currentOffset - previousDisplay > 10) {
-                window.scrollBy(0,-5);
-                currentOffset -= 5;
+                window.scrollBy(0,-8);
+                currentOffset -= 8;
             } else {
                 clearInterval(intervalUp);
                 window.scrollTo(0, previousDisplay);
+                console.log($('h4'));
+                $('h4').css({top: '84px', opacity: '1'});
+                $('h6').css({top: '137px', opacity: '1'});
             }
-        }, 10)
+        }, 6)
     }
      
 };  
+    
+    
+    
     
     //    Slick initialization
     

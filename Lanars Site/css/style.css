@@ -172,6 +172,7 @@ h4 {
     text-align: center;
     top: 84px;
     width: 100%;
+    transition: all 1s ease-out;
 }
 .main_menu__item {
     float: left;
@@ -216,7 +217,14 @@ h4 {
     width: 100%;
     z-index: 10;
 }
-
+.maincontent .second_screen .glass_inactive_mouse {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 20;
+}
 
 .maincontent .second_screen:before {
     content:'';
@@ -257,6 +265,7 @@ h4 {
     top: 137px;
     width: 100%;
     z-index: 10;
+    transition: all 1s ease-out;
 }
 .devices-container {
     position: relative;
