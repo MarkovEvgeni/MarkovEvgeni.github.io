@@ -170,7 +170,6 @@ document.addEventListener('DOMContentLoaded', function () {
     
  function changePosition () {
      
-     console.log(this);
      
 //     =================Меняем порядок экранов==========================
      
@@ -273,7 +272,7 @@ document.addEventListener('DOMContentLoaded', function () {
 //                    }
 //                    else {
 //                        classie.add( el, 'ms-view-layers' );
-//                    }
+//                    }scroll на тачпаде 
 //                    open = !open;
 //                }
             } );
@@ -398,7 +397,18 @@ document.addEventListener('DOMContentLoaded', function () {
 //-------------------------------------------------------------------------------    
 //      События связанные со скроллом мыши.    
     
-    document.addEventListener("wheel", scrollScreen);    
+//    Используем сторонний плагин для разрешения проблемы со скроллингом
+    
+    var indicator = new WheelIndicator({
+      elem: document.querySelector('body'),
+      callback: function(e){
+        scrollScreen();
+      }
+    });
+    
+    
+    
+//    document.addEventListener("wheel", scrollScreen);    
         
     
 //    Объявляем переменную которая будет счетчком текущего экрана, для определения логики взаимодействия с ними.
@@ -421,21 +431,22 @@ document.addEventListener('DOMContentLoaded', function () {
 function scrollScreen (el) {
     el = el || window.event;
     el.preventDefault ? el.preventDefault() : (el.returnValue = false);
-
     
     if (!throttled) {
         var scrollDelta = el.deltaY || el.detail || el.wheelDelta;
         if (scrollDelta < 0) {
+            console.log(scrollDelta);
             scrollScreenUp();
         } else if (scrollDelta > 0) {
             scrollScreenDown();
+            console.log(scrollDelta);
         }
         
         throttled = true;
         
         setTimeout(function() {
             throttled = false;
-        }, 500)
+        }, 600)
     } else {
         console.log('Too fast, cowboy!')
     }
