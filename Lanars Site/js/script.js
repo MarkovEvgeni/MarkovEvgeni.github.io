@@ -131,6 +131,17 @@ document.addEventListener('DOMContentLoaded', function () {
         var classNumber = classes.match(/[0-9]/)[0];
         var matchingScreen = ".matching-screen-" + classNumber;
         var matchingScreen = $(matchingScreen)[0];
+        var matchingScreenJQ = $(matchingScreen);
+        
+        var self = this;
+       
+//      Передаем контекст this, чтобы клик по экрану вызывал клик по кнопке.
+        
+        matchingScreenJQ.click(function () {
+            var g = changePosition.bind(self);
+            g();
+        });
+        
         $(this).hover(hoverEffect, noHoverEffect);
         $(this).click(changePosition);
     })
@@ -152,10 +163,14 @@ document.addEventListener('DOMContentLoaded', function () {
         var matchingScreen = $(matchingScreen).removeClass('special');
     }
 
+//Создадим функцию, которая будет по клику на экране вызывать клик на соответствующей кнопке
+    
+    
 //  Создадим функцию, которая будет перемещать экраны относительно друг друга посредством изменения классов.    
     
  function changePosition () {
      
+     console.log(this);
      
 //     =================Меняем порядок экранов==========================
      
@@ -218,6 +233,21 @@ document.addEventListener('DOMContentLoaded', function () {
     
          labelButtons.each(function () {
              $(this).unbind();
+             
+             var classes = $(this).attr('class');
+             var classNumber = classes.match(/[0-9]/)[0];
+             var matchingScreen = ".matching-screen-" + classNumber;
+             var matchingScreen = $(matchingScreen)[0];
+             var matchingScreenJQ = $(matchingScreen);
+             matchingScreenJQ.unbind();
+             
+             var self = this;
+             
+             matchingScreenJQ.click(function () {
+                 var g = changePosition.bind(self);
+                 g();
+             });
+             
              $(this).hover(hoverEffect, noHoverEffect);
              $(this).click(changePosition);
          })      
