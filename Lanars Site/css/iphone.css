@@ -344,9 +344,9 @@ body {
     display: block;
     cursor: pointer;
     opacity: 1;
-    -webkit-transition: -webkit-transform 0.7s, opacity 0.4s;
-    transition: -moz-transform 0.7s, opacity 0.4s;
-    transition: transform 0.7s, opacity 0.4s;
+    -webkit-transition: -webkit-transform 0.4s, opacity 0.4s;
+    transition: -moz-transform 0.4s, opacity 0.4s;
+    transition: transform 0.4s, opacity 0.4s;
     -webkit-transform: translateZ(6px);
     -moz-transform: translateZ(6px);
     transform: translateZ(6px);
@@ -376,9 +376,9 @@ body {
     -webkit-transform: rotateX(0deg);
     -moz-transform: rotateX(0deg);
     transform: rotateX(0deg);
-    -webkit-transition: opacity 0.7s, -webkit-transform 0.7s;
-    -moz-transition: opacity 0.7s, -moz-transform 0.7s;
-    transition: opacity 0.7s, transform 0.7s;
+    -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+    -moz-transition: opacity 0.3s, -moz-transform 0.3s;
+    transition: opacity 0.3s, transform 0.3s;
 }
 
 .ms-screens > a:hover .ms-label {
@@ -510,6 +510,9 @@ body {
 }
 
 .ms-view-layers .ms-screens > a:hover::after {
+    opacity: 1
+}
+.ms-view-layers .ms-screens > a.special::after {
     opacity: 1
 }
 
@@ -647,24 +650,28 @@ body {
     transform: rotateY(-30deg) rotateX(90deg) translateZ(-27px) translateZ(-97px);
 }
 
-.ms-effect-3 .ms-screens .ms-screen-1 {
+.ms-effect-3 .ms-screens .matching-screen-1 {
     background:rgb(255, 255, 255);
 }
 
-.ms-effect-3 .ms-screens .ms-screen-2 {
+.ms-effect-3 .ms-screens .matching-screen-2 {
     background:rgb(110, 94, 231);
 }
 
-.ms-effect-3 .ms-screens .ms-screen-3 {
+.ms-effect-3 .ms-screens .matching-screen-3 {
     background:rgb(123, 223, 131);
 }
 
-.ms-effect-3 .ms-screens .ms-screen-4 {
-    background:rgb(255, 224, 169);
+.ms-effect-3 .ms-screens .matching-screen-4 {
+/*    background:rgb(255, 224, 169);*/
+    background-size: cover;
+    background-image: url(../img/iPhone%207.png);
 }
 
-.ms-effect-3 .ms-screens .ms-screen-5 {
-    background:rgb(255, 169, 169);
+.ms-effect-3 .ms-screens .matching-screen-5 {
+/*    background:rgb(255, 169, 169);*/
+    background-size: cover;
+    background-image: url(../img/iPhone%207%20Copy%202.png);
 }
 
 .ms-effect-3 .ms-screens a .ms-label {

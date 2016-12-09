@@ -225,6 +225,83 @@ h4 {
     left: 0;
     z-index: 20;
 }
+.maincontent .second_screen .control_panel {
+    left: 170%;
+    position: absolute;
+    top: 20%;
+    width: 100%;
+}
+.maincontent .second_screen .control_panel .label {
+    border: 3px solid rgba(75, 81, 91, 1);
+    color: rgba(75, 81, 91, 1);
+    margin-left: 18px;
+    width: 200px;
+    margin: 10px 0;
+    padding: 10px;
+    opacity: 0;
+    -webkit-transform: rotateY(-30deg) rotatex(-90deg);
+    -moz-transform: rotateY(-30deg) rotatex(-90deg);
+    transform: rotateY(-30deg) rotatex(-90deg);
+    -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+    -moz-transition: opacity 0.3s, -moz-transform 0.3s;
+    transition: opacity 0.3s, transform 0.3s;
+}
+.maincontent .second_screen .ms-view-layers .label {
+    -webkit-transform: rotateY(-30deg) rotatex(0deg);
+    -moz-transform: rotateY(-30deg) rotatex(0deg);
+    transform: rotateY(-30deg) rotatex(0deg);
+    opacity: 0.9;
+}
+.maincontent .second_screen .ms-view-layers .hiden {
+    -webkit-transform: rotateY(-30deg) rotatex(90deg);
+    -moz-transform: rotateY(-30deg) rotatex(90deg);
+    transform: rotateY(-30deg) rotatex(90deg);
+    opacity: 0.1;
+}
+
+.maincontent .second_screen .control_panel .label:hover {
+    border-color: #687fa7;
+    cursor: pointer;
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+}
+.maincontent .second_screen .ms-view-layers .hiden:hover {
+    -webkit-transform: rotateY(0deg) rotatex(90deg);
+    -moz-transform: rotateY(0deg) rotatex(90deg);
+    transform: rotateY(0deg) rotatex(90deg);
+}
+.maincontent .second_screen .control_panel .label::after,
+.maincontent .second_screen .control_panel .label::before {
+    right: 100%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+}
+
+.maincontent .second_screen .control_panel .label::after {
+    border-color: transparent;
+    border-right-color: #d2d1d5;
+    border-width: 12px;
+    top: 50%;
+    margin-top: -12px;
+}
+
+.maincontent .second_screen .control_panel .label::before {
+    border-color: transparent;
+    border-right-color: rgba(75, 81, 91, 1);
+    border-width: 16px;
+    top: 50%;
+    margin-top: -16px;
+}
+
+.maincontent .second_screen .control_panel .label:hover::before {
+    border-right-color: #687fa7;
+    cursor: pointer;
+}
 
 .maincontent .second_screen:before {
     content:'';
@@ -284,20 +361,22 @@ h4 {
 }
 .clients_container {
     margin: 107px auto;
-    width: 60%;
-    padding: 43px 23px;   
+    width: 95%;
+    padding: 43px 10px;   
 }
 .clients_container__client {
     box-sizing: border-box;
-    border: 2px solid grey;
-    height: 66px;
-    width: 146px;
-    background: #999a99;
+    height: 137px;
+    width: 201px;
     float: left;
 }
 .clients_container__client a {
     display: block;
     height: 100%;
+    background: url(../img/clients.png);
+}
+.clients_container__client a:hover {
+    background: url(../img/clients_a.png);
 }
 
 

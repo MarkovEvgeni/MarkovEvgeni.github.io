@@ -74,21 +74,25 @@ document.addEventListener('DOMContentLoaded', function () {
         var scrolled = window.pageYOffset || document.documentElement.scrollTop;
         if (scrolled < 600 || scrolled > 1200) {
             setTimeout(function () {
-                $('.glass_inactive_mouse').css('display', 'block');
+                $('.glass_inactive_mouse').css('display', 'none');
             }, 1500);
-            $('.glass_inactive_mouse').css('display', 'block');
+            $('.glass_inactive_mouse').css('display', 'none');
             rotatedObject.css({
                 transform: 'rotateY(17deg) rotateX(10deg)',
                 MozTransform: 'rotateY(17deg) rotateX(10deg)',
                 WebkitTransform: 'rotateY(17deg) rotateX(10deg)',
                 msTransform: 'rotateY(17deg) rotateX(10deg)'
             });
+            [].slice.call( document.querySelectorAll( '.control_panel' ) ).forEach( function( el, i ) {
+                classie.remove( el, 'ms-view-layers' );
+                
+            });
             [].slice.call( document.querySelectorAll( '.ms-wrapper' ) ).forEach( function( el, i ) {
                 classie.remove( el, 'ms-view-layers' );
                 
-            })
+            });
         } else {
-            setTimeout(openScreens, 400);
+            setTimeout(openScreens, 300);
             
             function openScreens () {
                 rotatedObject.css({
@@ -96,11 +100,14 @@ document.addEventListener('DOMContentLoaded', function () {
                     MozTransform: 'rotateY(-30deg) rotateX(90deg)  translateZ(-124px)',
                     WebkitTransform: 'rotateY(-30deg) rotateX(90deg)  translateZ(-124px)',
                     msTransform: 'rotateY(-30deg) rotateX(90deg)  translateZ(-124px)',
-                    WebkitTransition: 'transform 0.7s ease-in-out',
-                    MozTransition: 'transform 0.7s ease-in-out',
-                    transition: 'transform 0.7s ease-in-out'
+                    WebkitTransition: 'transform 0.4s ease-in-out',
+                    MozTransition: 'transform 0.4s ease-in-out',
+                    transition: 'transform 0.4s ease-in-out'
                 });
                 [].slice.call( document.querySelectorAll( '.ms-wrapper' ) ).forEach( function( el, i ) {
+                    classie.add( el, 'ms-view-layers' );
+                });
+                [].slice.call( document.querySelectorAll( '.control_panel' ) ).forEach( function( el, i ) {
                     classie.add( el, 'ms-view-layers' );
                 })
             }
@@ -109,8 +116,121 @@ document.addEventListener('DOMContentLoaded', function () {
         
     document.addEventListener("scroll", scrolledUpButton);
 
+//=============================================   
+//|Операции с панелью кнопок и слоями телефона|
+//=============================================    
     
+    
+    
+//    Сначала создадим связь между каждой кнопкой, и каждым экраном. Связь устанавливается по номеру, который мы берем из класса с помощью регулярных выражений.
+    
+    var labelButtons = $('.label');
+    
+    labelButtons.each(function () {
+        var classes = $(this).attr('class');
+        var classNumber = classes.match(/[0-9]/)[0];
+        var matchingScreen = ".matching-screen-" + classNumber;
+        var matchingScreen = $(matchingScreen)[0];
+        $(this).hover(hoverEffect, noHoverEffect);
+        $(this).click(changePosition);
+    })
+    
+    
+//    Добавим функции, которые будут создавать эффект наведения на соответствующий экран. Сам эффект прописан в CSS класс 'a.special'
+    
+    function hoverEffect () {
+        var classes = $(this).attr('class');
+        var classNumber = classes.match(/[0-9]/)[0];
+        var matchingScreen = ".matching-screen-" + classNumber;
+        var matchingScreen = $(matchingScreen).addClass('special');
+    }
+    
+    function noHoverEffect () {
+        var classes = $(this).attr('class');
+        var classNumber = classes.match(/[0-9]/)[0];
+        var matchingScreen = ".matching-screen-" + classNumber;
+        var matchingScreen = $(matchingScreen).removeClass('special');
+    }
 
+//  Создадим функцию, которая будет перемещать экраны относительно друг друга посредством изменения классов.    
+    
+ function changePosition () {
+     
+     
+//     =================Меняем порядок экранов==========================
+     
+     var classes = $(this).attr('class');
+     var classNumber = classes.match(/[0-9]/)[0];
+     
+     var newPosition = ".matching-screen-" + classNumber;
+     var newPositionClass = "matching-screen-" + classNumber;
+     var thisScreen = $(newPosition);
+     thisScreen.removeClass(newPositionClass);
+     var thisScreenClasses = $(thisScreen).attr('class');
+     var thisScreenPositionClass = thisScreenClasses.match(/[0-9]/)[0];
+     thisScreen.addClass(newPositionClass);
+     var newPositionClass = "ms-screen-" + thisScreenPositionClass;
+     
+//     В данном случае 5 экранов поэтому экран который наверху будет с классом 5
+     var topScreen = $('.ms-screen-5');
+     
+     thisScreen.removeClass(newPositionClass);
+     topScreen.removeClass('ms-screen-5');
+     
+     thisScreen.addClass('ms-screen-5');
+     topScreen.addClass(newPositionClass);
+ 
+     
+     
+//     ===============Меняем положение соответствующих кнопок=======================
+     
+     var currentButtonPosition = ".label-" + classNumber;      
+     var currentButtonPositionClass = "label-" + classNumber;
+     
+     var topButton = $('.top-label');
+     
+     var topButtonClasses = topButton.attr('class');
+     var topButtonClassNumber = topButtonClasses.match(/[0-9]/)[0];
+     var topButtonClass = "label-" + topButtonClassNumber;
+     
+     var currentButton = $(currentButtonPosition);
+     
+     var topButtonDesc = topButton.html();
+     var currentButtonDesc = currentButton.html();
+     
+     topButton.addClass('hiden');
+     currentButton.addClass('hiden');
+     
+     setTimeout(function () {
+         topButton.removeClass(topButtonClass);
+         topButton.addClass(currentButtonPositionClass);
+         
+         currentButton.removeClass(currentButtonPositionClass);
+         currentButton.addClass(topButtonClass);
+         
+         currentButton.removeClass('hiden');
+         topButton.removeClass('hiden');
+         
+         topButton.html(currentButtonDesc);
+         currentButton.html(topButtonDesc);
+         
+         var labelButtons = $('.label');
+    
+         labelButtons.each(function () {
+             $(this).unbind();
+             $(this).hover(hoverEffect, noHoverEffect);
+             $(this).click(changePosition);
+         })      
+     }, 650);
+}   
+    
+    
+    
+    
+    
+    
+    
+    
     var phoneSlideshow = (function() {
 
         function init() {
@@ -207,14 +327,14 @@ document.addEventListener('DOMContentLoaded', function () {
                     var angleBiasY = biasX / 500;
 
         //      Определим ограничения для вращения модели           
-        //      Вращение в горизонтальной плоскости от 70 до 90 градусов
+        //      Вращение в горизонтальной плоскости от 50 до 90 градусов
 
                     var angleRestrictionX = rotateAngleX + angleBiasX;
 
                     if (angleRestrictionX > 90) {
                         rotateAngleX = 90;
-                    } else if (angleRestrictionX < 70) {
-                        rotateAngleX = 70;
+                    } else if (angleRestrictionX < 50) {
+                        rotateAngleX = 50;
                     } else {
                         rotateAngleX += angleBiasX;
                     }
@@ -241,7 +361,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 });
             
-        }, 1500)
+        }, 1200)
     }
     
     
@@ -328,7 +448,7 @@ function scrollScreenDown () {
                     $('h4').css({top: '84px', opacity: '1'});
                     $('h6').css({top: '137px', opacity: '1'});
                 }
-            }, 6)
+            }, 5)
         }
     } else {
         $('h4').css({top: '124px', opacity: '0.2'});
@@ -349,7 +469,7 @@ function scrollScreenDown () {
                 $('h4').css({top: '84px', opacity: '1'});
                 $('h6').css({top: '137px', opacity: '1'});
             }
-        }, 6)
+        }, 5)
     }
 };
     
@@ -416,7 +536,7 @@ function scrollScreenUp () {
                     $('h4').css({top: '84px', opacity: '1'});
                     $('h6').css({top: '137px', opacity: '1'});
                 }
-            }, 6)
+            }, 5)
         }
     } else {
         $('h4').css({top: '124px', opacity: '0.2'});
@@ -434,11 +554,10 @@ function scrollScreenUp () {
             } else {
                 clearInterval(intervalUp);
                 window.scrollTo(0, previousDisplay);
-                console.log($('h4'));
                 $('h4').css({top: '84px', opacity: '1'});
                 $('h6').css({top: '137px', opacity: '1'});
             }
-        }, 6)
+        }, 5)
     }
      
 };  
