@@ -204,12 +204,12 @@ h4 {
     height: calc(100% - 54px);
     box-sizing: border-box;
 }
-.maincontent .second_screen {
+.maincontent .third_screen {
     background: rgba(255, 249, 241, 1);
     height: 100vh;
     position: relative;
 }
-.maincontent .second_screen .transform_area {
+.maincontent .third_screen .transform_area {
     position: absolute;
     top: 0;
     left: 0;
@@ -217,7 +217,7 @@ h4 {
     width: 100%;
     z-index: 10;
 }
-.maincontent .second_screen .glass_inactive_mouse {
+.maincontent .third_screen .glass_inactive_mouse {
     height: 100%;
     width: 100%;
     position: absolute;
@@ -225,13 +225,13 @@ h4 {
     left: 0;
     z-index: 20;
 }
-.maincontent .second_screen .control_panel {
+.maincontent .third_screen .control_panel {
     left: 170%;
     position: absolute;
     top: 20%;
     width: 100%;
 }
-.maincontent .second_screen .control_panel .label {
+.maincontent .third_screen .control_panel .label {
     border: 3px solid rgba(75, 81, 91, 1);
     color: rgba(75, 81, 91, 1);
     margin-left: 18px;
@@ -246,33 +246,33 @@ h4 {
     -moz-transition: opacity 0.3s, -moz-transform 0.3s;
     transition: opacity 0.3s, transform 0.3s;
 }
-.maincontent .second_screen .ms-view-layers .label {
+.maincontent .third_screen .ms-view-layers .label {
     -webkit-transform: rotateY(-30deg) rotatex(0deg);
     -moz-transform: rotateY(-30deg) rotatex(0deg);
     transform: rotateY(-30deg) rotatex(0deg);
     opacity: 0.9;
 }
-.maincontent .second_screen .ms-view-layers .hiden {
+.maincontent .third_screen .ms-view-layers .hiden {
     -webkit-transform: rotateY(-30deg) rotatex(90deg);
     -moz-transform: rotateY(-30deg) rotatex(90deg);
     transform: rotateY(-30deg) rotatex(90deg);
     opacity: 0.1;
 }
 
-.maincontent .second_screen .control_panel .label:hover {
+.maincontent .third_screen .control_panel .label:hover {
     border-color: #687fa7;
     cursor: pointer;
     -webkit-transform: rotateY(0deg);
     -moz-transform: rotateY(0deg);
     transform: rotateY(0deg);
 }
-.maincontent .second_screen .ms-view-layers .hiden:hover {
+.maincontent .third_screen .ms-view-layers .hiden:hover {
     -webkit-transform: rotateY(0deg) rotatex(90deg);
     -moz-transform: rotateY(0deg) rotatex(90deg);
     transform: rotateY(0deg) rotatex(90deg);
 }
-.maincontent .second_screen .control_panel .label::after,
-.maincontent .second_screen .control_panel .label::before {
+.maincontent .third_screen .control_panel .label::after,
+.maincontent .third_screen .control_panel .label::before {
     right: 100%;
     border: solid transparent;
     content: " ";
@@ -282,7 +282,7 @@ h4 {
     pointer-events: none;
 }
 
-.maincontent .second_screen .control_panel .label::after {
+.maincontent .third_screen .control_panel .label::after {
     border-color: transparent;
     border-right-color: #d2d1d5;
     border-width: 12px;
@@ -290,7 +290,7 @@ h4 {
     margin-top: -12px;
 }
 
-.maincontent .second_screen .control_panel .label::before {
+.maincontent .third_screen .control_panel .label::before {
     border-color: transparent;
     border-right-color: rgba(75, 81, 91, 1);
     border-width: 16px;
@@ -298,12 +298,12 @@ h4 {
     margin-top: -16px;
 }
 
-.maincontent .second_screen .control_panel .label:hover::before {
+.maincontent .third_screen .control_panel .label:hover::before {
     border-right-color: #687fa7;
     cursor: pointer;
 }
 
-.maincontent .second_screen:before {
+.maincontent .third_screen:before {
     content:'';
 	height: 100%;
 	display: inline-block;
@@ -323,18 +323,18 @@ h4 {
     text-align: center;
 }
 
-/* Third screen */
+/* Second screen */
 
-.third_screen {
+.second_screen {
     position: relative;
     height: 100vh;
     background: #1f608d;
 }
-.third_screen h4 {
+.second_screen h4 {
     color: rgba(255, 255, 255, 1);
     z-index: 10;
 }
-.third_screen h6 {
+.second_screen h6 {
     color: rgba(255, 255, 255, 1);
     font-family: 'sf_ui_displayregular';
     position: absolute;

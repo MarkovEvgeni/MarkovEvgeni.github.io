@@ -71,8 +71,11 @@ document.addEventListener('DOMContentLoaded', function () {
     
     function scrolledUpButton() {
         
+        var thirdScreenOffset = window.innerHeight;
+        
+        
         var scrolled = window.pageYOffset || document.documentElement.scrollTop;
-        if (scrolled < 600 || scrolled > 1200) {
+        if (scrolled < thirdScreenOffset * 2 || scrolled > thirdScreenOffset * 2.5) {
             setTimeout(function () {
                 $('.glass_inactive_mouse').css('display', 'none');
             }, 1500);
@@ -322,12 +325,12 @@ document.addEventListener('DOMContentLoaded', function () {
     
     
     
-    $('.second_screen').mouseenter(receiveCoordinates);
-    $('.second_screen').mouseleave(function () {
+    $('.third_screen').mouseenter(receiveCoordinates);
+    $('.third_screen').mouseleave(function () {
         console.log('mouseleave');
-        $('.second_screen').unbind("mousemove");
+        $('.third_screen').unbind("mousemove");
         setTimeout(function () {
-            $('.second_screen').unbind("mousemove");
+            $('.third_screen').unbind("mousemove");
         }, 1500)
     });
     
@@ -347,7 +350,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         //     Привязываем изменение переменных к перемещению мыши.
 
-                $('.second_screen').mousemove(function() {
+                $('.third_screen').mousemove(function() {
 
                     var biasX = event.clientX - initialXCoordinate;
                     var biasY = event.clientY - initialYCoordinate;
@@ -467,7 +470,7 @@ function scrollScreenDown () {
     
     var currentDisplay = displayHeight * displayCounter;
     
-    if (displayCounter == 3) {
+    if (displayCounter == 2) {
         if (thirdScreenDevice < 3) {
             nextDevice();
         } else {
@@ -555,7 +558,7 @@ function scrollScreenUp () {
     var currentDisplay = displayHeight * displayCounter;
     var previousDisplay = displayHeight * (displayCounter - 2);
     
-    if (displayCounter == 3) {
+    if (displayCounter == 2) {
         if (thirdScreenDevice > 1) {
             previousDevice();
         } else {
