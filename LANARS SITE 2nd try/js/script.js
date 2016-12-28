@@ -2,6 +2,8 @@ document.addEventListener('DOMContentLoaded', function () {
     
     "use strict";
     
+//    Плагин для плавной прокрутки в Chrome и Safari
+    jQuery.scrollSpeed(100, 800);
     
 //    Используем сторонний плагин для разрешения проблемы со скроллингом
     
@@ -320,5 +322,6 @@ document.addEventListener('DOMContentLoaded', function () {
 //    };  
 //    
 //    
+
     
 });

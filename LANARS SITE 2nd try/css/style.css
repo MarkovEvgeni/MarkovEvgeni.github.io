@@ -2,7 +2,9 @@
 @import "parallax_screens.css";
 
 /*===Стили для эффекта parallax===*/
-
+body {
+    transform: translateZ(0);
+}
 .parallax {
     height: 100vh;
     overflow-x: hidden;
@@ -287,7 +289,8 @@
     width: 73%;
 }
 .laptop_screen,
-.ios_screen {
+.ios_screen,
+.android_tablet_screen {
     background-size: cover;
     background-repeat: no-repeat;
     position: absolute;
@@ -323,6 +326,20 @@
 }
 .ios_screen {
     background-image: url(../assets/img/mob_2.png);
+}
+.android_tablet_screen_container {
+    position: absolute;
+    top: 11.5%;
+    left: 5.8%;
+    width: 88.35%;
+}
+.android_tablet_screen_container::before {
+    content: "";
+    display: block;
+    padding-top: 65.33%; 
+}
+.android_tablet_screen {
+    background-image: url(../assets/img/tablet_3.png);
 }
 
 
@@ -687,8 +704,58 @@
 /*===Экран с командой===*/
 
 .our_team {
-    background-color: yellow;
+    background-color: white;
     z-index: 2;
+}
+.our_team .menu_plug {
+    height:  92px;
+}
+.our_team .content {
+    display: block;
+    height: calc(100% - 92px);
+    text-align: center;
+}
+.our_team .content::before {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    
+}
+.our_team_container {
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 96%;
+}
+.our_team_member {
+    box-sizing: border-box;
+    display: inline-block;
+    padding: 10px;
+    width: 320px;
+}
+.our_team_member_video {
+    background: yellow;
+    height: 300px;
+    position: relative;
+}
+.our_team_member_video video {
+    height: 300px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 300px;
+}
+.our_team_member_name {
+    color: rgb(75, 81, 91);
+    font-family: 'sf_ui_displaybold';
+    font-size: 18px;
+    padding: 15px 0 8px;
+    text-align: center;    
+}
+.our_team_member_position {
+    color: rgb(162, 166, 173);
+    font-family: 'sf_ui_displayregular';
+    padding: 4px 0;
 }
 
 /*===Экран с заказчиками===*/
