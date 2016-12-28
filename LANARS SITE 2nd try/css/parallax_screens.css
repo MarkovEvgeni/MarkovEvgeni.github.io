@@ -1,0 +1,165 @@
+/*=== CSS анимация прокрутки с первым экраном ===*/
+@Keyframes scroll-up1 {
+    from {
+        top: -100vh;
+    }
+    to {
+        top: 0;
+    }
+}
+@Keyframes scroll-down2 {
+    from {
+        top: 0;
+    }
+    to {
+        top: -100vh;
+    }
+}
+.scroll_up1 {
+    animation-name: scroll-up1;
+    animation-duration: 0.8s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+.scroll_down2 {
+    animation-name: scroll-down2;
+    animation-duration: 0.8s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+
+/*=== CSS анимация прокрутки со вторым экраном ===*/
+@Keyframes scroll-up2 {
+    from {
+        top: -200vh;
+    }
+    to {
+        top: -100vh;
+    }
+}
+@Keyframes scroll-down3 {
+    from {
+        top: -100vh;
+    }
+    to {
+        top: -200vh;
+    }
+}
+.scroll_up2 {
+    animation-name: scroll-up2;
+    animation-duration: 0.8s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+.scroll_down3 {
+    animation-name: scroll-down3;
+    animation-duration: 0.8s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+
+/*=== CSS анимация прокрутки с третьим экраном ===*/
+@Keyframes scroll-up3 {
+    from {
+        top: -300vh;
+    }
+    to {
+        top: -200vh;
+    }
+}
+@Keyframes scroll-down4 {
+    from {
+        top: -200vh;
+    }
+    to {
+        top: -300vh;
+    }
+}
+.scroll_up3 {
+    animation-name: scroll-up3;
+    animation-duration: 0.8s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+.scroll_down4 {
+    animation-name: scroll-down4;
+    animation-duration: 0.8s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+
+/*=== CSS анимация прокрутки с четвертым экраном ===*/
+@Keyframes scroll-up4 {
+    from {
+        top: -400vh;
+    }
+    to {
+        top: -300vh;
+    }
+}
+@Keyframes scroll-down5 {
+    from {
+        top: -300vh;
+    }
+    to {
+        top: -400vh;
+    }
+}
+.scroll_up4 {
+    animation-name: scroll-up4;
+    animation-duration: 0.8s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+.scroll_down5 {
+    animation-name: scroll-down5;
+    animation-duration: 0.8s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+
+/*=== CSS анимация прокрутки с пятым экраном ===*/
+@Keyframes scroll-up5 {
+    from {
+        top: -500vh;
+    }
+    to {
+        top: -400vh;
+    }
+}
+@Keyframes scroll-down6 {
+    from {
+        top: -400vh;
+    }
+    to {
+        top: -500vh;
+    }
+}
+.scroll_up5 {
+    animation-name: scroll-up5;
+    animation-duration: 0.8s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+.scroll_down6 {
+    animation-name: scroll-down6;
+    animation-duration: 0.8s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+
+/*=== CSS анимация прокрутки с шестым экраном ===*/
+@Keyframes scroll-up6 {
+    from {
+        top: -600vh;
+    }
+    to {
+        top: -500vh;
+    }
+}
+.scroll_up6 {
+    animation-name: scroll-up6;
+    animation-duration: 0.8s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}

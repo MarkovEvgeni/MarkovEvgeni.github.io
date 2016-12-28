@@ -1,0 +1,846 @@
+@import "fonts.css";
+@import "parallax_screens.css";
+
+/*===Стили для эффекта parallax===*/
+
+.parallax {
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    perspective: 1px;
+    scroll-behavior: initial;
+}
+.parallax__layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+}
+.parallax__group {
+  height: 100vh;
+  position: relative;
+  transform-style: preserve-3d;
+}
+.scrolling_feed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+/*===Главное меню - обычное состояние===*/
+
+.clearfix:after {
+    clear: both;
+    content: "";
+    display: block;
+}
+.menu_container {
+    padding: 10px 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+}
+.menu_title {
+    color: rgb(75, 81, 91);
+    display: inline-block;
+    float: left;
+    font-family: 'Oswald', sans-serif;
+    font-size: 23px;
+    font-weight: bold;
+    margin-left: 50px;
+    padding: 5px 0;
+}
+.main_menu {
+    float: right;
+    text-align: center;
+}
+.main_menu li {
+    box-sizing: border-box;
+    display: inline-block;
+    height: 33px;
+    margin: 0px 23px;
+}
+.main_menu li a {
+    color: rgb(75, 81, 91);
+    display: block;
+    font-family: 'sf_ui_displayregular';
+    font-size: 16px;
+    height: 100%;
+    padding: 9px 0 8px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.main_menu li:hover {
+    border-bottom: 2px solid rgb(255, 193, 104);
+    margin: 0px 21.2px;
+}
+.main_menu li:hover a,
+.main_menu li.active {
+    font-family: 'sf_ui_displaybold';
+    cursor: pointer;
+}
+
+/*===Главное меню в два ряда===*/
+
+.two_rows .menu_title,
+.two_rows .main_menu {
+    display: block;
+    float: none;
+    text-align: center;
+}
+.two_rows .menu_title {
+    margin-bottom: 6px;
+    margin-left: 0;
+}
+.two_rows .main_menu li:hover a {
+    font-family: 'sf_ui_displayregular';
+}
+.two_rows .main_menu li:hover {
+    margin: 0 23px;
+}
+
+
+/*Скрытие/показ меню*/
+
+@Keyframes hidemenu {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+@Keyframes showmenu {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.hide_menu {
+    animation-name: hidemenu;
+    animation-duration: 20ms;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+.show_menu {
+    animation-name: showmenu;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+
+/*===Первый экран===*/
+
+.menu_plug {
+    height: 53px;
+}
+.punchline_screen {
+    background: url(../assets/img/punchline_background.png);
+    background-size: cover;
+    height: calc(100vh - 53px);
+}
+.punchline_screen__glass {
+    background-color: rgba(0, 0, 0, 0.32);
+    height: 100%;
+    text-align: center;
+    width: 100%;
+}
+.punchline_screen__glass:before {
+    content:'';
+	display: inline-block;
+	height: 100%;
+    vertical-align: middle;
+}
+.punchline {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    width: 500px;
+}
+.punchline h1 {
+    color: rgb(255, 255, 255);
+    font-family: 'sf_ui_displaybold';
+    font-size: 44px;
+    letter-spacing: 0.0455em;
+    line-height: 68px;
+}
+.punchline h1 span {
+    color: rgb(255, 193, 104);
+}
+.punchline ul {
+    padding: 22px 0;
+}
+.punchline ul li {
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    font-family: 'CenturyGothic-Bold';
+    font-size: 18px;
+    font-weight: bold;
+}
+.punchline ul li::after {
+    background-color: rgb(255, 193, 104);
+    border-radius: 6px;
+    content: "";
+    display: inline-block;
+    height: 6px;
+    margin: 0 10px 3px 10px;
+    width: 6px;
+}
+.punchline ul li:last-child::after {
+    display: none;
+}
+
+/*===Экран с 3D моделью===*/
+
+.what_we_do {
+    background: rgb(255, 255, 255);
+    z-index: 2;
+}
+
+
+/*===Экран с девайсами===*/
+
+.our_works {
+    z-index: 1;
+}
+.our_works .menu_title,
+.our_works .main_menu li a {
+    color: rgb(255, 255, 255);
+}
+.parallax__background {
+    background: url(../assets/img/star_background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    transform: translateZ(-1px) scale(2);
+    width: 110%;
+}
+.our_works .content {
+    bottom: 0;
+    top: auto;
+    height: calc(100vh - 92px);
+    text-align: center;
+    width: 100%;
+}
+.our_works .menu_plug {
+    height:  92px;
+}
+.our_works .content::before {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+.devices {
+    border: 2px solid white;
+    box-sizing: border-box;
+    display: inline-block;
+    max-width: 1200px;
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+    width: 95%;
+}
+.devices::before {
+    content: "";
+    display: block;
+    padding-top: 50%;
+}
+.laptop_container {
+    top: 8.58%;
+    left: 10%;
+    position: absolute;
+    width: 80%;
+    z-index: 1;
+}
+.laptop {
+    box-sizing: border-box;
+    position: relative;
+    border: 1px solid red;
+    margin: 0 auto;
+    width: 100%;
+}
+.laptop:before {
+    content: "";
+    display: block;
+    padding-top: 53.54%;
+}
+.laptop_background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: url(../assets/img/web.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.laptop_screen_container {
+    top: 11.3%;
+    left: 13.5%;
+    position: absolute;
+    width: 73%;
+}
+.laptop_screen,
+.ios_screen {
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+.laptop_screen_1 {
+    background-image: url(../assets/img/web_3.png);
+}
+.laptop_screen_2 {
+    background-image: url(../assets/img/web_2.png);  
+}
+.laptop_screen_3 {
+    background-image: url(../assets/img/web_1.png);
+}
+.laptop_screen_container::before {
+    content: "";
+    display: block;
+    padding-top: 58%;        
+}
+.ios_screen_container {
+    position: absolute;
+    top: 11.5%;
+    left: 5.8%;
+    width: 88.35%;
+}
+.ios_screen_container::before {
+    content: "";
+    display: block;
+    padding-top: 171%;
+}
+.ios_screen {
+    background-image: url(../assets/img/mob_2.png);
+}
+
+
+.ios_container {
+    top: 9.65%;
+    left: 20%;
+    position: absolute;
+    width: 15.46%;
+    z-index: -2;
+}
+.ios {
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+    border: 1px solid yellow;
+    margin: 0 auto;
+}
+.ios:before {
+    content: "";
+    display: block;
+    padding-top: 203.47%;
+}
+.ios_background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: url(../assets/img/ios.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.android_tablet_container {
+    left: 22%;
+    opacity: 0;
+    position: absolute;
+    top: 27%;
+    width: 44.31%;
+    z-index: -1;
+}
+.android_tablet {
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+    border: 1px solid green;
+    margin: 0 auto;
+}
+.android_tablet:before {
+    content: "";
+    display: block;
+    padding-top: 72.27%;
+}
+.android_tablet_background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: url(../assets/img/tablet.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*Анимации девайсов*/
+/*Анимация исчезания экранов*/
+@keyframes dissolve{
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes appear{
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+/*Анимация Laptop*/
+/*Слайд вправо*/
+@keyframes laptop-right {
+    0% {
+        left: 10%;
+        transform: rotate(0);
+    }
+    50% {
+        left: 25%;
+        transform: rotate(1deg);
+    }
+    100% {
+        left: 20%;
+        transform: rotate(0);
+    }
+}
+.step2 .laptop_container {
+    animation-name: laptop-right;
+    animation-duration: 800ms;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+/*Слайд влево*/
+@keyframes laptop-left {
+    0% {
+        left: 20%;
+        transform: rotate(0);
+    }
+    50% {
+        transform: rotate(1deg);
+    }
+    100% {
+        left: 10%;
+        transform: rotate(0);
+    }
+}
+.step3 .laptop_container {
+    animation-name: laptop-left;
+    animation-duration: 800ms;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+/*Наклон для появления/исчезания iOS*/
+@keyframes laptop-open-path {
+    0% {
+        left: 10%;
+        transform: rotate(0);
+    }
+    50% {
+        left: 20%;
+        transform: rotate(1deg);
+    }
+    100% {
+        left: 10%;
+        transform: rotate(0);
+    }
+}
+@keyframes laptop-open-path2 {
+    0% {
+        left: 10%;
+        transform: rotate(0);
+    }
+    50% {
+        left: 20%;
+        transform: rotate(1deg);
+    }
+    100% {
+        left: 10%;
+        transform: rotate(0);
+    }
+}
+.step4 .laptop_container {
+    animation-name: laptop-open-path2;
+    animation-duration: 800ms;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+.step1 .laptop_container {
+    animation-name: laptop-open-path;
+    animation-duration: 800ms;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+/*Анимация ios*/
+/*Появление iOS*/
+@keyframes ios-show {
+    0% {
+        top: 9.65%;
+        left: 20%;
+        transform: scale(0.8) rotate(5deg);
+        z-index: -2;
+    }
+    50% {
+        left: 0%;
+        transform: scale(0.9) rotate(-5deg);
+    }
+    100% {
+        top: 37.5%;
+        left: 15%;
+        transform: scale(1) rotate(0deg);
+        z-index: 5;
+    }
+}
+.step1 .ios_container {
+    animation-name: ios-show;
+    animation-duration: 800ms;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+.step1 .laptop_screen_3,
+.step1 .laptop_screen_1 {
+    animation-name: dissolve;
+    animation-duration: 800ms;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+.step1 .laptop_screen_2 {
+    animation-name: appear;
+    animation-duration: 800ms;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+/*Cлайд iOS вправо*/
+@keyframes ios-right {
+    0% {
+        left: 15%;
+        top: 37.5%;
+        z-index: 5;
+    }
+    100% {
+        left: 25%;
+        top: 37.5%;
+        z-index: 5;
+    }
+}
+.step2 .ios_container {
+    animation-name: ios-right;
+    animation-duration: 800ms;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;    
+}
+.step2 .laptop_screen_2,
+.step2 .laptop_screen_3 {
+    animation-name: dissolve;
+    animation-duration: 800ms;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+.step2 .laptop_screen_1 {
+    animation-name: appear;
+    animation-duration: 800ms;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+/*Cлайд iOS влево*/
+@keyframes ios-left {
+    0% {
+        left: 25%;
+        top: 37.5%;
+        z-index: 5;
+    }
+    100% {
+        left: 15%;
+        top: 37.5%;
+        z-index: 5;
+    }
+}
+.step3 .ios_container {
+    animation-name: ios-left;
+    animation-duration: 800ms;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;    
+}
+/*Анимация ios*/
+/*Исчезание iOS*/
+@keyframes ios-hide {
+    0% {
+        top: 37.5%;
+        left: 15%;
+        transform: scale(1) rotate(0deg);
+        z-index: 5;
+    }
+    50% {
+        left: 0%;
+        transform: scale(0.9) rotate(-5deg);
+    }
+    100% {
+        top: 9.65%;
+        left: 20%;
+        transform: scale(0.8) rotate(5deg);
+        z-index: 0;
+    }
+}
+.step4 .ios_container {
+    animation-name: ios-hide;
+    animation-duration: 800ms;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+.step4 .laptop_screen_2,
+.step4 .laptop_screen_1 {
+    animation-name: dissolve;
+    animation-duration: 800ms;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+.step4 .laptop_screen_3 {
+    animation-name: appear;
+    animation-duration: 800ms;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+/*Анимация android*/
+/*Появление Android*/
+@keyframes android-show {
+    0% {
+        left: 22%;
+        opacity: 0;
+        transform: scale(0.8) rotate(2.5deg);
+        z-index: -1;
+    }
+    50% {
+        left: 8%;
+        opacity: 1;
+        transform: scale(0.95) rotate(-2.5deg);
+    }
+    100% {
+        opacity: 1;
+        left: 0;
+        transform: scale(1);
+        z-index: 0;
+    }
+}
+.step2 .android_tablet_container{
+    animation-name: android-show;
+    animation-duration: 800ms;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+@keyframes android-hide {
+    0% {
+        left: 0;
+        opacity: 1;
+        transform: scale(1);
+        z-index: 0;
+    }
+    50% {
+        left: 20%;
+        opacity: 1;
+        transform: scale(0.95) rotate(-2.5deg);
+    }
+    100% {
+        left: 22%;
+        opacity: 0;
+        transform: scale(0.8) rotate(2.5deg);
+        z-index: -1;
+    }
+}
+.step3 .android_tablet_container{
+    animation-name: android-hide;
+    animation-duration: 800ms;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+.step3 .laptop_screen_3,
+.step3 .laptop_screen_1 {
+    animation-name: dissolve;
+    animation-duration: 800ms;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+.step4 .laptop_screen_2 {
+    animation-name: appear;
+    animation-duration: 800ms;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+
+
+
+/*===Экран с командой===*/
+
+.our_team {
+    background-color: yellow;
+    z-index: 2;
+}
+
+/*===Экран с заказчиками===*/
+
+/*===Экран с контактами===*/
+
+.contacts {
+    overflow: hidden;
+}
+.contacts .menu_title,
+.contacts .main_menu li a {
+    color: rgb(255, 255, 255);
+}
+.footer_parallax_layer {
+    text-align: center;
+    width: 100%;
+}
+.footer_parallax_layer:before {
+    content: "";
+    display: inline-block;
+    height: calc(100% - 409px);
+    margin-top: 92px;
+    vertical-align: middle;
+}
+.get_in_touch {
+    display: inline-block;
+    height: 60px;
+    vertical-align: middle;
+}
+.get_in_touch li {
+    display: inline-block;
+    background: url(../assets/img/sprite_contacts.png);
+    background-repeat: no-repeat;
+    max-width: 220px;
+    height: 50px;
+    vertical-align: top;
+}
+.get_in_touch li:nth-child(2) {
+    background-position: 0px -40px ;
+}
+.get_in_touch li:nth-child(3) {
+    background-position: 0px -81px ;
+}
+.get_in_touch li:nth-child(4) {
+    background-position: 0px -40px ;
+}
+.get_in_touch li:nth-child(5) {
+    background-position: 0px -165px ;
+}
+.get_in_touch li a {
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+    display: block;
+    font-family: 'sf_ui_displayregular';
+    font-size: 16px;
+    height: 100%;
+    line-height: 22px;
+    padding: 18px 15px 0px 35px;
+    text-align: left;
+    text-decoration: none;
+}
+.footer-container {
+    background-color: rgb(70, 69, 83);
+    padding: 0 0 50px 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+/*Главное меню в составе footer*/
+
+.footer-container .menu_container {
+    display: inline-block;
+    position: relative;
+    top: none;
+    left: none;
+    width: auto;
+}
+.footer-container .main_menu {
+    display: block;
+    float: none;
+}
+.footer-container .menu_title {
+    color: rgb(255, 255, 255);
+    display: block;
+    float: none;
+    font-family: 'sf_ui_displaybold';
+    font-size: 14px;
+    margin: 25px 0 0 0;
+    text-align: left;
+    text-transform: none;
+}
+.footer-container .main_menu li {
+    color: rgb(255, 255, 255);
+    display: block;
+    font-family: 'sf_ui_displayregular';
+    font-size: 14px;
+    margin: 0;
+    text-transform: none;   
+}
+.footer-container .main_menu li a{
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+    text-align: left;
+    text-transform: none;
+}
+.contacts_parallax_background {
+    background: url(../assets/img/footer_background.png);
+    background-size: cover;
+    height: 100%;
+    position: absolute;
+    transform: translateZ(-1px) scale(2);
+    width: 110%;
+}
+.socials_container {
+    display: inline-block;
+    margin-left: 40px;
+    padding: 10px 0;
+    vertical-align: top;
+}
+.socials_container .socials_title {
+    color: rgb(255, 255, 255);
+    font-family: 'sf_ui_displaybold';
+    font-size: 14px;
+    margin: 25px 0 0 0px;
+    padding: 5px 0 5px 0;
+    text-align: left;
+}
+.socials_container li {
+    background-image: url(../assets/img/sprite_socials.png);
+    background-repeat: no-repeat;
+    background-position: -8px -18px;
+    box-sizing: border-box;
+    display: inline-block;
+    margin-right: 25px;
+    height: 30px;
+    width: 35px;
+}
+.socials_container li:nth-child(2) {
+    background-position: -8px -60px; 
+}
+.socials_container li:nth-child(3) {
+    background-position: -8px -102px; 
+}
+.socials_container li:nth-child(4) {
+    background-position: -8px -146px; 
+}
+.socials_container li:nth-child(4) {
+    background-position: -3px -189px; 
+}
+.socials_container li a {
+    display: block;
+    height: 100%;
+}
