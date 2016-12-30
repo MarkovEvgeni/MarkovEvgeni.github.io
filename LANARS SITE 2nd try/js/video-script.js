@@ -10,9 +10,6 @@ document.addEventListener('DOMContentLoaded', function () {
         g();
     };
     
-    
-    
-    
     function playUp() {
         var self=this;
         setTimeout(function(){
@@ -22,56 +19,46 @@ document.addEventListener('DOMContentLoaded', function () {
         setTimeout(function() {
             animationActive = false;
         }, 1000);
-        var video = $(this).children('.video_up')[0];
-        $(this).children('.video_up').css('opacity', '1');
-        $(this).children('.video_down').css('opacity', '0');
         var backVideo = $(this).children('.video_down')[0];
-        backVideo.currentTime = 0.010;
+        var video = $(this).children('.video_up')[0];
+        video.currentTime = 0.000;
         video.play();
+        setTimeout(function() {
+            $(self).children('.video_up').css('opacity', '1');
+            $(self).children('.video_down').css('opacity', '0');
+        }, 10);
         $(this).on("mouseleave", mouseLeaveEvent);
         function mouseLeaveEvent() {
             $(this).off("mouseleave", mouseLeaveEvent);
             if (!animationActive) {
-                $(this).children('.video_down').css('opacity', '1');
-                $(this).children('.video_up').css('opacity', '0');
-                var backVideo = $(this).children('.video_up')[0];
-                backVideo.currentTime = 0.010;
-                var video = $(this).children('.video_down')[0];
-                video.play();
-            } else {
                 var self = this;
+                var backVideo = $(this).children('.video_up')[0];
+                var video = $(this).children('.video_down')[0];
+                video.currentTime = 0.000;
+                video.play();
                 setTimeout(function() {
                     $(self).children('.video_down').css('opacity', '1');
                     $(self).children('.video_up').css('opacity', '0');
+                }, 10);
+            } else {
+                var self = this;
+                setTimeout(function() {
                     var backVideo = $(self).children('.video_up')[0];
-                    backVideo.currentTime = 0.010;
                     var video = $(self).children('.video_down')[0];
+                    video.currentTime = 0.000;
                     video.play();
+                    setTimeout(function() {
+                        $(self).children('.video_down').css('opacity', '1');
+                        $(self).children('.video_up').css('opacity', '0');
+                    }, 10);
                 }, 500);
             } 
         };
     };
- 
-//    function playDown() {
-//        console.log(testing);
-//        $(this).children('.video_up').css('opacity', '0');
-//        $(this).children('.video_down').css('opacity', '1');
-//        var video = $(this).children('.video_down')[0];
-//        video.play();
-//    };
-    
     
     $('.our_team_member_video').each(function() {
         $(this).on("mouseenter", bindEvent);
     });
      
-//    $('.our_team_member_video').each(function() {
-//        $(this).mouseleave(function() {
-////      Передаем контекст this, чтобы hover вызывал эффект внутри нужного div.
-//            var self = this;
-//            var g = playDown.bind(self);
-//            g();
-//        })
-//    });
 
 });

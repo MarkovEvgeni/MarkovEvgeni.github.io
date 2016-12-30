@@ -75,12 +75,12 @@ body {
     text-decoration: none;
     text-transform: uppercase;
 }
-.main_menu li:hover {
+.main_menu li:hover,
+.main_menu li.active {
     border-bottom: 2px solid rgb(255, 193, 104);
     margin: 0px 21.2px;
 }
-.main_menu li:hover a,
-.main_menu li.active {
+.main_menu li:hover a {
     font-family: 'sf_ui_displaybold';
     cursor: pointer;
 }
@@ -239,7 +239,6 @@ body {
     vertical-align: middle;
 }
 .devices {
-    border: 2px solid white;
     box-sizing: border-box;
     display: inline-block;
     max-width: 1200px;
@@ -263,7 +262,6 @@ body {
 .laptop {
     box-sizing: border-box;
     position: relative;
-    border: 1px solid red;
     margin: 0 auto;
     width: 100%;
 }
@@ -290,7 +288,8 @@ body {
 }
 .laptop_screen,
 .ios_screen,
-.android_tablet_screen {
+.android_tablet_screen,
+.android_phone_screen {
     background-size: cover;
     background-repeat: no-repeat;
     position: absolute;
@@ -327,34 +326,17 @@ body {
 .ios_screen {
     background-image: url(../assets/img/mob_2.png);
 }
-.android_tablet_screen_container {
-    position: absolute;
-    top: 11.5%;
-    left: 5.8%;
-    width: 88.35%;
-}
-.android_tablet_screen_container::before {
-    content: "";
-    display: block;
-    padding-top: 65.33%; 
-}
-.android_tablet_screen {
-    background-image: url(../assets/img/tablet_3.png);
-}
-
-
 .ios_container {
     top: 9.65%;
     left: 20%;
     position: absolute;
     width: 15.46%;
-    z-index: -2;
+    z-index: -1;
 }
 .ios {
     box-sizing: border-box;
     width: 100%;
     position: relative;
-    border: 1px solid yellow;
     margin: 0 auto;
 }
 .ios:before {
@@ -372,6 +354,50 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 }
+.android_phone_container {
+    top: 9.65%;
+    left: 20%;
+    opacity: 0;
+    position: absolute;
+    transform: scale(0.8) rotate(5deg);
+    width: 16.37%;
+    z-index: -2;
+}
+.android_phone {
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+}
+.android_phone:before {
+    content: "";
+    display: block;
+    padding-top: 190.27%;
+}
+.android_phone_background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: url(../assets/img/android.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.android_phone_screen_container {
+    position: absolute;
+    top: 11.5%;
+    left: 5.8%;
+    width: 88.35%;
+}
+.android_phone_screen_container::before {
+    content: "";
+    display: block;
+    padding-top: 171.05%; 
+}
+.android_phone_screen {
+    background-image: url(../assets/img/mob_3.png);
+}
 .android_tablet_container {
     left: 22%;
     opacity: 0;
@@ -384,7 +410,6 @@ body {
     box-sizing: border-box;
     width: 100%;
     position: relative;
-    border: 1px solid green;
     margin: 0 auto;
 }
 .android_tablet:before {
@@ -401,6 +426,20 @@ body {
     background: url(../assets/img/tablet.png);
     background-repeat: no-repeat;
     background-size: cover;
+}
+.android_tablet_screen_container {
+    position: absolute;
+    top: 11.5%;
+    left: 5.8%;
+    width: 88.35%;
+}
+.android_tablet_screen_container::before {
+    content: "";
+    display: block;
+    padding-top: 65.33%; 
+}
+.android_tablet_screen {
+    background-image: url(../assets/img/tablet_3.png);
 }
 
 /*Анимации девайсов*/
@@ -524,8 +563,35 @@ body {
         z-index: 5;
     }
 }
+@keyframes android-phone-show {
+    0% {
+        left: 20%;
+        opacity: 0;
+        top: 9.65%;
+        transform: scale(0.8) rotate(5deg);
+        z-index: -2;
+    }
+    50% {
+        left: 15%;
+        opacity: 1;
+        transform: scale(0.9) rotate(-5deg);
+    }
+    100% {
+        left: 20%;
+        top: 37.5%;
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+        z-index: 5;
+    }
+}
 .step1 .ios_container {
     animation-name: ios-show;
+    animation-duration: 800ms;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+.step2 .android_phone_container {
+    animation-name: android-phone-show;
     animation-duration: 800ms;
     animation-timing-function: ease;
     animation-fill-mode: forwards;
@@ -546,19 +612,27 @@ body {
 /*Cлайд iOS вправо*/
 @keyframes ios-right {
     0% {
+        transform: scale(1) rotate(0deg);
         left: 15%;
         top: 37.5%;
         z-index: 5;
     }
+    50% {
+        transform: scale(0.9) rotate(5deg);
+        left: 110%;
+        top: 30%;
+        z-index: 1;
+    }
     100% {
+        transform: scale(0.8) rotate(5deg);
         left: 25%;
-        top: 37.5%;
-        z-index: 5;
+        top: 25%;
+        z-index: -2;
     }
 }
 .step2 .ios_container {
     animation-name: ios-right;
-    animation-duration: 800ms;
+    animation-duration: 1200ms;
     animation-timing-function: ease;
     animation-fill-mode: forwards;    
 }
@@ -578,11 +652,19 @@ body {
 /*Cлайд iOS влево*/
 @keyframes ios-left {
     0% {
+        transform: scale(0.8) rotate(5deg);
         left: 25%;
-        top: 37.5%;
-        z-index: 5;
+        top: 25%;
+        z-index: -2;
+    }
+    50% {
+        transform: scale(0.9) rotate(5deg);
+        left: 110%;
+        top: 30%;
+        z-index: 1;
     }
     100% {
+        transform: scale(1) rotate(0deg);
         left: 15%;
         top: 37.5%;
         z-index: 5;
@@ -590,12 +672,12 @@ body {
 }
 .step3 .ios_container {
     animation-name: ios-left;
-    animation-duration: 800ms;
+    animation-duration: 1200ms;
     animation-timing-function: ease;
     animation-fill-mode: forwards;    
 }
 /*Анимация ios*/
-/*Исчезание iOS*/
+/*Исчезание ios phone*/
 @keyframes ios-hide {
     0% {
         top: 37.5%;
@@ -616,6 +698,35 @@ body {
 }
 .step4 .ios_container {
     animation-name: ios-hide;
+    animation-duration: 800ms;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+/*Исчезание android phone*/
+@keyframes android-phone-hide {
+    0% {
+        left: 20%;
+        top: 37.5%;
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+        z-index: 5;
+    }
+    50% {
+        left: 0%;
+        opacity: 1;
+        transform: scale(0.9) rotate(-5deg);
+        z-index: 1;
+    }
+    100% {
+        left: 20%;
+        opacity: 0;
+        top: 9.65%;
+        transform: scale(0.8) rotate(5deg);
+        z-index: -2;
+    }
+}
+.step3 .android_phone_container {
+    animation-name: android-phone-hide;
     animation-duration: 800ms;
     animation-timing-function: ease;
     animation-fill-mode: forwards;
@@ -699,8 +810,6 @@ body {
     animation-fill-mode: forwards;
 }
 
-
-
 /*===Экран с командой===*/
 
 .our_team {
@@ -734,7 +843,6 @@ body {
     width: 320px;
 }
 .our_team_member_video {
-    background: yellow;
     height: 300px;
     position: relative;
 }
@@ -818,7 +926,7 @@ body {
     text-decoration: none;
 }
 .footer-container {
-    background-color: rgb(70, 69, 83);
+    background-color: rgba(70, 69, 83, 0.3);
     padding: 0 0 50px 0;
     position: absolute;
     bottom: 0;

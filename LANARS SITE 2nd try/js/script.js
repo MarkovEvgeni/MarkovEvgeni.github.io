@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             setTimeout(function() {
                 throttled = false;
-            }, 800)
+            }, 1000)
         } else {
             console.log('Too fast, cowboy!')
         }
