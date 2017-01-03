@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3D Transformation</title>
+    <link href="css/reset.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/script.js"></script>
+</head>
+<body>
+<!--
+    <div class="scene">
+        <div class="model">
+            <div class="back side"><p>BACK</p></div>
+            <div class="left side"><p>L</p></div>
+            <div class="right side"><p>R</p></div>
+            <div class="top side"><p>TOP</p></div>
+            <div class="bottom side"><p>BOTTOM</p></div>
+            <div class="front side"><p>FRONT</p></div>
+        </div>
+    </div>
+-->
+<div id="tridiv">
+  <div class="scene" style="-webkit-transform:rotateX(-361deg) rotateY(-325deg); -moz-transform:rotateX(-361deg) rotateY(-325deg); -ms-transform:rotateX(-361deg) rotateY(-325deg); transform:rotateX(0deg) rotateY(0deg); ">
+    <div class="shape cuboid-1 cub-1">
+      <div class="face ft"></div>
+      <div class="face bk"></div>
+      <div class="face rt"></div>
+      <div class="face lt">
+          <div class="phone_charger"></div>
+          <div class="phone_down_dynamic phone_down_dynamic-1"></div>
+          <div class="phone_down_dynamic phone_down_dynamic-2"></div>
+          <div class="phone_down_dynamic phone_down_dynamic-3"></div>
+          <div class="phone_down_dynamic phone_down_dynamic-4"></div>
+          <div class="phone_down_dynamic phone_down_dynamic-5"></div>
+          <div class="phone_down_dynamic phone_down_dynamic-6"></div>
+          <div class="phone_down_dynamic phone_down_dynamic-7"></div>
+          <div class="phone_down_dynamic phone_down_dynamic-8"></div>
+          <div class="phone_down_dynamic phone_down_dynamic-9"></div>
+          <div class="phone_down_dynamic phone_down_dynamic-10"></div>
+      </div>
+      <div class="face bm">
+          <div class="phone_main_button"></div>
+          <div class="phone_main_screen"></div>
+          <div class="phone_dynamic"></div>
+          <div class="phone_camera"></div>
+          <div class="phone_circle"></div>    
+      </div>
+      <div class="face tp"></div>
+      <div class="cr cr-0">
+        <div class="face side s0"></div>
+        <div class="face side s1"></div>
+        <div class="face side s2"></div>
+      </div>
+      <div class="cr cr-1">
+        <div class="face side s0"></div>
+        <div class="face side s1"></div>
+        <div class="face side s2"></div>
+      </div>
+      <div class="cr cr-2">
+        <div class="face side s0"></div>
+        <div class="face side s1"></div>
+        <div class="face side s2"></div>
+      </div>
+      <div class="cr cr-3">
+        <div class="face side s0"></div>
+        <div class="face side s1"></div>
+        <div class="face side s2"></div>
+      </div>
+    </div>
+    <div class="shape cuboid-2 cub-2">
+      <div class="face ft"></div>
+      <div class="face bk"></div>
+      <div class="face rt"></div>
+      <div class="face lt"></div>
+      <div class="face bm"></div>
+      <div class="face tp"></div>
+      <div class="cr cr-0">
+        <div class="face side s0"></div>
+        <div class="face side s1"></div>
+        <div class="face side s2"></div>
+      </div>
+      <div class="cr cr-1">
+        <div class="face side s0"></div>
+        <div class="face side s1"></div>
+        <div class="face side s2"></div>
+      </div>
+      <div class="cr cr-2">
+        <div class="face side s0"></div>
+        <div class="face side s1"></div>
+        <div class="face side s2"></div>
+      </div>
+      <div class="cr cr-3">
+        <div class="face side s0"></div>
+        <div class="face side s1"></div>
+        <div class="face side s2"></div>
+      </div>
+    </div>
+    <div class="shape cuboid-3 cub-3">
+      <div class="face ft"></div>
+      <div class="face bk"></div>
+      <div class="face rt"></div>
+      <div class="face lt"></div>
+      <div class="face bm"></div>
+      <div class="face tp"></div>
+      <div class="cr cr-0">
+        <div class="face side s0"></div>
+        <div class="face side s1"></div>
+        <div class="face side s2"></div>
+      </div>
+      <div class="cr cr-1">
+        <div class="face side s0"></div>
+        <div class="face side s1"></div>
+        <div class="face side s2"></div>
+      </div>
+      <div class="cr cr-2">
+        <div class="face side s0"></div>
+        <div class="face side s1"></div>
+        <div class="face side s2"></div>
+      </div>
+      <div class="cr cr-3">
+        <div class="face side s0"></div>
+        <div class="face side s1"></div>
+        <div class="face side s2"></div>
+      </div>
+    </div>
+    <div class="shape cuboid-5 cub-5">
+      <div class="face ft"></div>
+      <div class="face bk"></div>
+      <div class="face rt"></div>
+      <div class="face lt"></div>
+      <div class="face bm"></div>
+      <div class="face tp"></div>
+      <div class="cr cr-0">
+        <div class="face side s0"></div>
+        <div class="face side s1"></div>
+        <div class="face side s2"></div>
+      </div>
+      <div class="cr cr-1">
+        <div class="face side s0"></div>
+        <div class="face side s1"></div>
+        <div class="face side s2"></div>
+      </div>
+      <div class="cr cr-2">
+        <div class="face side s0"></div>
+        <div class="face side s1"></div>
+        <div class="face side s2"></div>
+      </div>
+      <div class="cr cr-3">
+        <div class="face side s0"></div>
+        <div class="face side s1"></div>
+        <div class="face side s2"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<button id="rotate">ROTATE</button>   
+<button id="back">BACK</button>   
+   
+    <div class="third_screen">
+    <div onselectstart="return false" class="transform_area">CLICK YOUR MOUSE HERE AND TRY TO MOVE IT</div>
+        
+    </div>
+</body>
+</html>
