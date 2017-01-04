@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
     "use strict";
     
 //    Плагин для плавной прокрутки в Chrome и Safari
-    jQuery.scrollSpeed(100, 800);
+    jQuery.scrollSpeed(100, 2000, 'easeOutCubic');
     
 //    Используем сторонний плагин для разрешения проблемы со скроллингом
     
@@ -66,18 +66,22 @@ document.addEventListener('DOMContentLoaded', function () {
     var currentSlide = 1;
     
     function scrollScreenDown() {
-        console.log(displayCounter);
-        console.log(currentSlide);
         if(displayCounter < 6) {
             if (displayCounter == 1) {
+                $('.content .scene').unbind();
                 setTimeout(function(){
-                   $('.what_we_do .model').addClass('rotate_model');
+                   $('.what_we_do .model').css("transform", "translateY(50px) rotateX(50deg) rotateZ(30deg)");
+                   $('.what_we_do .model').css("transition", "transform 0.4s linear");
+                   $('.what_we_do .model').addClass('open_screen');
                    $('.what_we_do .control_panel').addClass('show_control_panel'); 
                 }, 1000);
             }
             if (displayCounter == 2) {
-               $('.what_we_do .model').removeClass('rotate_model');
-               $('.what_we_do .control_panel').removeClass('show_control_panel');  
+               $('.what_we_do .model').css("transform", "translateY(0px) rotateX(0deg) rotateZ(0deg)");
+               $('.what_we_do .model').css("transition", "transform 0.4s linear");
+               $('.what_we_do .model').removeClass('open_screen');
+               $('.what_we_do .control_panel').removeClass('show_control_panel');
+               $('.content .scene').unbind();
             }
             if (displayCounter == 3) {
                 console.log("Here it is!");
@@ -117,16 +121,22 @@ document.addEventListener('DOMContentLoaded', function () {
     function scrollScreenUp() {
         if(displayCounter > 1) {
             if (displayCounter == 2) {
-               $('.what_we_do .model').removeClass('rotate_model');
-               $('.what_we_do .control_panel').removeClass('show_control_panel');  
+               $('.what_we_do .control_panel').removeClass('show_control_panel');
+               $('.what_we_do .model').removeClass('open_screen');
+               $('.what_we_do .model').css("transform", "translateY(0px) rotateX(0deg) rotateZ(0deg)");
+               $('.what_we_do .model').css("transition", "transform 0.4s linear");
+               $('.content .scene').unbind();
             }
             if (displayCounter == 3) {
                 if (currentSlide !== 1) {
                     prevSlide();
                     return;
                 }
-                setTimeout(function(){
-                    $('.what_we_do .model').addClass('rotate_model');
+                $('.content .scene').unbind();
+                setTimeout(function() {
+                    $('.what_we_do .model').css("transform", "translateY(50px) rotateX(50deg) rotateZ(30deg)");
+                    $('.what_we_do .model').css("transition", "transform 0.4s linear");
+                    $('.what_we_do .model').addClass('open_screen');
                     $('.what_we_do .control_panel').addClass('show_control_panel');
                 }, 1000);
             }

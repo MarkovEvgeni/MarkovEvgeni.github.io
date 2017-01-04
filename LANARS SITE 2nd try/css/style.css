@@ -4,13 +4,13 @@
 /*===Стили для эффекта parallax===*/
 body {
     transform: translateZ(0);
+    perspective: 0px;
 }
 .parallax {
     height: 100vh;
     overflow-x: hidden;
     overflow-y: hidden;
     perspective: 1px;
-    scroll-behavior: initial;
 }
 .parallax__layer {
     position: absolute;
@@ -204,7 +204,6 @@ body {
     z-index: 2;
 }
 .what_we_do .content {
-    border: 1px solid red;
     box-sizing: border-box;
     height: calc(100% - 92px);
     margin: 0 auto;
@@ -221,7 +220,6 @@ body {
     height: 100%;
 }
 .what_we_do .scene {
-    border: 2px solid green;
     display: inline-block;
     height: 99%;
     vertical-align: middle;
@@ -275,45 +273,41 @@ body {
 }
 .what_we_do .scene .perspective .matching-screen-1 {
     background-color: aqua;
-    transition-delay: 0.3s;
 }
 .what_we_do .scene .perspective .matching-screen-2 {
     background-color: palevioletred;
-    transition-delay: 0.4s;
 }
 .what_we_do .scene .perspective .matching-screen-3 {
     background-color: goldenrod;
-    transition-delay: 0.5s;
 }
 .what_we_do .scene .perspective .matching-screen-4 {
     background-color: hotpink;
-    transition-delay: 0.6s;
 }
 .what_we_do .scene .perspective .matching-screen-5 {
     background-color: blueviolet;
-    transition-delay: 0.7s;
 }
 .what_we_do .scene .model {
     transition: transform 0.5s ease-in-out;
 }
-.what_we_do .scene .rotate_model {
-    transform: translateY(50px) rotateX(50deg) rotateZ(30deg);
-}
-.what_we_do .scene .rotate_model .screen-1 {
+.what_we_do .scene .open_screen .screen-1 {
     transform: translateZ(200px);
+    transition-delay: 0.3s;
 }
-.what_we_do .scene .rotate_model .screen-2 {
+.what_we_do .scene .open_screen .screen-2 {
     transform: translateZ(160px);
+    transition-delay: 0.4s;
 }
-.what_we_do .scene .rotate_model .screen-3 {
+.what_we_do .scene .open_screen .screen-3 {
     transform: translateZ(120px);
+    transition-delay: 0.5s;
 }
-.what_we_do .scene .rotate_model .screen-4 {
+.what_we_do .scene .open_screen .screen-4 {
     transform: translateZ(80px);
-    
+    transition-delay: 0.6s;
 }
-.what_we_do .scene .rotate_model .screen-5 {
+.what_we_do .scene .open_screen .screen-5 {
     transform: translateZ(40px);
+    transition-delay: 0.7s;
 }
 .what_we_do .control_panel {
     position: absolute;

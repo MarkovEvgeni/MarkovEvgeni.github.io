@@ -18,13 +18,13 @@
 .scroll_up1 {
     animation-name: scroll-up1;
     animation-duration: 1s;
-    animation-timing-function: ease;
+    animation-timing-function: ease-in;
     animation-fill-mode: forwards;
 }
 .scroll_down2 {
     animation-name: scroll-down2;
     animation-duration: 1s;
-    animation-timing-function: ease;
+    animation-timing-function: ease-in;
     animation-fill-mode: forwards;
 }
 
@@ -48,13 +48,13 @@
 .scroll_up2 {
     animation-name: scroll-up2;
     animation-duration: 1s;
-    animation-timing-function: ease;
+    animation-timing-function: ease-in;
     animation-fill-mode: forwards;
 }
 .scroll_down3 {
     animation-name: scroll-down3;
     animation-duration: 1s;
-    animation-timing-function: ease;
+    animation-timing-function: ease-in;
     animation-fill-mode: forwards;
 }
 
@@ -78,13 +78,13 @@
 .scroll_up3 {
     animation-name: scroll-up3;
     animation-duration: 1s;
-    animation-timing-function: ease;
+    animation-timing-function: ease-in;
     animation-fill-mode: forwards;
 }
 .scroll_down4 {
     animation-name: scroll-down4;
     animation-duration: 1s;
-    animation-timing-function: ease;
+    animation-timing-function: ease-in;
     animation-fill-mode: forwards;
 }
 
@@ -108,13 +108,13 @@
 .scroll_up4 {
     animation-name: scroll-up4;
     animation-duration: 1s;
-    animation-timing-function: ease;
+    animation-timing-function: ease-in;
     animation-fill-mode: forwards;
 }
 .scroll_down5 {
     animation-name: scroll-down5;
     animation-duration: 1s;
-    animation-timing-function: ease;
+    animation-timing-function: ease-in;
     animation-fill-mode: forwards;
 }
 
@@ -138,13 +138,13 @@
 .scroll_up5 {
     animation-name: scroll-up5;
     animation-duration: 1s;
-    animation-timing-function: ease;
+    animation-timing-function: ease-in;
     animation-fill-mode: forwards;
 }
 .scroll_down6 {
     animation-name: scroll-down6;
     animation-duration: 1s;
-    animation-timing-function: ease;
+    animation-timing-function: ease-in;
     animation-fill-mode: forwards;
 }
 
@@ -160,6 +160,6 @@
 .scroll_up6 {
     animation-name: scroll-up6;
     animation-duration: 1s;
-    animation-timing-function: ease;
+    animation-timing-function: ease-in;
     animation-fill-mode: forwards;
 }

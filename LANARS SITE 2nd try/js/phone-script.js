@@ -175,13 +175,13 @@ document.addEventListener('DOMContentLoaded', function () {
     
     
     
-    $('.content .scene').mouseenter(receiveCoordinates);
-    $('.content .scene').mouseleave(function () {
+    $('.what_we_do .content').mouseenter(receiveCoordinates);
+    $('.what_we_do .content').mouseleave(function () {
         console.log('mouseleave');
-        $('.third_screen').unbind("mousemove");
-        setTimeout(function () {
-            $('.content .scene').unbind("mousemove");
-        }, 1500)
+        $('.what_we_do .content').unbind("mousemove");
+//        setTimeout(function () {
+//            $('.what_we_do .content').unbind("mousemove");
+//        }, 1500)
     });
     
 //    Определяем модель которая будет перезаписывать переменные определяющие угол вращения.
@@ -243,7 +243,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 });
             
-        }, 500)
+        }, 1300)
     }   
     
     
