@@ -69,6 +69,16 @@ document.addEventListener('DOMContentLoaded', function () {
         console.log(displayCounter);
         console.log(currentSlide);
         if(displayCounter < 6) {
+            if (displayCounter == 1) {
+                setTimeout(function(){
+                   $('.what_we_do .model').addClass('rotate_model');
+                   $('.what_we_do .control_panel').addClass('show_control_panel'); 
+                }, 1000);
+            }
+            if (displayCounter == 2) {
+               $('.what_we_do .model').removeClass('rotate_model');
+               $('.what_we_do .control_panel').removeClass('show_control_panel');  
+            }
             if (displayCounter == 3) {
                 console.log("Here it is!");
                 console.log(currentSlide);
@@ -106,11 +116,19 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function scrollScreenUp() {
         if(displayCounter > 1) {
+            if (displayCounter == 2) {
+               $('.what_we_do .model').removeClass('rotate_model');
+               $('.what_we_do .control_panel').removeClass('show_control_panel');  
+            }
             if (displayCounter == 3) {
                 if (currentSlide !== 1) {
                     prevSlide();
                     return;
                 }
+                setTimeout(function(){
+                    $('.what_we_do .model').addClass('rotate_model');
+                    $('.what_we_do .control_panel').addClass('show_control_panel');
+                }, 1000);
             }
             --displayCounter;
             hideMenu();

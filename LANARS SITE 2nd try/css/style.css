@@ -203,7 +203,147 @@ body {
     background: rgb(255, 255, 255);
     z-index: 2;
 }
+.what_we_do .content {
+    border: 1px solid red;
+    box-sizing: border-box;
+    height: calc(100% - 92px);
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+}
+.what_we_do .menu_plug {
+    height: 92px;
+}
+.what_we_do .content::before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+}
+.what_we_do .scene {
+    border: 2px solid green;
+    display: inline-block;
+    height: 99%;
+    vertical-align: middle;
+    width: 99%; 
+}
+.what_we_do .scene .perspective {
+    background: transparent;
+    font-size: 180%;
+    height: 100%;
+    perspective: 800px;
+    width: 100%;
+}
 
+.what_we_do .scene .perspective .screens {
+    width: 13.83em;
+    height: 6.71em;
+    transform: rotateX(-90deg) translateY(-50%);
+    position: absolute;
+    transform-style: preserve-3d;
+    top: 100%;
+    transform-origin: 0 0;
+    backface-visibility: hidden;
+    z-index: 5;
+}
+.what_we_do .scene .perspective .screen {
+    height: 90%;
+    width: 78%;
+    top: 5%;
+    left: 10%;
+    position: absolute;
+    transition: transform 0.4s;
+    opacity: 0.9;
+}
+.what_we_do .scene .perspective .screen:hover {
+    cursor: pointer;
+}
+.what_we_do .scene .perspective .screen::after {
+    content: '';
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(65, 255, 239, .4);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+.what_we_do .scene .perspective .screen:hover::after,
+.what_we_do .scene .perspective .special::after {
+     opacity: 1;
+}
+.what_we_do .scene .perspective .matching-screen-1 {
+    background-color: aqua;
+    transition-delay: 0.3s;
+}
+.what_we_do .scene .perspective .matching-screen-2 {
+    background-color: palevioletred;
+    transition-delay: 0.4s;
+}
+.what_we_do .scene .perspective .matching-screen-3 {
+    background-color: goldenrod;
+    transition-delay: 0.5s;
+}
+.what_we_do .scene .perspective .matching-screen-4 {
+    background-color: hotpink;
+    transition-delay: 0.6s;
+}
+.what_we_do .scene .perspective .matching-screen-5 {
+    background-color: blueviolet;
+    transition-delay: 0.7s;
+}
+.what_we_do .scene .model {
+    transition: transform 0.5s ease-in-out;
+}
+.what_we_do .scene .rotate_model {
+    transform: translateY(50px) rotateX(50deg) rotateZ(30deg);
+}
+.what_we_do .scene .rotate_model .screen-1 {
+    transform: translateZ(200px);
+}
+.what_we_do .scene .rotate_model .screen-2 {
+    transform: translateZ(160px);
+}
+.what_we_do .scene .rotate_model .screen-3 {
+    transform: translateZ(120px);
+}
+.what_we_do .scene .rotate_model .screen-4 {
+    transform: translateZ(80px);
+    
+}
+.what_we_do .scene .rotate_model .screen-5 {
+    transform: translateZ(40px);
+}
+.what_we_do .control_panel {
+    position: absolute;
+    left: 75%;
+    top: 30%;
+    transition: opacity 0.3s;
+    opacity: 0;
+    
+}
+.what_we_do .control_panel .label {
+    font-family: 'sf_ui_displayregular';
+    font-size: 20px;
+    padding: 5%;
+    text-align: left;
+    
+}
+.what_we_do .control_panel .rotate_label {
+    transform: scale(1, -1) rotateX(180deg);
+    transition: transform 1.3s ease-in-out;
+}
+.what_we_do .control_panel .top-label {
+    color: rgb(65, 255, 239);
+}
+.what_we_do .control_panel .label:hover {
+    color: rgb(65, 255, 239);
+    cursor: pointer;
+}
+.what_we_do .show_control_panel {
+    opacity: 1;
+}
 
 /*===Экран с девайсами===*/
 
