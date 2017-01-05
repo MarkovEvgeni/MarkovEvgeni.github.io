@@ -1208,7 +1208,7 @@
 
 /*Проблема с альбомной ориентацией мобильного устройства*/
 
-@media all and (max-aspect-ratio: 16/9) and (orientation: landscape) {
+@media all and (max-device-aspect-ratio: 16/9) and (orientation: landscape) {
 /*
     body {
         background: red;
