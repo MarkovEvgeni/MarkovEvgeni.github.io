@@ -2,13 +2,43 @@ document.addEventListener('DOMContentLoaded', function () {
     
     "use strict";
     
+    
+//    Полифилл для requestAnimationFrame
+    (function() {
+        var lastTime = 0;
+        var vendors = ['ms', 'moz', 'webkit', 'o'];
+        for(var x = 0; x < vendors.length && !window.requestAnimationFrame; ++x) {
+            window.requestAnimationFrame = window[vendors[x]+'RequestAnimationFrame'];
+            window.cancelAnimationFrame = window[vendors[x]+'CancelAnimationFrame'] 
+                                       || window[vendors[x]+'CancelRequestAnimationFrame'];
+        }
+
+        if (!window.requestAnimationFrame)
+            window.requestAnimationFrame = function(callback, element) {
+                var currTime = new Date().getTime();
+                var timeToCall = Math.max(0, 16 - (currTime - lastTime));
+                var id = window.setTimeout(function() { callback(currTime + timeToCall); }, 
+                  timeToCall);
+                lastTime = currTime + timeToCall;
+                return id;
+            };
+
+        if (!window.cancelAnimationFrame)
+            window.cancelAnimationFrame = function(id) {
+                clearTimeout(id);
+            };
+    }());
+    
+    
+    
+    
 //    Плагин для плавной прокрутки в Chrome и Safari
     jQuery.scrollSpeed(100, 2000, 'easeOutCubic');
     
 //    Используем сторонний плагин для разрешения проблемы со скроллингом
     
     var indicator = new WheelIndicator({
-      elem: document.querySelector('body'),
+      elem: document.querySelector('.scrolling_feed'),
       callback: function(e){
         scrollScreen(e);
       }
@@ -16,7 +46,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
 //    Объявляем переменную которая будет счетчком текущего экрана, для определения логики взаимодействия с ними.
     
-    var displayCounter = 1;    
+    var displayCounter = 1;
+    
+    $('.up-test').on('click', scrollScreenUp);
+    $('.down-test').on('click', scrollScreenDown);
  
 // Создаем ограничение, чтобы скроллить экраны можно было не чаще чем один раз в установленное кол-во времени.  
     
@@ -26,18 +59,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function scrollScreen (el) {
         el = el || window.event;
-        console.log("window.event", window.event);
-        console.log("element", el);
         el.preventDefault ? el.preventDefault() : (el.returnValue = false);
 
         if (!throttled) {
             var scrollDelta = el.deltaY || el.detail || el.wheelDelta;
             if (scrollDelta < 0) {
-                console.log(scrollDelta);
-                scrollScreenUp();
+                scrollScreenUp;
             } else if (scrollDelta > 0) {
-                scrollScreenDown();
-                console.log(scrollDelta);
+                scrollScreenDown;
             }
 
             throttled = true;

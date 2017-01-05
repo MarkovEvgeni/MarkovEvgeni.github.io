@@ -3,8 +3,8 @@
 
 /*===Стили для эффекта parallax===*/
 body {
-    transform: translateZ(0);
-    perspective: 0px;
+/*    transform: translateZ(0);*/
+/*    transform: translateZ(0);*/
 }
 .parallax {
     height: 100vh;
@@ -142,7 +142,7 @@ body {
     height: 53px;
 }
 .punchline_screen {
-    background: url(../assets/img/punchline_background.png);
+    background: url(../assets/img/punchline_background-min.png);
     background-size: cover;
     height: calc(100vh - 53px);
 }
@@ -349,7 +349,7 @@ body {
     color: rgb(255, 255, 255);
 }
 .parallax__background {
-    background: url(../assets/img/star_background.png);
+    background: url(../assets/img/star_background-min.png);
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;

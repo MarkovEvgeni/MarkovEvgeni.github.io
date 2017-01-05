@@ -1,18 +1,18 @@
 /*=== CSS анимация прокрутки с первым экраном ===*/
 @Keyframes scroll-up1 {
     from {
-        top: -100vh;
+        transform: translateY(-100vh);
     }
     to {
-        top: 0;
+        transform:  translateY(0);
     }
 }
 @Keyframes scroll-down2 {
     from {
-        top: 0;
+        transform:  translateY(0);
     }
     to {
-        top: -100vh;
+        transform:  translateY(-100vh);
     }
 }
 .scroll_up1 {
@@ -31,18 +31,22 @@
 /*=== CSS анимация прокрутки со вторым экраном ===*/
 @Keyframes scroll-up2 {
     from {
-        top: -200vh;
+        transform:  translateY(-200vh);
+        transform-style: preserve-3d;
     }
     to {
-        top: -100vh;
+        transform:  translateY(-100vh);
+        transform-style: preserve-3d;
     }
 }
 @Keyframes scroll-down3 {
     from {
-        top: -100vh;
+        transform:  translateY(-100vh);
+        transform-style: preserve-3d;
     }
     to {
-        top: -200vh;
+        transform:  translateY(-200vh);
+        transform-style: preserve-3d;
     }
 }
 .scroll_up2 {
@@ -61,18 +65,22 @@
 /*=== CSS анимация прокрутки с третьим экраном ===*/
 @Keyframes scroll-up3 {
     from {
-        top: -300vh;
+        transform:  translateY(-300vh);
+        transform-style: preserve-3d;
     }
     to {
-        top: -200vh;
+        transform:  translateY(-200vh);
+        transform-style: preserve-3d;
     }
 }
 @Keyframes scroll-down4 {
     from {
-        top: -200vh;
+        transform:  translateY(-200vh);
+        transform-style: preserve-3d;
     }
     to {
-        top: -300vh;
+        transform:  translateY(-300vh);
+        transform-style: preserve-3d;
     }
 }
 .scroll_up3 {
@@ -91,18 +99,18 @@
 /*=== CSS анимация прокрутки с четвертым экраном ===*/
 @Keyframes scroll-up4 {
     from {
-        top: -400vh;
+        transform:  translateY(-400vh);
     }
     to {
-        top: -300vh;
+        transform:  translateY(-300vh);
     }
 }
 @Keyframes scroll-down5 {
     from {
-        top: -300vh;
+        transform:  translateY(-300vh);
     }
     to {
-        top: -400vh;
+        transform:  translateY(-400vh);
     }
 }
 .scroll_up4 {
@@ -121,18 +129,22 @@
 /*=== CSS анимация прокрутки с пятым экраном ===*/
 @Keyframes scroll-up5 {
     from {
-        top: -500vh;
+        transform:  translateY(-500vh);
+        transform-style: preserve-3d;
     }
     to {
-        top: -400vh;
+        transform:  translateY(-400vh);
+        transform-style: preserve-3d;
     }
 }
 @Keyframes scroll-down6 {
     from {
-        top: -400vh;
+        transform:  translateY(-400vh);
+        transform-style: preserve-3d;
     }
     to {
-        top: -500vh;
+        transform:  translateY(-500vh);
+        transform-style: preserve-3d;
     }
 }
 .scroll_up5 {
@@ -149,12 +161,15 @@
 }
 
 /*=== CSS анимация прокрутки с шестым экраном ===*/
+/*
 @Keyframes scroll-up6 {
     from {
-        top: -600vh;
+        transform:  translateY(-600vh);
+        transform-style: preserve-3d;
     }
     to {
-        top: -500vh;
+        transform:  translateY(-500vh);
+        transform-style: preserve-3d;
     }
 }
 .scroll_up6 {
@@ -162,4 +177,4 @@
     animation-duration: 1s;
     animation-timing-function: ease-in;
     animation-fill-mode: forwards;
-}
+}*/
