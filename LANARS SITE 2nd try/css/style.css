@@ -1209,14 +1209,16 @@
 /*Проблема с альбомной ориентацией мобильного устройства*/
 
 @media all and (max-device-width: 800px) and (orientation: landscape) {
+/*
     body {
         background: red;
     }
+*/
     .devices {
         width: 60%;
     }
     .what_we_do .scene .perspective {
-        font-size: 130%;
+        font-size: 115%;
     }
     .our_team_container_video {
         display: none;
