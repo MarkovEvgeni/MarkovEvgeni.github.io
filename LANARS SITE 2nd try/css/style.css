@@ -1,0 +1,1155 @@
+@import "fonts.css";
+@import "parallax_screens.css";
+
+/*===Стили для эффекта parallax===*/
+body {
+/*    transform: translateZ(0);*/
+/*    transform: translateZ(0);*/
+}
+.parallax {
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    perspective: 1px;
+}
+.parallax__layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+}
+.parallax__group {
+  height: 100vh;
+  position: relative;
+  transform-style: preserve-3d;
+}
+.scrolling_feed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+/*===Главное меню - обычное состояние===*/
+
+.clearfix:after {
+    clear: both;
+    content: "";
+    display: block;
+}
+.menu_container {
+    padding: 10px 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+}
+.menu_title {
+    color: rgb(75, 81, 91);
+    display: inline-block;
+    float: left;
+    font-family: 'Oswald', sans-serif;
+    font-size: 23px;
+    font-weight: bold;
+    margin-left: 50px;
+    padding: 5px 0;
+}
+.main_menu {
+    float: right;
+    text-align: center;
+}
+.main_menu li {
+    box-sizing: border-box;
+    display: inline-block;
+    height: 33px;
+    margin: 0px 23px;
+}
+.main_menu li a {
+    color: rgb(75, 81, 91);
+    display: block;
+    font-family: 'sf_ui_displayregular';
+    font-size: 16px;
+    height: 100%;
+    padding: 9px 0 8px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.main_menu li:hover,
+.main_menu li.active {
+    border-bottom: 2px solid rgb(255, 193, 104);
+    margin: 0px 21.2px;
+}
+.main_menu li:hover a {
+    font-family: 'sf_ui_displaybold';
+    cursor: pointer;
+}
+
+/*===Главное меню в два ряда===*/
+
+.two_rows .menu_title,
+.two_rows .main_menu {
+    display: block;
+    float: none;
+    text-align: center;
+}
+.two_rows .menu_title {
+    margin-bottom: 6px;
+    margin-left: 0;
+}
+.two_rows .main_menu li:hover a {
+    font-family: 'sf_ui_displayregular';
+}
+.two_rows .main_menu li:hover {
+    margin: 0 23px;
+}
+
+
+/*Скрытие/показ меню*/
+
+@Keyframes hidemenu {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+@Keyframes showmenu {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.hide_menu {
+    animation-name: hidemenu;
+    animation-duration: 20ms;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+.show_menu {
+    animation-name: showmenu;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+
+/*===Первый экран===*/
+
+.menu_plug {
+    height: 53px;
+}
+.punchline_screen {
+    background: url(../assets/img/punchline_background-min.png);
+    background-size: cover;
+    height: calc(100vh - 53px);
+}
+.punchline_screen__glass {
+    background-color: rgba(0, 0, 0, 0.32);
+    height: 100%;
+    text-align: center;
+    width: 100%;
+}
+.punchline_screen__glass:before {
+    content:'';
+	display: inline-block;
+	height: 100%;
+    vertical-align: middle;
+}
+.punchline {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    width: 500px;
+}
+.punchline h1 {
+    color: rgb(255, 255, 255);
+    font-family: 'sf_ui_displaybold';
+    font-size: 44px;
+    letter-spacing: 0.0455em;
+    line-height: 68px;
+}
+.punchline h1 span {
+    color: rgb(255, 193, 104);
+}
+.punchline ul {
+    padding: 22px 0;
+}
+.punchline ul li {
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    font-family: 'CenturyGothic-Bold';
+    font-size: 18px;
+    font-weight: bold;
+}
+.punchline ul li::after {
+    background-color: rgb(255, 193, 104);
+    border-radius: 6px;
+    content: "";
+    display: inline-block;
+    height: 6px;
+    margin: 0 10px 3px 10px;
+    width: 6px;
+}
+.punchline ul li:last-child::after {
+    display: none;
+}
+
+/*===Экран с 3D моделью===*/
+
+.what_we_do {
+    background: rgb(255, 255, 255);
+    z-index: 2;
+}
+.what_we_do .content {
+    box-sizing: border-box;
+    height: calc(100% - 92px);
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+}
+.what_we_do .menu_plug {
+    height: 92px;
+}
+.what_we_do .content::before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+}
+.what_we_do .scene {
+    display: inline-block;
+    height: 99%;
+    vertical-align: middle;
+    width: 99%; 
+}
+.what_we_do .scene .perspective {
+    background: transparent;
+    font-size: 180%;
+    height: 100%;
+    perspective: 800px;
+    width: 100%;
+}
+
+.what_we_do .scene .perspective .screens {
+    width: 13.83em;
+    height: 6.71em;
+    transform: rotateX(-90deg) translateY(-50%);
+    position: absolute;
+    transform-style: preserve-3d;
+    top: 100%;
+    transform-origin: 0 0;
+    backface-visibility: hidden;
+    z-index: 5;
+}
+.what_we_do .scene .perspective .screen {
+    height: 90%;
+    width: 78%;
+    top: 5%;
+    left: 10%;
+    position: absolute;
+    transition: transform 0.4s;
+    opacity: 0.9;
+}
+.what_we_do .scene .perspective .screen:hover {
+    cursor: pointer;
+}
+.what_we_do .scene .perspective .screen::after {
+    content: '';
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(65, 255, 239, .4);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+.what_we_do .scene .perspective .screen:hover::after,
+.what_we_do .scene .perspective .special::after {
+     opacity: 1;
+}
+.what_we_do .scene .perspective .matching-screen-1 {
+    background-color: aqua;
+}
+.what_we_do .scene .perspective .matching-screen-2 {
+    background-color: palevioletred;
+}
+.what_we_do .scene .perspective .matching-screen-3 {
+    background-color: goldenrod;
+}
+.what_we_do .scene .perspective .matching-screen-4 {
+    background-color: hotpink;
+}
+.what_we_do .scene .perspective .matching-screen-5 {
+    background-color: blueviolet;
+}
+.what_we_do .scene .model {
+    transition: transform 0.5s ease-in-out;
+}
+.what_we_do .scene .open_screen .screen-1 {
+    transform: translateZ(200px);
+    transition-delay: 0.3s;
+}
+.what_we_do .scene .open_screen .screen-2 {
+    transform: translateZ(160px);
+    transition-delay: 0.4s;
+}
+.what_we_do .scene .open_screen .screen-3 {
+    transform: translateZ(120px);
+    transition-delay: 0.5s;
+}
+.what_we_do .scene .open_screen .screen-4 {
+    transform: translateZ(80px);
+    transition-delay: 0.6s;
+}
+.what_we_do .scene .open_screen .screen-5 {
+    transform: translateZ(40px);
+    transition-delay: 0.7s;
+}
+.what_we_do .control_panel {
+    position: absolute;
+    left: 75%;
+    top: 30%;
+    transition: opacity 0.3s;
+    opacity: 0;
+    
+}
+.what_we_do .control_panel .label {
+    font-family: 'sf_ui_displayregular';
+    font-size: 20px;
+    padding: 5%;
+    text-align: left;
+    
+}
+.what_we_do .control_panel .rotate_label {
+    transform: scale(1, -1) rotateX(180deg);
+    transition: transform 1.3s ease-in-out;
+}
+.what_we_do .control_panel .top-label {
+    color: rgb(65, 255, 239);
+}
+.what_we_do .control_panel .label:hover {
+    color: rgb(65, 255, 239);
+    cursor: pointer;
+}
+.what_we_do .show_control_panel {
+    opacity: 1;
+}
+
+/*===Экран с девайсами===*/
+
+.our_works {
+    z-index: 1;
+}
+.our_works .menu_title,
+.our_works .main_menu li a {
+    color: rgb(255, 255, 255);
+}
+.parallax__background {
+    background: url(../assets/img/star_background-min.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    transform: translateZ(-1px) scale(2);
+    width: 110%;
+}
+.our_works .content {
+    bottom: 0;
+    top: auto;
+    height: calc(100vh - 92px);
+    text-align: center;
+    width: 100%;
+}
+.our_works .menu_plug {
+    height:  92px;
+}
+.our_works .content::before {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+.devices {
+    box-sizing: border-box;
+    display: inline-block;
+    max-width: 1200px;
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+    width: 95%;
+}
+.devices::before {
+    content: "";
+    display: block;
+    padding-top: 50%;
+}
+.laptop_container {
+    top: 8.58%;
+    left: 10%;
+    position: absolute;
+    width: 80%;
+    z-index: 1;
+}
+.laptop {
+    box-sizing: border-box;
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+}
+.laptop:before {
+    content: "";
+    display: block;
+    padding-top: 53.54%;
+}
+.laptop_background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: url(../assets/img/web.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.laptop_screen_container {
+    top: 11.3%;
+    left: 13.5%;
+    position: absolute;
+    width: 73%;
+}
+.laptop_screen,
+.ios_screen,
+.android_tablet_screen,
+.android_phone_screen {
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+.laptop_screen_1 {
+    background-image: url(../assets/img/web_3.png);
+}
+.laptop_screen_2 {
+    background-image: url(../assets/img/web_2.png);  
+}
+.laptop_screen_3 {
+    background-image: url(../assets/img/web_1.png);
+}
+.laptop_screen_container::before {
+    content: "";
+    display: block;
+    padding-top: 58%;        
+}
+.ios_screen_container {
+    position: absolute;
+    top: 11.5%;
+    left: 5.8%;
+    width: 88.35%;
+}
+.ios_screen_container::before {
+    content: "";
+    display: block;
+    padding-top: 171%;
+}
+.ios_screen {
+    background-image: url(../assets/img/mob_2.png);
+}
+.ios_container {
+    top: 9.65%;
+    left: 20%;
+    position: absolute;
+    width: 15.46%;
+    z-index: -1;
+}
+.ios {
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+}
+.ios:before {
+    content: "";
+    display: block;
+    padding-top: 203.47%;
+}
+.ios_background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: url(../assets/img/ios.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.android_phone_container {
+    top: 9.65%;
+    left: 20%;
+    opacity: 0;
+    position: absolute;
+    transform: scale(0.8) rotate(5deg);
+    width: 16.37%;
+    z-index: -2;
+}
+.android_phone {
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+}
+.android_phone:before {
+    content: "";
+    display: block;
+    padding-top: 190.27%;
+}
+.android_phone_background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: url(../assets/img/android.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.android_phone_screen_container {
+    position: absolute;
+    top: 11.5%;
+    left: 5.8%;
+    width: 88.35%;
+}
+.android_phone_screen_container::before {
+    content: "";
+    display: block;
+    padding-top: 171.05%; 
+}
+.android_phone_screen {
+    background-image: url(../assets/img/mob_3.png);
+}
+.android_tablet_container {
+    left: 22%;
+    opacity: 0;
+    position: absolute;
+    top: 27%;
+    width: 44.31%;
+    z-index: -1;
+}
+.android_tablet {
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+}
+.android_tablet:before {
+    content: "";
+    display: block;
+    padding-top: 72.27%;
+}
+.android_tablet_background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: url(../assets/img/tablet.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.android_tablet_screen_container {
+    position: absolute;
+    top: 11.5%;
+    left: 5.8%;
+    width: 88.35%;
+}
+.android_tablet_screen_container::before {
+    content: "";
+    display: block;
+    padding-top: 65.33%; 
+}
+.android_tablet_screen {
+    background-image: url(../assets/img/tablet_3.png);
+}
+
+/*Анимации девайсов*/
+/*Анимация исчезания экранов*/
+@keyframes dissolve{
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes appear{
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+/*Анимация Laptop*/
+/*Слайд вправо*/
+@keyframes laptop-right {
+    0% {
+        left: 10%;
+        transform: rotate(0);
+    }
+    50% {
+        left: 25%;
+        transform: rotate(1deg);
+    }
+    100% {
+        left: 20%;
+        transform: rotate(0);
+    }
+}
+.step2 .laptop_container {
+    animation-name: laptop-right;
+    animation-duration: 800ms;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+/*Слайд влево*/
+@keyframes laptop-left {
+    0% {
+        left: 20%;
+        transform: rotate(0);
+    }
+    50% {
+        transform: rotate(1deg);
+    }
+    100% {
+        left: 10%;
+        transform: rotate(0);
+    }
+}
+.step3 .laptop_container {
+    animation-name: laptop-left;
+    animation-duration: 800ms;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+/*Наклон для появления/исчезания iOS*/
+@keyframes laptop-open-path {
+    0% {
+        left: 10%;
+        transform: rotate(0);
+    }
+    50% {
+        left: 20%;
+        transform: rotate(1deg);
+    }
+    100% {
+        left: 10%;
+        transform: rotate(0);
+    }
+}
+@keyframes laptop-open-path2 {
+    0% {
+        left: 10%;
+        transform: rotate(0);
+    }
+    50% {
+        left: 20%;
+        transform: rotate(1deg);
+    }
+    100% {
+        left: 10%;
+        transform: rotate(0);
+    }
+}
+.step4 .laptop_container {
+    animation-name: laptop-open-path2;
+    animation-duration: 800ms;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+.step1 .laptop_container {
+    animation-name: laptop-open-path;
+    animation-duration: 800ms;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+/*Анимация ios*/
+/*Появление iOS*/
+@keyframes ios-show {
+    0% {
+        top: 9.65%;
+        left: 20%;
+        transform: scale(0.8) rotate(5deg);
+        z-index: -2;
+    }
+    50% {
+        left: 0%;
+        transform: scale(0.9) rotate(-5deg);
+    }
+    100% {
+        top: 37.5%;
+        left: 15%;
+        transform: scale(1) rotate(0deg);
+        z-index: 5;
+    }
+}
+@keyframes android-phone-show {
+    0% {
+        left: 20%;
+        opacity: 0;
+        top: 9.65%;
+        transform: scale(0.8) rotate(5deg);
+        z-index: -2;
+    }
+    50% {
+        left: 15%;
+        opacity: 1;
+        transform: scale(0.9) rotate(-5deg);
+    }
+    100% {
+        left: 20%;
+        top: 37.5%;
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+        z-index: 5;
+    }
+}
+.step1 .ios_container {
+    animation-name: ios-show;
+    animation-duration: 800ms;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+.step2 .android_phone_container {
+    animation-name: android-phone-show;
+    animation-duration: 800ms;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+.step1 .laptop_screen_3,
+.step1 .laptop_screen_1 {
+    animation-name: dissolve;
+    animation-duration: 800ms;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+.step1 .laptop_screen_2 {
+    animation-name: appear;
+    animation-duration: 800ms;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+/*Cлайд iOS вправо*/
+@keyframes ios-right {
+    0% {
+        transform: scale(1) rotate(0deg);
+        left: 15%;
+        top: 37.5%;
+        z-index: 5;
+    }
+    50% {
+        transform: scale(0.9) rotate(5deg);
+        left: 110%;
+        top: 30%;
+        z-index: 1;
+    }
+    100% {
+        transform: scale(0.8) rotate(5deg);
+        left: 25%;
+        top: 25%;
+        z-index: -2;
+    }
+}
+.step2 .ios_container {
+    animation-name: ios-right;
+    animation-duration: 1200ms;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;    
+}
+.step2 .laptop_screen_2,
+.step2 .laptop_screen_3 {
+    animation-name: dissolve;
+    animation-duration: 800ms;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+.step2 .laptop_screen_1 {
+    animation-name: appear;
+    animation-duration: 800ms;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+/*Cлайд iOS влево*/
+@keyframes ios-left {
+    0% {
+        transform: scale(0.8) rotate(5deg);
+        left: 25%;
+        top: 25%;
+        z-index: -2;
+    }
+    50% {
+        transform: scale(0.9) rotate(5deg);
+        left: 110%;
+        top: 30%;
+        z-index: 1;
+    }
+    100% {
+        transform: scale(1) rotate(0deg);
+        left: 15%;
+        top: 37.5%;
+        z-index: 5;
+    }
+}
+.step3 .ios_container {
+    animation-name: ios-left;
+    animation-duration: 1200ms;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;    
+}
+/*Анимация ios*/
+/*Исчезание ios phone*/
+@keyframes ios-hide {
+    0% {
+        top: 37.5%;
+        left: 15%;
+        transform: scale(1) rotate(0deg);
+        z-index: 5;
+    }
+    50% {
+        left: 0%;
+        transform: scale(0.9) rotate(-5deg);
+    }
+    100% {
+        top: 9.65%;
+        left: 20%;
+        transform: scale(0.8) rotate(5deg);
+        z-index: 0;
+    }
+}
+.step4 .ios_container {
+    animation-name: ios-hide;
+    animation-duration: 800ms;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+/*Исчезание android phone*/
+@keyframes android-phone-hide {
+    0% {
+        left: 20%;
+        top: 37.5%;
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+        z-index: 5;
+    }
+    50% {
+        left: 0%;
+        opacity: 1;
+        transform: scale(0.9) rotate(-5deg);
+        z-index: 1;
+    }
+    100% {
+        left: 20%;
+        opacity: 0;
+        top: 9.65%;
+        transform: scale(0.8) rotate(5deg);
+        z-index: -2;
+    }
+}
+.step3 .android_phone_container {
+    animation-name: android-phone-hide;
+    animation-duration: 800ms;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+.step4 .laptop_screen_2,
+.step4 .laptop_screen_1 {
+    animation-name: dissolve;
+    animation-duration: 800ms;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+.step4 .laptop_screen_3 {
+    animation-name: appear;
+    animation-duration: 800ms;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+/*Анимация android*/
+/*Появление Android*/
+@keyframes android-show {
+    0% {
+        left: 22%;
+        opacity: 0;
+        transform: scale(0.8) rotate(2.5deg);
+        z-index: -1;
+    }
+    50% {
+        left: 8%;
+        opacity: 1;
+        transform: scale(0.95) rotate(-2.5deg);
+    }
+    100% {
+        opacity: 1;
+        left: 0;
+        transform: scale(1);
+        z-index: 0;
+    }
+}
+.step2 .android_tablet_container{
+    animation-name: android-show;
+    animation-duration: 800ms;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+@keyframes android-hide {
+    0% {
+        left: 0;
+        opacity: 1;
+        transform: scale(1);
+        z-index: 0;
+    }
+    50% {
+        left: 20%;
+        opacity: 1;
+        transform: scale(0.95) rotate(-2.5deg);
+    }
+    100% {
+        left: 22%;
+        opacity: 0;
+        transform: scale(0.8) rotate(2.5deg);
+        z-index: -1;
+    }
+}
+.step3 .android_tablet_container{
+    animation-name: android-hide;
+    animation-duration: 800ms;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+.step3 .laptop_screen_3,
+.step3 .laptop_screen_1 {
+    animation-name: dissolve;
+    animation-duration: 800ms;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+.step4 .laptop_screen_2 {
+    animation-name: appear;
+    animation-duration: 800ms;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+
+/*===Экран с командой===*/
+
+.our_team {
+    background-color: white;
+    z-index: 2;
+}
+.our_team .menu_plug {
+    height:  92px;
+}
+.our_team .content {
+    display: block;
+    height: calc(100% - 92px);
+    text-align: center;
+}
+.our_team .content::before {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    
+}
+.our_team_container {
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 96%;
+}
+.our_team_member {
+    box-sizing: border-box;
+    display: inline-block;
+    padding: 10px;
+    width: 320px;
+}
+.our_team_member_video {
+    height: 300px;
+    position: relative;
+}
+.our_team_member_video video {
+    height: 300px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 300px;
+}
+.our_team_member_name {
+    color: rgb(75, 81, 91);
+    font-family: 'sf_ui_displaybold';
+    font-size: 18px;
+    padding: 15px 0 8px;
+    text-align: center;    
+}
+.our_team_member_position {
+    color: rgb(162, 166, 173);
+    font-family: 'sf_ui_displayregular';
+    padding: 4px 0;
+}
+
+/*===Экран с заказчиками===*/
+
+/*===Экран с контактами===*/
+
+.contacts {
+    overflow: hidden;
+}
+.contacts .menu_title,
+.contacts .main_menu li a {
+    color: rgb(255, 255, 255);
+}
+.footer_parallax_layer {
+    text-align: center;
+    width: 100%;
+}
+.footer_parallax_layer:before {
+    content: "";
+    display: inline-block;
+    height: calc(100% - 409px);
+    margin-top: 92px;
+    vertical-align: middle;
+}
+.get_in_touch {
+    display: inline-block;
+    height: 60px;
+    vertical-align: middle;
+}
+.get_in_touch li {
+    display: inline-block;
+    background: url(../assets/img/sprite_contacts.png);
+    background-repeat: no-repeat;
+    max-width: 220px;
+    height: 50px;
+    vertical-align: top;
+}
+.get_in_touch li:nth-child(2) {
+    background-position: 0px -40px ;
+}
+.get_in_touch li:nth-child(3) {
+    background-position: 0px -81px ;
+}
+.get_in_touch li:nth-child(4) {
+    background-position: 0px -40px ;
+}
+.get_in_touch li:nth-child(5) {
+    background-position: 0px -165px ;
+}
+.get_in_touch li a {
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+    display: block;
+    font-family: 'sf_ui_displayregular';
+    font-size: 16px;
+    height: 100%;
+    line-height: 22px;
+    padding: 18px 15px 0px 35px;
+    text-align: left;
+    text-decoration: none;
+}
+.footer-container {
+    background-color: rgba(70, 69, 83, 0.3);
+    padding: 0 0 50px 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+/*Главное меню в составе footer*/
+
+.footer-container .menu_container {
+    display: inline-block;
+    position: relative;
+    top: none;
+    left: none;
+    width: auto;
+}
+.footer-container .main_menu {
+    display: block;
+    float: none;
+}
+.footer-container .menu_title {
+    color: rgb(255, 255, 255);
+    display: block;
+    float: none;
+    font-family: 'sf_ui_displaybold';
+    font-size: 14px;
+    margin: 25px 0 0 0;
+    text-align: left;
+    text-transform: none;
+}
+.footer-container .main_menu li {
+    color: rgb(255, 255, 255);
+    display: block;
+    font-family: 'sf_ui_displayregular';
+    font-size: 14px;
+    margin: 0;
+    text-transform: none;   
+}
+.footer-container .main_menu li a{
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+    text-align: left;
+    text-transform: none;
+}
+.contacts_parallax_background {
+    background: url(../assets/img/footer_background.png);
+    background-size: cover;
+    height: 100%;
+    position: absolute;
+    transform: translateZ(-1px) scale(2);
+    width: 110%;
+}
+.socials_container {
+    display: inline-block;
+    margin-left: 40px;
+    padding: 10px 0;
+    vertical-align: top;
+}
+.socials_container .socials_title {
+    color: rgb(255, 255, 255);
+    font-family: 'sf_ui_displaybold';
+    font-size: 14px;
+    margin: 25px 0 0 0px;
+    padding: 5px 0 5px 0;
+    text-align: left;
+}
+.socials_container li {
+    background-image: url(../assets/img/sprite_socials.png);
+    background-repeat: no-repeat;
+    background-position: -8px -18px;
+    box-sizing: border-box;
+    display: inline-block;
+    margin-right: 25px;
+    height: 30px;
+    width: 35px;
+}
+.socials_container li:nth-child(2) {
+    background-position: -8px -60px; 
+}
+.socials_container li:nth-child(3) {
+    background-position: -8px -102px; 
+}
+.socials_container li:nth-child(4) {
+    background-position: -8px -146px; 
+}
+.socials_container li:nth-child(4) {
+    background-position: -3px -189px; 
+}
+.socials_container li a {
+    display: block;
+    height: 100%;
+}
