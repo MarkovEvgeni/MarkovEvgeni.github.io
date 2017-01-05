@@ -1208,17 +1208,15 @@
 
 /*Проблема с альбомной ориентацией мобильного устройства*/
 
-@media all and (max-device-aspect-ratio: 16/9) and (orientation: landscape) {
-/*
+@media all and (max-device-aspect-ratio: 16/10) and (orientation: landscape) {
     body {
         background: red;
     }
-*/
     .devices {
-        width: 80%;
+        width: 60%;
     }
     .what_we_do .scene .perspective {
-        font-size: 150%;
+        font-size: 130%;
     }
     .our_team_container_video {
         display: none;
