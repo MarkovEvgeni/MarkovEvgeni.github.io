@@ -2,10 +2,6 @@
 @import "parallax_screens.css";
 
 /*===Стили для эффекта parallax===*/
-body {
-/*    transform: translateZ(0);*/
-/*    transform: translateZ(0);*/
-}
 .parallax {
     height: 100vh;
     overflow-x: hidden;
@@ -989,6 +985,9 @@ body {
     vertical-align: middle;
     max-width: 96%;
 }
+.our_team_container_video {
+    display: inline-block;
+}
 .our_team_member {
     box-sizing: border-box;
     display: inline-block;
@@ -1017,6 +1016,33 @@ body {
     color: rgb(162, 166, 173);
     font-family: 'sf_ui_displayregular';
     padding: 4px 0;
+}
+
+.our_team_container_photo {
+    display: none;
+    width: 90%;
+}
+.our_team_container_photo:hover {
+    cursor: pointer;
+}
+.our_team_member_photo {
+    display: inline-block;
+    min-width: 200px;
+    max-width: 300px;
+    width: 24%;
+    box-sizing: border-box;
+    padding: 10px;
+}
+.our_team_member_background_photo {
+    background-image: url(../assets/img/AsheBuff.jpg);
+    background-size: cover;
+    position: relative;
+    width: 100%;
+}
+.our_team_member_background_photo::before {
+    content: "";
+    display: block;
+    padding-top: 100%;
 }
 
 /*===Экран с заказчиками===*/
@@ -1171,4 +1197,33 @@ body {
 .socials_container li a {
     display: block;
     height: 100%;
+}
+
+/*
+=================
+||Медиа-запросы||
+=================
+*/
+
+
+/*Проблема с альбомной ориентацией мобильного устройства*/
+
+@media all and (max-aspect-ratio: 16/9) and (orientation: landscape) {
+/*
+    body {
+        background: red;
+    }
+*/
+    .devices {
+        width: 80%;
+    }
+    .what_we_do .scene .perspective {
+        font-size: 150%;
+    }
+    .our_team_container_video {
+        display: none;
+    }
+    .our_team_container_photo {
+        display: inline-block;
+    }
 }

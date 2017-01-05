@@ -179,9 +179,6 @@ document.addEventListener('DOMContentLoaded', function () {
     $('.what_we_do .content').mouseleave(function () {
         console.log('mouseleave');
         $('.what_we_do .content').unbind("mousemove");
-//        setTimeout(function () {
-//            $('.what_we_do .content').unbind("mousemove");
-//        }, 1500)
     });
     
 //    Определяем модель которая будет перезаписывать переменные определяющие угол вращения.
@@ -189,13 +186,10 @@ document.addEventListener('DOMContentLoaded', function () {
     function receiveCoordinates () {
         
         setTimeout(function () {
-        //    Задаем начальные координаты для вычислений. Сейчас это точка где находится курсор.
+        //    Задаем начальные координаты для вычислений. Сейчас это точка - середина окна браузера.
             
                 var initialXCoordinate = document.documentElement.clientWidth / 2;
                 var initialYCoordinate = document.documentElement.clientHeight / 2;
-
-//                $('.glass_inactive_mouse').css('display', 'none');
-
 
 
         //     Привязываем изменение переменных к перемещению мыши.
@@ -245,13 +239,5 @@ document.addEventListener('DOMContentLoaded', function () {
             
         }, 1300)
     }   
-    
-    
-    
-    
-    
-    
-    
-    
     
 });
