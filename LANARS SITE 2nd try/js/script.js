@@ -64,9 +64,9 @@ document.addEventListener('DOMContentLoaded', function () {
         if (!throttled) {
             var scrollDelta = el.deltaY || el.detail || el.wheelDelta;
             if (scrollDelta < 0) {
-                scrollScreenUp;
+                scrollScreenUp();
             } else if (scrollDelta > 0) {
-                scrollScreenDown;
+                scrollScreenDown();
             }
 
             throttled = true;
