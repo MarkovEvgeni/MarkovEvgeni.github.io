@@ -2,6 +2,45 @@ document.addEventListener('DOMContentLoaded', function () {
     
     "use strict";
     
+//    Вешаем обработчики событий касания тачскрина
+    
+    var touchstartY = 0;
+    var touchendY = 0;
+
+    var gesuredZone = document.querySelector('.scrolling_feed');
+
+    gesuredZone.addEventListener('touchstart', function(el) {
+        console.log('event', el);
+        el = el || window.event;
+        touchstartY = el.changedTouches[0].screenY;
+    }, false);
+
+    gesuredZone.addEventListener('touchend', function(el) {
+        el = el || window.event;
+        touchendY = el.changedTouches[0].screenY;
+        handleGesure();
+    }, false); 
+
+    function handleGesure() {
+        var swiped = 'swiped: ';
+        if (touchendY < touchstartY) {
+            var el = [];
+            el.deltaY = 1;
+            scrollScreen(el);
+        }
+        if (touchendY > touchstartY) {
+            var el = [];
+            el.deltaY = -1;
+            scrollScreen(el);
+        }
+    }    
+    
+    
+    
+    
+    
+    
+    
     
 //    Полифилл для requestAnimationFrame
     (function() {
@@ -60,9 +99,12 @@ document.addEventListener('DOMContentLoaded', function () {
     function scrollScreen (el) {
         el = el || window.event;
         el.preventDefault ? el.preventDefault() : (el.returnValue = false);
-
+        
+        console.log("inside scroll screen", el.deltaY);
+        
         if (!throttled) {
             var scrollDelta = el.deltaY || el.detail || el.wheelDelta;
+            console.log(scrollDelta);
             if (scrollDelta < 0) {
                 scrollScreenUp();
             } else if (scrollDelta > 0) {

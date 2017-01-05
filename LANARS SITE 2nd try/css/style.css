@@ -62,10 +62,11 @@ body {
 .main_menu li {
     box-sizing: border-box;
     display: inline-block;
-    height: 33px;
+    height: 32px;
     margin: 0px 23px;
 }
 .main_menu li a {
+    box-sizing: border-box;
     color: rgb(75, 81, 91);
     display: block;
     font-family: 'sf_ui_displayregular';
@@ -75,16 +76,34 @@ body {
     text-decoration: none;
     text-transform: uppercase;
 }
-.main_menu li:hover,
-.main_menu li.active {
-    border-bottom: 2px solid rgb(255, 193, 104);
-    margin: 0px 21.2px;
+.main_menu li::after {
+    content: "";
+    display: block;
+    background-color: rgb(255, 193, 104);
+    height: 2px;
+    width: 0;
+    margin: 0 auto;
+}
+.main_menu li:hover::after,
+.main_menu li.active::after {
+    animation-name: underline;
+    animation-duration: 400ms;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    
 }
 .main_menu li:hover a {
     font-family: 'sf_ui_displaybold';
     cursor: pointer;
 }
-
+@keyframes underline {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
 /*===Главное меню в два ряда===*/
 
 .two_rows .menu_title,
