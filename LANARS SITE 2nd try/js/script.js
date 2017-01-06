@@ -10,7 +10,6 @@ document.addEventListener('DOMContentLoaded', function () {
     var gesuredZone = document.querySelector('.scrolling_feed');
 
     gesuredZone.addEventListener('touchstart', function(el) {
-        console.log('event', el);
         el = el || window.event;
         touchstartY = el.changedTouches[0].screenY;
     }, false);
@@ -34,13 +33,6 @@ document.addEventListener('DOMContentLoaded', function () {
             scrollScreen(el);
         }
     }    
-    
-    
-    
-    
-    
-    
-    
     
 //    Полифилл для requestAnimationFrame
     (function() {
@@ -100,11 +92,8 @@ document.addEventListener('DOMContentLoaded', function () {
         el = el || window.event;
         el.preventDefault ? el.preventDefault() : (el.returnValue = false);
         
-        console.log("inside scroll screen", el.deltaY);
-        
         if (!throttled) {
             var scrollDelta = el.deltaY || el.detail || el.wheelDelta;
-            console.log(scrollDelta);
             if (scrollDelta < 0) {
                 scrollScreenUp();
             } else if (scrollDelta > 0) {
@@ -155,8 +144,6 @@ document.addEventListener('DOMContentLoaded', function () {
                $('.content .scene').unbind();
             }
             if (displayCounter == 3) {
-                console.log("Here it is!");
-                console.log(currentSlide);
                 if (currentSlide !== 3) {
                     nextSlide();
                     return;
@@ -219,7 +206,6 @@ document.addEventListener('DOMContentLoaded', function () {
             setTimeout(showMenu, 1000);
         }
     
-//    console.log('Страницы крутятся лавеха мутится!!!');
 //    console.log($('parallax__group'));
 //    var currentPosition = getComputedStyle(document.documentElement).getPropertyValue('--current-screen');
 //    console.log(currentPosition);

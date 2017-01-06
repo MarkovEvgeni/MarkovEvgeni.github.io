@@ -11,14 +11,9 @@ document.addEventListener('DOMContentLoaded', function () {
     };
     
     function playUp() {
+        console.log('try-try');
         var self=this;
-//        setTimeout(function(){
-//            $(self).on("mouseenter", bindEvent);
-//        }, 1800);
         var animationActive = true;
-//        setTimeout(function() {
-//            animationActive = false;
-//        }, 1000);
         var backVideo = $(this).children('.video_down')[0];
         var video = $(this).children('.video_up')[0];
         video.currentTime = 0.000;
