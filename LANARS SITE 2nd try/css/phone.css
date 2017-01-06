@@ -3,7 +3,9 @@
 }
 .model, .shape, .face, .face-wrapper, .cr {
   position: absolute;
-  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d; 
+    -moz-transform-style: preserve-3d; /** fixes non transitive 3d from parent and child **/
+    transform-style: preserve-3d;
 }
 .model {
   backface-visibility: hidden;
