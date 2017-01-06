@@ -8,6 +8,11 @@
     overflow-y: hidden;
     perspective: 1px;
 }
+_:-moz-tree-row(hover),
+.parallax {
+    perspective: none;
+    transform: rotate(0);
+}
 .parallax__layer {
     position: absolute;
     top: 0;
@@ -18,6 +23,10 @@
   height: 100vh;
   position: relative;
   transform-style: preserve-3d;
+}
+_:-moz-tree-row(hover),
+.parallax {
+    transform-style: flat;
 }
 .scrolling_feed {
     position: absolute;
@@ -76,6 +85,7 @@
     content: "";
     display: block;
     background-color: rgb(255, 193, 104);
+    border-radius: 2px;
     height: 2px;
     width: 0;
     margin: 0 auto;
@@ -89,7 +99,7 @@
     
 }
 .main_menu li:hover a {
-    font-family: 'sf_ui_displaybold';
+/*    font-family: 'sf_ui_displaybold';*/
     cursor: pointer;
 }
 @keyframes underline {
@@ -100,6 +110,7 @@
         width: 100%;
     }
 }
+
 /*===Главное меню в два ряда===*/
 
 .two_rows .menu_title,
@@ -118,7 +129,6 @@
 .two_rows .main_menu li:hover {
     margin: 0 23px;
 }
-
 
 /*Скрытие/показ меню*/
 
@@ -235,6 +245,7 @@
     height: 100%;
 }
 .what_we_do .scene {
+    backface-visibility: hidden;
     display: inline-block;
     height: 99%;
     vertical-align: middle;
@@ -242,6 +253,7 @@
 }
 .what_we_do .scene .perspective {
     background: transparent;
+    backface-visibility: hidden;
     font-size: 180%;
     height: 100%;
     perspective: 800px;
@@ -260,13 +272,14 @@
     z-index: 5;
 }
 .what_we_do .scene .perspective .screen {
+    backface-visibility: hidden;
     height: 90%;
-    width: 78%;
-    top: 5%;
     left: 10%;
-    position: absolute;
-    transition: transform 0.4s;
     opacity: 0.9;
+    position: absolute;
+    top: 5%;
+    transition: transform 0.4s;
+    width: 78%;
 }
 .what_we_do .scene .perspective .screen:hover {
     cursor: pointer;
@@ -370,6 +383,11 @@
     height: 100%;
     transform: translateZ(-1px) scale(2);
     width: 110%;
+}
+_:-moz-tree-row(hover),
+.parallax__background {
+    width: 100%;
+    transform: none;
 }
 .our_works .content {
     bottom: 0;
@@ -1157,6 +1175,10 @@
     position: absolute;
     transform: translateZ(-1px) scale(2);
     width: 110%;
+}
+_:-moz-tree-row(hover),
+.contacts_parallax_background {
+    transform: none;
 }
 .socials_container {
     display: inline-block;

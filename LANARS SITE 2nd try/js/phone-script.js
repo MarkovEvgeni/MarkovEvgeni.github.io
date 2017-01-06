@@ -194,7 +194,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
         //     Привязываем изменение переменных к перемещению мыши.
 
-                $('.content .scene').mousemove(function() {
+                $('.content .scene').mousemove(function(event) {
+                    
+                    event = event || window.event;
 
                     var biasX = event.clientX - initialXCoordinate;
                     var biasY = event.clientY - initialYCoordinate;
