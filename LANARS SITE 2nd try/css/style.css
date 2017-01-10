@@ -273,6 +273,9 @@ _:-moz-tree-row(hover),
 }
 .what_we_do .scene .perspective .screen {
     backface-visibility: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
     height: 90%;
     left: 10%;
     opacity: 0.9;
@@ -280,6 +283,7 @@ _:-moz-tree-row(hover),
     top: 5%;
     transition: transform 0.4s;
     width: 78%;
+    border: 2px solid;
 }
 .what_we_do .scene .perspective .screen:hover {
     cursor: pointer;
@@ -300,19 +304,24 @@ _:-moz-tree-row(hover),
      opacity: 1;
 }
 .what_we_do .scene .perspective .matching-screen-1 {
-    background-color: aqua;
+    background-image: url(../assets/img/developing.png);
+    border-color: aqua;
 }
 .what_we_do .scene .perspective .matching-screen-2 {
-    background-color: palevioletred;
+    background-image: url(../assets/img/wireframe.png);
+    border-color: palevioletred;
 }
 .what_we_do .scene .perspective .matching-screen-3 {
-    background-color: goldenrod;
+    background-image: url(../assets/img/QA.png);
+    border-color: goldenrod;
 }
 .what_we_do .scene .perspective .matching-screen-4 {
-    background-color: hotpink;
+    background-image: url(../assets/img/project_coordination.png);
+    border-color: hotpink;
 }
 .what_we_do .scene .perspective .matching-screen-5 {
-    background-color: blueviolet;
+    background-image: url(../assets/img/final_result.png);
+    border-color: blueviolet;
 }
 .what_we_do .scene .model {
     transition: transform 0.5s ease-in-out;
@@ -1070,6 +1079,136 @@ _:-moz-tree-row(hover),
 }
 
 /*===Экран с заказчиками===*/
+.featured .menu_plug {
+    height: 92px;
+}
+.featured .content {
+    text-align: center;
+    border: 1px dashed orange;
+    height: 100%;
+    margin: 0 auto;
+    max-width: 1286px;
+    width: 95%;
+}
+.featured .content:before {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    width: 0%;
+}
+.clients_container {
+    border: 1px solid red;
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 98%;
+    min-width: 300px;
+}
+.clients_container .client {
+    background-image: url(../assets/img/featured.jpg);
+    background-repeat: no-repeat;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px #eee;
+    float: left;
+    height: 136px;
+    margin: 5px;
+    -webkit-filter: grayscale(100%) opacity(0.8);
+    filter: grayscale(100%) opacity(0.7);
+    -webkit-transition: -webkit-box-shadow 0.3s, transform 0.3s;
+    -moz-transition: -moz-box-shadow 0.3s, transform 0.3s;
+    -ms-transition: box-shadow 0.3s, transform 0.3s;
+    -o-transition: box-shadow 0.3s, transform 0.3s;
+    transition: box-shadow 0.3s, transform 0.3s;
+    width: 200px;
+}
+.clients_container .fox_news {
+    background-position: -5px -5px;
+}
+.clients_container .cbs {
+    background-position: -210px -5px;
+}
+.clients_container .cbc {
+    background-position: -415px -5px;
+}
+.clients_container .france24 {
+    background-position: -620px -5px;
+}
+.clients_container .voa {
+    background-position: -825px -5px;
+}
+.clients_container .bbc {
+    background-position: -1030px -5px;
+}
+.clients_container .cnn {
+    background-position: -5px -141px;
+}
+.clients_container .abc {
+    background-position: -210px -141px;
+}
+.clients_container .nbc {
+    background-position: -415px -141px;
+}
+.clients_container .rte {
+    background-position: -620px -141px;
+}
+.clients_container .asspress {
+    background-position: -825px -141px;
+}
+.clients_container .reuters {
+    background-position: -1030px -141px;
+}
+.clients_container .fm4 {
+    background-position: -1030px -281px;
+}
+.clients_container .themail {
+    background-position: -5px -286px;
+}
+.clients_container .sunday {
+    background-position: -210px -286px;
+}
+.clients_container .dailymirrort {
+    background-position: -415px -286px;
+}
+.clients_container .trt {
+    background-position: -620px -286px;
+}
+.clients_container .omantimes {
+    background-position: -825px -286px;
+}
+.clients_container .fm4 {
+    background-position: -1030px -286px;
+}
+.clients_container .usatoday {
+    background-position: -5px -426px;
+}
+.clients_container .skynews {
+    background-position: -210px -426px;
+}
+.clients_container .theeconomist {
+    background-position: -415px -426px;
+}
+.clients_container .theindependent {
+    background-position: -620px -426px;
+}
+.clients_container .aljazeera {
+    background-position: -825px -426px;
+}
+.clients_container .vanityfair {
+    background-position: -1030px -426px;
+}
+.clients_container .client:hover {
+    transition: ease;
+    -webkit-box-shadow: 0 2px 16px #aaa;
+    -moz-box-shadow: 0 2px 16px #aaa;
+    box-shadow: 0 2px 16px #aaa;
+    -webkit-transform: scale(1.02);
+    -moz-transform: scale(1.02);
+    -ms-transform: scale(1.02);
+    -o-transform: scale(1.02);
+    transform: scale(1.02);
+    -webkit-filter: none;
+    filter: none;
+}
 
 /*===Экран с контактами===*/
 

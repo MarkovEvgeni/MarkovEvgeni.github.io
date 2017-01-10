@@ -248,6 +248,22 @@ document.addEventListener('DOMContentLoaded', function () {
         $('.main_menu li.active').each(function() {
             $(this).removeClass('active');
         });
+        if (lastDisplayCounter == 2) {
+            $('.what_we_do .model').css("transform", "translateY(0px) rotateX(0deg) rotateZ(0deg)");
+            $('.what_we_do .model').css("transition", "transform 0.4s linear");
+            $('.what_we_do .model').removeClass('open_screen');
+            $('.what_we_do .control_panel').removeClass('show_control_panel');
+            $('.content .scene').unbind();
+        };
+        if (targetScreen == 2) {
+            $('.content .scene').unbind();
+            setTimeout(function() {
+                $('.what_we_do .model').css("transform", "translateY(50px) rotateX(50deg) rotateZ(30deg)");
+                $('.what_we_do .model').css("transition", "transform 0.4s linear");
+                $('.what_we_do .model').addClass('open_screen');
+                $('.what_we_do .control_panel').addClass('show_control_panel');
+            }, 1000);
+        };
         $('.scrolling_feed').addClass('position_screen_' + displayCounter);
         console.log(displayCounter);
         $('.scrolling_feed').removeClass('position_screen_' + lastDisplayCounter);
