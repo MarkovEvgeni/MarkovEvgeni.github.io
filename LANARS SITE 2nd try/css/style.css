@@ -1207,6 +1207,7 @@ _:-moz-tree-row(hover),
     box-sizing: border-box;
     display: inline-block;
     margin-right: 25px;
+    opacity: 0.8;
     height: 30px;
     width: 35px;
 }
@@ -1219,12 +1220,15 @@ _:-moz-tree-row(hover),
 .socials_container li:nth-child(4) {
     background-position: -8px -146px; 
 }
-.socials_container li:nth-child(4) {
+.socials_container li:nth-child(5) {
     background-position: -3px -189px; 
 }
 .socials_container li a {
     display: block;
     height: 100%;
+}
+.socials_container li:hover {
+    opacity: 1;
 }
 
 /*

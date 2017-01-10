@@ -79,6 +79,10 @@ document.addEventListener('DOMContentLoaded', function () {
     
     var displayCounter = 1;
     
+//  Объявляем переменную, которая будет содержать информацию о предыдущем экране
+    
+    var lastDisplayCounter = 1;
+    
     $('.up-test').on('click', scrollScreenUp);
     $('.down-test').on('click', scrollScreenDown);
  
@@ -125,6 +129,34 @@ document.addEventListener('DOMContentLoaded', function () {
     
     var currentSlide = 1;
     
+//    Обработчики событий для кнопок меню
+    
+    $('.screen_1_link').on('click', function() {
+       changeScreen(1); 
+    });
+    
+    $('.screen_2_link').on('click', function() {
+       changeScreen(2); 
+    });
+    
+    $('.screen_3_link').on('click', function() {
+       changeScreen(3); 
+    });
+    
+    $('.screen_4_link').on('click', function() {
+       changeScreen(4); 
+    });
+    
+    $('.screen_5_link').on('click', function() {
+       changeScreen(5); 
+    });
+    
+    $('.screen_6_link').on('click', function() {
+       changeScreen(6); 
+    });
+    
+    setTimeout(underlineActiveScreen, 400);
+    
     function scrollScreenDown() {
         if(displayCounter < 6) {
             if (displayCounter == 1) {
@@ -149,31 +181,22 @@ document.addEventListener('DOMContentLoaded', function () {
                     return;
                 }
             }
-            ++displayCounter;
+            $('.scrolling_feed').addClass('position_screen_' + displayCounter);
+            $('.scrolling_feed').removeClass('position_screen_' + lastDisplayCounter);
+            lastDisplayCounter = displayCounter;
+            var targetScreen = ++displayCounter;
+            displayCounter = targetScreen;
             hideMenu();
-            $('.scrolling_feed').removeClass('scroll_up' + (displayCounter-1));
-            $('.scrolling_feed').removeClass('scroll_down' + (displayCounter-1));
-            $('.scrolling_feed').addClass('scroll_down' + displayCounter);
+            $('.main_menu li.active').each(function() {
+                $(this).removeClass('active');
+            });
+            $('.scrolling_feed').removeClass('scroll' + lastDisplayCounter);
+            $('.scrolling_feed').addClass('scroll' + targetScreen);
             setTimeout(showMenu, 1000);
+            setTimeout(underlineActiveScreen, 2000);
         } else {
             console.log('Bottom of the screen');
-        }
-
-    
-//    $('.scrolling_feed').removeClass('scroll_up');
-//    $('.scrolling_feed').removeClass('scroll_down');
-//    var currentPosition = getComputedStyle(document.documentElement).getPropertyValue('--current-screen');
-//    console.log(currentPosition);
-//    currentPosition = parseInt(currentPosition);
-//    console.log(currentPosition);
-//    if (currentPosition < 1) {
-//        ++currentScreen;
-//        var newPosition = (-100) * currentScreen;
-//        newPosition = newPosition + 'vh';
-//        console.log(newPosition);
-//        document.documentElement.style.setProperty('--current-screen', newPosition);
-//    }
-//    $('.scrolling_feed').addClass('scroll_down');   
+        } 
     }
 
     function scrollScreenUp() {
@@ -198,33 +221,44 @@ document.addEventListener('DOMContentLoaded', function () {
                     $('.what_we_do .control_panel').addClass('show_control_panel');
                 }, 1000);
             }
-            --displayCounter;
             hideMenu();
-            $('.scrolling_feed').removeClass('scroll_up' + (displayCounter+1));
-            $('.scrolling_feed').removeClass('scroll_down' + (displayCounter+1));
-            $('.scrolling_feed').addClass('scroll_up' + displayCounter);
+            $('.main_menu li.active').each(function() {
+                $(this).removeClass('active');
+            });
+            $('.scrolling_feed').addClass('position_screen_' + displayCounter);
+            $('.scrolling_feed').removeClass('position_screen_' + lastDisplayCounter);
+            lastDisplayCounter = displayCounter;
+            var targetScreen = --displayCounter;
+            displayCounter = targetScreen;
+            hideMenu();
+            $('.scrolling_feed').removeClass('scroll' + lastDisplayCounter);
+            $('.scrolling_feed').addClass('scroll' + targetScreen);
             setTimeout(showMenu, 1000);
+            setTimeout(underlineActiveScreen, 2000);
         }
+    }
     
-//    console.log($('parallax__group'));
-//    var currentPosition = getComputedStyle(document.documentElement).getPropertyValue('--current-screen');
-//    console.log(currentPosition);
-//    currentPosition = parseInt(currentPosition);
-//    console.log(currentPosition);
-//    if (currentPosition > 0) {
-//        --currentScreen;
-//        var newPosition = (100) * currentScreen;
-//        newPosition = newPosition + 'vh';
-//        console.log(newPosition);
-//        document.documentElement.style.setProperty('--current-screen', newPosition);
-//    }
-//    $('.scrolling_feed ').removeClass('scroll_up');
-//    $('.scrolling_feed ').removeClass('scroll_down');
-//    $('.scrolling_feed ').addClass('scroll_up');
-//    
+    function underlineActiveScreen() {
+        var currentLink = '.screen_' + displayCounter + '_link';
+        $(currentLink).addClass('active');
     }
     
     
+    function changeScreen(targetScreen) {
+        $('.main_menu li.active').each(function() {
+            $(this).removeClass('active');
+        });
+        $('.scrolling_feed').addClass('position_screen_' + displayCounter);
+        console.log(displayCounter);
+        $('.scrolling_feed').removeClass('position_screen_' + lastDisplayCounter);
+        lastDisplayCounter = displayCounter;
+        displayCounter = targetScreen;
+        hideMenu();
+        $('.scrolling_feed').removeClass('scroll' + lastDisplayCounter);
+        $('.scrolling_feed').addClass('scroll' + targetScreen);
+        setTimeout(showMenu, 1000);
+        setTimeout(underlineActiveScreen, 2000);
+    }
     
     function nextSlide() {
         if (currentSlide == 1) {
@@ -254,159 +288,5 @@ document.addEventListener('DOMContentLoaded', function () {
             --currentSlide;
         }
     };
-    
-    
-//    
-////Объявим переменную, которая будет показывать количество текущих устройств на третьем экране. 
-//    
-//    var thirdScreenDevice = 1;
-//    
-//    function scrollScreenDown () {
-//
-//        var displayHeight = window.innerHeight;
-//        var currentOffset = window.pageYOffset;
-//
-//        countCurrentDisplay();
-//
-//        var currentDisplay = displayHeight * displayCounter;
-//
-//        if (displayCounter == 2) {
-//            if (thirdScreenDevice < 3) {
-//                nextDevice();
-//            } else {
-//                $('h4').css({top: '124px', opacity: '0.2'});
-//                $('h6').css({top: '207px', opacity: '0.2'});
-//                var intervalDown = setInterval(function () {
-//                    if (currentDisplay - currentOffset > 600) {
-//                        window.scrollBy(0,8);
-//                        currentOffset += 8;
-//                    } else if (currentDisplay - currentOffset > 200) {
-//                        window.scrollBy(0,12);
-//                        currentOffset += 12;
-//                    } else if (currentDisplay - currentOffset > 10) {
-//                        window.scrollBy(0,8);
-//                        currentOffset += 8;
-//                    } else {
-//                        clearInterval(intervalDown);
-//                        window.scrollTo(0, currentDisplay);
-//                        $('h4').css({top: '84px', opacity: '1'});
-//                        $('h6').css({top: '137px', opacity: '1'});
-//                    }
-//                }, 5)
-//            }
-//        } else {
-//            $('h4').css({top: '124px', opacity: '0.2'});
-//            $('h6').css({top: '207px', opacity: '0.2'});
-//            var intervalDown = setInterval(function () {
-//                if (currentDisplay - currentOffset > 600) {
-//                    window.scrollBy(0,8);
-//                    currentOffset += 8;
-//                } else if (currentDisplay - currentOffset > 200) {
-//                    window.scrollBy(0,12);
-//                    currentOffset += 12;
-//                } else if (currentDisplay - currentOffset > 10) {
-//                    window.scrollBy(0,8);
-//                    currentOffset += 8;
-//                } else {
-//                    clearInterval(intervalDown);
-//                    window.scrollTo(0, currentDisplay);
-//                    $('h4').css({top: '84px', opacity: '1'});
-//                    $('h6').css({top: '137px', opacity: '1'});
-//                }
-//            }, 5)
-//        }
-//    };
-//    
-//    
-//    function nextDevice () {
-//        if ($('.products').hasClass('is-first')) {
-//          $('.products').removeClass('is-first').addClass('is-third');
-//        } else if($('.products').hasClass('is-second')) {
-//          $('.products').removeClass('is-second').addClass('is-first-back');
-//        } else if($('.products').hasClass('is-second-back')) {
-//          $('.products').removeClass('is-second-back').addClass('is-first-back');
-//        } else if($('.products').hasClass('is-third')) {
-//          $('.products').removeClass('is-third').addClass('is-second-back');
-//        } else if($('.products').hasClass('is-second-back')) {
-//          $('.products').removeClass('is-second').addClass('is-first-back');  
-//        }
-//        thirdScreenDevice += 1;
-//    }
-//
-//    function previousDevice () {
-//        if ($('.products').hasClass('is-first')) {
-//          $('.products').removeClass('is-first').addClass('is-second');
-//        } else if($('.products').hasClass('is-first-back')) {
-//          $('.products').removeClass('is-first-back').addClass('is-second');
-//        } else if($('.products').hasClass('is-second')) {
-//          $('.products').removeClass('is-second').addClass('is-third');
-//        } else if($('.products').hasClass('is-second-back')) {
-//          $('.products').removeClass('is-second-back').addClass('is-third');
-//        } else {
-//          $('.products').removeClass('is-third').addClass('is-first');
-//        } 
-//        thirdScreenDevice -= 1;
-//    }    
-//
-//    function scrollScreenUp () {
-//
-//        var displayHeight = window.innerHeight;
-//        var currentOffset = window.pageYOffset;
-//
-//        countCurrentDisplay();
-//
-//        var currentDisplay = displayHeight * displayCounter;
-//        var previousDisplay = displayHeight * (displayCounter - 2);
-//
-//        if (displayCounter == 2) {
-//            if (thirdScreenDevice > 1) {
-//                previousDevice();
-//            } else {
-//                $('h4').css({top: '124px', opacity: '0.2'});
-//                $('h6').css({top: '207px', opacity: '0.2'});
-//                var intervalUp = setInterval(function () {
-//                    if (currentOffset - previousDisplay > 600) {
-//                        window.scrollBy(0,-8);
-//                        currentOffset -= 8;
-//                    } else if (currentOffset - previousDisplay > 200) {
-//                        window.scrollBy(0,-12);
-//                        currentOffset -= 12;
-//                    } else if (currentOffset - previousDisplay > 10) {
-//                        window.scrollBy(0,-8);
-//                        currentOffset -= 8;
-//                    } else {
-//                        clearInterval(intervalUp);
-//                        window.scrollTo(0, previousDisplay);
-//                        $('h4').css({top: '84px', opacity: '1'});
-//                        $('h6').css({top: '137px', opacity: '1'});
-//                    }
-//                }, 5)
-//            }
-//        } else {
-//            $('h4').css({top: '124px', opacity: '0.2'});
-//            $('h6').css({top: '207px', opacity: '0.2'});
-//            var intervalUp = setInterval(function () {
-//                if (currentOffset - previousDisplay > 600) {
-//                    window.scrollBy(0,-8);
-//                    currentOffset -= 8;
-//                } else if (currentOffset - previousDisplay > 200) {
-//                    window.scrollBy(0,-12);
-//                    currentOffset -= 12;
-//                } else if (currentOffset - previousDisplay > 10) {
-//                    window.scrollBy(0,-8);
-//                    currentOffset -= 8;
-//                } else {
-//                    clearInterval(intervalUp);
-//                    window.scrollTo(0, previousDisplay);
-//                    $('h4').css({top: '84px', opacity: '1'});
-//                    $('h6').css({top: '137px', opacity: '1'});
-//                }
-//            }, 5)
-//        }
-//
-//    };  
-//    
-//    
-
-    
+       
 });

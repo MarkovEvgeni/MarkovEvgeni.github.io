@@ -1,180 +1,107 @@
 /*=== CSS анимация прокрутки с первым экраном ===*/
-@Keyframes scroll-up1 {
-    from {
-        transform: translateY(-100vh);
-    }
+.position_screen_1 {
+    transform:  translateY(0);
+}
+.position_screen_2 {
+    transform:  translateY(-100vh);
+}
+.position_screen_3 {
+    transform:  translateY(-200vh);
+}
+.position_screen_4 {
+    transform:  translateY(-300vh);
+}
+.position_screen_5 {
+    transform:  translateY(-400vh);
+}
+.position_screen_6 {
+    transform:  translateY(-500vh);
+}
+
+@Keyframes scroll1 {
     to {
         transform:  translateY(0);
     }
 }
-@Keyframes scroll-down2 {
-    from {
-        transform:  translateY(0);
-    }
-    to {
-        transform:  translateY(-100vh);
-    }
-}
-.scroll_up1 {
-    animation-name: scroll-up1;
+.scroll1 {
+    animation-name: scroll1;
     animation-duration: 1s;
     animation-timing-function: ease-in;
     animation-fill-mode: forwards;
-}
-.scroll_down2 {
-    animation-name: scroll-down2;
-    animation-duration: 1s;
-    animation-timing-function: ease-in;
-    animation-fill-mode: forwards;
+    transform-style: preserve-3d;
 }
 
 /*=== CSS анимация прокрутки со вторым экраном ===*/
-@Keyframes scroll-up2 {
-    from {
-        transform:  translateY(-200vh);
-        transform-style: preserve-3d;
-    }
+@Keyframes scroll2 {
     to {
         transform:  translateY(-100vh);
-        transform-style: preserve-3d;
     }
 }
-@Keyframes scroll-down3 {
-    from {
-        transform:  translateY(-100vh);
-        transform-style: preserve-3d;
-    }
-    to {
-        transform:  translateY(-200vh);
-        transform-style: preserve-3d;
-    }
-}
-.scroll_up2 {
-    animation-name: scroll-up2;
+
+.scroll2 {
+    animation-name: scroll2;
     animation-duration: 1s;
     animation-timing-function: ease-in;
     animation-fill-mode: forwards;
-}
-.scroll_down3 {
-    animation-name: scroll-down3;
-    animation-duration: 1s;
-    animation-timing-function: ease-in;
-    animation-fill-mode: forwards;
+    transform-style: preserve-3d;
 }
 
 /*=== CSS анимация прокрутки с третьим экраном ===*/
-@Keyframes scroll-up3 {
-    from {
-        transform:  translateY(-300vh);
-        transform-style: preserve-3d;
-    }
+@Keyframes scroll3 {
     to {
         transform:  translateY(-200vh);
-        transform-style: preserve-3d;
     }
-}
-@Keyframes scroll-down4 {
-    from {
-        transform:  translateY(-200vh);
-        transform-style: preserve-3d;
-    }
-    to {
-        transform:  translateY(-300vh);
-        transform-style: preserve-3d;
-    }
-}
-.scroll_up3 {
-    animation-name: scroll-up3;
-    animation-duration: 1s;
-    animation-timing-function: ease-in;
-    animation-fill-mode: forwards;
-}
-.scroll_down4 {
-    animation-name: scroll-down4;
-    animation-duration: 1s;
-    animation-timing-function: ease-in;
-    animation-fill-mode: forwards;
 }
 
+.scroll3 {
+    animation-name: scroll3;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+    transform-style: preserve-3d;
+}
+
+
 /*=== CSS анимация прокрутки с четвертым экраном ===*/
-@Keyframes scroll-up4 {
-    from {
-        transform:  translateY(-400vh);
-    }
+@Keyframes scroll4 {
     to {
         transform:  translateY(-300vh);
     }
 }
-@Keyframes scroll-down5 {
-    from {
-        transform:  translateY(-300vh);
-    }
-    to {
-        transform:  translateY(-400vh);
-    }
-}
-.scroll_up4 {
-    animation-name: scroll-up4;
+
+.scroll4 {
+    animation-name: scroll4;
     animation-duration: 1s;
     animation-timing-function: ease-in;
     animation-fill-mode: forwards;
-}
-.scroll_down5 {
-    animation-name: scroll-down5;
-    animation-duration: 1s;
-    animation-timing-function: ease-in;
-    animation-fill-mode: forwards;
+    transform-style: preserve-3d;
 }
 
 /*=== CSS анимация прокрутки с пятым экраном ===*/
-@Keyframes scroll-up5 {
-    from {
-        transform:  translateY(-500vh);
-        transform-style: preserve-3d;
-    }
+@Keyframes scroll5 {
     to {
         transform:  translateY(-400vh);
-        transform-style: preserve-3d;
     }
 }
-@Keyframes scroll-down6 {
-    from {
-        transform:  translateY(-400vh);
-        transform-style: preserve-3d;
-    }
-    to {
-        transform:  translateY(-500vh);
-        transform-style: preserve-3d;
-    }
-}
-.scroll_up5 {
-    animation-name: scroll-up5;
+.scroll5 {
+    animation-name: scroll5;
     animation-duration: 1s;
     animation-timing-function: ease-in;
     animation-fill-mode: forwards;
-}
-.scroll_down6 {
-    animation-name: scroll-down6;
-    animation-duration: 1s;
-    animation-timing-function: ease-in;
-    animation-fill-mode: forwards;
+    transform-style: preserve-3d;   
 }
 
+
 /*=== CSS анимация прокрутки с шестым экраном ===*/
-/*
-@Keyframes scroll-up6 {
-    from {
-        transform:  translateY(-600vh);
-        transform-style: preserve-3d;
-    }
+@Keyframes scroll6 {
     to {
         transform:  translateY(-500vh);
-        transform-style: preserve-3d;
     }
 }
-.scroll_up6 {
-    animation-name: scroll-up6;
+.scroll6 {
+    animation-name: scroll6;
     animation-duration: 1s;
     animation-timing-function: ease-in;
     animation-fill-mode: forwards;
-}*/
+    transform-style: preserve-3d;   
+}
