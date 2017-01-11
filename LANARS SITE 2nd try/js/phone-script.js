@@ -203,6 +203,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
                     var angleBiasX = -biasY / 500;
                     var angleBiasZ = -biasX / 500;
+                    
+                    angleBiasX = Math.round(angleBiasX * 10)/10;
+                    angleBiasZ = Math.round(angleBiasZ * 10)/10;
 
         //      Определим ограничения для вращения модели           
         //      Вращение в горизонтальной плоскости от 50 до 90 градусов

@@ -233,6 +233,7 @@ _:-moz-tree-row(hover),
     height: calc(100% - 92px);
     margin: 0 auto;
     text-align: center;
+    transform: translateZ(0)
     width: 100%;
 }
 .what_we_do .menu_plug {
@@ -1032,7 +1033,6 @@ _:-moz-tree-row(hover),
 }
 .our_team_member_video video {
     height: 300px;
-    background: red;
     left: 0;
     position: absolute;
     top: 0;
@@ -1083,11 +1083,11 @@ _:-moz-tree-row(hover),
     height: 92px;
 }
 .featured .content {
-    text-align: center;
-    border: 1px dashed orange;
-    height: 100%;
+    box-sizing: border-box;
+    height: calc(100vh - 92px);
     margin: 0 auto;
-    max-width: 1286px;
+    max-width: 1300px;
+    text-align: center;
     width: 95%;
 }
 .featured .content:before {
@@ -1098,18 +1098,27 @@ _:-moz-tree-row(hover),
     width: 0%;
 }
 .clients_container {
-    border: 1px solid red;
-    display: inline-block;
-    vertical-align: middle;
-    max-width: 98%;
     min-width: 300px;
+    vertical-align: middle;
+    width: 98%;
+/*    Свойства для flexbox*/
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: space-around;
 }
+/* Для нерабочего флексбокса
+.clients_container {
+    display: inline-block;
+}
+*/
 .clients_container .client {
     background-image: url(../assets/img/featured.jpg);
     background-repeat: no-repeat;
     border-radius: 5px;
     box-shadow: 0 2px 8px #eee;
-    float: left;
     height: 136px;
     margin: 5px;
     -webkit-filter: grayscale(100%) opacity(0.8);
@@ -1121,6 +1130,11 @@ _:-moz-tree-row(hover),
     transition: box-shadow 0.3s, transform 0.3s;
     width: 200px;
 }
+/* Для нерабочего флексбокса
+.clients_container .client {
+    float: left;
+}
+*/
 .clients_container .fox_news {
     background-position: -5px -5px;
 }
@@ -1288,6 +1302,7 @@ _:-moz-tree-row(hover),
 .footer-container .main_menu {
     display: block;
     float: none;
+    max-width: 80px;
 }
 .footer-container .menu_title {
     color: rgb(255, 255, 255);
@@ -1302,6 +1317,7 @@ _:-moz-tree-row(hover),
 .footer-container .main_menu li {
     color: rgb(255, 255, 255);
     display: block;
+    float: left;
     font-family: 'sf_ui_displayregular';
     font-size: 14px;
     margin: 0;

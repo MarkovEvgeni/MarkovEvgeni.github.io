@@ -248,7 +248,7 @@ document.addEventListener('DOMContentLoaded', function () {
         $('.main_menu li.active').each(function() {
             $(this).removeClass('active');
         });
-        if (lastDisplayCounter == 2) {
+        if (displayCounter == 2) {
             $('.what_we_do .model').css("transform", "translateY(0px) rotateX(0deg) rotateZ(0deg)");
             $('.what_we_do .model').css("transition", "transform 0.4s linear");
             $('.what_we_do .model').removeClass('open_screen');
@@ -265,7 +265,6 @@ document.addEventListener('DOMContentLoaded', function () {
             }, 1000);
         };
         $('.scrolling_feed').addClass('position_screen_' + displayCounter);
-        console.log(displayCounter);
         $('.scrolling_feed').removeClass('position_screen_' + lastDisplayCounter);
         lastDisplayCounter = displayCounter;
         displayCounter = targetScreen;
