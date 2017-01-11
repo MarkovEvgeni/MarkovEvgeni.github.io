@@ -7,11 +7,11 @@ document.addEventListener('DOMContentLoaded', function () {
     var touchstartY = 0;
     var touchendY = 0;
 
-    var gesuredZone = document.querySelector('body');
+    var gesuredZone = document.querySelector('.scrolling_feed');
 
     gesuredZone.addEventListener('touchstart', function(el) {
+        el.preventDefault();
         el = el || window.event;
-        el.preventDefault;
         touchstartY = el.changedTouches[0].screenY;
     }, false);
 
