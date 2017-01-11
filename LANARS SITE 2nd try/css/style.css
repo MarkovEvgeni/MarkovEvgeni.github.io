@@ -2,9 +2,6 @@
 @import "parallax_screens.css";
 
 /*===Стили для эффекта parallax===*/
-body {
-    overflow-y: hidden;
-}
 .parallax {
     height: 100vh;
     overflow-x: hidden;

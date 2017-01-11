@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     gesuredZone.addEventListener('touchstart', function(el) {
         el = el || window.event;
+        el.preventDefault;
         touchstartY = el.changedTouches[0].screenY;
     }, false);
 
