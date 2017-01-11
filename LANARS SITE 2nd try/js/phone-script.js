@@ -94,8 +94,8 @@ document.addEventListener('DOMContentLoaded', function () {
          var topButtonDesc = topButton.html();
          var currentButtonDesc = currentButton.html();
 
-         topButton.addClass('rotate_label');
-         currentButton.addClass('rotate_label');
+         topButton.addClass('emerge_label');
+         currentButton.addClass('emerge_label');
 
          setTimeout(function () {
              topButton.removeClass(topButtonClass);
@@ -105,8 +105,8 @@ document.addEventListener('DOMContentLoaded', function () {
              currentButton.addClass(topButtonClass);
 
              setTimeout(function() {
-                currentButton.removeClass('rotate_label');
-                topButton.removeClass('rotate_label'); 
+                currentButton.removeClass('emerge_label');
+                topButton.removeClass('emerge_label'); 
              }, 650);
 
              topButton.html(currentButtonDesc);

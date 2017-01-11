@@ -61,8 +61,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }());
     
     
-    
-    
 //    Плагин для плавной прокрутки в Chrome и Safari
     jQuery.scrollSpeed(100, 2000, 'easeOutCubic');
     
@@ -155,7 +153,7 @@ document.addEventListener('DOMContentLoaded', function () {
        changeScreen(6); 
     });
     
-    setTimeout(underlineActiveScreen, 400);
+    underlineActiveScreen(400);
     
     function scrollScreenDown() {
         if(displayCounter < 6) {
@@ -193,7 +191,7 @@ document.addEventListener('DOMContentLoaded', function () {
             $('.scrolling_feed').removeClass('scroll' + lastDisplayCounter);
             $('.scrolling_feed').addClass('scroll' + targetScreen);
             setTimeout(showMenu, 1000);
-            setTimeout(underlineActiveScreen, 2000);
+            underlineActiveScreen(1200);
         } else {
             console.log('Bottom of the screen');
         } 
@@ -233,16 +231,22 @@ document.addEventListener('DOMContentLoaded', function () {
             hideMenu();
             $('.scrolling_feed').removeClass('scroll' + lastDisplayCounter);
             $('.scrolling_feed').addClass('scroll' + targetScreen);
+            underlineActiveScreen(1200);
             setTimeout(showMenu, 1000);
-            setTimeout(underlineActiveScreen, 2000);
         }
     }
     
-    function underlineActiveScreen() {
+    function underlineActiveScreen(mas) {
+        var previousLink = '.screen_' + lastDisplayCounter + '_link';
+        $(previousLink).on('click', function() {
+            changeScreen(lastDisplayCounter);
+        })
         var currentLink = '.screen_' + displayCounter + '_link';
-        $(currentLink).addClass('active');
+        setTimeout(function() {
+            $(currentLink).addClass('active');
+        }, mas);
+        $(currentLink).off();
     }
-    
     
     function changeScreen(targetScreen) {
         $('.main_menu li.active').each(function() {
@@ -272,7 +276,7 @@ document.addEventListener('DOMContentLoaded', function () {
         $('.scrolling_feed').removeClass('scroll' + lastDisplayCounter);
         $('.scrolling_feed').addClass('scroll' + targetScreen);
         setTimeout(showMenu, 1000);
-        setTimeout(underlineActiveScreen, 2000);
+        underlineActiveScreen(1200);
     }
     
     function nextSlide() {

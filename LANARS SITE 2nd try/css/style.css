@@ -348,29 +348,41 @@ _:-moz-tree-row(hover),
     transition-delay: 0.7s;
 }
 .what_we_do .control_panel {
-    position: absolute;
     left: 75%;
+    opacity: 0;
+    position: absolute;
     top: 30%;
     transition: opacity 0.3s;
-    opacity: 0;
-    
+    width: 160px;
 }
 .what_we_do .control_panel .label {
-    font-family: 'sf_ui_displayregular';
-    font-size: 20px;
+    font-family: 'CenturyGothic-Bold';
+    font-size: 18px;
     padding: 5%;
     text-align: left;
-    
 }
-.what_we_do .control_panel .rotate_label {
-    transform: scale(1, -1) rotateX(180deg);
-    transition: transform 1.3s ease-in-out;
+.what_we_do .control_panel .emerge_label {
+    animation-name: emerge;
+    animation-duration: 1.3s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+@keyframes emerge {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 .what_we_do .control_panel .top-label {
-    color: rgb(65, 255, 239);
+    color: rgb(255, 193, 104);
 }
 .what_we_do .control_panel .label:hover {
-    color: rgb(65, 255, 239);
+    color: rgb(255, 193, 104);
     cursor: pointer;
 }
 .what_we_do .show_control_panel {
@@ -1059,18 +1071,30 @@ _:-moz-tree-row(hover),
     cursor: pointer;
 }
 .our_team_member_photo {
+    box-sizing: border-box;
     display: inline-block;
     min-width: 200px;
     max-width: 300px;
-    width: 24%;
-    box-sizing: border-box;
     padding: 10px;
+    vertical-align: top;
+    width: 24%;
 }
 .our_team_member_background_photo {
-    background-image: url(../assets/img/AsheBuff.jpg);
     background-size: cover;
     position: relative;
     width: 100%;
+}
+.our_team_member_photo .arslan {
+    background-image: url(../assets/img/our_team_mobile_Arslan.png);
+}
+.our_team_member_photo .maya {
+    background-image: url(../assets/img/our_team_mobile_Maya.png);
+}
+.our_team_member_photo .denys {
+    background-image: url(../assets/img/our_team_mobile_Denys.png);
+}
+.our_team_member_photo .veronika {
+    background-image: url(../assets/img/our_team_mobile_Veronika.png);
 }
 .our_team_member_background_photo::before {
     content: "";
@@ -1103,17 +1127,24 @@ _:-moz-tree-row(hover),
     width: 98%;
 /*    Свойства для flexbox*/
     display: inline-flex;
+    -webkit-flex-direction: row;
     flex-direction: row;
+     -webkit-flex-wrap: row;
     flex-wrap: wrap;
+    -webkit-justify-content: space-around;
     justify-content: space-around;
+    -webkit-align-items: center;
     align-items: center;
+    -webkit-align-content: space-around;
     align-content: space-around;
 }
-/* Для нерабочего флексбокса
+/* Хак для IE без флексбокса*/
 .clients_container {
-    display: inline-block;
+    display: inline-block\9;
 }
-*/
+.clients_container .client {
+    float: left\9;
+}
 .clients_container .client {
     background-image: url(../assets/img/featured.jpg);
     background-repeat: no-repeat;
@@ -1130,11 +1161,8 @@ _:-moz-tree-row(hover),
     transition: box-shadow 0.3s, transform 0.3s;
     width: 200px;
 }
-/* Для нерабочего флексбокса
-.clients_container .client {
-    float: left;
-}
-*/
+ Для нерабочего флексбокса
+
 .clients_container .fox_news {
     background-position: -5px -5px;
 }
