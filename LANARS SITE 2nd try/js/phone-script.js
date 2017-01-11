@@ -59,6 +59,7 @@ document.addEventListener('DOMContentLoaded', function () {
          var classNumber = classes.match(/[0-9]/)[0];
 
          var newPosition = ".matching-screen-" + classNumber;
+         $(newPosition).removeClass('special');
          var newPositionClass = "matching-screen-" + classNumber;
          var thisScreen = $(newPosition);
          thisScreen.removeClass(newPositionClass);

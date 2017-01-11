@@ -275,16 +275,16 @@ _:-moz-tree-row(hover),
 .what_we_do .scene .perspective .screen {
     backface-visibility: hidden;
     background-repeat: no-repeat;
-    background-size: cover;
+/*    background-size: cover;*/
     box-sizing: border-box;
     height: 90%;
     left: 10%;
-    opacity: 0.9;
+/*    opacity: 0.9;*/
     position: absolute;
     top: 5%;
     transition: transform 0.4s;
     width: 78%;
-    border: 2px solid;
+/*    border: 2px solid;*/
 }
 .what_we_do .scene .perspective .screen:hover {
     cursor: pointer;
@@ -306,23 +306,23 @@ _:-moz-tree-row(hover),
 }
 .what_we_do .scene .perspective .matching-screen-1 {
     background-image: url(../assets/img/developing.png);
-    border-color: aqua;
+/*    border-color: aqua;*/
 }
 .what_we_do .scene .perspective .matching-screen-2 {
     background-image: url(../assets/img/wireframe.png);
-    border-color: palevioletred;
+/*    border-color: palevioletred;*/
 }
 .what_we_do .scene .perspective .matching-screen-3 {
-    background-image: url(../assets/img/QA.png);
-    border-color: goldenrod;
+    background-image: url(../assets/img/design%20copy1111.png);
+/*    border-color: goldenrod;*/
 }
 .what_we_do .scene .perspective .matching-screen-4 {
     background-image: url(../assets/img/project_coordination.png);
-    border-color: hotpink;
+/*    border-color: hotpink;*/
 }
 .what_we_do .scene .perspective .matching-screen-5 {
     background-image: url(../assets/img/final_result.png);
-    border-color: blueviolet;
+/*    border-color: blueviolet;*/
 }
 .what_we_do .scene .model {
     transition: transform 0.5s ease-in-out;
@@ -356,7 +356,8 @@ _:-moz-tree-row(hover),
     width: 160px;
 }
 .what_we_do .control_panel .label {
-    font-family: 'CenturyGothic-Bold';
+/*    font-family: 'CenturyGothic-Bold';*/
+    font-family: 'Lato', sans-serif;
     font-size: 18px;
     padding: 5%;
     text-align: left;
