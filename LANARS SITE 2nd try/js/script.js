@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var touchstartY = 0;
     var touchendY = 0;
 
-    var gesuredZone = document.querySelector('.scrolling_feed');
+    var gesuredZone = document.querySelector('body');
 
     gesuredZone.addEventListener('touchstart', function(el) {
         el = el || window.event;
