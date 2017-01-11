@@ -191,7 +191,7 @@ document.addEventListener('DOMContentLoaded', function () {
             $('.scrolling_feed').removeClass('scroll' + lastDisplayCounter);
             $('.scrolling_feed').addClass('scroll' + targetScreen);
             setTimeout(showMenu, 1000);
-            underlineActiveScreen(1200);
+            underlineActiveScreen(1100);
         } else {
             console.log('Bottom of the screen');
         } 
@@ -231,15 +231,16 @@ document.addEventListener('DOMContentLoaded', function () {
             hideMenu();
             $('.scrolling_feed').removeClass('scroll' + lastDisplayCounter);
             $('.scrolling_feed').addClass('scroll' + targetScreen);
-            underlineActiveScreen(1200);
             setTimeout(showMenu, 1000);
+            underlineActiveScreen(1100);
         }
     }
     
     function underlineActiveScreen(mas) {
-        var previousLink = '.screen_' + lastDisplayCounter + '_link';
+        var numb = lastDisplayCounter;
+        var previousLink = '.screen_' + numb + '_link';
         $(previousLink).on('click', function() {
-            changeScreen(lastDisplayCounter);
+            changeScreen(numb);
         })
         var currentLink = '.screen_' + displayCounter + '_link';
         setTimeout(function() {
@@ -276,7 +277,7 @@ document.addEventListener('DOMContentLoaded', function () {
         $('.scrolling_feed').removeClass('scroll' + lastDisplayCounter);
         $('.scrolling_feed').addClass('scroll' + targetScreen);
         setTimeout(showMenu, 1000);
-        underlineActiveScreen(1200);
+        underlineActiveScreen(1100);
     }
     
     function nextSlide() {

@@ -2,6 +2,9 @@
 @import "parallax_screens.css";
 
 /*===Стили для эффекта parallax===*/
+body {
+    overflow-y: hidden;
+}
 .parallax {
     height: 100vh;
     overflow-x: hidden;
@@ -33,6 +36,11 @@ _:-moz-tree-row(hover),
     top: 0;
     left: 0;
     width: 100%;
+}
+.what_we_do,
+.our_team,
+.featured {
+    overflow: hidden;
 }
 
 /*===Главное меню - обычное состояние===*/
@@ -74,7 +82,7 @@ _:-moz-tree-row(hover),
     box-sizing: border-box;
     color: rgb(75, 81, 91);
     display: block;
-    font-family: 'sf_ui_displayregular';
+    font-family: 'Lato', sans-serif;
     font-size: 16px;
     height: 100%;
     padding: 9px 0 8px;
@@ -124,7 +132,7 @@ _:-moz-tree-row(hover),
     margin-left: 0;
 }
 .two_rows .main_menu li:hover a {
-    font-family: 'sf_ui_displayregular';
+/*    font-family: 'sf_ui_displayregular';*/
 }
 .two_rows .main_menu li:hover {
     margin: 0 23px;
@@ -150,7 +158,7 @@ _:-moz-tree-row(hover),
 }
 .hide_menu {
     animation-name: hidemenu;
-    animation-duration: 20ms;
+    animation-duration: 200ms;
     animation-timing-function: ease-out;
     animation-fill-mode: forwards;
 }
@@ -305,47 +313,49 @@ _:-moz-tree-row(hover),
      opacity: 1;
 }
 .what_we_do .scene .perspective .matching-screen-1 {
-    background-image: url(../assets/img/developing.png);
-/*    border-color: aqua;*/
+    background-image: url(../assets/img/wireframes.png);
 }
 .what_we_do .scene .perspective .matching-screen-2 {
-    background-image: url(../assets/img/wireframe.png);
-/*    border-color: palevioletred;*/
+    background-image: url(../assets/img/design.png);
 }
 .what_we_do .scene .perspective .matching-screen-3 {
-    background-image: url(../assets/img/design%20copy1111.png);
-/*    border-color: goldenrod;*/
+    background-image: url(../assets/img/developing.png);
 }
 .what_we_do .scene .perspective .matching-screen-4 {
-    background-image: url(../assets/img/project_coordination.png);
-/*    border-color: hotpink;*/
+    background-image: url(../assets/img/Q:A.png);
 }
 .what_we_do .scene .perspective .matching-screen-5 {
+    background-image: url(../assets/img/project_coordination.png);
+}
+.what_we_do .scene .perspective .matching-screen-6 {
     background-image: url(../assets/img/final_result.png);
-/*    border-color: blueviolet;*/
 }
 .what_we_do .scene .model {
     transition: transform 0.5s ease-in-out;
 }
 .what_we_do .scene .open_screen .screen-1 {
-    transform: translateZ(200px);
+    transform: translateZ(210px);
     transition-delay: 0.3s;
 }
 .what_we_do .scene .open_screen .screen-2 {
-    transform: translateZ(160px);
+    transform: translateZ(175px);
     transition-delay: 0.4s;
 }
 .what_we_do .scene .open_screen .screen-3 {
-    transform: translateZ(120px);
+    transform: translateZ(140px);
     transition-delay: 0.5s;
 }
 .what_we_do .scene .open_screen .screen-4 {
-    transform: translateZ(80px);
+    transform: translateZ(105px);
     transition-delay: 0.6s;
 }
 .what_we_do .scene .open_screen .screen-5 {
-    transform: translateZ(40px);
+    transform: translateZ(70px);
     transition-delay: 0.7s;
+}
+.what_we_do .scene .open_screen .screen-6 {
+    transform: translateZ(35px);
+    transition-delay: 0.8s;
 }
 .what_we_do .control_panel {
     left: 75%;
@@ -1053,14 +1063,15 @@ _:-moz-tree-row(hover),
 }
 .our_team_member_name {
     color: rgb(75, 81, 91);
-    font-family: 'sf_ui_displaybold';
+    font-family: 'Lato', sans-serif;
     font-size: 18px;
+    font-weight: bold;
     padding: 15px 0 8px;
     text-align: center;    
 }
 .our_team_member_position {
     color: rgb(162, 166, 173);
-    font-family: 'sf_ui_displayregular';
+    font-family: 'Lato', sans-serif;
     padding: 4px 0;
 }
 
@@ -1302,7 +1313,7 @@ _:-moz-tree-row(hover),
     box-sizing: border-box;
     color: rgb(255, 255, 255);
     display: block;
-    font-family: 'sf_ui_displayregular';
+    font-family: 'Lato', sans-serif;
     font-size: 16px;
     height: 100%;
     line-height: 22px;
@@ -1337,8 +1348,9 @@ _:-moz-tree-row(hover),
     color: rgb(255, 255, 255);
     display: block;
     float: none;
-    font-family: 'sf_ui_displaybold';
+    font-family: 'Lato', sans-serif;
     font-size: 14px;
+    font-weight: bold;
     margin: 25px 0 0 0;
     text-align: left;
     text-transform: none;
@@ -1378,10 +1390,11 @@ _:-moz-tree-row(hover),
 }
 .socials_container .socials_title {
     color: rgb(255, 255, 255);
-    font-family: 'sf_ui_displaybold';
+    font-family: 'Lato', sans-serif;
     font-size: 14px;
+    font-weight: bold;
     margin: 25px 0 0 0px;
-    padding: 5px 0 5px 0;
+    padding: 5px 0 10px 0;
     text-align: left;
 }
 .socials_container li {

@@ -77,8 +77,6 @@ document.addEventListener('DOMContentLoaded', function () {
          thisScreen.addClass('screen-1');
          topScreen.addClass(newPositionClass);
 
-
-
     //     ===============Меняем положение соответствующих кнопок=======================
 
          var currentButtonPosition = ".label-" + classNumber;      
