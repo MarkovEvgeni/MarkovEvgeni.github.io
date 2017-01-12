@@ -1170,7 +1170,6 @@ _:-moz-tree-row(hover),
     transition: box-shadow 0.3s, transform 0.3s;
     width: 200px;
 }
- Для нерабочего флексбокса
 
 .clients_container .fox_news {
     background-position: -5px -5px;
@@ -1191,61 +1190,58 @@ _:-moz-tree-row(hover),
     background-position: -1030px -5px;
 }
 .clients_container .cnn {
-    background-position: -5px -141px;
+    background-position: -5px -146px;
 }
 .clients_container .abc {
-    background-position: -210px -141px;
+    background-position: -210px -146px;
 }
 .clients_container .nbc {
-    background-position: -415px -141px;
+    background-position: -415px -146px;
 }
 .clients_container .rte {
-    background-position: -620px -141px;
+    background-position: -620px -146px;
 }
 .clients_container .asspress {
-    background-position: -825px -141px;
+    background-position: -825px -146px;
 }
 .clients_container .reuters {
-    background-position: -1030px -141px;
-}
-.clients_container .fm4 {
-    background-position: -1030px -281px;
+    background-position: -1030px -146px;
 }
 .clients_container .themail {
-    background-position: -5px -286px;
+    background-position: -5px -287px;
 }
 .clients_container .sunday {
-    background-position: -210px -286px;
+    background-position: -210px -287px;
 }
-.clients_container .dailymirrort {
-    background-position: -415px -286px;
+.clients_container .dailymirror {
+    background-position: -415px -287px;
 }
 .clients_container .trt {
-    background-position: -620px -286px;
+    background-position: -620px -287px;
 }
 .clients_container .omantimes {
-    background-position: -825px -286px;
+    background-position: -825px -287px;
 }
 .clients_container .fm4 {
-    background-position: -1030px -286px;
+    background-position: -1030px -287px;
 }
 .clients_container .usatoday {
-    background-position: -5px -426px;
+    background-position: -5px -428px;
 }
 .clients_container .skynews {
-    background-position: -210px -426px;
+    background-position: -210px -428px;
 }
 .clients_container .theeconomist {
-    background-position: -415px -426px;
+    background-position: -415px -428px;
 }
 .clients_container .theindependent {
-    background-position: -620px -426px;
+    background-position: -620px -428px;
 }
 .clients_container .aljazeera {
-    background-position: -825px -426px;
+    background-position: -825px -428px;
 }
 .clients_container .vanityfair {
-    background-position: -1030px -426px;
+    background-position: -1030px -428px;
 }
 .clients_container .client:hover {
     transition: ease;
