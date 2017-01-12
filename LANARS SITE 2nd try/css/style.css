@@ -230,7 +230,7 @@ _:-moz-tree-row(hover),
 /*===Экран с 3D моделью===*/
 
 .what_we_do {
-    background: rgb(255, 255, 255);
+    background: rgb(249, 249, 249);
     z-index: 2;
 }
 .what_we_do .content {
@@ -280,23 +280,21 @@ _:-moz-tree-row(hover),
 .what_we_do .scene .perspective .screen {
     backface-visibility: hidden;
     background-repeat: no-repeat;
-/*    background-size: cover;*/
     box-sizing: border-box;
     height: 90%;
     left: 10%;
-/*    opacity: 0.9;*/
     position: absolute;
     top: 5%;
     transition: transform 0.4s;
     width: 78%;
-/*    border: 2px solid;*/
 }
 .what_we_do .scene .perspective .screen:hover {
     cursor: pointer;
 }
 .what_we_do .scene .perspective .screen::after {
     content: '';
-    border: 3px solid rgba(65, 255, 239, .9);
+    border: 3px solid rgb(255, 193, 104);
+    border-radius: 8px;
     background: transparent;
     left: -3px;
     position: absolute;

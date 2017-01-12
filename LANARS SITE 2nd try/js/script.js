@@ -175,8 +175,8 @@ document.addEventListener('DOMContentLoaded', function () {
             $('.scrolling_feed').addClass('position_screen_' + displayCounter);
             $('.scrolling_feed').removeClass('position_screen_' + lastDisplayCounter);
             lastDisplayCounter = displayCounter;
-            var targetScreen = ++displayCounter;
-            displayCounter = targetScreen;
+            ++displayCounter;
+            var targetScreen = displayCounter;
             nextScreen(targetScreen);
         } else {
             console.log('Bottom of the screen');
