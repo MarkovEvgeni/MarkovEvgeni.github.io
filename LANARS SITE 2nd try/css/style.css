@@ -360,7 +360,7 @@ _:-moz-tree-row(hover),
     position: absolute;
     top: 30%;
     transition: opacity 0.3s;
-    width: 160px;
+    width: 170px;
 }
 .what_we_do .control_panel .label {
 /*    font-family: 'CenturyGothic-Bold';*/

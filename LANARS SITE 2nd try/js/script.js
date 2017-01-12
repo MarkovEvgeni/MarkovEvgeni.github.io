@@ -10,9 +10,13 @@ document.addEventListener('DOMContentLoaded', function () {
     var gesuredZone = document.querySelector('.scrolling_feed');
 
     gesuredZone.addEventListener('touchstart', function(el) {
-        el.preventDefault();
         el = el || window.event;
         touchstartY = el.changedTouches[0].screenY;
+    }, false);
+    
+    gesuredZone.addEventListener('touchmove', function(el) {
+        el = el || window.event;
+        el.preventDefault();
     }, false);
 
     gesuredZone.addEventListener('touchend', function(el) {
