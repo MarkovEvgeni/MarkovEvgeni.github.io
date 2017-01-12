@@ -5,6 +5,8 @@
 }
 .wrapper_background {
     height: 100%;
+    overflow: hidden;
+    position: relative;
     font-family: 'Lato', sans-serif;
     background: rgba(195,221,253,1);
     background: -moz-radial-gradient(center, ellipse cover, rgba(195,221,253,1) 0%, rgba(119,150,223,1) 100%);
@@ -19,7 +21,7 @@
 .wrapper {
     border: 1px dashed orange;
     box-sizing: border-box;
-    height: 100vh;
+    min-height: 100vh;
     margin: 0 auto;
     max-width: 880px;
 }
@@ -126,9 +128,96 @@
     min-height: 23px;
     height: 4.6%;
 }
+.notch_container {
+    margin: 0 auto;
+    width: 430px;
+    height: 160px;
+}
 .notch_round {
-    width: 130px;
-    height: 130px;
     border-radius: 50%;
-    background-color: rgba(22, 29, 82, 1);
+    box-sizing: border-box;
+    box-shadow: 4px 0px 10px 0px rgba(0, 0, 0, 0.25);
+    height: 130px;
+    padding: 30px;
+    text-align: center;
+    width: 130px;
+}
+.notch_round:before {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+.notch1 {
+    transform: translateX(300px);
+}
+.notch2 {
+    transform: translateX(200px) translateY(-130px);
+}
+.notch3 {
+    transform: translateX(100px) translateY(-260px);
+}
+.notch4 {
+    transform: translateY(-390px);
+}
+.notch4 .notch_round {
+    background-color: rgb(22, 29, 82);
+}
+.notch3 .notch_round {
+    background-color: rgb(63, 76, 155);
+}
+.notch2 .notch_round {
+    background-color: rgb(73, 104, 163);
+}
+.notch1 .notch_round {
+    background-color: rgb(91, 122, 189);
+}
+.notch_round p {
+    color: white;
+    display: inline-block;
+    font-size: 14px;
+    line-height: 18px;
+    vertical-align: middle;
+    width: 70px;
+}
+.notch_rect {
+    border: 1px solid red;
+    height: 50px;
+    width: 50px;
+    transform: rotate(45deg) skew(20deg, 20deg);
+}
+.left .spacing3 {
+    height: 17%;
+    min-height: 85px;
+    
+}
+.get_it_container {
+    text-align: center;
+}
+.get_it_container .btn {
+    background-size: cover;
+    border-radius: 5px;
+/*    border: 1px solid rgba(143, 143, 143, 1);*/
+    display: inline-block;
+    height: 44px;
+    width: 150px;
+    margin: 0 11px;
+}
+.get_it_container .btn:hover {
+    cursor: pointer;
+}
+.google_play {
+    background-image: url(../assets/playstore.png);
+}
+.app_store {
+    background-image: url(../assets/appstore.png);
+}
+.clouds_container {
+    bottom: -2px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+.clouds {
+    display: inline-block;
 }
