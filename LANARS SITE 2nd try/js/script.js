@@ -40,6 +40,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }    
     
 //    Полифилл для requestAnimationFrame
+    
     (function() {
         var lastTime = 0;
         var vendors = ['ms', 'moz', 'webkit', 'o'];
@@ -85,9 +86,6 @@ document.addEventListener('DOMContentLoaded', function () {
 //  Объявляем переменную, которая будет содержать информацию о предыдущем экране
     
     var lastDisplayCounter = 1;
-    
-    $('.up-test').on('click', scrollScreenUp);
-    $('.down-test').on('click', scrollScreenDown);
  
 // Создаем ограничение, чтобы скроллить экраны можно было не чаще чем один раз в установленное кол-во времени.  
     
@@ -163,20 +161,10 @@ document.addEventListener('DOMContentLoaded', function () {
     function scrollScreenDown() {
         if(displayCounter < 6) {
             if (displayCounter == 1) {
-                $('.content .scene').unbind();
-                setTimeout(function(){
-                   $('.what_we_do .model').css("transform", "translateY(50px) rotateX(50deg) rotateZ(30deg)");
-                   $('.what_we_do .model').css("transition", "transform 0.4s linear");
-                   $('.what_we_do .model').addClass('open_screen');
-                   $('.what_we_do .control_panel').addClass('show_control_panel'); 
-                }, 1000);
+                rotateModel();
             }
             if (displayCounter == 2) {
-               $('.what_we_do .model').css("transform", "translateY(0px) rotateX(0deg) rotateZ(0deg)");
-               $('.what_we_do .model').css("transition", "transform 0.4s linear");
-               $('.what_we_do .model').removeClass('open_screen');
-               $('.what_we_do .control_panel').removeClass('show_control_panel');
-               $('.content .scene').unbind();
+                returnModel();
             }
             if (displayCounter == 3) {
                 if (currentSlide !== 3) {
@@ -189,56 +177,60 @@ document.addEventListener('DOMContentLoaded', function () {
             lastDisplayCounter = displayCounter;
             var targetScreen = ++displayCounter;
             displayCounter = targetScreen;
-            hideMenu();
-            $('.main_menu li.active').each(function() {
-                $(this).removeClass('active');
-            });
-            $('.scrolling_feed').removeClass('scroll' + lastDisplayCounter);
-            $('.scrolling_feed').addClass('scroll' + targetScreen);
-            setTimeout(showMenu, 1000);
-            underlineActiveScreen(1100);
+            nextScreen(targetScreen);
         } else {
             console.log('Bottom of the screen');
         } 
     }
 
+    function rotateModel() {
+        $('.what_we_do .content .scene').unbind();
+        setTimeout(function(){
+            $('.what_we_do .model').css("transform", "translateY(50px) rotateX(50deg) rotateZ(30deg)");
+            $('.what_we_do .model').css("transition", "transform 0.4s linear");
+            $('.what_we_do .model').addClass('open_screen');
+            $('.what_we_do .control_panel').addClass('show_control_panel');
+        }, 1000);
+    };
+    
+    function returnModel() {
+        $('.what_we_do .model').css("transform", "translateY(0px) rotateX(0deg) rotateZ(0deg)");
+        $('.what_we_do .model').css("transition", "transform 0.4s linear");
+        $('.what_we_do .model').removeClass('open_screen');
+        $('.what_we_do .control_panel').removeClass('show_control_panel');
+        $('.what_we_do .content .scene').unbind();
+    }
+    
     function scrollScreenUp() {
         if(displayCounter > 1) {
             if (displayCounter == 2) {
-               $('.what_we_do .control_panel').removeClass('show_control_panel');
-               $('.what_we_do .model').removeClass('open_screen');
-               $('.what_we_do .model').css("transform", "translateY(0px) rotateX(0deg) rotateZ(0deg)");
-               $('.what_we_do .model').css("transition", "transform 0.4s linear");
-               $('.content .scene').unbind();
+               returnModel();
             }
             if (displayCounter == 3) {
                 if (currentSlide !== 1) {
                     prevSlide();
                     return;
                 }
-                $('.content .scene').unbind();
-                setTimeout(function() {
-                    $('.what_we_do .model').css("transform", "translateY(50px) rotateX(50deg) rotateZ(30deg)");
-                    $('.what_we_do .model').css("transition", "transform 0.4s linear");
-                    $('.what_we_do .model').addClass('open_screen');
-                    $('.what_we_do .control_panel').addClass('show_control_panel');
-                }, 1000);
+                rotateModel();
             }
-            hideMenu();
-            $('.main_menu li.active').each(function() {
-                $(this).removeClass('active');
-            });
             $('.scrolling_feed').addClass('position_screen_' + displayCounter);
             $('.scrolling_feed').removeClass('position_screen_' + lastDisplayCounter);
             lastDisplayCounter = displayCounter;
             var targetScreen = --displayCounter;
             displayCounter = targetScreen;
-            hideMenu();
-            $('.scrolling_feed').removeClass('scroll' + lastDisplayCounter);
-            $('.scrolling_feed').addClass('scroll' + targetScreen);
-            setTimeout(showMenu, 1000);
-            underlineActiveScreen(1100);
+            nextScreen(targetScreen);
         }
+    }
+    
+    function nextScreen(targetScreen) {
+        hideMenu();
+        $('.main_menu li.active').each(function() {
+            $(this).removeClass('active');
+        });
+        $('.scrolling_feed').removeClass('scroll' + lastDisplayCounter);
+        $('.scrolling_feed').addClass('scroll' + targetScreen);
+        setTimeout(showMenu, 1000);
+        underlineActiveScreen(1100);
     }
     
     function underlineActiveScreen(mas) {
@@ -259,30 +251,16 @@ document.addEventListener('DOMContentLoaded', function () {
             $(this).removeClass('active');
         });
         if (displayCounter == 2) {
-            $('.what_we_do .model').css("transform", "translateY(0px) rotateX(0deg) rotateZ(0deg)");
-            $('.what_we_do .model').css("transition", "transform 0.4s linear");
-            $('.what_we_do .model').removeClass('open_screen');
-            $('.what_we_do .control_panel').removeClass('show_control_panel');
-            $('.content .scene').unbind();
+            returnModel();
         };
         if (targetScreen == 2) {
-            $('.content .scene').unbind();
-            setTimeout(function() {
-                $('.what_we_do .model').css("transform", "translateY(50px) rotateX(50deg) rotateZ(30deg)");
-                $('.what_we_do .model').css("transition", "transform 0.4s linear");
-                $('.what_we_do .model').addClass('open_screen');
-                $('.what_we_do .control_panel').addClass('show_control_panel');
-            }, 1000);
+            rotateModel();
         };
         $('.scrolling_feed').addClass('position_screen_' + displayCounter);
         $('.scrolling_feed').removeClass('position_screen_' + lastDisplayCounter);
         lastDisplayCounter = displayCounter;
         displayCounter = targetScreen;
-        hideMenu();
-        $('.scrolling_feed').removeClass('scroll' + lastDisplayCounter);
-        $('.scrolling_feed').addClass('scroll' + targetScreen);
-        setTimeout(showMenu, 1000);
-        underlineActiveScreen(1100);
+        nextScreen(targetScreen);
     }
     
     function nextSlide() {
