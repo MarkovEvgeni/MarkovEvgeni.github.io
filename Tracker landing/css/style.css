@@ -119,6 +119,12 @@
     float: right;
     width: 35.5%;
 }
+.main_content .right:before {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
 .left .slogan {
     color: white;
     font-size: 28px;
@@ -197,11 +203,12 @@
 .get_it_container .btn {
     background-size: cover;
     border-radius: 5px;
-/*    border: 1px solid rgba(143, 143, 143, 1);*/
     display: inline-block;
     height: 44px;
-    width: 150px;
     margin: 0 11px;
+    position: relative;
+    width: 150px;
+    z-index: 5;
 }
 .get_it_container .btn:hover {
     cursor: pointer;
@@ -211,6 +218,61 @@
 }
 .app_store {
     background-image: url(../assets/appstore.png);
+}
+.controls {
+    display: inline-block;
+    vertical-align: middle;
+    width: 8px;
+}
+.controls .ctrl {
+    background-color: rgba(255,255,255,.37);
+    border-radius: 50%;
+    height: 8px;
+    margin: 10px 0;
+    width: 8px;
+}
+.controls .ctrl:hover {
+    background-color: rgba(255,255,255,1);
+    cursor: pointer;
+}
+.scrolling_frame {
+    display: inline-block;
+    height: 471px;
+    overflow: hidden;
+    vertical-align: middle;
+    text-align: center;
+    width: calc(100% - 16px);
+}
+.scrolling_frame .feed {
+    height: 200%;
+    width: 100%;
+}
+.feed .feed_frame {
+    height: 50%;
+}
+.feed .feed_frame:before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+}
+.feed .feed_frame img {
+    vertical-align: middle;
+}
+@keyframes scrolling {
+    0%, 58.2%, 66.5%, 75.8%, 84.1%, 92.4%, 100% {
+        transform: translateY(0);
+    }
+    8.3%, 16.6%, 24.9%, 33.3%, 41.6%, 49.9% {
+        transform: translateY(-50%);
+    }
+}
+.animate {
+    animation-delay: 4s;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-name: scrolling;
+    animation-fill-mode: none;
 }
 .clouds_container {
     bottom: -2px;
