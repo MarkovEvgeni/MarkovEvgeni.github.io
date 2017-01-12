@@ -1,0 +1,134 @@
+.clearfix:after {
+    clear: both;
+    content: "";
+    display: block;
+}
+.wrapper_background {
+    height: 100%;
+    font-family: 'Lato', sans-serif;
+    background: rgba(195,221,253,1);
+    background: -moz-radial-gradient(center, ellipse cover, rgba(195,221,253,1) 0%, rgba(119,150,223,1) 100%);
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(195,221,253,1)), color-stop(100%, rgba(119,150,223,1)));
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(195,221,253,1) 0%, rgba(119,150,223,1) 100%);
+    background: -o-radial-gradient(center, ellipse cover, rgba(195,221,253,1) 0%, rgba(119,150,223,1) 100%);
+    background: -ms-radial-gradient(center, ellipse cover, rgba(195,221,253,1) 0%, rgba(119,150,223,1) 100%);
+    background: radial-gradient(ellipse at center, rgba(195,221,253,1) 0%, rgba(119,150,223,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c3ddfd', endColorstr='#7796df', GradientType=1 ); 
+    width: 100%;
+}
+.wrapper {
+    border: 1px dashed orange;
+    box-sizing: border-box;
+    height: 100vh;
+    margin: 0 auto;
+    max-width: 880px;
+}
+.login {
+    box-sizing: border-box;
+    height: 21.25%;
+    min-height: 170px;
+    padding-top: 6.5%;
+}
+.punchline_container {
+    box-sizing: border-box;
+    background-color: rgba(120, 153, 214, .18);
+    height: 55px;
+    margin: 0 10px;
+    padding-top: 11px;
+    transform: skewX(-22.5deg);
+    
+}
+.punchline {
+    color: rgb(255, 255, 255);
+    font-size: 26px;
+    text-align: center;
+    transform: skewX(22.5deg);
+}
+.btns_container {
+    padding-right: 15px;
+}
+.btns_container .logo {
+    color: white;
+    float: left;
+    font-size: 18px;
+    font-weight: 900;
+    padding-top: 11px;
+}
+.button {
+    border-radius: 5px;
+    box-sizing: border-box;
+    color: white;
+    float: right;
+    font-size: 18px;
+    height: 41px;
+    margin: 0 11px;
+    padding-top: 11px;
+    text-align: center;
+    width: 128px;
+}
+.button:hover,
+.button:active {
+    cursor: pointer
+}
+.sign_up {
+    background-color: rgba(255, 255, 255, .16);
+    -webkit-box-shadow: 0px 2px 4px 0px rgba(89,116,167,1);
+    -moz-box-shadow: 0px 2px 4px 0px rgba(89,116,167,1);
+    box-shadow: 0px 2px 4px 0px rgba(89,116,167,1);
+}
+.sign_up:hover {
+    background-color: rgba(255, 255, 255, .26);
+}
+.sign_up:active {
+    background-color: rgba(255, 255, 255, .36);
+}
+.sign_in {
+    background-color: rgba(22, 26, 74, .16);
+    -webkit-box-shadow: 0px 2px 4px 0px rgba(63,86,146,1);
+    -moz-box-shadow: 0px 2px 4px 0px rgba(63,86,146,1);
+    box-shadow: 0px 2px 4px 0px rgba(63,86,146,1);
+}
+.sign_in:hover {
+    background-color: rgba(22, 26, 74, .26);
+}
+.sign_in:active {
+    background-color: rgba(22, 26, 74, .36);
+}
+.spacing {
+    height: 21.2%;
+    min-height: 36px;
+}
+.main_content {
+    box-sizing: border-box;
+    border: 1px dashed green;
+    height: 62.5%;
+    min-height: 500px;
+    padding-top: 6%;
+}
+.main_content .left {
+    box-sizing: border-box;
+    border: 1px solid yellow;
+    float: left;
+    width: 63.5%;
+}
+.main_content .right {
+    box-sizing: border-box;
+    border: 1px solid orange;
+    float: right;
+    width: 35.5%;
+}
+.left .slogan {
+    color: white;
+    font-size: 28px;
+    text-align: center;
+}
+.left .spacing2 {
+    min-height: 23px;
+    height: 4.6%;
+}
+.notch_round {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background-color: rgba(22, 29, 82, 1);
+}
