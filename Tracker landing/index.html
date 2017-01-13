@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,900" rel="stylesheet">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
@@ -12,10 +13,12 @@
         <div class="wrapper">
             <section class="login">
                 <div class="padd"></div>
-                <div class="btns_container clearfix">
+                <div class="login_container clearfix">
                     <div class="logo">Work Koin</div>
-                    <div class="sign_in button">Sign In</div>
-                    <div class="sign_up button">Sign Up</div>
+                    <div class="btns_container clearfix">
+                        <div class="sign_in button">Sign In</div>
+                        <div class="sign_up button">Sign Up</div>
+                    </div>
                 </div>
                 <div class="spacing"></div>
                 <div class="punchline_container">
@@ -23,6 +26,7 @@
                 </div>
                 </section>
             <section class="main_content">
+                    <div class="padd2"></div>
                     <section class="left">
                         <div class="slogan">It’s as easy as</div>
                         <div class="spacing2"></div>
@@ -77,6 +81,8 @@
                 <img src="assets/group.svg" alt="">
             </div>
         </div>
+        <div class="cloud animated_cloud_1"></div>
+        <div class="cloud animated_cloud_2"></div>
     </div>
     <script>
         var button1 = document.getElementsByClassName('control_1')[0];
@@ -84,19 +90,41 @@
         var feed = document.getElementsByClassName('feed')[0];
         button1.addEventListener("click", function() {
             var currentPosition = getCurrentTransormX();
-            console.log(currentPosition);
             if(currentPosition == 0) {
                 feed.classList.remove('animate');
+                feed.classList.remove('animate2');
                 feed.classList.add('animate');
             } else {
-                console.log('Anoher logic');
-                console.log(feed.style);
-                feed.style.transformY = currentPosition +'px';
-                feed.classList.remove('animate');
+                if (currentPosition > -471) {
+                } else {
+                    feed.classList.add('up');
+                    feed.classList.remove('animate');
+                    feed.classList.remove('animate2');
+                    setTimeout(function() {
+                        feed.classList.add('animate');
+                        feed.classList.remove('up');
+                    }, 1100);
+                }
             }
         });
         button2.addEventListener("click", function() {
-            var currentPosition = getCurrentTransormX()
+            var currentPosition = getCurrentTransormX();
+            if(currentPosition == 0) {
+                feed.classList.add('down');
+                feed.classList.remove('animate');
+                feed.classList.remove('animate2');
+                setTimeout(function() {
+                    feed.classList.add('animate2');
+                    feed.classList.remove('down');
+                }, 1100);
+            } else {
+                if (currentPosition > -471) {
+                } else {
+                    feed.classList.remove('animate');
+                    feed.classList.remove('animate2');
+                    feed.classList.add('animate2');
+                }
+            }
         });
         function getCurrentTransormX() {
             var property = window.getComputedStyle(feed, null);
