@@ -358,47 +358,98 @@
     z-index: 0;
 }
 .animated_cloud_1 {
-    transform: translateY(-65vh) translatex(-10vh);
+    transform: translateY(-65vh) translateX(-30vw);
     animation-name: animation_cloud1;
-    animation-duration: 20s;
+    animation-duration: 40s;
     animation-iteration-count: infinite;
 }
 .animated_cloud_2 {
-    transform: translateY(-35vh) translatex(-10vh);
+    transform: translateY(-35vh) translateX(-30vw);
     animation-name: animation_cloud2;
-    animation-duration: 30s;
+    animation-duration: 60s;
     animation-iteration-count: infinite;
 }
 @keyframes animation_cloud1 {
     0% {
-        transform: translateY(-65vh) translateX(-10vh);
+        transform: translateY(-65vh) translateX(-30vw);
     }
     100% {
-        transform: translateY(-65vh) translateX(120vh);
+        transform: translateY(-65vh) translateX(130vw);
     }
 }
 @keyframes animation_cloud2 {
     0% {
-        transform: translateY(-35vh) translateX(-10vh);
+        transform: translateY(-35vh) translateX(-30vw);
     }
     100% {
-        transform: translateY(-35vh) translateX(120vh);
+        transform: translateY(-35vh) translateX(130vw);
     }
 }
-animation_c
-/*
-.animated_cloud_2 {
-    left: -40vh;
-    top: 70vh;
+@media all and (max-width: 890px) {
+    .login_container .logo {
+        padding-left: 10px;
+    }
 }
-*/
-animation {}
-@media all and (max-width: 320px) {
+@media all and (max-width: 730px) {
+    .main_content .left {
+        width: 58%
+    }
+    .main_content .right {
+        width: 41%
+    }
+    .notch_container {
+        width: 350px;
+        height: 146px;
+    }
+    .notch_shadow{
+        box-shadow: 4px 0px 10px 0px rgba(0, 0, 0, 0.25);
+        position: relative;
+        transform: translateY(-110px);
+        z-index: 1;
+    }
+    .notch_shadow,
+    .notch_round {
+        height: 110px;
+        padding: 20px;
+        width: 110px;
+    }
+    .notch_round {
+        z-index: 3;
+    }
+    .notch1 {
+        transform: translateX(240px);
+    }
+    .notch2 {
+        transform: translateX(160px) translateY(-296px);
+    }
+    .notch3 {
+        transform: translateX(80px) translateY(-592px);
+    }
+    .notch4 {
+        transform: translateY(-888px);
+    }
+    .notch_round p {
+        font-size: 12px;
+        line-height: 16px;
+        width: 60px;
+    }
+    .notch_rect {
+        height: 76px;
+        width: 76px;
+        transform: rotate(45deg) translateY(-135px) translateX(-112px) skew(8deg, 8deg);
+    }
+}
+@media all and (max-width: 660px) {
+    .spacing {
+        min-height: 20px;
+    }
+}
+@media all and (max-width: 480px) {
     .wrapper_background {
         min-height: 1060px;
     }
     .wrapper {
-        max-width: 320px;
+        max-width: 480px;
     }
     .login {
         height: 7.5%;
@@ -419,6 +470,157 @@ animation {}
     .btns_container {
         position: absolute;
         bottom: 2%;
+        left: 0;
+        width: 100%;
+        z-index: 20;
+    }
+    .punchline_container {
+        padding-top: 5px;
+        height: 34px;
+    }
+    .punchline {
+        line-height: 19px;
+        font-size: 16px;
+    }
+    .main_content {
+        height: 92%;
+        min-height: 980px;
+    }
+    .padd2 {
+        height: 1.5%;
+        min-height: 15px;
+    }
+    .main_content .left {
+        float: none;
+        width: 100%;
+    }
+    .left .slogan {
+        box-sizing: border-box;
+        font-size: 16px;
+        height: 19px;
+        padding-top: 3px;
+    }
+    left .spacing2 {
+        height: 2%;
+        min-height: 20px;
+    }
+    .notch_container {
+        width: 350px;
+        height: 146px;
+    }
+    .notch_shadow{
+        box-shadow: 4px 0px 10px 0px rgba(0, 0, 0, 0.25);
+        position: relative;
+        transform: translateY(-110px);
+        z-index: 1;
+    }
+    .notch_shadow,
+    .notch_round {
+        height: 110px;
+        padding: 20px;
+        width: 110px;
+    }
+    .notch_round {
+        z-index: 3;
+    }
+    .notch1 {
+        transform: translateX(240px);
+    }
+    .notch2 {
+        transform: translateX(160px) translateY(-296px);
+    }
+    .notch3 {
+        transform: translateX(80px) translateY(-592px);
+    }
+    .notch4 {
+        transform: translateY(-888px);
+    }
+    .notch_round p {
+        font-size: 12px;
+        line-height: 16px;
+        width: 60px;
+    }
+    .notch_rect {
+        height: 76px;
+        width: 76px;
+        transform: rotate(45deg) translateY(-135px) translateX(-112px) skew(8deg, 8deg);
+    }
+    .get_it_container {
+        bottom: 20%;
+        left: 0;
+        position: absolute;
+        width: 100%;
+    }
+    .left .spacing3 {
+        height: 1.5%;
+        min-height: 16px;
+    }
+    .main_content .right {
+        float: none;
+        width: 100%;
+    }
+    .controls {
+        display: none;
+    }
+    .animate {
+        animation-name: none;
+    }
+    .clouds {
+        display: block;
+        height: 150px;
+        width: 100%;
+        background-position: -345px -82px;
+        background-image: url(../assets/group.svg);
+    }
+    .get_it_container .btn {
+        margin: 0 2px;
+    }
+    .clouds img {
+        display: none;
+    }
+    .sign_up,
+    .sign_up:hover,
+    .sign_up:active {
+        color:  rgb(22, 26, 74);
+        margin: 0 15px;
+        float: left;
+    }
+    .sign_in,
+    .sign_in:hover,
+    .sign_in:active {
+        background-color: rgb(22, 26, 74);
+        margin: 0 15px;
+    }
+}
+@media all and (max-width: 380px) {
+    .wrapper_background {
+        min-height: 1060px;
+    }
+    .wrapper {
+        min-width: 320px;
+    }
+    .login {
+        height: 7.5%;
+        min-height: 80px;
+    }
+    .padd,
+    .spacing {
+        height: 15%;
+        min-height: 12px;
+    }
+    .login_container {
+        padding: 0 12px;
+    }
+    .login_container .logo {
+        float: none;
+        padding: 0;
+    }
+    .btns_container {
+        position: absolute;
+        bottom: 2%;
+        left: 0;
+        text-align: center;
+        width: 100%;
         z-index: 20;
     }
     .punchline_container {
@@ -508,6 +710,7 @@ animation {}
     }
     .get_it_container {
         bottom: 20%;
+        left: 0;
         position: absolute;
         width: 100%;
     }
@@ -533,7 +736,7 @@ animation {}
         background-image: url(../assets/group.svg);
     }
     .get_it_container .btn {
-        margin: 0 4px;
+        margin: 0 2px;
     }
     .clouds img {
         display: none;
@@ -548,4 +751,225 @@ animation {}
     .sign_in:active {
         background-color: rgb(22, 26, 74);
     }
+    .button {
+        display: inline-block;
+        margin: 0 7px;
+        float: none;
+    }
+    .animated_cloud_1 {
+        transform: translateY(-65vh) translateX(-80vw)
+    }
+    .animated_cloud_2 {
+        transform: translateY(-35vh) translateX(-80vw);
+        animation-name: animation_cloud2;
+        animation-duration: 60s;
+        animation-iteration-count: infinite;
+    }
+    @keyframes animation_cloud1 {
+        0% {
+            transform: translateY(-65vh) translateX(-80vw);
+        }
+        100% {
+            transform: translateY(-65vh) translateX(180vw);
+        }
+    }
+    @keyframes animation_cloud2 {
+        0% {
+            transform: translateY(-35vh) translateX(-80vw);
+        }
+        100% {
+            transform: translateY(-35vh) translateX(180vw);
+        }
+    }
 }
+@media all and (max-width: 320px) {
+    .wrapper_background {
+        min-height: 1060px;
+    }
+    .wrapper {
+        min-width: 320px;
+    }
+    .login {
+        height: 7.5%;
+        min-height: 80px;
+    }
+    .padd,
+    .spacing {
+        height: 15%;
+        min-height: 12px;
+    }
+    .login_container {
+        padding: 0 12px;
+    }
+    .login_container .logo {
+        float: none;
+        padding: 0;
+    }
+    .btns_container {
+        position: absolute;
+        bottom: 2%;
+        left: 0;
+        text-align: center;
+        width: 100%;
+        z-index: 20;
+    }
+    .punchline_container {
+        padding-top: 5px;
+        height: 34px;
+    }
+    .punchline {
+        line-height: 19px;
+        font-size: 16px;
+    }
+    .main_content {
+        height: 92%;
+        min-height: 980px;
+    }
+    .padd2 {
+        height: 1.5%;
+        min-height: 15px;
+    }
+    .main_content .left {
+        float: none;
+        width: 100%;
+    }
+    .left .slogan {
+        box-sizing: border-box;
+        font-size: 16px;
+        height: 19px;
+        padding-top: 3px;
+    }
+    left .spacing2 {
+        height: 2%;
+        min-height: 20px;
+    }
+    .notch_container {
+        height: 120px;
+        width: 300px;
+    }
+    .notch_shadow{
+        box-shadow: 4px 0px 10px 0px rgba(0, 0, 0, 0.25);
+        position: relative;
+        transform: translateY(-90px);
+        z-index: 1;
+    }
+    .notch_shadow, .notch_round {
+        border-radius: 50%;
+        height: 90px;
+        padding: 0 10px;
+        width: 90px;
+    }
+    .notch1 {
+        transform: translateX(210px);
+    }
+    .notch2 {
+        transform: translateX(140px) translateY(-245px);
+    }
+    .notch3 {
+        transform: translateX(70px) translateY(-490px);
+    }
+    .notch4 {
+        transform: translateY(-735px);
+    }
+    .notch4 .notch_round,
+    .notch4 .notch_rect {
+        background-color: rgb(22, 29, 82);
+    }
+    .notch3 .notch_round,
+    .notch3 .notch_rect{
+        background-color: rgb(63, 76, 155);
+    }
+    .notch2 .notch_round,
+    .notch2 .notch_rect{
+        background-color: rgb(73, 104, 163);
+    }
+    .notch1 .notch_round,
+    .notch1 .notch_rect{
+        background-color: rgb(91, 122, 189);
+    }
+    .notch_round p {
+        font-size: 10px;
+        line-height: 12px;
+        width: 50px;
+    }
+    .notch_rect {
+        box-shadow: 4px -3px 10px 0px rgba(0, 0, 0, 0.25);
+        height: 65px;
+        width: 65px;
+        transform: rotate(45deg) translateY(-113px) translateX(-95px) skew(8deg, 8deg);
+    }
+    .get_it_container {
+        bottom: 20%;
+        left: 0;
+        position: absolute;
+        width: 100%;
+    }
+    .left .spacing3 {
+        height: 1.5%;
+        min-height: 16px;
+    }
+    .main_content .right {
+        float: none;
+        width: 100%;
+    }
+    .controls {
+        display: none;
+    }
+    .animate {
+        animation-name: none;
+    }
+    .clouds {
+        display: block;
+        height: 150px;
+        width: 100%;
+        background-position: -345px -82px;
+        background-image: url(../assets/group.svg);
+    }
+    .get_it_container .btn {
+        margin: 0 2px;
+    }
+    .clouds img {
+        display: none;
+    }
+    .sign_up,
+    .sign_up:hover,
+    .sign_up:active {
+        color:  rgb(22, 26, 74);
+    }
+    .sign_in,
+    .sign_in:hover,
+    .sign_in:active {
+        background-color: rgb(22, 26, 74);
+    }
+    .button {
+        display: inline-block;
+        margin: 0 7px;
+        float: none;
+    }
+    .animated_cloud_1 {
+        transform: translateY(-65vh) translateX(-80vw)
+    }
+    .animated_cloud_2 {
+        transform: translateY(-35vh) translateX(-80vw);
+        animation-name: animation_cloud2;
+        animation-duration: 60s;
+        animation-iteration-count: infinite;
+    }
+    @keyframes animation_cloud1 {
+        0% {
+            transform: translateY(-65vh) translateX(-80vw);
+        }
+        100% {
+            transform: translateY(-65vh) translateX(180vw);
+        }
+    }
+    @keyframes animation_cloud2 {
+        0% {
+            transform: translateY(-35vh) translateX(-80vw);
+        }
+        100% {
+            transform: translateY(-35vh) translateX(180vw);
+        }
+    }
+}
+
