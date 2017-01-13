@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="199px" height="183px" viewBox="0 0 199 183" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 6</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="-4.85722573e-15%" y1="87.8515581%" x2="100%" y2="2.22044605e-14%" id="linearGradient-1">
+            <stop stop-color="#161A4A" offset="0%"></stop>
+            <stop stop-color="#506DB7" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="landing" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="landing_3" transform="translate(-1132.000000, -314.000000)">
+            <g id="Group-4" transform="translate(1110.000000, 271.000000)">
+                <g id="Group-6" transform="translate(19.000000, 43.000000)">
+                    <text id="8" font-family="SFUIText-Regular, SF UI  Text" font-size="8.80000032" font-weight="normal" letter-spacing="0.105600011" fill="#485465">
+                        <tspan x="53.0550764" y="160.170213">8</tspan>
+                    </text>
+                    <text id="0" font-family="SFUIText-Regular, SF UI  Text" font-size="8.80000032" font-weight="normal" letter-spacing="0.105600011" fill="#485465">
+                        <tspan x="26.1055294" y="145.856383">0</tspan>
+                    </text>
+                    <text id="25" font-family="SFUIText-Regular, SF UI  Text" font-size="8.80000032" font-weight="normal" letter-spacing="0.105600011" fill="#485465">
+                        <tspan x="20.7835229" y="111.723404">25</tspan>
+                    </text>
+                    <text id="50" font-family="SFUIText-Regular, SF UI  Text" font-size="8.80000032" font-weight="normal" letter-spacing="0.105600011" fill="#485465">
+                        <tspan x="20.5557886" y="76.4893617">50</tspan>
+                    </text>
+                    <text id="75" font-family="SFUIText-Regular, SF UI  Text" font-size="8.80000032" font-weight="normal" letter-spacing="0.105600011" fill="#485465">
+                        <tspan x="21.1702417" y="42.356383">75</tspan>
+                    </text>
+                    <text id="100" font-family="SFUIText-Regular, SF UI  Text" font-size="8.80000032" font-weight="normal" letter-spacing="0.105600011" fill="#485465">
+                        <tspan x="16.2478446" y="8.22340426">100</tspan>
+                    </text>
+                    <text id="16" font-family="SFUIText-Regular, SF UI  Text" font-size="8.80000032" font-weight="normal" letter-spacing="0.105600011" fill="#485465">
+                        <tspan x="83.9077835" y="160.170213">16</tspan>
+                    </text>
+                    <text id="24" font-family="SFUIText-Regular, SF UI  Text" font-size="8.80000032" font-weight="normal" letter-spacing="0.105600011" fill="#485465">
+                        <tspan x="116.773994" y="160.170213">24</tspan>
+                    </text>
+                    <text id="32" font-family="SFUIText-Regular, SF UI  Text" font-size="8.80000032" font-weight="normal" letter-spacing="0.105600011" fill="#485465">
+                        <tspan x="150.896222" y="160.170213">32</tspan>
+                    </text>
+                    <text id="40" font-family="SFUIText-Regular, SF UI  Text" font-size="8.80000032" font-weight="normal" letter-spacing="0.105600011" fill="#485465">
+                        <tspan x="184.758488" y="160.170213">40</tspan>
+                    </text>
+                    <text id="Productivity-per-hou-Copy" transform="translate(7.440386, 77.742021) rotate(-90.000000) translate(-7.440386, -77.742021) " font-family="SFUIDisplay-Regular, SF UI Display" font-size="10.5600004" font-weight="normal" fill="#485465">
+                        <tspan x="-48.9754098" y="81.2420213">Productivity per hour (%)</tspan>
+                    </text>
+                    <text id="Working-hours-per-we-Copy" font-family="Lato-Regular, Lato" font-size="10.5600004" font-weight="normal" fill="#485465">
+                        <tspan x="36.147541" y="180.888298">Working hours per week (h)</tspan>
+                    </text>
+                    <polyline id="Rectangle-6" fill="url(#linearGradient-1)" opacity="0.9" points="66.9016393 92.712766 66.9016393 145.56383 44.9344262 145.56383 44.9344262 92.712766"></polyline>
+                    <rect id="Rectangle-6" fill="url(#linearGradient-1)" opacity="0.9" x="77.8852459" y="67.3882979" width="21.9672131" height="78.1755319"></rect>
+                    <polyline id="Rectangle-6" fill="url(#linearGradient-1)" opacity="0.9" points="132.803279 55.2765957 132.803279 145.56383 110.836066 145.56383 110.836066 55.2765957"></polyline>
+                    <rect id="Rectangle-6" fill="url(#linearGradient-1)" opacity="0.9" x="143.786885" y="21" width="21.9672131" height="124.56383"></rect>
+                    <polyline id="Rectangle-6" fill="url(#linearGradient-1)" opacity="0.9" points="202 0.223404255 202 145.56383 180.032787 145.56383 180.032787 0.223404255"></polyline>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

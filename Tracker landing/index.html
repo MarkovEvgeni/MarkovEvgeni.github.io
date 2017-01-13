@@ -11,6 +11,7 @@
     <div class="wrapper_background">
         <div class="wrapper">
             <section class="login">
+                <div class="padd"></div>
                 <div class="btns_container clearfix">
                     <div class="logo">Work Koin</div>
                     <div class="sign_in button">Sign In</div>
@@ -28,16 +29,23 @@
                         <div class="notch_container">
                             <div class="notch1">
                                 <div class="notch_round"><p>Start collecting Koins!</p></div>
+                                <div class="notch_shadow"></div>
+                                <div class="notch_rect"></div>
                             </div>
                             <div class="notch2">
                                 <div class="notch_round"><p>Employees download the app</p></div>
+                                <div class="notch_shadow"></div>
+                                <div class="notch_rect"></div>
                             </div>
                             <div class="notch3">
                                 <div class="notch_round"><p>Configure your account</p></div>
+                                <div class="notch_shadow"></div>
+                                <div class="notch_rect"></div>
                             </div>
                             <div class="notch4">
-<!--                                <div class="notch_rect"></div>-->
                                 <div class="notch_round"><p>Sign Up</p></div>
+                                <div class="notch_shadow"></div>
+                                <div class="notch_rect"></div>
                             </div>
                         </div>
                         <div class="spacing3"></div>
@@ -57,7 +65,7 @@
                                     <img src="assets/portrait_dark.svg" alt="">    
                                 </div>
                                 <div class="feed_frame feed_frame_2">
-                                    <img width="90%" src="assets/our_team_mobile_Denys.png" alt="">
+                                    <img width="90%" src="assets/group_6.svg" alt="">
                                 </div>
                             </div>
                         </div>
@@ -70,5 +78,34 @@
             </div>
         </div>
     </div>
+    <script>
+        var button1 = document.getElementsByClassName('control_1')[0];
+        var button2 = document.getElementsByClassName('control_2')[0];
+        var feed = document.getElementsByClassName('feed')[0];
+        button1.addEventListener("click", function() {
+            var currentPosition = getCurrentTransormX();
+            console.log(currentPosition);
+            if(currentPosition == 0) {
+                feed.classList.remove('animate');
+                feed.classList.add('animate');
+            } else {
+                console.log('Anoher logic');
+                console.log(feed.style);
+                feed.style.transformY = currentPosition +'px';
+                feed.classList.remove('animate');
+            }
+        });
+        button2.addEventListener("click", function() {
+            var currentPosition = getCurrentTransormX()
+        });
+        function getCurrentTransormX() {
+            var property = window.getComputedStyle(feed, null);
+            var transformProperty = property.getPropertyValue("-moz-transform") || property.getPropertyValue("-ms-transform") || property.getPropertyValue("-o-transform") || property.getPropertyValue("transform");
+            var values = transformProperty.split('(')[1];
+            values = values.split(')')[0];
+            values = values.split(',');
+            return values[5];
+        }
+    </script>
 </body>
 </html>
