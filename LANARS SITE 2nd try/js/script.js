@@ -317,6 +317,7 @@ document.addEventListener('DOMContentLoaded', function () {
           autoplay: true,
           draggable: false,
           speed: 1200,
+          pauseOnHover: false,
           autoplaySpeed: 2000,
           prevArrow: '<div class="prev_arrow arrow">&#60;</div>',
           nextArrow: '<div class="next_arrow arrow">&#62;</div>',
