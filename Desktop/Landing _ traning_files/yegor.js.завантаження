@@ -1,0 +1,12 @@
+(function ($) {
+	"use strict";
+
+	$(document).ready(function() {
+
+        console.info("jQuery works!!!")
+
+	});
+    
+}(jQuery));
+
+
