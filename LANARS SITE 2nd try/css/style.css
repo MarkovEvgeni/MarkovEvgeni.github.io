@@ -1118,22 +1118,75 @@ _:-moz-tree-row(hover),
     box-sizing: border-box;
     height: calc(100vh - 92px);
     margin: 0 auto;
-    max-width: 1300px;
+/*    max-width: 1300px;*/
     text-align: center;
-    width: 95%;
+/*    width: 95%;*/
 }
+
 .featured .content:before {
+    content: "";
+    display: block;
+    height: 50%;
+}
+.featured .item {
+    box-sizing: border-box;
+    height: 150px;
+    background-size: cover;
+    text-align: center;
+}
+.featured .items_container {
+    background-color: rgb(246, 246, 246);
+    margin-top: -75px;
+    overflow: hidden;
+}
+.featured .item:before {
     content: "";
     display: inline-block;
     height: 100%;
     vertical-align: middle;
-    width: 0%;
 }
+.featured .item img {
+    display: inline-block;
+    vertical-align: middle;
+}
+.featured .arrow {
+    color: rgba(0,0,0,0.5);
+    font-size: 30px;
+    font-weight: bold;
+    height: 100%;
+    padding-top: 60px;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 40px;
+}
+.featured .prev_arrow {
+    left: 0;
+    z-index: 1100;
+}
+.featured .next_arrow {
+    right: 0;
+}
+.featured .arrow:hover {
+    background-color: rgba(255,255,255,0.5);
+    color: rgba(0,0,0,0.7);
+    cursor: pointer;
+}
+.featured .arrow:active {
+    color: rgba(0,0,0,1);
+    background-color: rgba(255,255,255,0.8);
+    cursor: pointer;
+}
+
+
+/*
 .clients_container {
     min-width: 300px;
     vertical-align: middle;
     width: 98%;
+*/
 /*    Свойства для flexbox*/
+/*
     display: inline-flex;
     -webkit-flex-direction: row;
     flex-direction: row;
@@ -1146,7 +1199,11 @@ _:-moz-tree-row(hover),
     -webkit-align-content: space-around;
     align-content: space-around;
 }
+*/
+
 /* Хак для IE без флексбокса*/
+
+/*
 .clients_container {
     display: inline-block\9;
 }
@@ -1169,7 +1226,9 @@ _:-moz-tree-row(hover),
     transition: box-shadow 0.3s, transform 0.3s;
     width: 200px;
 }
+*/
 
+/*
 .clients_container .fox_news {
     background-position: -5px -5px;
 }
@@ -1255,6 +1314,7 @@ _:-moz-tree-row(hover),
     -webkit-filter: none;
     filter: none;
 }
+*/
 
 /*===Экран с контактами===*/
 

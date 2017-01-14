@@ -304,5 +304,66 @@ document.addEventListener('DOMContentLoaded', function () {
             --currentSlide;
         }
     };
+    
+    
+//    Инициализируем слайдер
        
+    $(document).ready(function(){
+      $('.items_container').slick({
+          infinite: true,
+          dots: false,
+          slidesToShow: 6,
+          slidesToScroll: 3,
+          autoplay: true,
+          draggable: false,
+          speed: 1200,
+          autoplaySpeed: 2000,
+          prevArrow: '<div class="prev_arrow arrow">&#60;</div>',
+          nextArrow: '<div class="next_arrow arrow">&#62;</div>',
+          responsive: [
+            {
+              breakpoint: 1280,
+              settings: {
+                slidesToShow: 5,
+                slidesToScroll: 3,
+                infinite: true,
+              }
+            },
+            {
+              breakpoint: 1080,
+              settings: {
+                slidesToShow: 4,
+                slidesToScroll: 3,
+                infinite: true,
+              }
+            },
+            {
+              breakpoint: 880,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                infinite: true,
+              }
+            },
+            {
+              breakpoint: 680,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                speed: 600
+              }
+            },
+            {
+              breakpoint: 480,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                speed: 600
+              }
+            }
+        ]
+      });
+    });
+       
+
 });
