@@ -1118,16 +1118,17 @@ _:-moz-tree-row(hover),
     box-sizing: border-box;
     height: calc(100vh - 92px);
     margin: 0 auto;
-/*    max-width: 1300px;*/
+    max-width: 1300px;
     text-align: center;
-/*    width: 95%;*/
+    width: 95%;
 }
-
 .featured .content:before {
     content: "";
-    display: block;
-    height: 50%;
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
 }
+/*
 .featured .item {
     box-sizing: border-box;
     height: 300px;
@@ -1160,6 +1161,8 @@ _:-moz-tree-row(hover),
     top: 0;
     width: 40px;
 }
+*/
+/*
 .featured .prev_arrow {
     left: 0;
     z-index: 1100;
@@ -1177,16 +1180,14 @@ _:-moz-tree-row(hover),
     background-color: rgba(255,255,255,0.8);
     cursor: pointer;
 }
-
-
-/*
-.clients_container {
-    min-width: 300px;
-    vertical-align: middle;
-    width: 98%;
 */
+
+
+.clients_container {
+    min-width: 400px;
+    vertical-align: middle;
+    max-width: 98%;
 /*    Свойства для flexbox*/
-/*
     display: inline-flex;
     -webkit-flex-direction: row;
     flex-direction: row;
@@ -1199,11 +1200,9 @@ _:-moz-tree-row(hover),
     -webkit-align-content: space-around;
     align-content: space-around;
 }
-*/
 
 /* Хак для IE без флексбокса*/
 
-/*
 .clients_container {
     display: inline-block\9;
 }
@@ -1211,11 +1210,10 @@ _:-moz-tree-row(hover),
     float: left\9;
 }
 .clients_container .client {
-    background-image: url(../assets/img/featured.jpg);
     background-repeat: no-repeat;
     border-radius: 5px;
     box-shadow: 0 2px 8px #eee;
-    height: 136px;
+    height: 218px;
     margin: 5px;
     -webkit-filter: grayscale(100%) opacity(0.8);
     filter: grayscale(100%) opacity(0.7);
@@ -1224,9 +1222,37 @@ _:-moz-tree-row(hover),
     -ms-transition: box-shadow 0.3s, transform 0.3s;
     -o-transition: box-shadow 0.3s, transform 0.3s;
     transition: box-shadow 0.3s, transform 0.3s;
-    width: 200px;
+    width: 392px;
 }
-*/
+
+.clients_container .kairos {
+    background-image: url(../assets/img/logo_1.png)
+}
+.clients_container .octopus {
+    background-image: url(../assets/img/logo_2.png)
+}
+.clients_container .icrc {
+    background-image: url(../assets/img/logo_3.png)
+}
+.clients_container .bergx2 {
+    background-image: url(../assets/img/logo_4.png)
+}
+.clients_container .hsbc {
+    background-image: url(../assets/img/logo_5.png)
+}
+.clients_container .dpd {
+    background-image: url(../assets/img/logo_6.png)
+}
+.clients_container .cat {
+    background-image: url(../assets/img/logo_7.png)
+}
+.clients_container .charj {
+    background-image: url(../assets/img/logo_8.png)
+}
+.clients_container .strange {
+    background-image: url(../assets/img/logo_9.png)
+}
+
 
 /*
 .clients_container .fox_news {
@@ -1301,6 +1327,7 @@ _:-moz-tree-row(hover),
 .clients_container .vanityfair {
     background-position: -1030px -428px;
 }
+*/
 .clients_container .client:hover {
     transition: ease;
     -webkit-box-shadow: 0 2px 16px #aaa;
@@ -1314,7 +1341,6 @@ _:-moz-tree-row(hover),
     -webkit-filter: none;
     filter: none;
 }
-*/
 
 /*===Экран с контактами===*/
 
