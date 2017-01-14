@@ -1201,6 +1201,10 @@ _:-moz-tree-row(hover),
     align-content: space-around;
 }
 
+.featured .content .clearfix:after {
+    content: none;
+}
+
 /* Хак для IE без флексбокса*/
 
 .clients_container {
@@ -1209,6 +1213,10 @@ _:-moz-tree-row(hover),
 .clients_container .client {
     float: left\9;
 }
+.featured .content .clearfix:after {
+    content: ""\9;
+}
+
 .clients_container .client {
     background-repeat: no-repeat;
     border-radius: 5px;
