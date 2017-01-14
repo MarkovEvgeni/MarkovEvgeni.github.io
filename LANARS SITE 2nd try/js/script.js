@@ -132,6 +132,19 @@ document.addEventListener('DOMContentLoaded', function () {
     
 //    Обработчики событий для кнопок меню
     
+    
+    (function() {
+//        for (var index = 1; index < 7; index++) {
+//            console.log(index);
+//            var iteratorCount = index;
+//            $('.screen_' + index + '_link').on('click', function(iteratorCount) {
+//                changeScreen(iteratorCount);
+//                console.log(iteratorCount);
+//            })
+//            console.log($('.screen_' + iteratorCount + '_link'));
+//        }
+    }());
+    
     $('.screen_1_link').on('click', function() {
        changeScreen(1); 
     });
