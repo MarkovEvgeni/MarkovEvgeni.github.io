@@ -1130,13 +1130,13 @@ _:-moz-tree-row(hover),
 }
 .featured .item {
     box-sizing: border-box;
-    height: 150px;
+    height: 300px;
     background-size: cover;
     text-align: center;
 }
 .featured .items_container {
     background-color: rgb(246, 246, 246);
-    margin-top: -75px;
+    margin-top: -150px;
     overflow: hidden;
 }
 .featured .item:before {
@@ -1154,7 +1154,7 @@ _:-moz-tree-row(hover),
     font-size: 30px;
     font-weight: bold;
     height: 100%;
-    padding-top: 60px;
+    padding-top: 135px;
     position: absolute;
     text-align: center;
     top: 0;

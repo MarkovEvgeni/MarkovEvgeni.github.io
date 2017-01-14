@@ -312,8 +312,8 @@ document.addEventListener('DOMContentLoaded', function () {
       $('.items_container').slick({
           infinite: true,
           dots: false,
-          slidesToShow: 6,
-          slidesToScroll: 3,
+          slidesToShow: 4,
+          slidesToScroll: 1,
           autoplay: true,
           draggable: false,
           speed: 1200,
@@ -321,32 +321,32 @@ document.addEventListener('DOMContentLoaded', function () {
           prevArrow: '<div class="prev_arrow arrow">&#60;</div>',
           nextArrow: '<div class="next_arrow arrow">&#62;</div>',
           responsive: [
+//            {
+//              breakpoint: 1280,
+//              settings: {
+//                slidesToShow: 5,
+//                slidesToScroll: 3,
+//                infinite: true,
+//              }
+//            },
+//            {
+//              breakpoint: 1080,
+//              settings: {
+//                slidesToShow: 4,
+//                slidesToScroll: 3,
+//                infinite: true,
+//              }
+//            },
             {
-              breakpoint: 1280,
-              settings: {
-                slidesToShow: 5,
-                slidesToScroll: 3,
-                infinite: true,
-              }
-            },
-            {
-              breakpoint: 1080,
-              settings: {
-                slidesToShow: 4,
-                slidesToScroll: 3,
-                infinite: true,
-              }
-            },
-            {
-              breakpoint: 880,
+              breakpoint: 1680,
               settings: {
                 slidesToShow: 3,
-                slidesToScroll: 3,
+                slidesToScroll: 1,
                 infinite: true,
               }
             },
             {
-              breakpoint: 680,
+              breakpoint: 1280,
               settings: {
                 slidesToShow: 2,
                 slidesToScroll: 1,
@@ -354,7 +354,7 @@ document.addEventListener('DOMContentLoaded', function () {
               }
             },
             {
-              breakpoint: 480,
+              breakpoint: 880,
               settings: {
                 slidesToShow: 1,
                 slidesToScroll: 1,
