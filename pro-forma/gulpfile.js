@@ -28,16 +28,16 @@ var path = {
         html: 'src/*.html',
         js: 'src/js/main.js',
         ts: 'src/ts/tscript.ts',
-        css: 'src/style/main.scss',
+        css: 'src/css/style.scss',
         img: 'src/assets/img/**/*.*',
         video: 'src/assets/video/**/*.*',
         fonts: 'src/fonts/**/*.*'
     },
     watch: {
         html: 'src/*.html',
-        js: 'src/js/main.js',
-        ts: 'src/ts/tscript.ts',
-        css: 'src/style/main.scss',
+        js: 'src/js/**/*.js',
+        ts: 'src/ts/**/*.ts',
+        css: 'src/css/**/*.scss',
         img: 'src/assets/img/**/*.*',
         video: 'src/assets/video/**/*.*',
         fonts: 'src/fonts/**/*.*'
@@ -101,6 +101,9 @@ gulp.task('css:build', function () {
         .pipe(cssnano())
         .pipe(sourcemaps.write())
         .pipe(gulp.dest(path.build.css))
+        .pipe(reload({
+            stream: true
+        }));
 });
 
 gulp.task('img:build', function () {
