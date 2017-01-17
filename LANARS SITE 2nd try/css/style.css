@@ -180,6 +180,7 @@ _:-moz-tree-row(hover),
     .main_menu li {
         display: block;
         width: 100%;
+        text-align: left;
     }
     .menu_title {
         margin: 0;
@@ -1915,7 +1916,11 @@ _:-moz-tree-row(hover),
     display: block;
     padding-top: 100%;
 }
-
+@media all and (max-width: 1400px) {
+    .our_team_container {
+        max-width: 960px;
+    }
+}
 @media all and (max-width: 680px) {
     .our_team .menu_plug {
         height: 45px;
