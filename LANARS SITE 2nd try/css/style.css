@@ -1818,6 +1818,13 @@ _:-moz-tree-row(hover),
     }
 }
 
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 568px) {
+    .model {
+        transform-style: flat;
+    }
+}
 
 /*Только для 5iPhone*/
 @media only screen 
@@ -2942,6 +2949,17 @@ _:-moz-tree-row(hover),
     }
     .socials_container .socials_title {
         display: none;
+    }
+}
+
+/*Только для 5iPhone*/
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 568px) {
+    .contacts_parallax__background {
+        transform: translateZ(0) scale(1);
+        width: 100%;
+        height: 100%;
     }
 }
 
