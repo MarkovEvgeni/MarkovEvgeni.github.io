@@ -125,13 +125,24 @@ document.addEventListener('DOMContentLoaded', function () {
     
     function hideMenu() {
         $('.menu_container').removeClass('show_menu');
+        $('.main_menu').addClass('mob_hide');
         $('.menu_container').addClass('hide_menu');
     };
     
     var currentSlide = 1;
     
-//    Обработчики событий для кнопок меню
+//    Открытие меню на мобильных девайсах
     
+    var mobileMenuEventEmitter  = $('.menu_event_emitter');
+    
+    mobileMenuEventEmitter.on('click', toggleMobileMenu);
+    
+    function toggleMobileMenu() {
+        $('.main_menu').toggleClass('mob_hide');
+    }
+    
+    
+//    Обработчики событий для кнопок меню
     
     (function() {
 //        for (var index = 1; index < 7; index++) {

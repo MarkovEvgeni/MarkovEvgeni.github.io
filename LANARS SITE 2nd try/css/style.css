@@ -2,6 +2,7 @@
 @import "parallax_screens.css";
 
 /*===Стили для эффекта parallax===*/
+
 .parallax {
     height: 100vh;
     overflow-x: hidden;
@@ -115,6 +116,73 @@ _:-moz-tree-row(hover),
         width: 100%;
     }
 }
+.hamburger_icon {
+    display: none;
+}
+.menu_event_emitter{
+    display: none;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 5;
+}
+.mob_hide {
+    display: block;
+}
+
+@media all and (max-width: 320px) {
+    .menu_container {
+        padding: 0;
+        background-color: rgb(255, 255, 255);
+    }
+    .main_menu,
+    .menu_title,
+    .main_menu li {
+        display: block;
+        width: 100%;
+    }
+    .menu_title {
+        margin: 0;
+        position: relative;
+        padding: 11px 10px;
+        width: calc(100% - 24px);
+    }
+    .mob_hide {
+        display: none;
+    }
+    .main_menu li {
+        margin: 0;
+        position: relative;
+        text-align: left;
+    }
+    .main_menu li a {
+        padding-left: 10px;
+        z-index: 2;
+        position: relative;
+    }
+    .main_menu li::after {
+        position: absolute;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+    .hamburger_icon {
+        background-image: url(../assets/img/menu-icon.png);
+        background-size: cover;
+        display: block;
+        float: right;
+        height: 20px;
+        margin-top: 1px;
+        opacity: 0.7;
+        width: 24px;
+    }
+    .menu_event_emitter {
+        display: block;
+    }
+}
 
 /*===Главное меню в два ряда===*/
 
@@ -133,6 +201,29 @@ _:-moz-tree-row(hover),
 }
 .two_rows .main_menu li:hover {
     margin: 0 23px;
+}
+.two_rows .mob_hide {
+    display: block;
+}
+
+@media all and (max-width: 320px) {
+    .two_rows .main_menu,
+    .two_rows .menu_title,
+    .two_rows .main_menu li {
+        display: block;
+        width: 100%;
+    }
+    .two_rows .menu_title {
+        margin: 0;
+        padding: 11px 10px;
+        position: relative;
+        text-align: left;
+        width: calc(100% - 24px);
+    }
+    .two_rows .mob_hide {
+        display: none;
+    }
+    
 }
 
 /*Скрытие/показ меню*/
@@ -227,6 +318,28 @@ _:-moz-tree-row(hover),
     display: none;
 }
 
+@media all and (max-width: 320px) {
+    .menu_plug {
+        height: 45px;
+    }
+    .punchline_screen {
+        height: calc(100vh - 45px);
+    }
+    .punchline {
+        width: 310px;
+    }
+    .punchline h1 {
+        font-size: 23px;
+        line-height: 30px;
+    }
+    .punchline ul li {
+        font-size: 13px;
+    }
+    .punchline ul li::after {
+        margin: 0 3px 1px 7px;
+    }
+}
+
 /*===Экран с 3D моделью===*/
 
 .what_we_do {
@@ -238,7 +351,7 @@ _:-moz-tree-row(hover),
     height: calc(100% - 92px);
     margin: 0 auto;
     text-align: center;
-    transform: translateZ(0)
+    transform: translateZ(0);
     width: 100%;
 }
 .what_we_do .menu_plug {
@@ -255,7 +368,7 @@ _:-moz-tree-row(hover),
     display: inline-block;
     height: 99%;
     vertical-align: middle;
-    width: 99%; 
+    width: 98%; 
 }
 .what_we_do .scene .perspective {
     background: transparent;
@@ -333,6 +446,9 @@ _:-moz-tree-row(hover),
     transform: translateZ(210px);
     transition-delay: 0.3s;
 }
+.what_we_do .scene .screen-1 {
+    z-index: 10;
+}
 .what_we_do .scene .open_screen .screen-2 {
     transform: translateZ(175px);
     transition-delay: 0.4s;
@@ -394,6 +510,51 @@ _:-moz-tree-row(hover),
 }
 .what_we_do .show_control_panel {
     opacity: 1;
+}
+
+
+@media all and (max-width: 320px) {
+   .what_we_do .menu_plug {
+        height: 45px;
+    }
+    .what_we_do .content {
+        height: calc(100% - 45px);
+    }
+    .what_we_do .scene .perspective {
+        font-size: 90%;
+    }
+    .what_we_do .scene .open_screen .screen-1 {
+        transform: translateZ(120px);
+    }
+    .what_we_do .scene .open_screen .screen-2 {
+        transform: translateZ(100px);
+    }
+    .what_we_do .scene .open_screen .screen-3 {
+        transform: translateZ(80px);
+    }
+    .what_we_do .scene .open_screen .screen-4 {
+        transform: translateZ(60px);
+    }
+    .what_we_do .scene .open_screen .screen-5 {
+        transform: translateZ(40px);
+    }
+    .what_we_do .scene .open_screen .screen-6 {
+        transform: translateZ(20px);
+    }
+    .model {
+        top: 40%;
+    }
+    .what_we_do .control_panel {
+        left: 0%;
+        top: auto;
+        bottom: 0%;
+    }
+    .what_we_do .control_panel {
+        padding: 2%;
+    }
+    .what_we_do .control_panel .label {
+        font-size: 13px;
+    }
 }
 
 /*===Экран с девайсами===*/
@@ -1011,6 +1172,20 @@ _:-moz-tree-row(hover),
     animation-fill-mode: forwards;
 }
 
+
+@media all and (max-width: 320px) {
+    .our_works .menu_plug {
+        height: 45px;
+    }
+    .our_works .content {
+        height: calc(100% - 45px);
+    }
+    .our_works .menu_title,
+    .our_works .main_menu li a {
+        color: rgb(75, 81, 91);
+    }
+}
+
 /*===Экран с командой===*/
 
 .our_team {
@@ -1110,7 +1285,35 @@ _:-moz-tree-row(hover),
     padding-top: 100%;
 }
 
+@media all and (max-width: 320px) {
+    .our_team .menu_plug {
+        height: 45px;
+    }
+    .our_team .content {
+        height: calc(100% - 45px);
+    }
+    .our_team_container_video {
+        display: none;
+    }
+    .our_team_container_photo {
+        display: inline-block;
+    }
+    .our_team_container_photo {
+        width: 310px;
+        position: relative;
+    }
+    .our_team_member_photo {
+        min-width: 150px;
+        width: 150px;
+    }
+    .our_team_member_name {
+        font-size: 15px;
+        padding: 8px 0;
+    }
+}
+
 /*===Экран с заказчиками===*/
+
 .featured .menu_plug {
     height: 92px;
 }
@@ -1367,6 +1570,21 @@ _:-moz-tree-row(hover),
     filter: none;
 }
 
+@media all and (max-width: 320px) {
+    .featured .menu_plug {
+        height: 45px;
+    }
+    .featured .content {
+        height: calc(100% - 45px);
+    }
+    .clients_container {
+        min-width: 310px;
+    }
+    .clients_container .client {
+        width: 45%;
+    }
+}
+
 /*===Экран с контактами===*/
 
 .contacts {
@@ -1391,6 +1609,7 @@ _:-moz-tree-row(hover),
     display: inline-block;
     height: 60px;
     vertical-align: middle;
+    max-width: 70%;
 }
 .get_in_touch li {
     display: inline-block;
@@ -1503,25 +1722,25 @@ _:-moz-tree-row(hover),
 .socials_container li {
     background-image: url(../assets/img/sprite_socials.png);
     background-repeat: no-repeat;
-    background-position: -8px -18px;
+    background-position: 0px -5px;
     box-sizing: border-box;
     display: inline-block;
     margin-right: 25px;
     opacity: 0.8;
-    height: 30px;
+    height: 35px;
     width: 35px;
 }
 .socials_container li:nth-child(2) {
-    background-position: -8px -60px; 
+    background-position: 0px -45px; 
 }
 .socials_container li:nth-child(3) {
-    background-position: -8px -102px; 
+    background-position: 0px -85px; 
 }
 .socials_container li:nth-child(4) {
-    background-position: -8px -146px; 
+    background-position: -0px -125px; 
 }
 .socials_container li:nth-child(5) {
-    background-position: -3px -189px; 
+    background-position: 0px -165px; 
 }
 .socials_container li a {
     display: block;
@@ -1530,6 +1749,82 @@ _:-moz-tree-row(hover),
 .socials_container li:hover {
     opacity: 1;
 }
+
+@media all and (max-width: 320px) {
+    .contacts .menu_title,
+    .contacts .main_menu li a {
+        color: rgb(75, 81, 91);
+    }
+    .contacts .footer-container .menu_title,
+    .contacts .footer-container .main_menu li a {
+        color: rgb(255, 255, 255);
+        text-align: center;
+    }
+    .footer-container {
+        padding: 5px 0;
+    }
+    .footer-container .menu_container {
+        display: block;
+        background: none;
+    }
+    .footer-container .main_menu {
+        max-width: 100%;
+    }
+    .footer-container .main_menu li {
+        display: inline-block;
+        height: 18px;
+        width: 53px;
+    }
+    .contacts .footer-container .menu_title {
+        margin: 1px;
+    }
+    .contacts .footer-container .main_menu li a {
+        padding: 1px;
+        font-size: 12px;
+    }
+    .get_in_touch {
+        height: auto;
+        text-align: left;
+    }
+    .footer-container .main_menu li::after {
+        content: "";
+        display: block;
+        position: relative;
+        background-color: rgb(255, 193, 104);
+        border-radius: 2px;
+        height: 2px;
+        width: 0;
+        margin: 0 auto;
+    }
+    .socials_container {
+        padding: 5px 0;
+    }
+    .socials_container .socials_title {
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+    .socials_container {
+        margin: 0;
+    }
+    .socials_container ul {
+        text-align: center;
+    }
+    .socials_container li {
+        margin: 2px;
+    }
+    .footer_parallax_layer:before {
+        height: calc(100% - 107px);
+        margin-top: 45px; 
+    }
+    .footer-container .menu_container {
+        display: none;
+    }
+    .socials_container .socials_title {
+        display: none;
+    }
+}
+
 
 /*
 =================
@@ -1552,6 +1847,25 @@ _:-moz-tree-row(hover),
     .what_we_do .scene .perspective {
         font-size: 115%;
     }
+    
+    
+}
+
+@media all and (max-device-width: 670px) and (orientation: portrait) {
+/*
+    .our_team_container_video {
+        display: none;
+    }
+    .our_team_container_photo {
+        display: inline-block;
+    }
+    .our_team_member_photo {
+        width: 48%;
+    }
+    
+*/
+}
+@media all and (max-width: 670px) {
     .our_team_container_video {
         display: none;
     }
