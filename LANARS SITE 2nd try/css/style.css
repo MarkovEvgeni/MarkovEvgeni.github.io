@@ -1818,6 +1818,18 @@ _:-moz-tree-row(hover),
     }
 }
 
+
+/*Только для 5iPhone*/
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 568px) {
+    .parallax__background {
+        transform: translateZ(0) scale(1);
+        width: 100%;
+        height: 100%;
+    } 
+}
+
 /*===Экран с командой===*/
 
 .our_team {
