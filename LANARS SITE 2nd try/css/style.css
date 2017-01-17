@@ -1820,7 +1820,9 @@ _:-moz-tree-row(hover),
 
 @media only screen 
 and (min-device-width : 320px) 
-and (max-device-width : 568px) {
+and (max-device-width : 568px) 
+and (-webkit-device-pixel-ratio: 2) 
+and (device-aspect-ratio: 40/71) {
     .model {
         transform-style: flat;
     }
@@ -1829,7 +1831,9 @@ and (max-device-width : 568px) {
 /*Только для 5iPhone*/
 @media only screen 
 and (min-device-width : 320px) 
-and (max-device-width : 568px) {
+and (max-device-width : 568px) 
+and (-webkit-device-pixel-ratio: 2) 
+and (device-aspect-ratio: 40/71) {
     .parallax__background {
         transform: translateZ(0) scale(1);
         width: 100%;
@@ -2955,7 +2959,9 @@ _:-moz-tree-row(hover),
 /*Только для 5iPhone*/
 @media only screen 
 and (min-device-width : 320px) 
-and (max-device-width : 568px) {
+and (max-device-width : 568px) 
+and (-webkit-device-pixel-ratio: 2) 
+and (device-aspect-ratio: 40/71) {
     .contacts_parallax__background {
         transform: translateZ(0) scale(1);
         width: 100%;
