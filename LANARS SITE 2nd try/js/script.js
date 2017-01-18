@@ -7,6 +7,11 @@ document.addEventListener('DOMContentLoaded', function () {
     var touchstartY = 0;
     var touchendY = 0;
 
+    setInterval(function() {
+        window.scrollBy(0,10);
+        console.log(window.pageYOffset);
+    }, 2000);
+    
     var gesuredZone = document.querySelector('.scrolling_feed');
 
     gesuredZone.addEventListener('touchstart', function(el) {
