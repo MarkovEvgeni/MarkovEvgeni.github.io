@@ -1855,8 +1855,8 @@ and (device-aspect-ratio: 357/667) {
 }
 /*Только для 5iPhone*/
 @media only screen 
-and (min-device-width : 375px) 
-and (max-device-width : 667px) 
+and (min-device-width : 320px) 
+and (max-device-width : 568px) 
 and (-webkit-device-pixel-ratio: 2) 
 and (device-aspect-ratio: 40/71) {
     .parallax__background {
