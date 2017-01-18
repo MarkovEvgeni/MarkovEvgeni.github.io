@@ -1819,6 +1819,17 @@ _:-moz-tree-row(hover),
 }
 
 @media only screen 
+/*
+and (min-device-width : 320px) 
+and (max-device-width : 568px) 
+*/
+and (-webkit-device-pixel-ratio: 2) 
+and (device-aspect-ratio: 357/667) {
+    .model {
+        transform-style: flat;
+    }
+}
+@media only screen 
 and (min-device-width : 320px) 
 and (max-device-width : 568px) 
 and (-webkit-device-pixel-ratio: 2) 
@@ -1828,10 +1839,29 @@ and (device-aspect-ratio: 40/71) {
     }
 }
 
-/*Только для 5iPhone*/
+/*Только для 6iPhone*/
 @media only screen 
+/*
 and (min-device-width : 320px) 
 and (max-device-width : 568px) 
+*/
+and (-webkit-device-pixel-ratio: 2) 
+and (device-aspect-ratio: 357/667) {
+    .parallax__background {
+        transform: translateZ(0) scale(1);
+        width: 100%;
+        height: 100%;
+    }
+    .scrolling_feed {
+        transform-style: flat!important;
+    }
+}
+/*Только для 5iPhone*/
+@media only screen 
+/*
+and (min-device-width : 320px) 
+and (max-device-width : 568px) 
+*/
 and (-webkit-device-pixel-ratio: 2) 
 and (device-aspect-ratio: 40/71) {
     .parallax__background {
@@ -2956,10 +2986,26 @@ _:-moz-tree-row(hover),
     }
 }
 
-/*Только для 5iPhone*/
+
 @media only screen 
+/*
 and (min-device-width : 320px) 
 and (max-device-width : 568px) 
+*/
+and (-webkit-device-pixel-ratio: 2) 
+and (device-aspect-ratio: 357/667) {
+    .contacts_parallax__background {
+        transform: translateZ(0) scale(1);
+        width: 100%;
+        height: 100%;
+    }
+}
+/*Только для 5iPhone*/
+@media only screen 
+/*
+and (min-device-width : 320px) 
+and (max-device-width : 568px) 
+*/
 and (-webkit-device-pixel-ratio: 2) 
 and (device-aspect-ratio: 40/71) {
     .contacts_parallax__background {
