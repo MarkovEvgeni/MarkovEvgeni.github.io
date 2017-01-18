@@ -176,7 +176,6 @@ document.addEventListener('DOMContentLoaded', function () {
     
     $('.what_we_do .content').mouseenter(receiveCoordinates);
     $('.what_we_do .content').mouseleave(function () {
-        console.log('mouseleave');
         $('.what_we_do .content').unbind("mousemove");
     });
     

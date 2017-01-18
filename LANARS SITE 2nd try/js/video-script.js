@@ -11,7 +11,6 @@ document.addEventListener('DOMContentLoaded', function () {
     };
     
     function playUp() {
-        console.log('try-try');
         var self=this;
         var animationActive = true;
         var backVideo = $(this).children('.video_down')[0];
