@@ -193,9 +193,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
         //     Привязываем изменение переменных к перемещению мыши.
 
-                $('.content .scene').mousemove(function(event) {
+                $('.content .scene').mousemove(function() {
                     
-                    event = event || window.event;
+//                    event = event || window.event;
+//                    Для работы поворота в Mozilla нужно добавить event в качестве аргумента функции и раскомментировать строку выше
+                    
+                    var event = window.event;
 
                     var biasX = event.clientX - initialXCoordinate;
                     var biasY = event.clientY - initialYCoordinate;
