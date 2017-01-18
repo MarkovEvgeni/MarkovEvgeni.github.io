@@ -1060,6 +1060,54 @@ and (device-aspect-ratio: 40/71) {
         font-size: 16px;
     }
 }
+@media all and (max-width: 570px) and (max-height: 320px) {
+    .what_we_do .scene .perspective {
+        font-size: 90%;
+    }
+    .model {
+        top: 45%;
+        left: 60%;
+    }
+    .what_we_do .control_panel {
+        bottom: 10%;
+    }
+    .what_we_do .scene .open_screen .screen-1 {
+        transform: translateZ(120px);
+    }
+    .what_we_do .scene .open_screen .screen-2 {
+        transform: translateZ(100px);
+    }
+    .what_we_do .scene .open_screen .screen-3 {
+        transform: translateZ(80px);
+    }
+    .what_we_do .scene .open_screen .screen-4 {
+        transform: translateZ(60px);
+    }
+    .what_we_do .scene .open_screen .screen-5 {
+        transform: translateZ(40px);
+    }
+    .what_we_do .scene .open_screen .screen-6 {
+        transform: translateZ(20px);
+    }
+    .what_we_do .scene .perspective .matching-screen-1 {
+        background-image: url(../assets/img/88x157/wireframe.png);
+    }
+    .what_we_do .scene .perspective .matching-screen-2 {
+        background-image: url(../assets/img/88x157/design.png);
+    }
+    .what_we_do .scene .perspective .matching-screen-3 {
+        background-image: url(../assets/img/88x157/developing.png);
+    }
+    .what_we_do .scene .perspective .matching-screen-4 {
+        background-image: url(../assets/img/88x157/QA.png);
+    }
+    .what_we_do .scene .perspective .matching-screen-5 {
+        background-image: url(../assets/img/88x157/project_coordination.png);
+    }
+    .what_we_do .scene .perspective .matching-screen-6 {
+        background-image: url(../assets/img/88x157/final_result.png);
+    }
+}
 @media all and (max-width: 480px) {
    .what_we_do .menu_plug {
         height: 45px;
@@ -1183,7 +1231,7 @@ and (device-aspect-ratio: 40/71) {
     }
 }
 @media all and (max-width: 320px) {
-   .what_we_do .menu_plug {
+    .what_we_do .menu_plug {
         height: 45px;
     }
     .what_we_do .content {
@@ -2104,6 +2152,25 @@ and (device-aspect-ratio: 40/71) {
         padding: 8px 0;
     }
 }
+@media all and (max-width: 570px)
+and (max-height: 320px) {
+    .our_team .menu_plug {
+        height: 45px;
+    }
+    .our_team_container_photo {
+        display: inline-block;
+        width: 95%;
+        position: relative;
+    }
+    .our_team_member_photo {
+        min-width: 130px;
+        width: 24%;
+    }
+    .our_team_member_name {
+        font-size: 15px;
+        padding: 8px 0;
+    }
+}
 @media all and (max-width: 480px) {
     .our_team .menu_plug {
         height: 45px;
@@ -2686,6 +2753,44 @@ and (device-aspect-ratio: 40/71) {
         background-position: -439px -250px;
     }
 }
+@media all and (max-width: 570px)
+and (max-height: 320px) {
+    .clients_container .client {
+        width: 140px;
+    }
+    .clients_container .client .image {
+        background-image: url(../assets/img/sprite_logos_140.png);
+        background-size: auto;
+        height: 79px;
+    }
+    .clients_container .client .kairos {
+        background-position: -5px -5px;
+    }
+    .clients_container .octopus {
+        background-position: -5px -88px;
+    }
+    .clients_container .icrc {
+        background-position: -5px -171px;
+    }
+    .clients_container .bergx2 {
+        background-position: -150px -5px;
+    }
+    .clients_container .hsbc {
+        background-position: -150px -88px;
+    }
+    .clients_container .dpd {
+        background-position: -150px -171px;
+    }
+    .clients_container .cat {
+        background-position: -295px -5px;
+    }
+    .clients_container .charj {
+        background-position: -295px -88px;
+    }
+    .clients_container .strange {
+        background-position: -295px -171px;
+    }
+}
 @media all and (max-width: 480px) {
     .featured .menu_plug {
         height: 45px;
@@ -2752,9 +2857,6 @@ and (device-aspect-ratio: 40/71) {
         background-image: url(../assets/img/sprite_logos_140.png);
         background-size: auto;
         height: 79px;
-        position: relative;
-        top: auto;
-        left: auto;
     }
     .clients_container .client .kairos {
         background-position: -5px -5px;
@@ -3160,6 +3262,12 @@ _:-moz-tree-row(hover),
         display: none;
     }
 }
+@media all and (max-width: 570px)
+and (max-height: 320px) {
+    .footer_parallax_layer:before {
+         margin-top: 65px; 
+    }
+}
 @media all and (max-width: 480px) {
     .contacts .menu_title,
     .contacts .main_menu li a {
@@ -3420,13 +3528,12 @@ and (device-aspect-ratio: 40/71) {
 
 
 /*Проблема с альбомной ориентацией мобильного устройства*/
+/*
 
 @media all and (max-device-width: 800px) and (orientation: landscape) {
-/*
     body {
         background: red;
     }
-*/
     .devices {
         width: 60%;
     }
@@ -3436,3 +3543,4 @@ and (device-aspect-ratio: 40/71) {
     
     
 }
+*/
