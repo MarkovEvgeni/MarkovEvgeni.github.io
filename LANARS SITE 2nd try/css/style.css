@@ -25,15 +25,15 @@ _:-moz-tree-row(hover),
   position: relative;
   transform-style: preserve-3d;
 }
-_:-moz-tree-row(hover),
-.parallax {
-    transform-style: flat;
-}
 .scrolling_feed {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
+}
+_:-moz-tree-row(hover),
+.scrolling_feed {
+    transform-style: flat!important;
 }
 .what_we_do,
 .our_team,
@@ -707,12 +707,17 @@ and (device-aspect-ratio: 40/71) {
     .menu_plug {
         height: 85px;
     }
+    .punchline_screen {
+        background-image: url(../assets/img/bg_768.png);
+        background-size: auto;
+    }
 }
 @media all and (max-width: 680px) {
     .menu_plug {
         height: 45px;
     }
     .punchline_screen {
+        background-image: url(../assets/img/bg_680.png);
         height: calc(100vh - 45px);
     }
 }
@@ -721,6 +726,7 @@ and (device-aspect-ratio: 40/71) {
         height: 45px;
     }
     .punchline_screen {
+        background-image: url(../assets/img/bg_570.png);
         height: calc(100vh - 45px);
     }
     .punchline {
@@ -736,6 +742,7 @@ and (device-aspect-ratio: 40/71) {
         height: 45px;
     }
     .punchline_screen {
+        background-image: url(../assets/img/bg_480.png);
         height: calc(100vh - 45px);
     }
     .punchline {
@@ -757,6 +764,7 @@ and (device-aspect-ratio: 40/71) {
         height: 45px;
     }
     .punchline_screen {
+        background-image: url(../assets/img/bg_375.png);
         height: calc(100vh - 45px);
     }
     .punchline {
@@ -778,6 +786,7 @@ and (device-aspect-ratio: 40/71) {
         height: 45px;
     }
     .punchline_screen {
+        background-image: url(../assets/img/bg_320.png);
         height: calc(100vh - 45px);
     }
     .punchline {
@@ -1018,6 +1027,24 @@ and (device-aspect-ratio: 40/71) {
     .what_we_do .scene .open_screen .screen-6 {
         transform: translateZ(30px);
     }
+    .what_we_do .scene .perspective .matching-screen-1 {
+        background-image: url(../assets/img/167x297/wireframe.png);
+    }
+    .what_we_do .scene .perspective .matching-screen-2 {
+        background-image: url(../assets/img/167x297/design.png);
+    }
+    .what_we_do .scene .perspective .matching-screen-3 {
+        background-image: url(../assets/img/167x297/developing.png);
+    }
+    .what_we_do .scene .perspective .matching-screen-4 {
+        background-image: url(../assets/img/167x297/QA.png);
+    }
+    .what_we_do .scene .perspective .matching-screen-5 {
+        background-image: url(../assets/img/167x297/project_coordination.png);
+    }
+    .what_we_do .scene .perspective .matching-screen-6 {
+        background-image: url(../assets/img/167x297/final_result.png);
+    }
     .model {
         top: 35%;
     }
@@ -1060,6 +1087,24 @@ and (device-aspect-ratio: 40/71) {
     }
     .what_we_do .scene .open_screen .screen-6 {
         transform: translateZ(20px);
+    }
+    .what_we_do .scene .perspective .matching-screen-1 {
+        background-image: url(../assets/img/147x262/wireframe.png);
+    }
+    .what_we_do .scene .perspective .matching-screen-2 {
+        background-image: url(../assets/img/147x262/design.png);
+    }
+    .what_we_do .scene .perspective .matching-screen-3 {
+        background-image: url(../assets/img/147x262/developing.png);
+    }
+    .what_we_do .scene .perspective .matching-screen-4 {
+        background-image: url(../assets/img/147x262/QA.png);
+    }
+    .what_we_do .scene .perspective .matching-screen-5 {
+        background-image: url(../assets/img/147x262/project_coordination.png);
+    }
+    .what_we_do .scene .perspective .matching-screen-6 {
+        background-image: url(../assets/img/147x262/final_result.png);
     }
     .model {
         top: 35%;
@@ -1104,6 +1149,24 @@ and (device-aspect-ratio: 40/71) {
     .what_we_do .scene .open_screen .screen-6 {
         transform: translateZ(20px);
     }
+    .what_we_do .scene .perspective .matching-screen-1 {
+        background-image: url(../assets/img/88x157/wireframe.png);
+    }
+    .what_we_do .scene .perspective .matching-screen-2 {
+        background-image: url(../assets/img/88x157/design.png);
+    }
+    .what_we_do .scene .perspective .matching-screen-3 {
+        background-image: url(../assets/img/88x157/developing.png);
+    }
+    .what_we_do .scene .perspective .matching-screen-4 {
+        background-image: url(../assets/img/88x157/QA.png);
+    }
+    .what_we_do .scene .perspective .matching-screen-5 {
+        background-image: url(../assets/img/88x157/project_coordination.png);
+    }
+    .what_we_do .scene .perspective .matching-screen-6 {
+        background-image: url(../assets/img/88x157/final_result.png);
+    }
     .model {
         top: 35%;
     }
@@ -1146,6 +1209,24 @@ and (device-aspect-ratio: 40/71) {
     }
     .what_we_do .scene .open_screen .screen-6 {
         transform: translateZ(20px);
+    }
+    .what_we_do .scene .perspective .matching-screen-1 {
+        background-image: url(../assets/img/88x157/wireframe.png);
+    }
+    .what_we_do .scene .perspective .matching-screen-2 {
+        background-image: url(../assets/img/88x157/design.png);
+    }
+    .what_we_do .scene .perspective .matching-screen-3 {
+        background-image: url(../assets/img/88x157/developing.png);
+    }
+    .what_we_do .scene .perspective .matching-screen-4 {
+        background-image: url(../assets/img/88x157/QA.png);
+    }
+    .what_we_do .scene .perspective .matching-screen-5 {
+        background-image: url(../assets/img/88x157/project_coordination.png);
+    }
+    .what_we_do .scene .perspective .matching-screen-6 {
+        background-image: url(../assets/img/88x157/final_result.png);
     }
     .model {
         top: 35%;
@@ -2212,7 +2293,6 @@ and (device-aspect-ratio: 40/71) {
     background-repeat: no-repeat;
     border-radius: 5px;
     box-shadow: 0 2px 8px #eee;
-    height: 218px;
     margin: 5px;
     position: relative;
     -webkit-filter: grayscale(100%) opacity(0.8);
@@ -2230,33 +2310,32 @@ and (device-aspect-ratio: 40/71) {
     width: 100%;
     height: 218px;
 }
-
 .clients_container .client .kairos {
-    background-position: -5px -205px;
+    background-position: -10px -10px;
 }
 .clients_container .octopus {
-     background-position: -5px -205px;
+     background-position: -10px -238px;
 }
 .clients_container .icrc {
-    background-position: -5px -205px;
+    background-position: -10px -466px;
 }
 .clients_container .bergx2 {
-    background-position: -5px -205px;
+    background-position: -412px -10px;
 }
 .clients_container .hsbc {
-   background-position: -5px -205px;
+   background-position: -412px -238px;
 }
 .clients_container .dpd {
-    background-position: -5px -205px;
+    background-position: -412px -466px;
 }
 .clients_container .cat {
-    background-position: -5px -205px;
+    background-position: -814px -10px;
 }
 .clients_container .charj {
-    background-position: -5px -205px;
+    background-position: -814px -238px;
 }
 .clients_container .strange {
-    background-position: -5px -205px;
+    background-position: -814px -466px;
 }
 
 
