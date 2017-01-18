@@ -1142,6 +1142,26 @@ _:-moz-tree-row(hover),
     }
 }
 
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 667px) 
+and (-webkit-device-pixel-ratio: 2) 
+and (device-aspect-ratio: 357/667) {
+    .model {
+        transform-style: flat;
+    }
+}
+
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 568px) 
+and (-webkit-device-pixel-ratio: 2) 
+and (device-aspect-ratio: 40/71) {
+    .model {
+        transform-style: flat;
+    }
+}
+
 /*===Экран с девайсами===*/
 
 .our_works {
@@ -1818,33 +1838,10 @@ _:-moz-tree-row(hover),
     }
 }
 
-@media only screen 
-/*
-and (min-device-width : 320px) 
-and (max-device-width : 568px) 
-*/
-and (-webkit-device-pixel-ratio: 2) 
-and (device-aspect-ratio: 357/667) {
-    .model {
-        transform-style: flat;
-    }
-}
-@media only screen 
-and (min-device-width : 320px) 
-and (max-device-width : 568px) 
-and (-webkit-device-pixel-ratio: 2) 
-and (device-aspect-ratio: 40/71) {
-    .model {
-        transform-style: flat;
-    }
-}
-
 /*Только для 6iPhone*/
 @media only screen 
-/*
-and (min-device-width : 320px) 
-and (max-device-width : 568px) 
-*/
+and (min-device-width : 375px) 
+and (max-device-width : 667px) 
 and (-webkit-device-pixel-ratio: 2) 
 and (device-aspect-ratio: 357/667) {
     .parallax__background {
@@ -1858,10 +1855,8 @@ and (device-aspect-ratio: 357/667) {
 }
 /*Только для 5iPhone*/
 @media only screen 
-/*
-and (min-device-width : 320px) 
-and (max-device-width : 568px) 
-*/
+and (min-device-width : 375px) 
+and (max-device-width : 667px) 
 and (-webkit-device-pixel-ratio: 2) 
 and (device-aspect-ratio: 40/71) {
     .parallax__background {
@@ -2988,10 +2983,8 @@ _:-moz-tree-row(hover),
 
 
 @media only screen 
-/*
-and (min-device-width : 320px) 
-and (max-device-width : 568px) 
-*/
+and (min-device-width : 375px) 
+and (max-device-width : 667px) 
 and (-webkit-device-pixel-ratio: 2) 
 and (device-aspect-ratio: 357/667) {
     .contacts_parallax__background {
@@ -3002,10 +2995,8 @@ and (device-aspect-ratio: 357/667) {
 }
 /*Только для 5iPhone*/
 @media only screen 
-/*
 and (min-device-width : 320px) 
 and (max-device-width : 568px) 
-*/
 and (-webkit-device-pixel-ratio: 2) 
 and (device-aspect-ratio: 40/71) {
     .contacts_parallax__background {
