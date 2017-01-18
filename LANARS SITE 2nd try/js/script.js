@@ -320,46 +320,62 @@ document.addEventListener('DOMContentLoaded', function () {
 //    Инициализируем слайдер
        
     $(document).ready(function(){
-      $('.items_container').slick({
-          infinite: true,
-          dots: false,
-          slidesToShow: 4,
-          slidesToScroll: 1,
-          autoplay: true,
-          draggable: false,
-          speed: 1200,
-          pauseOnHover: false,
-          autoplaySpeed: 2000,
-          prevArrow: '<div class="prev_arrow arrow">&#60;</div>',
-          nextArrow: '<div class="next_arrow arrow">&#62;</div>',
-          responsive: [
-            {
-              breakpoint: 1680,
-              settings: {
-                slidesToShow: 3,
-                slidesToScroll: 1,
-                infinite: true,
-              }
-            },
-            {
-              breakpoint: 1280,
-              settings: {
-                slidesToShow: 2,
-                slidesToScroll: 1,
-                speed: 600
-              }
-            },
-            {
-              breakpoint: 880,
-              settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                speed: 600
-              }
-            }
-        ]
-      });
-    });
+        $('.items_container').slick({
+           infinite: true,
+            dots: true,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            autoPlay: true,
+            draggable:true,
+            speed: 800,
+            autoplaySpeed: 1000,
+            prevArrow: '<div class="prev_arrow arrow">&#60;</div>',
+            nextArrow: '<div class="next_arrow arrow">&#62;</div>',
+        })
+    })
+    
+    
+//    $(document).ready(function(){
+//      $('.items_container').slick({
+//          infinite: true,
+//          dots: false,
+//          slidesToShow: 4,
+//          slidesToScroll: 1,
+//          autoplay: true,
+//          draggable: false,
+//          speed: 1200,
+//          pauseOnHover: false,
+//          autoplaySpeed: 2000,
+//          prevArrow: '<div class="prev_arrow arrow">&#60;</div>',
+//          nextArrow: '<div class="next_arrow arrow">&#62;</div>',
+//          responsive: [
+//            {
+//              breakpoint: 1680,
+//              settings: {
+//                slidesToShow: 3,
+//                slidesToScroll: 1,
+//                infinite: true,
+//              }
+//            },
+//            {
+//              breakpoint: 1280,
+//              settings: {
+//                slidesToShow: 2,
+//                slidesToScroll: 1,
+//                speed: 600
+//              }
+//            },
+//            {
+//              breakpoint: 880,
+//              settings: {
+//                slidesToShow: 1,
+//                slidesToScroll: 1,
+//                speed: 600
+//              }
+//            }
+//        ]
+//      });
+//    });
        
 
 });
