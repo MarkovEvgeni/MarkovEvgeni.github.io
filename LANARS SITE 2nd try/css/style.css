@@ -1355,11 +1355,7 @@ _:-moz-tree-row(hover),
 .our_works .plug {
     content: "";
     display: block;
-    height: calc(100% - 252px + 80px);
-}
-.scroll_up {
-    padding-right: 18px;
-    display: none;
+    height: calc(100% - 172px);
 }
 .scroll_down .arrows{
     transform: rotate(90deg) translateX(-100%);
@@ -1367,36 +1363,13 @@ _:-moz-tree-row(hover),
     font-size: 80px;
     color: white;
 }
-.scroll_up .arrows {
-    display: inline-block;
-    transform: rotate(-90deg) translateX(-100%);
-    font-size: 80px;
-    color: white;
-    text-align: center;
-}
 .jumping {
     animation-name: jumping;
     animation-duration: 700ms;
     animation-iteration-count: infinite;
     animation-direction: alternate-reverse;
 }
-.jumping2 {
-    animation-name: jumping2;
-    animation-duration: 700ms;
-    animation-iteration-count: infinite;
-    animation-direction: alternate-reverse;
-}
 @keyframes jumping {
-    0% {
-/*        color: white;*/
-        transform: rotate(-90deg) translateX(-100%);
-    }
-    100% {
-/*        color: rgb(255, 193, 104);*/
-        transform: rotate(-90deg) translateX(0);
-    }
-}
-@keyframes jumping2 {
     0% {
 /*        color: white;*/
         transform: rotate(90deg) translateX(-100%);
@@ -1971,6 +1944,9 @@ _:-moz-tree-row(hover),
 }
 
 @media all and (max-width: 680px) {
+    .our_works .plug {
+        height: calc(100% - 125px);
+    }
     .our_works .menu_plug {
         height: 45px;
     }
@@ -2556,6 +2532,86 @@ and (max-height: 320px) {
     -webkit-filter: none;
     filter: none;
 }
+@media all and (max-height: 790px) {
+    .clients_container .client {
+        width: 350px;
+    }
+    .clients_container .client .image {
+        background-image: url(../assets/img/sprite_logos_350.png);
+        background-size: auto;
+        height: 195px;
+        position: relative;
+        top: auto;
+        left: auto;
+    }
+    .clients_container .client .kairos {
+        background-position: -5px -5px;
+    }
+    .clients_container .octopus {
+        background-position: -5px -205px;
+    }
+    .clients_container .icrc {
+        background-position: -5px -405px;
+    }
+    .clients_container .bergx2 {
+        background-position: -360px -5px;
+    }
+    .clients_container .hsbc {
+        background-position: -360px -205px;
+    }
+    .clients_container .dpd {
+        background-position: -360px -405px;
+    }
+    .clients_container .cat {
+        background-position: -715px -5px;
+    }
+    .clients_container .charj {
+        background-position: -715px -205px;
+    }
+    .clients_container .strange {
+        background-position: -715px -405px;
+    }
+}
+@media all and (max-height: 710px) {
+    .clients_container .client {
+        width: 300px;
+    }
+    .clients_container .client .image {
+        background-image: url(../assets/img/sprite_logos_300.png);
+        background-size: auto;
+        height: 167px;
+        position: relative;
+        top: auto;
+        left: auto;
+    }
+    .clients_container .client .kairos {
+        background-position: -5px -5px;
+    }
+    .clients_container .octopus {
+        background-position: -5px -177px;
+    }
+    .clients_container .icrc {
+        background-position: -5px -349px;
+    }
+    .clients_container .bergx2 {
+        background-position: -310px -5px;
+    }
+    .clients_container .hsbc {
+        background-position: -310px -177px;
+    }
+    .clients_container .dpd {
+        background-position: -310px -349px;
+    }
+    .clients_container .cat {
+        background-position: -615px -5px;
+    }
+    .clients_container .charj {
+        background-position: -615px -177px;
+    }
+    .clients_container .strange {
+        background-position: -615px -349px;
+    }
+}
 @media all and (max-width: 1265px) {
     .clients_container .client {
         width: 350px;
@@ -2594,6 +2650,47 @@ and (max-height: 320px) {
     }
     .clients_container .strange {
         background-position: -715px -405px;
+    }
+}
+@media all and (max-width: 1265px)
+    and (max-height: 710px) {
+    .clients_container .client {
+        width: 300px;
+    }
+    .clients_container .client .image {
+        background-image: url(../assets/img/sprite_logos_300.png);
+        background-size: auto;
+        height: 167px;
+        position: relative;
+        top: auto;
+        left: auto;
+    }
+    .clients_container .client .kairos {
+        background-position: -5px -5px;
+    }
+    .clients_container .octopus {
+        background-position: -5px -177px;
+    }
+    .clients_container .icrc {
+        background-position: -5px -349px;
+    }
+    .clients_container .bergx2 {
+        background-position: -310px -5px;
+    }
+    .clients_container .hsbc {
+        background-position: -310px -177px;
+    }
+    .clients_container .dpd {
+        background-position: -310px -349px;
+    }
+    .clients_container .cat {
+        background-position: -615px -5px;
+    }
+    .clients_container .charj {
+        background-position: -615px -177px;
+    }
+    .clients_container .strange {
+        background-position: -615px -349px;
     }
 }
 @media all and (max-width: 1130px) {
@@ -3142,7 +3239,7 @@ and (max-height: 320px) {
     display: inline-block;
     height: 60px;
     vertical-align: middle;
-    max-width: 70%;
+    max-width: 95%;
 }
 .get_in_touch li {
     display: inline-block;
@@ -3328,6 +3425,7 @@ _:-moz-tree-row(hover),
     .get_in_touch {
         height: auto;
         text-align: left;
+        max-width: 70%;
     }
     .get_in_touch li {
         display: block;
@@ -3371,6 +3469,9 @@ _:-moz-tree-row(hover),
     }
 }
 @media all and (max-width: 570px) {
+    .contacts_parallax_background {
+        background-size: auto;
+    }
     .contacts .menu_title,
     .contacts .main_menu li a {
         color: rgb(75, 81, 91);
@@ -3528,6 +3629,9 @@ and (max-height: 320px) {
     }
 }
 @media all and (max-width: 375px) {
+    .contacts_parallax_background {
+        background-image: url(../assets/img/footer_bg_375.png);
+    }
     .contacts .menu_title,
     .contacts .main_menu li a {
         color: rgb(75, 81, 91);
@@ -3602,6 +3706,9 @@ and (max-height: 320px) {
     }
 }
 @media all and (max-width: 320px) {
+    .contacts_parallax_background {
+        background-image: url(../assets/img/footer_bg_320.png);
+    }
     .contacts .menu_title,
     .contacts .main_menu li a {
         color: rgb(75, 81, 91);
