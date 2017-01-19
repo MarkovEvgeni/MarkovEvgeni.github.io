@@ -1344,6 +1344,68 @@ _:-moz-tree-row(hover),
     display: block;
     padding-top: 50%;
 }
+.scroll_down,
+.scroll_up {
+    box-sizing: border-box;
+    text-align: center;
+}
+.scroll_down {
+    padding-left: 18px;
+}
+.our_works .plug {
+    content: "";
+    display: block;
+    height: calc(100% - 252px);
+}
+.scroll_up {
+    padding-right: 18px;
+}
+.scroll_down .arrows{
+    transform: rotate(90deg) translateX(-100%);
+    display: inline-block;
+    font-size: 80px;
+    color: white;
+}
+.scroll_up .arrows {
+    display: inline-block;
+    transform: rotate(-90deg) translateX(-100%);
+    font-size: 80px;
+    color: white;
+    text-align: center;
+}
+.jumping {
+    animation-name: jumping;
+    animation-duration: 700ms;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+.jumping2 {
+    animation-name: jumping2;
+    animation-duration: 700ms;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+@keyframes jumping {
+    0% {
+        color: white;
+        transform: rotate(-90deg) translateX(-100%);
+    }
+    100% {
+        color: rgb(255, 193, 104);
+        transform: rotate(-90deg) translateX(0);
+    }
+}
+@keyframes jumping2 {
+    0% {
+        color: white;
+        transform: rotate(90deg) translateX(-100%);
+    }
+    100% {
+        color: rgb(255, 193, 104);
+        transform: rotate(90deg) translateX(0);
+    }
+}
+
 .laptop_container {
     top: 8.58%;
     left: 10%;
@@ -2023,7 +2085,7 @@ and (device-aspect-ratio: 40/71) {
 .our_team_container {
     display: inline-block;
     vertical-align: middle;
-    max-width: 96%;
+    width: 96%;
 }
 .our_team_container_video {
     display: inline-block;
