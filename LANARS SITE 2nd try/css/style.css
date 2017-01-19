@@ -2385,14 +2385,14 @@ and (max-height: 320px) {
 
 /* Хак для IE без флексбокса*/
 
-.clients_container {
-    display: inline-block\9;
+:root input.clients_container {
+    display: inline-block;
 }
-.clients_container .client {
-    float: left\9;
+:root input.clients_container .client {
+    float: left;
 }
-.featured .content .clearfix:after {
-    content: ""\9;
+:root input.featured .content .clearfix:after {
+    content: "";
 }
 
 .clients_container .client {
@@ -3784,52 +3784,21 @@ and (max-height: 320px) {
 }
 
 
-@media only screen 
-and (min-device-width : 375px) 
-and (max-device-width : 667px) 
-and (-webkit-device-pixel-ratio: 2) 
-and (device-aspect-ratio: 375/667) {
+@media only screen and (min-device-width : 375px) and (max-device-width : 667px) and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 375/667) {
     .contacts_parallax__background {
         transform: none;
         width: 100%;
         height: 100%;
     }
 }
+
 /*Только для 5iPhone*/
-@media only screen 
-and (min-device-width : 320px) 
-and (max-device-width : 568px) 
-and (-webkit-device-pixel-ratio: 2) 
-and (device-aspect-ratio: 40/71) {
-    .contacts_parallax__background {
-        transform: nones;
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 568px) and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 40/71) {
+    .contacts_parallax_background {
+        transform: none;
         width: 100%;
         height: 100%;
     }
 }
 
-
-/*
-=================
-||Медиа-запросы||
-=================
-*/
-
-
-/*Проблема с альбомной ориентацией мобильного устройства*/
-/*
-
-@media all and (max-device-width: 800px) and (orientation: landscape) {
-    body {
-        background: red;
-    }
-    .devices {
-        width: 60%;
-    }
-    .what_we_do .scene .perspective {
-        font-size: 115%;
-    }
-    
-    
-}
-*/
