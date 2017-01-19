@@ -2082,23 +2082,24 @@ and (device-aspect-ratio: 40/71) {
 }
 .our_team_container_video {
     display: inline-block;
+    position: relative;
 }
 .our_team_member {
     box-sizing: border-box;
     display: inline-block;
     padding: 10px;
-    width: 320px;
+    width: 49%;
+    max-width: 320px;
 }
 .our_team_member_video {
-    height: 300px;
+    padding-top: 100%;
     position: relative;
 }
 .our_team_member_video video {
-    height: 300px;
     left: 0;
     position: absolute;
     top: 0;
-    width: 300px;
+    width: 100%;
 }
 .our_team_member_name {
     color: rgb(75, 81, 91);
@@ -2151,6 +2152,13 @@ and (device-aspect-ratio: 40/71) {
     content: "";
     display: block;
     padding-top: 100%;
+}
+
+@media all and (min-aspect-ratio: 16/9) {
+    .our_team_member{
+        width: 24%;
+        vertical-align: top;
+    }
 }
 @media all and (max-width: 1400px) {
     .our_team_container {
