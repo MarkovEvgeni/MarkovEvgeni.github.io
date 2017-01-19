@@ -1355,10 +1355,11 @@ _:-moz-tree-row(hover),
 .our_works .plug {
     content: "";
     display: block;
-    height: calc(100% - 252px);
+    height: calc(100% - 252px + 80px);
 }
 .scroll_up {
     padding-right: 18px;
+    display: none;
 }
 .scroll_down .arrows{
     transform: rotate(90deg) translateX(-100%);
@@ -1387,21 +1388,21 @@ _:-moz-tree-row(hover),
 }
 @keyframes jumping {
     0% {
-        color: white;
+/*        color: white;*/
         transform: rotate(-90deg) translateX(-100%);
     }
     100% {
-        color: rgb(255, 193, 104);
+/*        color: rgb(255, 193, 104);*/
         transform: rotate(-90deg) translateX(0);
     }
 }
 @keyframes jumping2 {
     0% {
-        color: white;
+/*        color: white;*/
         transform: rotate(90deg) translateX(-100%);
     }
     100% {
-        color: rgb(255, 193, 104);
+/*        color: rgb(255, 193, 104);*/
         transform: rotate(90deg) translateX(0);
     }
 }
