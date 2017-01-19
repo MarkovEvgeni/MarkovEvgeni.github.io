@@ -316,6 +316,8 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     };
     
+    $('.our_works .scroll_down .arrows').on('click', scrollScreenDown);
+    
     
 //    Инициализируем слайдер
        

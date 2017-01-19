@@ -1344,24 +1344,26 @@ _:-moz-tree-row(hover),
     display: block;
     padding-top: 50%;
 }
-.scroll_down,
-.scroll_up {
+.scroll_down {
     box-sizing: border-box;
     text-align: center;
-}
-.scroll_down {
     padding-left: 18px;
+    position: relative;
+    z-index: 15;
 }
 .our_works .plug {
     content: "";
     display: block;
     height: calc(100% - 172px);
 }
-.scroll_down .arrows{
-    transform: rotate(90deg) translateX(-100%);
+.scroll_down .arrows {
     display: inline-block;
     font-size: 80px;
     color: white;
+    transform: rotate(90deg) translateX(-100%);
+}
+.scroll_down .arrows:hover {
+    cursor: pointer;
 }
 .jumping {
     animation-name: jumping;
@@ -1945,7 +1947,13 @@ _:-moz-tree-row(hover),
 
 @media all and (max-width: 680px) {
     .our_works .plug {
-        height: calc(100% - 125px);
+        height: calc(100% - 85px);
+    }
+    .scroll_down {
+        padding-left: 9px;
+    }
+    .scroll_down .arrows {
+        font-size: 40px;
     }
     .our_works .menu_plug {
         height: 45px;
@@ -1986,6 +1994,9 @@ _:-moz-tree-row(hover),
     .our_works .menu_plug {
         height: 45px;
     }
+    .our_works .plug {
+        height: calc(100% - 125px);
+    }
     .our_works .content {
         height: calc(100% - 45px);
     }
@@ -2004,6 +2015,11 @@ _:-moz-tree-row(hover),
     .our_works .menu_title,
     .our_works .main_menu li a {
         color: rgb(75, 81, 91);
+    }
+}
+@media all and (min-aspect-ratio: 16/9) {
+    .devices {
+        width: 70%;
     }
 }
 
