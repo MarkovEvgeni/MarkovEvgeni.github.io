@@ -1,6 +1,9 @@
+var rotatingIdentifier;
+
 document.addEventListener('DOMContentLoaded', function () {
     
     "use strict";
+    
     
     //=============================================   
     //|Операции с панелью кнопок и слоями телефона|
@@ -153,6 +156,12 @@ document.addEventListener('DOMContentLoaded', function () {
 //    Вращение вокруг оси апликат.
     var rotateAngleZ = 30;
     
+    function setDefaultCoordinates () {
+        rotateAngleX = 90;
+        rotateAngleY = 0;
+        rotateAngleZ = 30;
+    };
+    
 //    Определяем функцию-контроллер которая будет передавать углы вращения объекту.
     
     function rotateObject() {
@@ -165,23 +174,37 @@ document.addEventListener('DOMContentLoaded', function () {
             transform: 'translateY(50px) rotateX(' + angleX + ') rotateZ(' + angleZ + ')',
             MozTransform: 'translateY(50px) rotateX(' + angleX + ') rotateZ(' + angleZ + ')',
             WebkitTransform: 'translateY(50px) rotateX(' + angleX + ') rotateZ(' + angleZ + ')',
-            msTransform: 'translateY(50px) rotateX(' + angleX + ') rotateZ(' + angleZ + ')',
-            WebkitTransition: 'transform 0.1s linear',
-            MozTransition: 'transform 0.1s linear',
-            transition: 'transform 0.1s linear'
+            msTransform: 'translateY(50px) rotateX(' + angleX + ') rotateZ(' + angleZ + ')'
         });
+        
     };
     
-    
-    
-    $('.what_we_do .content').mouseenter(receiveCoordinates);
-    $('.what_we_do .content').mouseleave(function () {
-        $('.what_we_do .content').unbind("mousemove");
+    $('.what_we_do .content').on("mouseenter", function() {
+        if (rotatingIdentifier == 1) {
+            return
+        } else {
+            rotatingIdentifier = 1;
+            receiveCoordinates();
+        }
     });
+//    $('.what_we_do .content').on("mouseleave", function () {
+//        $('.content .scene').off("mousemove");
+//    });
     
 //    Определяем модель которая будет перезаписывать переменные определяющие угол вращения.
     
     function receiveCoordinates () {
+        
+        setDefaultCoordinates();
+        
+        setTimeout(function() {
+        console.log('start working');
+        rotatedObject.css({
+                WebkitTransition: 'transform 0s linear',
+                MozTransition: 'transform 0s linear',
+                transition: 'transform 0s linear'
+            })
+        }, 1000);
         
         setTimeout(function () {
         //    Задаем начальные координаты для вычислений. Сейчас это точка - середина окна браузера.
@@ -192,7 +215,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         //     Привязываем изменение переменных к перемещению мыши.
 
-                $('.content .scene').mousemove(function() {
+                $('.content .scene').on("mousemove", function() {
                     
 //                    event = event || window.event;
 //                    Для работы поворота в Mozilla нужно добавить event в качестве аргумента функции и раскомментировать строку выше
@@ -233,9 +256,6 @@ document.addEventListener('DOMContentLoaded', function () {
                     } else {
                         rotateAngleZ += angleBiasZ;
                     }
-
-                    rotateAngleZ += angleBiasZ;
-
 
         //        Вызываем функцию-контроллер, которая изменит углы отображения объекта. 
 

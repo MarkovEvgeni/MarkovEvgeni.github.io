@@ -37,38 +37,7 @@ document.addEventListener('DOMContentLoaded', function () {
             el.deltaY = -1;
             scrollScreen(el);
         }
-    }    
-    
-//    Полифилл для requestAnimationFrame
-    
-    (function() {
-        var lastTime = 0;
-        var vendors = ['ms', 'moz', 'webkit', 'o'];
-        for(var x = 0; x < vendors.length && !window.requestAnimationFrame; ++x) {
-            window.requestAnimationFrame = window[vendors[x]+'RequestAnimationFrame'];
-            window.cancelAnimationFrame = window[vendors[x]+'CancelAnimationFrame'] 
-                                       || window[vendors[x]+'CancelRequestAnimationFrame'];
-        }
-
-        if (!window.requestAnimationFrame)
-            window.requestAnimationFrame = function(callback, element) {
-                var currTime = new Date().getTime();
-                var timeToCall = Math.max(0, 16 - (currTime - lastTime));
-                var id = window.setTimeout(function() { callback(currTime + timeToCall); }, 
-                  timeToCall);
-                lastTime = currTime + timeToCall;
-                return id;
-            };
-
-        if (!window.cancelAnimationFrame)
-            window.cancelAnimationFrame = function(id) {
-                clearTimeout(id);
-            };
-    }());
-    
-    
-//    Плагин для плавной прокрутки в Chrome и Safari
-    jQuery.scrollSpeed(100, 2000, 'easeOutCubic');
+    };
     
 //    Используем сторонний плагин для разрешения проблемы со скроллингом
     
@@ -144,18 +113,6 @@ document.addEventListener('DOMContentLoaded', function () {
     
 //    Обработчики событий для кнопок меню
     
-    (function() {
-//        for (var index = 1; index < 7; index++) {
-//            console.log(index);
-//            var iteratorCount = index;
-//            $('.screen_' + index + '_link').on('click', function(iteratorCount) {
-//                changeScreen(iteratorCount);
-//                console.log(iteratorCount);
-//            })
-//            console.log($('.screen_' + iteratorCount + '_link'));
-//        }
-    }());
-    
     $('.screen_1_link').on('click', function() {
        changeScreen(1); 
     });
@@ -181,7 +138,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
     
     underlineActiveScreen(400);
-    
+
     function scrollScreenDown() {
         if(displayCounter < 6) {
             if (displayCounter == 1) {
@@ -208,7 +165,8 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function rotateModel() {
-        $('.what_we_do .content .scene').unbind();
+        $('.content .scene').off("mousemove");
+        rotatingIdentifier = 0;
         setTimeout(function(){
             $('.what_we_do .model').css("transform", "translateY(50px) rotateX(50deg) rotateZ(30deg)");
             $('.what_we_do .model').css("transition", "transform 0.4s linear");
@@ -222,7 +180,8 @@ document.addEventListener('DOMContentLoaded', function () {
         $('.what_we_do .model').css("transition", "transform 0.4s linear");
         $('.what_we_do .model').removeClass('open_screen');
         $('.what_we_do .control_panel').removeClass('show_control_panel');
-        $('.what_we_do .content .scene').unbind();
+        $('.content .scene').off("mousemove");
+        rotatingIdentifier = 0;
     }
     
     function scrollScreenUp() {
@@ -346,6 +305,5 @@ document.addEventListener('DOMContentLoaded', function () {
             ]
         })
     })
-    
 
 });
