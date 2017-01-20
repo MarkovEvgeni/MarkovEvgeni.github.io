@@ -328,7 +328,7 @@ document.addEventListener('DOMContentLoaded', function () {
             slidesToScroll: 1,
             pauseOnHover: false,
             autoplay: true,
-            autoplaySpeed: 1000,
+            autoplaySpeed: 2000,
             speed: 800,
             prevArrow: '<div class="prev_arrow arrow"></div>',
             nextArrow: '<div class="next_arrow arrow"></div>',
@@ -338,11 +338,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     breakpoint: 600,
                     settings: {
                         arrows: false,
-                        slidesToShow: 3,
-                        slidesToScroll: 1,
-                        autoplay: true,
                         draggable: true,
-                        autoplaySpeed: 1000,
                         centerMode: true,
                         variableWidth: true,
                     }
@@ -351,48 +347,5 @@ document.addEventListener('DOMContentLoaded', function () {
         })
     })
     
-    
-//    $(document).ready(function(){
-//      $('.items_container').slick({
-//          infinite: true,
-//          dots: false,
-//          slidesToShow: 4,
-//          slidesToScroll: 1,
-//          autoplay: true,
-//          draggable: false,
-//          speed: 1200,
-//          pauseOnHover: false,
-//          autoplaySpeed: 2000,
-//          prevArrow: '<div class="prev_arrow arrow">&#60;</div>',
-//          nextArrow: '<div class="next_arrow arrow">&#62;</div>',
-//          responsive: [
-//            {
-//              breakpoint: 1680,
-//              settings: {
-//                slidesToShow: 3,
-//                slidesToScroll: 1,
-//                infinite: true,
-//              }
-//            },
-//            {
-//              breakpoint: 1280,
-//              settings: {
-//                slidesToShow: 2,
-//                slidesToScroll: 1,
-//                speed: 600
-//              }
-//            },
-//            {
-//              breakpoint: 880,
-//              settings: {
-//                slidesToShow: 1,
-//                slidesToScroll: 1,
-//                speed: 600
-//              }
-//            }
-//        ]
-//      });
-//    });
-       
 
 });

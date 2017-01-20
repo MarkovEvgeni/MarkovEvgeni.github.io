@@ -61,6 +61,16 @@ and (device-aspect-ratio: 40/71) {
         transform-style: flat!important;
     }
 }
+/*Только для iPad*/
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px)
+    and (-webkit-device-pixel-ratio: 2) 
+and (device-aspect-ratio: 3/4) {
+    .scrolling_feed {
+        transform-style: flat!important;
+    }
+}
 
 /*===Главное меню - обычное состояние===*/
 
@@ -811,6 +821,10 @@ and (device-aspect-ratio: 40/71) {
     background: rgb(249, 249, 249);
     z-index: 2;
 }
+_:-moz-tree-row(hover),
+.what_we_do {
+    background: rgb(239, 239, 239);
+}
 .what_we_do .content {
     box-sizing: border-box;
     height: calc(100% - 92px);
@@ -1441,6 +1455,9 @@ and (min-device-width : 375px)
 and (max-device-width : 667px) 
 and (-webkit-device-pixel-ratio: 2) 
 and (device-aspect-ratio: 375/667) {
+    .what_we_do {
+        background: rgb(239, 239, 239);
+    }
     .what_we_do .scene {
         display: none;
     }
@@ -1454,6 +1471,25 @@ and (min-device-width : 320px)
 and (max-device-width : 568px) 
 and (-webkit-device-pixel-ratio: 2) 
 and (device-aspect-ratio: 40/71) {
+    .what_we_do {
+        background: rgb(239, 239, 239);
+    }
+    .what_we_do .scene {
+        display: none;
+    }
+    .slider_container {
+        display: inline-block;
+    }
+}
+/*Только для 5iPhone*/
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (-webkit-device-pixel-ratio: 2) 
+and (device-aspect-ratio: 3/4) {
+    .what_we_do {
+        background: rgb(239, 239, 239);
+    }
     .what_we_do .scene {
         display: none;
     }
@@ -3977,6 +4013,7 @@ and (max-height: 320px) {
     }
 }
 
+/*Только для iPhone6*/
 
 @media only screen and (min-device-width : 375px) and (max-device-width : 667px) and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 375/667) {
     .contacts_parallax__background {
@@ -3986,7 +4023,7 @@ and (max-height: 320px) {
     }
 }
 
-/*Только для 5iPhone*/
+/*Только для iPhone5*/
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 568px) and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 40/71) {
     .contacts_parallax_background {
@@ -3996,3 +4033,12 @@ and (max-height: 320px) {
     }
 }
 
+/*Только для iPad*/
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 3/4) {
+    .contacts_parallax_background {
+        transform: none;
+        width: 100%;
+        height: 100%;
+    }
+}
