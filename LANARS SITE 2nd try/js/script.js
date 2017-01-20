@@ -2,13 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
     
     "use strict";
     
-//    trying to use FullScreenMode
-    
-    var fullscreenElement = $('body')[0];
-    
-//    var spr = fullscreenElement.webkitRequestFullscreen;
-    
-    
+    var fullscreenElement = document.documentElement;
     
     function makeFullscreen() {
        if (fullscreenElement.requestFullscreen) {
@@ -33,12 +27,15 @@ document.addEventListener('DOMContentLoaded', function () {
     gesuredZone.addEventListener('touchstart', function(el) {
         el = el || window.event;
         touchstartY = el.changedTouches[0].screenY;
-        if (touchMsCounter > 1);
-        clearInterval(timerId);
-        if (touchMsCounter < 500) {
-            makeFullscreen()
-        }
-        touchMsCounter = 1;
+        if (touchMsCounter > 1) {
+            clearInterval(timerId);
+            if (touchMsCounter < 500) {
+                makeFullscreen();
+            }
+            touchMsCounter = 1;    
+        } else {
+            
+        };
     }, false);
     
     gesuredZone.addEventListener('touchmove', function(el) {
