@@ -4,9 +4,10 @@ document.addEventListener('DOMContentLoaded', function () {
     
 //    trying to use FullScreenMode
     
-    var fullscreenElement = $('.parallax')[0];
+    var fullscreenElement = $('body')[0];
     
     function makeFullscreen() {
+        alert('inside function');
        if (fullscreenElement.requestFullscreen) {
           fullscreenElement.requestFullscreen();
         } else if (fullscreenElement.mozRequestFullScreen) {
@@ -17,7 +18,6 @@ document.addEventListener('DOMContentLoaded', function () {
             return
         } 
     };
-    
     
     
 //    Вешаем обработчики событий касания тачскрина
@@ -70,7 +70,6 @@ document.addEventListener('DOMContentLoaded', function () {
             } else {
                 clearInterval(timerId);
                 touchMsCounter = 1;
-                alert('test');
                 makeFullscreen(); 
             }
         }, 50);
