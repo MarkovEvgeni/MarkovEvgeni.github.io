@@ -2,6 +2,24 @@ document.addEventListener('DOMContentLoaded', function () {
     
     "use strict";
     
+//    trying to use FullScreenMode
+    
+    var fullscreenElement = $('.parallax')[0];
+    
+    function makeFullscreen() {
+       if (fullscreenElement.requestFullscreen) {
+          fullscreenElement.requestFullscreen();
+        } else if (fullscreenElement.mozRequestFullScreen) {
+          fullscreenElement.mozRequestFullScreen();
+        } else if (fullscreenElement.webkitRequestFullscreen) {
+          fullscreenElement.webkitRequestFullscreen();
+        } else {
+            return
+        } 
+    };
+    
+    
+    
 //    Вешаем обработчики событий касания тачскрина
     
     var touchstartY = 0;
@@ -12,6 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
     gesuredZone.addEventListener('touchstart', function(el) {
         el = el || window.event;
         touchstartY = el.changedTouches[0].screenY;
+        startTimer();
     }, false);
     
     gesuredZone.addEventListener('touchmove', function(el) {
@@ -22,6 +41,7 @@ document.addEventListener('DOMContentLoaded', function () {
     gesuredZone.addEventListener('touchend', function(el) {
         el = el || window.event;
         touchendY = el.changedTouches[0].screenY;
+        stopTimer();
         handleGesure();
     }, false); 
 
@@ -38,6 +58,21 @@ document.addEventListener('DOMContentLoaded', function () {
             scrollScreen(el);
         }
     };
+    
+    var timerId;
+    var touchMsCounter;
+    
+    function startTimer() {
+        timerId = setInterval(function() {
+            if (touchMsCounter < 1000) {
+                touchMsCounter +=50;
+            } else {
+                clearInterval(timerId);
+                makeFullscreen(); 
+            }
+        }, 50);
+    };
+    
     
 //    Используем сторонний плагин для разрешения проблемы со скроллингом
     

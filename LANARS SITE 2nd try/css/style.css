@@ -2545,9 +2545,6 @@ and (device-aspect-ratio: 3/4) {
         .our_team_member_position {
             font-size: 10px;
         }
-        .our_team .content {
-            background-color: yellow;
-        }
 }
 @media all and (max-width: 320px) {
     .our_team .menu_plug {
@@ -2579,7 +2576,7 @@ and (device-aspect-ratio: 3/4) {
     }
 }
 @media all and (max-width: 320px)
-    and (max-height: 460px) {
+    and (max-height: 450px) {
         .our_team_member_photo {
             min-width: 50px;
             vertical-align: top;
@@ -2590,9 +2587,6 @@ and (device-aspect-ratio: 3/4) {
         }
         .our_team_member_position {
             font-size: 10px;
-        }
-        .our_team .content {
-            background-color: red;
         }
 }
 
