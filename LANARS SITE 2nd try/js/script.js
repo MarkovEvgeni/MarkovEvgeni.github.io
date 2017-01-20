@@ -6,8 +6,11 @@ document.addEventListener('DOMContentLoaded', function () {
     
     var fullscreenElement = $('body')[0];
     
+//    var spr = fullscreenElement.webkitRequestFullscreen;
+    
+    
+    
     function makeFullscreen() {
-        alert('inside function');
        if (fullscreenElement.requestFullscreen) {
           fullscreenElement.requestFullscreen();
         } else if (fullscreenElement.mozRequestFullScreen) {
@@ -30,7 +33,12 @@ document.addEventListener('DOMContentLoaded', function () {
     gesuredZone.addEventListener('touchstart', function(el) {
         el = el || window.event;
         touchstartY = el.changedTouches[0].screenY;
-        startTimer();
+        if (touchMsCounter > 1);
+        clearInterval(timerId);
+        if (touchMsCounter < 500) {
+            makeFullscreen()
+        }
+        touchMsCounter = 1;
     }, false);
     
     gesuredZone.addEventListener('touchmove', function(el) {
@@ -41,9 +49,8 @@ document.addEventListener('DOMContentLoaded', function () {
     gesuredZone.addEventListener('touchend', function(el) {
         el = el || window.event;
         touchendY = el.changedTouches[0].screenY;
-        clearInterval(timerId);
-        touchMsCounter = 1;
         handleGesure();
+        startTimer();
     }, false); 
 
     function handleGesure() {
@@ -70,7 +77,6 @@ document.addEventListener('DOMContentLoaded', function () {
             } else {
                 clearInterval(timerId);
                 touchMsCounter = 1;
-                makeFullscreen(); 
             }
         }, 50);
     };
