@@ -322,17 +322,32 @@ document.addEventListener('DOMContentLoaded', function () {
 //    Инициализируем слайдер
        
     $(document).ready(function(){
-        $('.items_container').slick({
-           infinite: true,
-            dots: true,
+        $('.item_container').slick({
+            infinite: true,
             slidesToShow: 3,
             slidesToScroll: 1,
-            autoPlay: true,
-            draggable:true,
-            speed: 800,
+            pauseOnHover: false,
+            autoplay: true,
             autoplaySpeed: 1000,
-            prevArrow: '<div class="prev_arrow arrow">&#60;</div>',
-            nextArrow: '<div class="next_arrow arrow">&#62;</div>',
+            speed: 800,
+            prevArrow: '<div class="prev_arrow arrow"></div>',
+            nextArrow: '<div class="next_arrow arrow"></div>',
+            variableWidth: false,
+            responsive: [
+                {
+                    breakpoint: 600,
+                    settings: {
+                        arrows: false,
+                        slidesToShow: 3,
+                        slidesToScroll: 1,
+                        autoplay: true,
+                        draggable: true,
+                        autoplaySpeed: 1000,
+                        centerMode: true,
+                        variableWidth: true,
+                    }
+                }
+            ]
         })
     })
     

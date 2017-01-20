@@ -977,6 +977,124 @@ and (device-aspect-ratio: 40/71) {
     opacity: 1;
 }
 
+_:-moz-tree-row(hover),
+.what_we_do .scene {
+    display: none;
+}
+.slider_container {
+    display: none;
+}
+.what_we_do .arrow {
+    box-sizing: border-box;
+    color: rgba(0,0,0,0.5);
+    font-size: 30px;
+    font-weight: bold;
+    height: 312px;
+    padding-top: 135px;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 178px;
+}
+.slider_container {
+    display: none;
+    vertical-align: middle;
+    width: 98%;
+}
+_:-moz-tree-row(hover),
+.slider_container {
+    display: inline-block;
+}
+.item_container {
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 20;
+    width: 98%;
+}
+.what_we_do .prev_arrow {
+    left: 11px;
+    z-index: 1100;
+}
+.what_we_do .next_arrow {
+    right: 11px;
+}
+.what_we_do .arrow:hover {
+    background-color: rgba(255,255,255,0.5);
+    border: 1px solid rgba(255, 193, 104,0.7);
+    cursor: pointer;
+}
+.what_we_do .arrow:active {
+    color: rgba(0,0,0,1);
+    background-color: rgba(255,255,255,0.8);
+    cursor: pointer;
+}
+.slick-slide img {
+    margin: 0 auto;
+}
+.phone_flat {
+    background-image: url(../assets/img/iPhone%206%20Plus%20Copy.png);
+    background-size: cover;
+    height: 405px;
+    width: 200px;
+    z-index: 20;
+    position: absolute;
+    top: calc(50% - 251px);
+    left: calc(50% - 98px);
+}
+.slick-slide {
+    opacity: 0.7;
+}
+.slick-current {
+    animation-name: rotatetocenter2;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+}
+.slick-current+.slick-active {
+    animation-name: rotatetocenter;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+}
+.slick-current+.slick-active .name {
+    animation-name: showname;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+    animation-delay: 600ms;
+    
+}
+.item_container .name {
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    padding: 80px 0 2px;
+    opacity: 0;
+}
+
+@keyframes rotatetocenter {
+    0% {
+        opacity: 0.7;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes rotatetocenter2 {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.7;
+    }
+}
+@keyframes showname {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
 @media all and (max-width: 680px) {
    .what_we_do .menu_plug {
         height: 45px;
@@ -997,6 +1115,31 @@ and (device-aspect-ratio: 40/71) {
     }
     .what_we_do .control_panel .label {
         font-size: 16px;
+    }
+}
+@media all and (max-width: 600px) {
+    .slick-slide {
+        opacity: 0.7;
+    }
+    .slick-active,
+    .slick-current+.slick-active {
+        animation-name: rotatetocenter2;
+        animation-duration: 500ms;
+        animation-fill-mode: forwards;
+    }
+    .slick-current {
+        animation-name: rotatetocenter;
+        animation-duration: 500ms;
+        animation-fill-mode: forwards;
+    }
+    .slick-current .name {
+        animation-name: showname;
+        animation-duration: 500ms;
+        animation-fill-mode: forwards;
+        animation-delay: 600ms;
+    }
+    .slick-current+.slick-active .name {
+        animation: none;
     }
 }
 @media all and (max-width: 570px) {
@@ -1289,6 +1432,33 @@ and (device-aspect-ratio: 40/71) {
     }
     .what_we_do .control_panel .label {
         font-size: 13px;
+    }
+}
+
+/*Только для 6iPhone*/
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 667px) 
+and (-webkit-device-pixel-ratio: 2) 
+and (device-aspect-ratio: 375/667) {
+    .what_we_do .scene {
+        display: none;
+    }
+    .slider_container {
+        display: inline-block;
+    }
+}
+/*Только для 5iPhone*/
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 568px) 
+and (-webkit-device-pixel-ratio: 2) 
+and (device-aspect-ratio: 40/71) {
+    .what_we_do .scene {
+        display: none;
+    }
+    .slider_container {
+        display: inline-block;
     }
 }
 
