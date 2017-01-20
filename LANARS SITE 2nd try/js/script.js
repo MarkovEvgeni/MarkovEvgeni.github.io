@@ -41,7 +41,6 @@ document.addEventListener('DOMContentLoaded', function () {
     gesuredZone.addEventListener('touchend', function(el) {
         el = el || window.event;
         touchendY = el.changedTouches[0].screenY;
-        stopTimer();
         handleGesure();
     }, false); 
 
@@ -60,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function () {
     };
     
     var timerId;
-    var touchMsCounter;
+    var touchMsCounter = 1;
     
     function startTimer() {
         timerId = setInterval(function() {
@@ -68,6 +67,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 touchMsCounter +=50;
             } else {
                 clearInterval(timerId);
+                touchMsCounter = 1;
                 makeFullscreen(); 
             }
         }, 50);
