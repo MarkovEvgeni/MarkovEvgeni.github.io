@@ -2545,6 +2545,9 @@ and (device-aspect-ratio: 3/4) {
         .our_team_member_position {
             font-size: 10px;
         }
+        .our_team .content {
+            background-color: yellow;
+        }
 }
 @media all and (max-width: 320px) {
     .our_team .menu_plug {
@@ -2587,6 +2590,9 @@ and (device-aspect-ratio: 3/4) {
         }
         .our_team_member_position {
             font-size: 10px;
+        }
+        .our_team .content {
+            background-color: red;
         }
 }
 
