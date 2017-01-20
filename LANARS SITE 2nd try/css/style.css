@@ -2201,7 +2201,7 @@ _:-moz-tree-row(hover),
         height: 45px;
     }
     .our_works .plug {
-        height: calc(100% - 125px);
+        height: calc(100% - 85px);
     }
     .our_works .content {
         height: calc(100% - 45px);
@@ -2240,9 +2240,6 @@ and (device-aspect-ratio: 375/667) {
         width: 100%;
         height: 100%;
     }
-    .scrolling_feed {
-        transform-style: flat!important;
-    }
 }
 /*Только для 5iPhone*/
 @media only screen 
@@ -2255,8 +2252,17 @@ and (device-aspect-ratio: 40/71) {
         width: 100%;
         height: 100%;
     }
-    .scrolling_feed {
-        transform-style: flat!important;
+}
+/*Только для 5iPhone*/
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (-webkit-device-pixel-ratio: 2) 
+and (device-aspect-ratio: 3/4) {
+    .parallax__background {
+        transform: translateZ(0) scale(1);
+        width: 100%;
+        height: 100%;
     }
 }
 
@@ -2371,6 +2377,13 @@ and (device-aspect-ratio: 40/71) {
         max-width: 960px;
     }
 }
+@media all and (max-width: 1400px)
+    and (max-height: 860px) {
+        .our_team_member{
+            width: 24%;
+            vertical-align: top;
+        }
+}
 @media all and (max-width: 680px) {
     .our_team .menu_plug {
         height: 45px;
@@ -2395,6 +2408,20 @@ and (device-aspect-ratio: 40/71) {
         font-size: 15px;
         padding: 8px 0;
     }
+}
+@media all and (max-width: 680px)
+    and (max-height: 670px) {
+        .our_team_member_photo {
+            min-width: 50px;
+            vertical-align: top;
+            width: 24%;
+        }
+        .our_team_member_name {
+            font-size: 14px;
+        }
+        .our_team_member_position {
+            font-size: 14px;
+        }
 }
 @media all and (max-width: 570px) {
     .our_team .menu_plug {
@@ -2422,23 +2449,18 @@ and (device-aspect-ratio: 40/71) {
     }
 }
 @media all and (max-width: 570px)
-and (max-height: 320px) {
-    .our_team .menu_plug {
-        height: 45px;
-    }
-    .our_team_container_photo {
-        display: inline-block;
-        width: 95%;
-        position: relative;
-    }
-    .our_team_member_photo {
-        min-width: 130px;
-        width: 24%;
-    }
-    .our_team_member_name {
-        font-size: 15px;
-        padding: 8px 0;
-    }
+    and (max-height: 590px) {
+        .our_team_member_photo {
+            min-width: 50px;
+            vertical-align: top;
+            width: 24%;
+        }
+        .our_team_member_name {
+            font-size: 12px;
+        }
+        .our_team_member_position {
+            font-size: 12px;
+        }
 }
 @media all and (max-width: 480px) {
     .our_team .menu_plug {
@@ -2465,6 +2487,20 @@ and (max-height: 320px) {
         padding: 8px 0;
     }
 }
+@media all and (max-width: 480px)
+    and (max-height: 520px) {
+        .our_team_member_photo {
+            min-width: 50px;
+            vertical-align: top;
+            width: 24%;
+        }
+        .our_team_member_name {
+            font-size: 12px;
+        }
+        .our_team_member_position {
+            font-size: 12px;
+        }
+}
 @media all and (max-width: 375px) {
     .our_team .menu_plug {
         height: 45px;
@@ -2489,6 +2525,20 @@ and (max-height: 320px) {
         font-size: 15px;
         padding: 8px 0;
     }
+}
+@media all and (max-width: 375px)
+    and (max-height: 470px) {
+        .our_team_member_photo {
+            min-width: 50px;
+            vertical-align: top;
+            width: 24%;
+        }
+        .our_team_member_name {
+            font-size: 10px;
+        }
+        .our_team_member_position {
+            font-size: 10px;
+        }
 }
 @media all and (max-width: 320px) {
     .our_team .menu_plug {
@@ -2516,6 +2566,20 @@ and (max-height: 320px) {
         padding: 8px 0;
     }
 }
+@media all and (max-width: 320px)
+    and (max-height: 470px) {
+        .our_team_member_photo {
+            min-width: 50px;
+            vertical-align: top;
+            width: 24%;
+        }
+        .our_team_member_name {
+            font-size: 10px;
+        }
+        .our_team_member_position {
+            font-size: 10px;
+        }
+}
 
 /*===Экран с заказчиками===*/
 
@@ -2536,61 +2600,6 @@ and (max-height: 320px) {
     height: 100%;
     vertical-align: middle;
 }
-/*
-.featured .item {
-    box-sizing: border-box;
-    height: 300px;
-    background-size: cover;
-    text-align: center;
-}
-.featured .items_container {
-    background-color: rgb(246, 246, 246);
-    margin-top: -150px;
-    overflow: hidden;
-}
-.featured .item:before {
-    content: "";
-    display: inline-block;
-    height: 100%;
-    vertical-align: middle;
-}
-.featured .item img {
-    display: inline-block;
-    vertical-align: middle;
-}
-.featured .arrow {
-    color: rgba(0,0,0,0.5);
-    font-size: 30px;
-    font-weight: bold;
-    height: 100%;
-    padding-top: 135px;
-    position: absolute;
-    text-align: center;
-    top: 0;
-    width: 40px;
-}
-*/
-/*
-.featured .prev_arrow {
-    left: 0;
-    z-index: 1100;
-}
-.featured .next_arrow {
-    right: 0;
-}
-.featured .arrow:hover {
-    background-color: rgba(255,255,255,0.5);
-    color: rgba(0,0,0,0.7);
-    cursor: pointer;
-}
-.featured .arrow:active {
-    color: rgba(0,0,0,1);
-    background-color: rgba(255,255,255,0.8);
-    cursor: pointer;
-}
-*/
-
-
 .clients_container {
     width: 98%;
     position: relative;
@@ -2641,7 +2650,7 @@ and (max-height: 320px) {
     width: 392px;
 }
 .clients_container .client .image {
-    background-image: url(../assets/img/sprite_logos@2x.png);
+    background-image: url(../assets/img/sprite_logos.png);
     background-repeat: no-repeat;
     width: 100%;
     height: 218px;
@@ -2673,82 +2682,6 @@ and (max-height: 320px) {
 .clients_container .strange {
     background-position: -814px -466px;
 }
-
-
-/*
-.clients_container .fox_news {
-    background-position: -5px -5px;
-}
-.clients_container .cbs {
-    background-position: -210px -5px;
-}
-.clients_container .cbc {
-    background-position: -415px -5px;
-}
-.clients_container .france24 {
-    background-position: -620px -5px;
-}
-.clients_container .voa {
-    background-position: -825px -5px;
-}
-.clients_container .bbc {
-    background-position: -1030px -5px;
-}
-.clients_container .cnn {
-    background-position: -5px -146px;
-}
-.clients_container .abc {
-    background-position: -210px -146px;
-}
-.clients_container .nbc {
-    background-position: -415px -146px;
-}
-.clients_container .rte {
-    background-position: -620px -146px;
-}
-.clients_container .asspress {
-    background-position: -825px -146px;
-}
-.clients_container .reuters {
-    background-position: -1030px -146px;
-}
-.clients_container .themail {
-    background-position: -5px -287px;
-}
-.clients_container .sunday {
-    background-position: -210px -287px;
-}
-.clients_container .dailymirror {
-    background-position: -415px -287px;
-}
-.clients_container .trt {
-    background-position: -620px -287px;
-}
-.clients_container .omantimes {
-    background-position: -825px -287px;
-}
-.clients_container .fm4 {
-    background-position: -1030px -287px;
-}
-.clients_container .usatoday {
-    background-position: -5px -428px;
-}
-.clients_container .skynews {
-    background-position: -210px -428px;
-}
-.clients_container .theeconomist {
-    background-position: -415px -428px;
-}
-.clients_container .theindependent {
-    background-position: -620px -428px;
-}
-.clients_container .aljazeera {
-    background-position: -825px -428px;
-}
-.clients_container .vanityfair {
-    background-position: -1030px -428px;
-}
-*/
 .clients_container .client:hover {
     transition: ease;
     -webkit-box-shadow: 0 0px 12px rgba(255, 193, 104, .54);
@@ -2761,6 +2694,13 @@ and (max-height: 320px) {
     transform: scale(1.02);
     -webkit-filter: none;
     filter: none;
+}
+
+@media all (-webkit-min-device-pixel-ratio: 2) {
+    .clients_container .client .image {
+        background-image: url(../assets/img/sprite_logos@2x.png);
+        background-size: 1216px 694px;
+    }
 }
 @media all and (max-height: 790px) {
     .clients_container .client {
@@ -2802,6 +2742,13 @@ and (max-height: 320px) {
         background-position: -715px -405px;
     }
 }
+@media all and (max-height: 790px)
+    and (-webkit-device-pixel-ratio: 2) {
+        .clients_container .client .image {
+            background-image: url(../assets/img/sprite_logos_350@2x.png);
+            background-size: 1070px 611px;
+        } 
+}
 @media all and (max-height: 710px) {
     .clients_container .client {
         width: 300px;
@@ -2842,6 +2789,13 @@ and (max-height: 320px) {
         background-position: -615px -349px;
     }
 }
+@media all and (max-height: 710px)
+    and (-webkit-device-pixel-ratio: 2) {
+        .clients_container .client .image {
+            background-image: url(../assets/img/sprite_logos_300@2x.png);
+            background-size: 926px 530px;
+        } 
+}
 @media all and (max-width: 1265px) {
     .clients_container .client {
         width: 350px;
@@ -2881,6 +2835,13 @@ and (max-height: 320px) {
     .clients_container .strange {
         background-position: -715px -405px;
     }
+}
+@media all and (max-width: 1265px)
+    and (-webkit-device-pixel-ratio: 2) {
+        .clients_container .client .image {
+            background-image: url(../assets/img/sprite_logos_350@2x.png);
+            background-size: 1070px 611px;
+        } 
 }
 @media all and (max-width: 1265px)
     and (max-height: 710px) {
@@ -2963,6 +2924,13 @@ and (max-height: 320px) {
         background-position: -615px -349px;
     }
 }
+@media all and (max-width: 1130px)
+    and (-webkit-device-pixel-ratio: 2) {
+        .clients_container .client .image {
+            background-image: url(../assets/img/sprite_logos_300@2x.png);
+            background-size: 926px 530px;
+        } 
+}
 @media all and (max-width: 970px) {
     .clients_container .client {
         width: 251px;
@@ -3003,6 +2971,13 @@ and (max-height: 320px) {
         background-position: -517px -295px;
     }
 }
+@media all and (max-width: 970px)
+    and (-webkit-device-pixel-ratio: 2) {
+        .clients_container .client .image {
+            background-image: url(../assets/img/sprite_logos_251@2x.png);
+            background-size: 773px 443px;
+        } 
+}
 @media all and (max-width: 820px) {
     .clients_container .client {
         width: 212px;
@@ -3042,6 +3017,13 @@ and (max-height: 320px) {
     .clients_container .strange {
         background-position: -439px -250px;
     }
+}
+@media all and (max-width: 820px)
+    and (-webkit-device-pixel-ratio: 2) {
+        .clients_container .client .image {
+            background-image: url(../assets/img/sprite_logos_212@2x.png);
+            background-size: 656px 377px;
+        } 
 }
 @media all and (max-width: 820px)
     and (max-height: 450px) {
@@ -3129,6 +3111,13 @@ and (max-height: 320px) {
     .clients_container .strange {
         background-position: -517px -295px;
     }
+}
+@media all and (max-width: 695px)
+    and (-webkit-device-pixel-ratio: 2) {
+        .clients_container .client .image {
+            background-image: url(../assets/img/sprite_logos_251@2x.png);
+            background-size: 773px 443px;
+        } 
 }
 @media all and (max-width: 695px)
     and (max-height: 430px) {
@@ -3263,6 +3252,13 @@ and (max-height: 320px) {
     }
 }
 @media all and (max-width: 570px)
+    and (-webkit-device-pixel-ratio: 2) {
+        .clients_container .client .image {
+            background-image: url(../assets/img/sprite_logos_212@2x.png);
+            background-size: 656px 377px;
+        } 
+}
+@media all and (max-width: 570px)
 and (max-height: 320px) {
     .clients_container .client {
         width: 140px;
@@ -3349,6 +3345,13 @@ and (max-height: 320px) {
         background-position: -345px -199px;
     }
 }
+@media all and (max-width: 480px)
+    and (-webkit-device-pixel-ratio: 2) {
+        .clients_container .client .image {
+            background-image: url(../assets/img/sprite_logos_165@2x.png);
+            background-size: 517px 298px;
+        } 
+}
 @media all and (max-width: 375px) {
     .featured .menu_plug {
         height: 45px;
@@ -3395,6 +3398,13 @@ and (max-height: 320px) {
         background-position: -295px -171px;
     }
 }
+@media all and (max-width: 375px)
+    and (-webkit-device-pixel-ratio: 2) {
+        .clients_container .client .image {
+            background-image: url(../assets/img/sprite_logos_140@2x.png);
+            background-size: 440px 254px;
+        }
+} 
 @media all and (max-width: 320px) {
     .featured .menu_plug {
         height: 45px;
