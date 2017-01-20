@@ -27,12 +27,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function handleGesure() {
         var swiped = 'swiped: ';
-        if (touchstartY - touchendY > 30) {
+        if (touchstartY - touchendY > 50) {
             var el = [];
             el.deltaY = 1;
             scrollScreen(el);
         }
-        if (touchendY - touchstartY > 30) {
+        if (touchendY - touchstartY > 50) {
             var el = [];
             el.deltaY = -1;
             scrollScreen(el);
