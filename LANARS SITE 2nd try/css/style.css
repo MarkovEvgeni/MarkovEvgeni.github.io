@@ -1152,8 +1152,7 @@ _:-moz-tree-row(hover),
         animation-delay: 600ms;
     }
     .slick-current+.slick-active .name {
-        animation: none;
-        color: aqua;
+        animation-name: none;
     }
 }
 @media all and (max-width: 570px) {
