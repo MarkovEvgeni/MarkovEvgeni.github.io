@@ -1074,7 +1074,6 @@ _:-moz-tree-row(hover),
     animation-duration: 500ms;
     animation-fill-mode: forwards;
     animation-delay: 600ms;
-    
 }
 .item_container .name {
     font-family: 'Lato', sans-serif;
@@ -1154,6 +1153,7 @@ _:-moz-tree-row(hover),
     }
     .slick-current+.slick-active .name {
         animation: none;
+        color: aqua;
     }
 }
 @media all and (max-width: 570px) {
