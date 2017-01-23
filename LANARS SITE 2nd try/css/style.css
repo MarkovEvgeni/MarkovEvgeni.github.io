@@ -64,8 +64,8 @@ and (device-aspect-ratio: 40/71) {
         transform-style: flat!important;
     }
     .parallax__group {
-        height: calc(100vh - 88px);
-        margin-bottom: 88px;
+        height: calc(100vh - 44px);
+        margin-bottom: 44px;
     }
 }
 /*Только для iPad*/
