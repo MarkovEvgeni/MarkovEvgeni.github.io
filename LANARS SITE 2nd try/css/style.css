@@ -821,6 +821,12 @@ and (device-aspect-ratio: 3/4) {
 
 /*===Экран с 3D моделью===*/
 
+.rotate_device {
+    font-family: 'sf_ui_displayregular';
+    text-align: center;
+    display: none;
+    vertical-align: middle;
+}
 .what_we_do {
     background: rgb(249, 249, 249);
     z-index: 2;
@@ -1136,7 +1142,7 @@ _:-moz-tree-row(hover),
 }
 @media all and (max-width: 680px)
     and (max-height: 400px) {
-        .what_we_do .scene .perspective {
+    .what_we_do .scene .perspective {
         font-size: 90%;
     }
     .what_we_do .scene .open_screen .screen-1 {
@@ -1555,6 +1561,16 @@ and (device-aspect-ratio: 375/667) {
         animation: none;
     }
 }
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 667px) 
+and (-webkit-device-pixel-ratio: 2) 
+and (device-aspect-ratio: 375/667)
+and (max-height: 400px) {
+    .rotate_device {
+        display: inline-block;
+    }
+}
 /*Только для 5iPhone*/
 @media only screen 
 and (min-device-width : 320px) 
@@ -1572,6 +1588,16 @@ and (device-aspect-ratio: 40/71) {
     }
     .slick-current+.slick-active .name {
         animation: none;
+    }
+}
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 568px) 
+and (-webkit-device-pixel-ratio: 2) 
+and (device-aspect-ratio: 40/71) 
+and (max-height: 400px) {
+    .rotate_device {
+        display: inline-block;
     }
 }
 /*Только для iPad*/
