@@ -4191,17 +4191,17 @@ and (max-height: 320px) {
         height: 100%;
     }
     .footer-container {
-        bottom: 88px;
+        bottom: 66px;
     }
     .footer_parallax_layer:before {
-        height: calc(100% - 195px);
+        height: calc(100% - 173px);
     }
 }
 @media only screen
     and (min-device-width : 320px)
     and (max-device-width : 568px)
     and (-webkit-device-pixel-ratio: 2)
-    and (device-aspect-ratio: 71/40) 
+    and (device-aspect-ratio: 40/71) 
     and (orientation: landscape) {
         .get_in_touch {
             display: none;
