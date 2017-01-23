@@ -4203,17 +4203,18 @@ and (max-height: 320px) {
     and (-webkit-device-pixel-ratio: 2)
     and (device-aspect-ratio: 71/40) 
     and (orientation: landscape) {
-        .get_in_touch li {
-            height: 40px;
+        .get_in_touch {
+            display: none;
         }
-        .get_in_touch li a {
-            line-height: 14px;
+        .contacts .rotate_device {
+            display: inline-block;
+            color: white;
         }
         .footer-container {
             bottom: 44px;
         }
         .footer_parallax_layer:before {
-            height: calc(100% - 151px);
+            height: calc(100% - 107px);
         }
 }
 
