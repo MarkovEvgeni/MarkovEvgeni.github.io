@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function () {
         touchstartY = el.changedTouches[0].screenY;
         if (touchMsCounter > 1) {
             clearInterval(timerId);
-            if (touchMsCounter < 500) {
+            if (touchMsCounter < 300) {
                 makeFullscreen();
             }
             touchMsCounter = 1;    
