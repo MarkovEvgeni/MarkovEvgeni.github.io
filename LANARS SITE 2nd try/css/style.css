@@ -63,10 +63,6 @@ and (device-aspect-ratio: 40/71) {
     .scrolling_feed {
         transform-style: flat!important;
     }
-    .parallax__group {
-        height: calc(100vh - 44px);
-        margin-bottom: 44px;
-    }
 }
 /*Только для iPad*/
 @media only screen 
@@ -4178,6 +4174,12 @@ and (max-height: 320px) {
         width: 100%;
         height: 100%;
     }
+    .footer-container {
+        bottom: 44px;
+    }
+    .footer_parallax_layer:before {
+        height: calc(100% - 151px);
+    }
 }
 
 /*Только для iPhone5*/
@@ -4187,6 +4189,12 @@ and (max-height: 320px) {
         transform: none;
         width: 100%;
         height: 100%;
+    }
+    .footer-container {
+        bottom: 44px;
+    }
+    .footer_parallax_layer:before {
+        height: calc(100% - 151px);
     }
 }
 
