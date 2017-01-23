@@ -63,6 +63,9 @@ and (device-aspect-ratio: 40/71) {
     .scrolling_feed {
         transform-style: flat!important;
     }
+    .parallax_group {
+        height: calc(100vh - 88px);
+    }
 }
 /*Только для iPad*/
 @media only screen 
