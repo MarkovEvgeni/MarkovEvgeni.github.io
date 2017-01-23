@@ -6,9 +6,6 @@
 .none_displaying {
     display: none;
 }
-.spacer {
-    height: 1px;
-}
 .parallax {
     height: 100vh;
     overflow-x: hidden;
