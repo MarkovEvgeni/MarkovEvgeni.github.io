@@ -3,6 +3,10 @@
 
 /*===Стили для эффекта parallax===*/
 
+.none_displaying {
+    display: none;
+}
+
 .parallax {
     height: 100vh;
     overflow-x: hidden;

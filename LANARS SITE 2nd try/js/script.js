@@ -17,6 +17,15 @@ document.addEventListener('DOMContentLoaded', function () {
     };
     
     
+//    Функция скрывающая анимацию при повороте экрана мобильного устройства
+    
+    $( window ).resize(function() {
+        $('body').addClass('none_displaying');
+        setTimeout(function() {
+            $('body').removeClass('none_displaying');
+        }, 600);
+    })
+    
 //    Вешаем обработчики событий касания тачскрина
     
     var touchstartY = 0;
