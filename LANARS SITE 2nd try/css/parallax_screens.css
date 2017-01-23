@@ -1,107 +1,18 @@
-/*=== CSS анимация прокрутки с первым экраном ===*/
-.position_screen_1 {
-    transform:  translateY(0);
+.scrolling_screen_1 {
+    transform: translateY(0);
 }
-.position_screen_2 {
-    transform:  translateY(-100vh);
+.scrolling_screen_2 {
+    transform: translateY(-100vh);
 }
-.position_screen_3 {
-    transform:  translateY(-200vh);
+.scrolling_screen_3 {
+    transform: translateY(-200vh);
 }
-.position_screen_4 {
-    transform:  translateY(-300vh);
+.scrolling_screen_4 {
+    transform: translateY(-300vh);
 }
-.position_screen_5 {
-    transform:  translateY(-400vh);
+.scrolling_screen_5 {
+    transform: translateY(-400vh);
 }
-.position_screen_6 {
-    transform:  translateY(-500vh);
-}
-
-@Keyframes scroll1 {
-    to {
-        transform:  translateY(0);
-    }
-}
-.scroll1 {
-    animation-name: scroll1;
-    animation-duration: 1s;
-    animation-timing-function: ease-in;
-    animation-fill-mode: forwards;
-    transform-style: preserve-3d;
-}
-
-/*=== CSS анимация прокрутки со вторым экраном ===*/
-@Keyframes scroll2 {
-    to {
-        transform:  translateY(-100vh);
-    }
-}
-
-.scroll2 {
-    animation-name: scroll2;
-    animation-duration: 1s;
-    animation-timing-function: ease-in;
-    animation-fill-mode: forwards;
-    transform-style: preserve-3d;
-}
-
-/*=== CSS анимация прокрутки с третьим экраном ===*/
-@Keyframes scroll3 {
-    to {
-        transform:  translateY(-200vh);
-    }
-}
-
-.scroll3 {
-    animation-name: scroll3;
-    animation-duration: 1s;
-    animation-timing-function: ease-in;
-    animation-fill-mode: forwards;
-    transform-style: preserve-3d;
-}
-
-
-/*=== CSS анимация прокрутки с четвертым экраном ===*/
-@Keyframes scroll4 {
-    to {
-        transform:  translateY(-300vh);
-    }
-}
-
-.scroll4 {
-    animation-name: scroll4;
-    animation-duration: 1s;
-    animation-timing-function: ease-in;
-    animation-fill-mode: forwards;
-    transform-style: preserve-3d;
-}
-
-/*=== CSS анимация прокрутки с пятым экраном ===*/
-@Keyframes scroll5 {
-    to {
-        transform:  translateY(-400vh);
-    }
-}
-.scroll5 {
-    animation-name: scroll5;
-    animation-duration: 1s;
-    animation-timing-function: ease-in;
-    animation-fill-mode: forwards;
-    transform-style: preserve-3d;   
-}
-
-
-/*=== CSS анимация прокрутки с шестым экраном ===*/
-@Keyframes scroll6 {
-    to {
-        transform:  translateY(-500vh);
-    }
-}
-.scroll6 {
-    animation-name: scroll6;
-    animation-duration: 1s;
-    animation-timing-function: ease-in;
-    animation-fill-mode: forwards;
-    transform-style: preserve-3d;   
+.scrolling_screen_6 {
+    transform: translateY(-500vh);
 }

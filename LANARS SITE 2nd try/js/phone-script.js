@@ -198,7 +198,6 @@ document.addEventListener('DOMContentLoaded', function () {
         setDefaultCoordinates();
         
         setTimeout(function() {
-        console.log('start working');
         rotatedObject.css({
                 WebkitTransition: 'transform 0s linear',
                 MozTransition: 'transform 0s linear',

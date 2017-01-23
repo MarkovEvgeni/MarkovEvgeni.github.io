@@ -153,29 +153,13 @@ document.addEventListener('DOMContentLoaded', function () {
     
 //    Обработчики событий для кнопок меню
     
-    $('.screen_1_link').on('click', function() {
-       changeScreen(1); 
-    });
-    
-    $('.screen_2_link').on('click', function() {
-       changeScreen(2); 
-    });
-    
-    $('.screen_3_link').on('click', function() {
-       changeScreen(3); 
-    });
-    
-    $('.screen_4_link').on('click', function() {
-       changeScreen(4); 
-    });
-    
-    $('.screen_5_link').on('click', function() {
-       changeScreen(5); 
-    });
-    
-    $('.screen_6_link').on('click', function() {
-       changeScreen(6); 
-    });
+    (function () {
+        for (var i=1; i<7; i++) (function(i) {
+            $('.screen_' + i + "_link").on('click', function() {
+                changeScreen(i);
+            })
+        }) (i); 
+    })();
     
     underlineActiveScreen(400);
 
@@ -193,8 +177,6 @@ document.addEventListener('DOMContentLoaded', function () {
                     return;
                 }
             }
-            $('.scrolling_feed').addClass('position_screen_' + displayCounter);
-            $('.scrolling_feed').removeClass('position_screen_' + lastDisplayCounter);
             lastDisplayCounter = displayCounter;
             ++displayCounter;
             var targetScreen = displayCounter;
@@ -236,8 +218,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
                 rotateModel();
             }
-            $('.scrolling_feed').addClass('position_screen_' + displayCounter);
-            $('.scrolling_feed').removeClass('position_screen_' + lastDisplayCounter);
             lastDisplayCounter = displayCounter;
             var targetScreen = --displayCounter;
             displayCounter = targetScreen;
@@ -250,8 +230,8 @@ document.addEventListener('DOMContentLoaded', function () {
         $('.main_menu li.active').each(function() {
             $(this).removeClass('active');
         });
-        $('.scrolling_feed').removeClass('scroll' + lastDisplayCounter);
-        $('.scrolling_feed').addClass('scroll' + targetScreen);
+        $('.scrolling_feed').removeClass('scrolling_screen_' + lastDisplayCounter);
+        $('.scrolling_feed').addClass('scrolling_screen_' + targetScreen);
         setTimeout(showMenu, 1000);
         underlineActiveScreen(1100);
     }
@@ -279,8 +259,6 @@ document.addEventListener('DOMContentLoaded', function () {
         if (targetScreen == 2) {
             rotateModel();
         };
-        $('.scrolling_feed').addClass('position_screen_' + displayCounter);
-        $('.scrolling_feed').removeClass('position_screen_' + lastDisplayCounter);
         lastDisplayCounter = displayCounter;
         displayCounter = targetScreen;
         nextScreen(targetScreen);
