@@ -2,6 +2,8 @@ document.addEventListener('DOMContentLoaded', function () {
     
     "use strict";
     
+    window.scrollTo(0,1);
+    
     var fullscreenElement = document.documentElement;
     
     function makeFullscreen() {
