@@ -87,7 +87,7 @@ and (device-aspect-ratio: 3/4) {
 }
 .menu_container {
     padding: 10px 0;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -239,6 +239,10 @@ and (device-aspect-ratio: 3/4) {
         padding-left: 10px;
         z-index: 2;
         position: relative;
+    }
+    body .white_menu .menu_title,
+    .white_menu .main_menu li a {
+        color: rgb(75, 81, 91);
     }
     .main_menu li::after {
         position: absolute;
@@ -636,7 +640,7 @@ and (device-aspect-ratio: 3/4) {
 }
 .hide_menu {
     animation-name: hidemenu;
-    animation-duration: 200ms;
+    animation-duration: 100ms;
     animation-timing-function: ease-out;
     animation-fill-mode: forwards;
 }
@@ -1627,8 +1631,8 @@ and (device-aspect-ratio: 3/4) {
 .our_works {
     z-index: 1;
 }
-.our_works .menu_title,
-.our_works .main_menu li a {
+.white_menu .menu_title,
+.white_menu li a {
     color: rgb(255, 255, 255);
 }
 .parallax__background {
@@ -1689,9 +1693,6 @@ _:-moz-tree-row(hover),
     vertical-align: middle;
     height: 100%;
 }
-.scroll_right {
-    transform: translateY(-100%);
-}
 .scroll_left .arrows,
 .scroll_right .arrows {
     display: inline-block;
@@ -1700,10 +1701,10 @@ _:-moz-tree-row(hover),
     vertical-align: middle;
 }
 .scroll_left {
-    transform: translateX(40px);
+    transform: translateX(50%);
 }
 .scroll_right {
-    transform: translateY(-100%) translateX(calc(100vw - 80px));
+    transform: translateY(-100%) translateX(calc(100vw - 100%));
 }
 .scroll_left .arrows:hover,
 .scroll_right .arrows:hover{
@@ -2358,7 +2359,10 @@ _:-moz-tree-row(hover),
 }
 
 @media all and (max-width: 680px) {
-
+    .scroll_right,
+    .scroll_left {
+        width: 40px;
+    }
     .scroll_left .arrows,
     .scroll_right .arrows {
         font-size: 40px;
@@ -3673,8 +3677,8 @@ and (max-height: 320px) {
 .contacts {
     overflow: hidden;
 }
-.contacts .menu_title,
-.contacts .main_menu li a {
+.white_menu .menu_title,
+.white_menu .main_menu a {
     color: rgb(255, 255, 255);
 }
 .footer_parallax_layer {

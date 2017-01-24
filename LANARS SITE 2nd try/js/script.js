@@ -138,14 +138,28 @@ document.addEventListener('DOMContentLoaded', function () {
     
     var currentScreen = 0;
     
-    function showMenu() {
+    function showMenu(targetScreen) {
         $('.menu_container').removeClass('hide_menu');
+        if (targetScreen == 1) {
+            $('.menu_container').removeClass('two_rows');
+        } else {
+            $('.menu_container').addClass('two_rows');
+        }
+        if (targetScreen == 3) {
+            $('.menu_container').addClass('white_menu');
+        } else {
+            if (targetScreen == 6) {
+                $('.menu_container').addClass('white_menu');
+            } else {
+                $('.menu_container').removeClass('white_menu');
+            }
+        }
         $('.menu_container').addClass('show_menu');
     };
     
     function hideMenu() {
         $('.menu_container').removeClass('show_menu');
-        $('.main_menu').addClass('mob_hide');
+        $('.menu_container').removeClass('mob_hide');
         $('.menu_container').addClass('hide_menu');
     };
     
@@ -252,7 +266,9 @@ document.addEventListener('DOMContentLoaded', function () {
         });
         $('.scrolling_feed').removeClass('scrolling_screen_' + lastDisplayCounter);
         $('.scrolling_feed').addClass('scrolling_screen_' + targetScreen);
-        setTimeout(showMenu, 1000);
+        setTimeout(function() {
+            showMenu(targetScreen);
+        }, 1000);
         underlineActiveScreen(1100);
     }
     
