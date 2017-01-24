@@ -789,7 +789,7 @@ and (device-aspect-ratio: 3/4) {
         line-height: 30px;
     }
 }
-@media only screen 
+@media only screen
     and (min-device-width : 320px)
     and (max-device-width : 568px)
     and (-webkit-device-pixel-ratio: 2)
@@ -1962,6 +1962,12 @@ _:-moz-tree-row(hover),
     animation-timing-function: ease;
     animation-fill-mode: forwards;
 }
+.step5 .laptop_container {
+    animation-name: laptop-left;
+    animation-duration: 800ms;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
 /*Наклон для появления/исчезания iOS*/
 @keyframes laptop-open-path {
     0% {
@@ -2069,6 +2075,19 @@ _:-moz-tree-row(hover),
     animation-timing-function: ease;
     animation-fill-mode: forwards;
 }
+.step5 .laptop_screen_3 {
+    animation-name: appear;
+    animation-duration: 800ms;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+.step5 .laptop_screen_2,
+.step5 .laptop_screen_1 {
+    animation-name: dissolve;
+    animation-duration: 800ms;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
 /*Cлайд iOS вправо*/
 @keyframes ios-right {
     0% {
@@ -2095,6 +2114,9 @@ _:-moz-tree-row(hover),
     animation-duration: 1200ms;
     animation-timing-function: ease;
     animation-fill-mode: forwards;    
+}
+.step5 .ios_container {
+    display: none;
 }
 .step2 .laptop_screen_2,
 .step2 .laptop_screen_3 {
@@ -2191,6 +2213,12 @@ _:-moz-tree-row(hover),
     animation-timing-function: ease;
     animation-fill-mode: forwards;
 }
+.step5 .android_phone_container {
+    animation-name: android-phone-hide;
+    animation-duration: 800ms;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
 .step4 .laptop_screen_2,
 .step4 .laptop_screen_1 {
     animation-name: dissolve;
@@ -2256,6 +2284,12 @@ _:-moz-tree-row(hover),
     }
 }
 .step3 .android_tablet_container{
+    animation-name: android-hide;
+    animation-duration: 800ms;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+.step5 .android_tablet_container{
     animation-name: android-hide;
     animation-duration: 800ms;
     animation-timing-function: ease;

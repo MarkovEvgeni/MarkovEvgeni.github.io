@@ -173,6 +173,8 @@ document.addEventListener('DOMContentLoaded', function () {
     })();
     
     underlineActiveScreen(400);
+    
+    var slideTimer;
 
     function scrollScreenDown() {
         if(displayCounter < 6) {
@@ -181,12 +183,15 @@ document.addEventListener('DOMContentLoaded', function () {
             }
             if (displayCounter == 2) {
                 returnModel();
+                slideTimer = setInterval(nextSlide, 10000);
             }
             if (displayCounter == 3) {
-                if (currentSlide !== 3) {
-                    nextSlide();
-                    return;
-                }
+                clearInterval(slideTimer);
+//                if (currentSlide !== 3) {
+//                    slideTimer
+//                    nextSlide();
+//                    return;
+//                }
             }
             lastDisplayCounter = displayCounter;
             ++displayCounter;
@@ -220,14 +225,18 @@ document.addEventListener('DOMContentLoaded', function () {
     function scrollScreenUp() {
         if(displayCounter > 1) {
             if (displayCounter == 2) {
-               returnModel();
+               returnModel(); 
             }
             if (displayCounter == 3) {
-                if (currentSlide !== 1) {
-                    prevSlide();
-                    return;
-                }
+//                if (currentSlide !== 1) {
+//                    prevSlide();
+//                    return;
+//                }
                 rotateModel();
+                clearInterval(slideTimer);
+            }
+            if (displayCounter == 4) {
+                slideTimer = setInterval(nextSlide, 10000);
             }
             lastDisplayCounter = displayCounter;
             var targetScreen = --displayCounter;
@@ -267,25 +276,43 @@ document.addEventListener('DOMContentLoaded', function () {
         if (displayCounter == 2) {
             returnModel();
         };
+        if (displayCounter == 3) {
+            clearInterval(slideTimer);
+        };
         if (targetScreen == 2) {
             rotateModel();
         };
+        if (targetScreen == 3) {
+            slideTimer = setInterval(nextSlide, 10000);
+        }
         lastDisplayCounter = displayCounter;
         displayCounter = targetScreen;
         nextScreen(targetScreen);
     }
     
     function nextSlide() {
+        if (throttled) {
+            return
+        };
+        throttled = true;
+        setTimeout(function() {
+            throttled = false;
+        }, 1000);
         if (currentSlide == 1) {
+           $('.devices').removeClass('step5');
            $('.devices').removeClass('step4');
            $('.devices').addClass('step1');
             ++currentSlide;
             return
-        } else {
+        } else if (currentSlide == 2) {
             $('.devices').removeClass('step1');
-            $('.devices').removeClass('step3');
+//            $('.devices').removeClass('step3');
             $('.devices').addClass('step2');
             ++currentSlide;
+        } else if (currentSlide == 3) {
+            $('.devices').removeClass('step2');
+            $('.devices').addClass('step5');
+            currentSlide = 1;
         }
     };
     
@@ -304,7 +331,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     };
     
-    $('.our_works .scroll_down .arrows').on('click', scrollScreenDown);
+    $('.our_works .scroll_down .arrows').on('click', nextSlide);
     
     
 //    Инициализируем слайдер
