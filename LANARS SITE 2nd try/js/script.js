@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
         } 
     };
     
+    window.scrollTo(0,100);
     
 //    Функция скрывающая анимацию при повороте экрана мобильного устройства
     
