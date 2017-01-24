@@ -18,7 +18,6 @@ document.addEventListener('DOMContentLoaded', function () {
         } 
     };
     
-    window.scrollTo(0,100);
     
 //    Функция скрывающая анимацию при повороте экрана мобильного устройства
     
@@ -139,6 +138,8 @@ document.addEventListener('DOMContentLoaded', function () {
     
     var currentScreen = 0;
     
+    var bodyScroller = 0;
+    
     function showMenu(targetScreen) {
         $('.menu_container').removeClass('hide_menu');
         if (targetScreen == 1) {
@@ -192,6 +193,8 @@ document.addEventListener('DOMContentLoaded', function () {
     var slideTimer;
 
     function scrollScreenDown() {
+        bodyScroller = bodyScroller + 100;
+        window.scrollTo(0, bodyScroller);
         if(displayCounter < 6) {
             if (displayCounter == 1) {
                 rotateModel();
@@ -238,6 +241,8 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     
     function scrollScreenUp() {
+        bodyScroller = bodyScroller + 100;
+        window.scrollTo(0, bodyScroller);
         if(displayCounter > 1) {
             if (displayCounter == 2) {
                returnModel(); 
