@@ -3,9 +3,6 @@
 
 /*===Стили для эффекта parallax===*/
 
-body {
-    height: 10000px;
-}
 .none_displaying {
     display: none;
 }

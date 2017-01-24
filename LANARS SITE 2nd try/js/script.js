@@ -254,7 +254,6 @@ document.addEventListener('DOMContentLoaded', function () {
         $('.scrolling_feed').addClass('scrolling_screen_' + targetScreen);
         setTimeout(showMenu, 1000);
         underlineActiveScreen(1100);
-        window.scrollTo(0, 500);
     }
     
     function underlineActiveScreen(mas) {
