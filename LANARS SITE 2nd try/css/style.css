@@ -3,14 +3,20 @@
 
 /*===Стили для эффекта parallax===*/
 
+body {
+    height: 10000px;
+    position: absolute;
+}
 .none_displaying {
     display: none;
 }
 .parallax {
     height: 100vh;
+    position: fixed;
     overflow-x: hidden;
     overflow-y: hidden;
     perspective: 1px;
+    width: 100vw;
 }
 _:-moz-tree-row(hover),
 .parallax {
