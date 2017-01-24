@@ -469,7 +469,6 @@ and (device-aspect-ratio: 3/4) {
 }
 
 /*===Главное меню в два ряда===*/
-
 .two_rows .menu_title,
 .two_rows .main_menu {
     display: block;
@@ -649,12 +648,11 @@ and (device-aspect-ratio: 3/4) {
 }
 
 /*===Первый экран===*/
-
 .menu_plug {
     height: 53px;
 }
 .punchline_screen {
-    background: url(../assets/img/punchline_background-min.png);
+    background: url(../assets/img/punchline_background.png);
     background-size: cover;
     height: calc(100vh - 53px);
 }
@@ -666,8 +664,8 @@ and (device-aspect-ratio: 3/4) {
 }
 .punchline_screen__glass:before {
     content:'';
-	display: inline-block;
-	height: 100%;
+    display: inline-block;
+    height: 100%;
     vertical-align: middle;
 }
 .punchline {
@@ -713,16 +711,11 @@ and (device-aspect-ratio: 3/4) {
     .menu_plug {
         height: 85px;
     }
-}
-@media all and (max-width: 880px) {
-    .menu_plug {
-        height: 85px;
+    .punchline_screen {
+        height: calc(100vh - 85px);
     }
 }
 @media all and (max-width: 768px) {
-    .menu_plug {
-        height: 85px;
-    }
     .punchline_screen {
         background-image: url(../assets/img/bg_768.png);
         background-size: auto;
@@ -738,12 +731,8 @@ and (device-aspect-ratio: 3/4) {
     }
 }
 @media all and (max-width: 570px) {
-    .menu_plug {
-        height: 45px;
-    }
     .punchline_screen {
         background-image: url(../assets/img/bg_570.png);
-        height: calc(100vh - 45px);
     }
     .punchline {
         width: 90%;
@@ -754,12 +743,8 @@ and (device-aspect-ratio: 3/4) {
     }
 }
 @media all and (max-width: 480px) {
-    .menu_plug {
-        height: 45px;
-    }
     .punchline_screen {
         background-image: url(../assets/img/bg_480.png);
-        height: calc(100vh - 45px);
     }
     .punchline {
         width: 93%;
@@ -776,12 +761,8 @@ and (device-aspect-ratio: 3/4) {
     }
 }
 @media all and (max-width: 375px) {
-    .menu_plug {
-        height: 45px;
-    }
     .punchline_screen {
         background-image: url(../assets/img/bg_375.png);
-        height: calc(100vh - 45px);
     }
     .punchline {
         width: 90%;
@@ -798,27 +779,43 @@ and (device-aspect-ratio: 3/4) {
     }
 }
 @media all and (max-width: 320px) {
-    .menu_plug {
-        height: 45px;
-    }
     .punchline_screen {
         background-image: url(../assets/img/bg_320.png);
-        height: calc(100vh - 45px);
     }
     .punchline {
-        width: 90%;
         min-width: 310px;
     }
     .punchline h1 {
-        font-size: 23px;
         line-height: 30px;
     }
-    .punchline ul li {
-        font-size: 13px;
-    }
-    .punchline ul li::after {
-        margin: 0 3px 1px 7px;
-    }
+}
+@media only screen 
+    and (min-device-width : 320px)
+    and (max-device-width : 568px)
+    and (-webkit-device-pixel-ratio: 2)
+    and (device-aspect-ratio: 40/71) {
+        .parallax__group {
+            height: calc(100vh - 66px);
+            margin-bottom: 66px;
+        }
+        .punchline_screen {
+            height: calc(100vh - 111px);
+        }
+}
+@media only screen 
+    and (min-device-width : 320px)
+    and (max-device-width : 568px)
+    and (-webkit-device-pixel-ratio: 2)
+    and (device-aspect-ratio: 71/40)
+    and (orientation: landscape) {
+        .parallax__group {
+            height: calc(100vh - 88px);
+            margin-bottom: 88px;
+        }
+        .punchline_screen {
+            border: 1px solid red;
+            height: calc(100vh - 133px);
+        }
 }
 
 /*===Экран с 3D моделью===*/
@@ -2832,7 +2829,8 @@ and (device-aspect-ratio: 3/4) {
     filter: none;
 }
 
-@media all (-webkit-min-device-pixel-ratio: 2) {
+@media all 
+    and (-webkit-min-device-pixel-ratio: 2) {
     .clients_container .client .image {
         background-image: url(../assets/img/sprite_logos@2x.png);
         background-size: 1216px 694px;
