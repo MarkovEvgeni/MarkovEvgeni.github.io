@@ -2,8 +2,6 @@ document.addEventListener('DOMContentLoaded', function () {
     
     "use strict";
     
-    window.scrollTo(0,1);
-    
     var fullscreenElement = document.documentElement;
     
     function makeFullscreen() {
@@ -195,6 +193,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function scrollScreenDown() {
         bodyScroller = bodyScroller + 100;
         window.scrollTo(0, bodyScroller);
+        console.log(window.pageYOffset);
         if(displayCounter < 6) {
             if (displayCounter == 1) {
                 rotateModel();
@@ -241,8 +240,9 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     
     function scrollScreenUp() {
-        bodyScroller = bodyScroller + 100;
+        bodyScroller = bodyScroller - 100;
         window.scrollTo(0, bodyScroller);
+        console.log(window.pageYOffset);
         if(displayCounter > 1) {
             if (displayCounter == 2) {
                returnModel(); 
