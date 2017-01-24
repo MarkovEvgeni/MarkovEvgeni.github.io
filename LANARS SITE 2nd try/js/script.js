@@ -254,6 +254,7 @@ document.addEventListener('DOMContentLoaded', function () {
         $('.scrolling_feed').addClass('scrolling_screen_' + targetScreen);
         setTimeout(showMenu, 1000);
         underlineActiveScreen(1100);
+        window.scrollTo(0, 500);
     }
     
     function underlineActiveScreen(mas) {
@@ -306,10 +307,11 @@ document.addEventListener('DOMContentLoaded', function () {
             return
         } else if (currentSlide == 2) {
             $('.devices').removeClass('step1');
-//            $('.devices').removeClass('step3');
+            $('.devices').removeClass('step3');
             $('.devices').addClass('step2');
             ++currentSlide;
         } else if (currentSlide == 3) {
+            $('.devices').removeClass('step6');
             $('.devices').removeClass('step2');
             $('.devices').addClass('step5');
             currentSlide = 1;
@@ -317,21 +319,35 @@ document.addEventListener('DOMContentLoaded', function () {
     };
     
     function prevSlide() {
+        if (throttled) {
+            return
+        };
+        throttled = true;
+        setTimeout(function() {
+            throttled = false;
+        }, 1000);
         if (currentSlide == 2) {
            $('.devices').removeClass('step1');
            $('.devices').removeClass('step3');
            $('.devices').addClass('step4');
             --currentSlide;
             return
-        } else {
-            $('.devices').removeClass('step3');
+        } else if (currentSlide == 3){
+            $('.devices').removeClass('step6');
             $('.devices').removeClass('step2');
             $('.devices').addClass('step3');
             --currentSlide;
+        } else {
+            $('.devices').removeClass('step4');
+            $('.devices').removeClass('step5');
+            $('.devices').addClass('step6');
+            currentSlide = 3;
         }
     };
     
-    $('.our_works .scroll_down .arrows').on('click', nextSlide);
+    $('.our_works .scroll_right .arrows').on('click', nextSlide);
+    
+    $('.our_works .scroll_left .arrows').on('click', prevSlide);
     
     
 //    Инициализируем слайдер

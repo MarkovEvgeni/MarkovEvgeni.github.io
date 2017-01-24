@@ -3,6 +3,9 @@
 
 /*===Стили для эффекта parallax===*/
 
+body {
+    height: 10000px;
+}
 .none_displaying {
     display: none;
 }
@@ -1674,25 +1677,39 @@ _:-moz-tree-row(hover),
     display: block;
     padding-top: 50%;
 }
-.scroll_down {
+.scroll_left,
+.scroll_right {
     box-sizing: border-box;
-    text-align: center;
-    padding-left: 18px;
+    height: 100%;
     position: relative;
+    width: 80px;
     z-index: 15;
 }
-.our_works .plug {
+.scroll_left:before,
+.scroll_right:before {
+    display: inline-block;
     content: "";
-    display: block;
-    height: calc(100% - 172px);
+    vertical-align: middle;
+    height: 100%;
 }
-.scroll_down .arrows {
+.scroll_right {
+    transform: translateY(-100%);
+}
+.scroll_left .arrows,
+.scroll_right .arrows {
     display: inline-block;
     font-size: 80px;
     color: white;
-    transform: rotate(90deg) translateX(-100%);
+    vertical-align: middle;
 }
-.scroll_down .arrows:hover {
+.scroll_left {
+    transform: translateX(40px);
+}
+.scroll_right {
+    transform: translateY(-100%) translateX(calc(100vw - 80px));
+}
+.scroll_left .arrows:hover,
+.scroll_right .arrows:hover{
     cursor: pointer;
 }
 .jumping {
@@ -1701,14 +1718,26 @@ _:-moz-tree-row(hover),
     animation-iteration-count: infinite;
     animation-direction: alternate-reverse;
 }
+.jumping2 {
+    animation-name: jumping2;
+    animation-duration: 700ms;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
 @keyframes jumping {
     0% {
-/*        color: white;*/
-        transform: rotate(90deg) translateX(-100%);
+        transform: translateX(100%);
     }
     100% {
-/*        color: rgb(255, 193, 104);*/
-        transform: rotate(90deg) translateX(0);
+        transform: translateX(0);
+    }
+}
+@keyframes jumping2 {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
     }
 }
 
@@ -1942,6 +1971,12 @@ _:-moz-tree-row(hover),
     animation-timing-function: ease;
     animation-fill-mode: forwards;
 }
+.step6 .laptop_container {
+    animation-name: laptop-right;
+    animation-duration: 800ms;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
 /*Слайд влево*/
 @keyframes laptop-left {
     0% {
@@ -2062,6 +2097,12 @@ _:-moz-tree-row(hover),
     animation-timing-function: ease;
     animation-fill-mode: forwards;
 }
+.step6 .android_phone_container {
+    animation-name: android-phone-show;
+    animation-duration: 800ms;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
 .step1 .laptop_screen_3,
 .step1 .laptop_screen_1 {
     animation-name: dissolve;
@@ -2115,9 +2156,12 @@ _:-moz-tree-row(hover),
     animation-timing-function: ease;
     animation-fill-mode: forwards;    
 }
+.step6 .ios_container,
 .step5 .ios_container {
     display: none;
 }
+.step6 .laptop_screen_2,
+.step6 .laptop_screen_3,
 .step2 .laptop_screen_2,
 .step2 .laptop_screen_3 {
     animation-name: dissolve;
@@ -2125,6 +2169,7 @@ _:-moz-tree-row(hover),
     animation-timing-function: ease;
     animation-fill-mode: forwards;
 }
+.step6 .laptop_screen_1,
 .step2 .laptop_screen_1 {
     animation-name: appear;
     animation-duration: 800ms;
@@ -2263,6 +2308,12 @@ _:-moz-tree-row(hover),
     animation-timing-function: ease;
     animation-fill-mode: forwards;
 }
+.step6 .android_tablet_container{
+    animation-name: android-show;
+    animation-duration: 800ms;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
 @keyframes android-hide {
     0% {
         left: 0;
@@ -2310,13 +2361,9 @@ _:-moz-tree-row(hover),
 }
 
 @media all and (max-width: 680px) {
-    .our_works .plug {
-        height: calc(100% - 85px);
-    }
-    .scroll_down {
-        padding-left: 9px;
-    }
-    .scroll_down .arrows {
+
+    .scroll_left .arrows,
+    .scroll_right .arrows {
         font-size: 40px;
     }
     .our_works .menu_plug {
@@ -2357,9 +2404,6 @@ _:-moz-tree-row(hover),
 @media all and (max-width: 375px) {
     .our_works .menu_plug {
         height: 45px;
-    }
-    .our_works .plug {
-        height: calc(100% - 85px);
     }
     .our_works .content {
         height: calc(100% - 45px);
@@ -2822,6 +2866,10 @@ and (device-aspect-ratio: 3/4) {
     width: 100%;
     height: 218px;
 }
+.clients_container .client .image a {
+    height: 100%;
+    display: block;
+}
 .clients_container .client .kairos {
     background-position: -10px -10px;
 }
@@ -2846,7 +2894,7 @@ and (device-aspect-ratio: 3/4) {
 .clients_container .charj {
     background-position: -814px -238px;
 }
-.clients_container .strange {
+.clients_container .ptc {
     background-position: -814px -466px;
 }
 .clients_container .client:hover {
@@ -2906,7 +2954,7 @@ and (device-aspect-ratio: 3/4) {
     .clients_container .charj {
         background-position: -715px -205px;
     }
-    .clients_container .strange {
+    .clients_container .ptc {
         background-position: -715px -405px;
     }
 }
@@ -2953,7 +3001,7 @@ and (device-aspect-ratio: 3/4) {
     .clients_container .charj {
         background-position: -615px -177px;
     }
-    .clients_container .strange {
+    .clients_container .ptc {
         background-position: -615px -349px;
     }
 }
@@ -3000,7 +3048,7 @@ and (device-aspect-ratio: 3/4) {
     .clients_container .charj {
         background-position: -715px -205px;
     }
-    .clients_container .strange {
+    .clients_container .ptc {
         background-position: -715px -405px;
     }
 }
@@ -3048,7 +3096,7 @@ and (device-aspect-ratio: 3/4) {
     .clients_container .charj {
         background-position: -615px -177px;
     }
-    .clients_container .strange {
+    .clients_container .ptc {
         background-position: -615px -349px;
     }
 }
@@ -3088,7 +3136,7 @@ and (device-aspect-ratio: 3/4) {
     .clients_container .charj {
         background-position: -615px -177px;
     }
-    .clients_container .strange {
+    .clients_container .ptc {
         background-position: -615px -349px;
     }
 }
@@ -3135,7 +3183,7 @@ and (device-aspect-ratio: 3/4) {
     .clients_container .charj {
         background-position: -517px -150px;
     }
-    .clients_container .strange {
+    .clients_container .ptc {
         background-position: -517px -295px;
     }
 }
@@ -3182,7 +3230,7 @@ and (device-aspect-ratio: 3/4) {
     .clients_container .charj {
         background-position: -439px -128px;
     }
-    .clients_container .strange {
+    .clients_container .ptc {
         background-position: -439px -250px;
     }
 }
@@ -3230,7 +3278,7 @@ and (device-aspect-ratio: 3/4) {
     .clients_container .charj {
         background-position: -345px -102px;
     }
-    .clients_container .strange {
+    .clients_container .ptc {
         background-position: -345px -199px;
     }
 }
@@ -3276,7 +3324,7 @@ and (device-aspect-ratio: 3/4) {
     .clients_container .charj {
         background-position: -517px -150px;
     }
-    .clients_container .strange {
+    .clients_container .ptc {
         background-position: -517px -295px;
     }
 }
@@ -3322,7 +3370,7 @@ and (device-aspect-ratio: 3/4) {
         .clients_container .charj {
             background-position: -345px -102px;
         }
-        .clients_container .strange {
+        .clients_container .ptc {
             background-position: -345px -199px;
         }
 }
@@ -3366,7 +3414,7 @@ and (device-aspect-ratio: 3/4) {
         .clients_container .charj {
             background-position: -345px -102px;
         }
-        .clients_container .strange {
+        .clients_container .ptc {
             background-position: -345px -199px;
         }
 }
@@ -3415,7 +3463,7 @@ and (device-aspect-ratio: 3/4) {
     .clients_container .charj {
         background-position: -439px -128px;
     }
-    .clients_container .strange {
+    .clients_container .ptc {
         background-position: -439px -250px;
     }
 }
@@ -3460,7 +3508,7 @@ and (max-height: 320px) {
     .clients_container .charj {
         background-position: -295px -88px;
     }
-    .clients_container .strange {
+    .clients_container .ptc {
         background-position: -295px -171px;
     }
 }
@@ -3509,7 +3557,7 @@ and (max-height: 320px) {
     .clients_container .charj {
         background-position: -345px -102px;
     }
-    .clients_container .strange {
+    .clients_container .ptc {
         background-position: -345px -199px;
     }
 }
@@ -3562,7 +3610,7 @@ and (max-height: 320px) {
     .clients_container .charj {
         background-position: -295px -88px;
     }
-    .clients_container .strange {
+    .clients_container .ptc {
         background-position: -295px -171px;
     }
 }
@@ -3618,7 +3666,7 @@ and (max-height: 320px) {
     .clients_container .charj {
         background-position: -295px -88px;
     }
-    .clients_container .strange {
+    .clients_container .ptc {
         background-position: -295px -171px;
     }
 }
