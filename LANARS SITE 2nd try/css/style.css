@@ -3499,6 +3499,9 @@ and (-webkit-device-pixel-ratio: 2)
     .clients_container .ptc {
         background-position: -295px -171px;
     }
+    .ptc {
+        display: none;
+        }
 }
 @media all and (max-width: 570px) {
     .featured .menu_plug {
@@ -3706,7 +3709,6 @@ and (max-height: 400px) {
 
 
 /*Только для 5iPhone*/
-/*
 @media only screen 
 and (min-device-width : 320px) 
 and (max-device-width : 568px) 
@@ -3714,6 +3716,9 @@ and (-webkit-device-pixel-ratio: 2)
     and (device-aspect-ratio: 40/71) {
         .clients_container {
             margin-bottom: 66px;
+        }
+        .ptc {
+            display: none;
         }
 }
 @media only screen 
@@ -3726,7 +3731,6 @@ and (-webkit-device-pixel-ratio: 2)
             margin-bottom: 88px;
         }
 }
-*/
 
 /*===Экран с контактами===*/
 
