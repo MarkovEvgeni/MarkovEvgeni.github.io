@@ -813,7 +813,10 @@ and (device-aspect-ratio: 40/71) {
     and (device-aspect-ratio: 71/40)
     and (orientation: landscape) {
         .punchline {
-            margin-bottom: 88px;
+            margin-bottom: 44px;
+        }
+        .punchline h1 span {
+            color: red;
         }
 }
 
