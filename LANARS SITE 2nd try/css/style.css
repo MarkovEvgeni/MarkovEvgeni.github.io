@@ -2,9 +2,6 @@
 @import "parallax_screens.css";
 
 /*===Стили для эффекта parallax===*/
-.scroller {
-    height: 100000px;
-}
 .none_displaying {
     display: none;
 }
@@ -4301,11 +4298,12 @@ and (max-height: 320px) {
             color: white;
         }
         .footer-container {
-            bottom: 44px;
+            bottom: 88px;
         }
         .footer_parallax_layer:before {
-            height: calc(100% - 107px);
+            height: calc(100% - 151px);
         }
 }
+
 
 
