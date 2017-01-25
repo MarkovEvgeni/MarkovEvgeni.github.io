@@ -4378,12 +4378,12 @@ _:-moz-tree-row(hover),
     and (device-aspect-ratio: 40/71) 
     and (orientation: landscape) {
         .get_in_touch {
-            text-align: center;
+            text-align: justify;
             max-width: 98%;
             padding-left: 0;
         }
         .get_in_touch li {
-            height: 40px;
+            display: inline-block;
         }
         .footer-container {
             bottom: 88px;
