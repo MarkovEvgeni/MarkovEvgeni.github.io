@@ -3329,9 +3329,6 @@ and (-webkit-device-pixel-ratio: 2)
     }
 }
 @media all and (max-width: 695px) {
-    .featured .content {
-        height: calc(100% - 45px);
-    }
     .clients_container {
         min-width: 310px;
     }
@@ -3381,87 +3378,276 @@ and (-webkit-device-pixel-ratio: 2)
             background-size: 773px 443px;
         } 
 }
-@media all and (max-width: 695px)
-    and (max-height: 430px) {
-        .clients_container .client {
-            width: 165px;
-        }
-        .clients_container .client .image {
-            background-image: url(../assets/img/sprite_logos_165.png);
-            background-size: auto;
-            height: 92px;
-            position: relative;
-        }
-        .clients_container .client .kairos {
-            background-position: -5px -5px;
-        }
-        .clients_container .octopus {
-            background-position: -5px -102px;
-        }
-        .clients_container .icrc {
-            background-position: -5px -199px;
-        }
-        .clients_container .bergx2 {
-            background-position: -175px -5px;
-        }
-        .clients_container .hsbc {
-            background-position: -175px -102px;
-        }
-        .clients_container .dpd {
-            background-position: -175px -199px;
-        }
-        .clients_container .cat {
-            background-position: -345px -5px;
-        }
-        .clients_container .charj {
-            background-position: -345px -102px;
-        }
-        .clients_container .ptc {
-            background-position: -345px -199px;
+@media all and (max-width: 695px) 
+    and (max-height: 870px) {
+    .clients_container {
+        min-width: 310px;
+    }
+    .clients_container .client {
+        width: 212px;
+    }
+    .clients_container .client .image {
+        background-image: url(../assets/img/sprite_logos_212.png);
+        background-size: auto;
+        height: 118px;
+        position: relative;
+        top: auto;
+        left: auto;
+    }
+    .clients_container .client .kairos {
+        background-position: -5px -5px;
+    }
+    .clients_container .octopus {
+        background-position: -5px -128px;
+    }
+    .clients_container .icrc {
+        background-position: -5px -250px;
+    }
+    .clients_container .bergx2 {
+        background-position: -222px -5px;
+    }
+    .clients_container .hsbc {
+        background-position: -222px -128px;
+    }
+    .clients_container .dpd {
+        background-position: -222px -250px;
+    }
+    .clients_container .cat {
+        background-position: -439px -5px;
+    }
+    .clients_container .charj {
+        background-position: -439px -128px;
+    }
+    .clients_container .ptc {
+        background-position: -439px -250px;
+    }
+}
+@media all and (max-width: 695px) 
+    and (max-height: 510px) {
+    .clients_container {
+        min-width: 310px;
+    }
+    .clients_container .client {
+        width: 165px;
+    }
+    .clients_container .client .image {
+        background-image: url(../assets/img/sprite_logos_165.png);
+        background-size: auto;
+        height: 92px;
+        position: relative;
+        top: auto;
+        left: auto;
+    }
+    .clients_container .client .kairos {
+        background-position: -5px -5px;
+    }
+    .clients_container .octopus {
+        background-position: -5px -102px;
+    }
+    .clients_container .icrc {
+        background-position: -5px -199px;
+    }
+    .clients_container .bergx2 {
+        background-position: -175px -5px;
+    }
+    .clients_container .hsbc {
+        background-position: -175px -102px;
+    }
+    .clients_container .dpd {
+        background-position: -175px -199px;
+    }
+    .clients_container .cat {
+        background-position: -345px -5px;
+    }
+    .clients_container .charj {
+        background-position: -345px -102px;
+    }
+    .clients_container .ptc {
+        background-position: -345px -199px;
+    }
+}
+@media all and (max-width: 695px) 
+    and (max-height: 440px) {
+    .clients_container {
+        min-width: 310px;
+    }
+    .clients_container .client {
+        width: 140px;
+    }
+    .clients_container .client .image {
+        background-image: url(../assets/img/sprite_logos_140.png);
+        background-size: auto;
+        height: 79px;
+    }
+    .clients_container .client .kairos {
+        background-position: -5px -5px;
+    }
+    .clients_container .octopus {
+        background-position: -5px -88px;
+    }
+    .clients_container .icrc {
+        background-position: -5px -171px;
+    }
+    .clients_container .bergx2 {
+        background-position: -150px -5px;
+    }
+    .clients_container .hsbc {
+        background-position: -150px -88px;
+    }
+    .clients_container .dpd {
+        background-position: -150px -171px;
+    }
+    .clients_container .cat {
+        background-position: -295px -5px;
+    }
+    .clients_container .charj {
+        background-position: -295px -88px;
+    }
+    .clients_container .ptc {
+        background-position: -295px -171px;
+    }
+}
+@media all and (max-width: 695px) 
+    and (max-height: 400px) {
+        .ptc {
+            display: none;
         }
 }
 @media all and (max-width: 670px) {
     .featured .menu_plug {
         height: 45px;
     }
+    .featured .content {
+        height: calc(100vh - 45px);
+    }
 }
-@media all and (max-width: 670px)
-    and (max-height: 380px) {
+@media all and (max-width: 670px) 
+    and (max-height: 830px) {
+    .clients_container {
+        min-width: 310px;
+    }
+    .clients_container .client {
+        width: 212px;
+    }
+    .clients_container .client .image {
+        background-image: url(../assets/img/sprite_logos_212.png);
+        background-size: auto;
+        height: 118px;
+        position: relative;
+        top: auto;
+        left: auto;
+    }
+    .clients_container .client .kairos {
+        background-position: -5px -5px;
+    }
+    .clients_container .octopus {
+        background-position: -5px -128px;
+    }
+    .clients_container .icrc {
+        background-position: -5px -250px;
+    }
+    .clients_container .bergx2 {
+        background-position: -222px -5px;
+    }
+    .clients_container .hsbc {
+        background-position: -222px -128px;
+    }
+    .clients_container .dpd {
+        background-position: -222px -250px;
+    }
+    .clients_container .cat {
+        background-position: -439px -5px;
+    }
+    .clients_container .charj {
+        background-position: -439px -128px;
+    }
+    .clients_container .ptc {
+        background-position: -439px -250px;
+    }
+}
+@media all and (max-width: 670px) 
+    and (max-height: 690px) {
+    .clients_container {
+        min-width: 310px;
+    }
+    .clients_container .client {
+        width: 165px;
+    }
+    .clients_container .client .image {
+        background-image: url(../assets/img/sprite_logos_165.png);
+        background-size: auto;
+        height: 92px;
+        position: relative;
+        top: auto;
+        left: auto;
+    }
+    .clients_container .client .kairos {
+        background-position: -5px -5px;
+    }
+    .clients_container .octopus {
+        background-position: -5px -102px;
+    }
+    .clients_container .icrc {
+        background-position: -5px -199px;
+    }
+    .clients_container .bergx2 {
+        background-position: -175px -5px;
+    }
+    .clients_container .hsbc {
+        background-position: -175px -102px;
+    }
+    .clients_container .dpd {
+        background-position: -175px -199px;
+    }
+    .clients_container .cat {
+        background-position: -345px -5px;
+    }
+    .clients_container .charj {
+        background-position: -345px -102px;
+    }
+    .clients_container .ptc {
+        background-position: -345px -199px;
+    }
+}
+@media all and (max-width: 670px) 
+    and (max-height: 420px) {
+        .clients_container {
+        min-width: 310px;
+    }
         .clients_container .client {
-            width: 165px;
-        }
+        width: 140px;
+    }
         .clients_container .client .image {
-            background-image: url(../assets/img/sprite_logos_165.png);
+            background-image: url(../assets/img/sprite_logos_140.png);
             background-size: auto;
-            height: 92px;
-            position: relative;
+            height: 79px;
         }
         .clients_container .client .kairos {
             background-position: -5px -5px;
         }
         .clients_container .octopus {
-            background-position: -5px -102px;
+            background-position: -5px -88px;
         }
         .clients_container .icrc {
-            background-position: -5px -199px;
+            background-position: -5px -171px;
         }
         .clients_container .bergx2 {
-            background-position: -175px -5px;
+            background-position: -150px -5px;
         }
         .clients_container .hsbc {
-            background-position: -175px -102px;
+            background-position: -150px -88px;
         }
         .clients_container .dpd {
-            background-position: -175px -199px;
+            background-position: -150px -171px;
         }
         .clients_container .cat {
-            background-position: -345px -5px;
+            background-position: -295px -5px;
         }
         .clients_container .charj {
-            background-position: -345px -102px;
+            background-position: -295px -88px;
         }
         .clients_container .ptc {
-            background-position: -345px -199px;
+            background-position: -295px -171px;
         }
 }
 @media all and (max-width: 570px) {
@@ -3520,6 +3706,50 @@ and (-webkit-device-pixel-ratio: 2)
             background-size: 656px 377px;
         } 
 }
+@media all and (max-width: 570px) 
+    and (max-height: 710px) {
+    .clients_container {
+        min-width: 310px;
+    }
+    .clients_container .client {
+        width: 165px;
+    }
+    .clients_container .client .image {
+        background-image: url(../assets/img/sprite_logos_165.png);
+        background-size: auto;
+        height: 92px;
+        position: relative;
+        top: auto;
+        left: auto;
+    }
+    .clients_container .client .kairos {
+        background-position: -5px -5px;
+    }
+    .clients_container .octopus {
+        background-position: -5px -102px;
+    }
+    .clients_container .icrc {
+        background-position: -5px -199px;
+    }
+    .clients_container .bergx2 {
+        background-position: -175px -5px;
+    }
+    .clients_container .hsbc {
+        background-position: -175px -102px;
+    }
+    .clients_container .dpd {
+        background-position: -175px -199px;
+    }
+    .clients_container .cat {
+        background-position: -345px -5px;
+    }
+    .clients_container .charj {
+        background-position: -345px -102px;
+    }
+    .clients_container .ptc {
+        background-position: -345px -199px;
+    }
+}
 @media all and (max-width: 570px)
 and (max-height: 400px) {
     .clients_container .client {
@@ -3557,6 +3787,14 @@ and (max-height: 400px) {
     .clients_container .ptc {
         background-position: -295px -171px;
     }
+}
+@media all and (max-width: 570px)
+    and (max-height: 330px) {
+        .ptc,
+        .charj,
+        .cat {
+            display: none;
+        }
 }
 @media all and (max-width: 570px)
     and (max-height: 310px) {
