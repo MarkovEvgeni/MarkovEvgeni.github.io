@@ -4380,8 +4380,11 @@ _:-moz-tree-row(hover),
         .get_in_touch {
             text-align: left;
             max-width: 80%;
-            margin-bottom: 20px;
+            margin-bottom: 44px;
             padding-left: 0;
+        }
+        .get_in_touch li a {
+            color: red;
         }
         .get_in_touch li {
             display: inline-block;
