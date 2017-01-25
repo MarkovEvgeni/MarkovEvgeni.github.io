@@ -3426,7 +3426,6 @@ and (-webkit-device-pixel-ratio: 2)
 }
 @media all and (max-width: 670px)
     and (max-height: 380px) {
-/*
         .clients_container .client {
             width: 165px;
         }
@@ -3463,45 +3462,6 @@ and (-webkit-device-pixel-ratio: 2)
         .clients_container .ptc {
             background-position: -345px -199px;
         }
-*/
-    .clients_container .client {
-        width: 140px;
-    }
-    .clients_container .client .image {
-        background-image: url(../assets/img/sprite_logos_140.png);
-        background-size: auto;
-        height: 79px;
-    }
-    .clients_container .client .kairos {
-        background-position: -5px -5px;
-    }
-    .clients_container .octopus {
-        background-position: -5px -88px;
-    }
-    .clients_container .icrc {
-        background-position: -5px -171px;
-    }
-    .clients_container .bergx2 {
-        background-position: -150px -5px;
-    }
-    .clients_container .hsbc {
-        background-position: -150px -88px;
-    }
-    .clients_container .dpd {
-        background-position: -150px -171px;
-    }
-    .clients_container .cat {
-        background-position: -295px -5px;
-    }
-    .clients_container .charj {
-        background-position: -295px -88px;
-    }
-    .clients_container .ptc {
-        background-position: -295px -171px;
-    }
-    .ptc {
-        display: none;
-    }
 }
 @media all and (max-width: 570px) {
     .featured .menu_plug {
@@ -3560,7 +3520,7 @@ and (-webkit-device-pixel-ratio: 2)
         } 
 }
 @media all and (max-width: 570px)
-and (max-height: 380px) {
+and (max-height: 400px) {
     .clients_container .client {
         width: 140px;
     }
@@ -3596,9 +3556,12 @@ and (max-height: 380px) {
     .clients_container .ptc {
         background-position: -295px -171px;
     }
-    .ptc {
-        display: none;
-    } 
+}
+@media all and (max-width: 570px)
+    and (max-height: 330px) {
+        .ptc {
+            display: none;
+        } 
 }
 @media all and (max-width: 480px) {
     .featured .menu_plug {
