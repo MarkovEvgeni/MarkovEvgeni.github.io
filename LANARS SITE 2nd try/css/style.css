@@ -3839,6 +3839,10 @@ _:-moz-tree-row(hover),
         background-image: url(../assets/img/sprite_socials@2x.png);
         background-size: 35px 205px;
     }
+    .get_in_touch li {
+        background: url(../assets/img/sprite_contacts@2x.png);
+        background-size: 32px 2224px;
+    }
 }
 @media all and (max-width: 768px) {
     .get_in_touch {
@@ -4273,8 +4277,6 @@ and (max-height: 320px) {
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 568px) and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 40/71) {
     .contacts_parallax_background {
-        background-size: 35px 205px;
-        background-image: url(../assets/img/footer_bg_320.png);
         transform: none;
         width: 100%;
         height: 100%;
