@@ -4379,7 +4379,8 @@ _:-moz-tree-row(hover),
     and (orientation: landscape) {
         .get_in_touch {
             text-align: justify;
-            max-width: 98%;
+            max-width: 80%;
+            margin-bottom: 15px;
             padding-left: 0;
         }
         .get_in_touch li {
