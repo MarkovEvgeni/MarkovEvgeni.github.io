@@ -2871,28 +2871,28 @@ and (device-aspect-ratio: 3/4) {
     background-position: -5px -5px;
 }
 .clients_container .octopus {
-     background-position: -5px -233px;
+     background-position: -5px -228px;
 }
 .clients_container .icrc {
-    background-position: -5px -461px;
+    background-position: -5px -451px;
 }
 .clients_container .bergx2 {
-    background-position: -407px -5px;
+    background-position: -402px -5px;
 }
 .clients_container .hsbc {
-   background-position: -407px -233px;
+   background-position: -402px -228px;
 }
 .clients_container .dpd {
-    background-position: -407px -461px;
+    background-position: -402px -451px;
 }
 .clients_container .cat {
-    background-position: -809px -5px;
+    background-position: -799px -5px;
 }
 .clients_container .charj {
-    background-position: -809px -233px;
+    background-position: -799px -228px;
 }
 .clients_container .ptc {
-    background-position: -809px -461px;
+    background-position: -799px -451px;
 }
 .clients_container .client:hover {
     transition: ease;
@@ -3837,10 +3837,12 @@ _:-moz-tree-row(hover),
     and (-webkit-min-device-pixel-ratio: 2) {
     .socials_container li {
         background-image: url(../assets/img/sprite_socials@2x.png);
+        background-repeat: no-repeat;
         background-size: 35px 205px;
     }
     .get_in_touch li {
         background: url(../assets/img/sprite_contacts@2x.png);
+        background-repeat: no-repeat;
         background-size: 32px 224px;
     }
 }
