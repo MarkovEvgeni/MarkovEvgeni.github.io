@@ -159,7 +159,7 @@ document.addEventListener('DOMContentLoaded', function () {
     
     function hideMenu() {
         $('.menu_container').removeClass('show_menu');
-        $('.menu_container').removeClass('mob_hide');
+        $('.main_menu').addClass('mob_hide');
         $('.menu_container').addClass('hide_menu');
     };
     
