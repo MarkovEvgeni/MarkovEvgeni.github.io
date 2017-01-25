@@ -3499,9 +3499,7 @@ and (-webkit-device-pixel-ratio: 2)
     .clients_container .ptc {
         background-position: -295px -171px;
     }
-    .ptc,
-    .charj,
-    .cat {
+    .ptc {
         display: none;
     }
 }
@@ -3598,6 +3596,9 @@ and (max-height: 380px) {
     .clients_container .ptc {
         background-position: -295px -171px;
     }
+    .ptc {
+        display: none;
+    } 
 }
 @media all and (max-width: 480px) {
     .featured .menu_plug {
