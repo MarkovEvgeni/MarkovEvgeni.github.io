@@ -819,7 +819,7 @@ and (device-aspect-ratio: 40/71) {
 
 /*===Экран с 3D моделью===*/
 
-.rotate_device {
+.what_we_do .rotate_device {
     font-family: 'sf_ui_displayregular';
     text-align: center;
     display: none;
@@ -1600,7 +1600,7 @@ and (max-height: 400px) {
     .slider_container {
         display: none;
     }
-    .rotate_device {
+    .what_we_do .rotate_device {
         display: inline-block;
         margin-bottom: 66px;
     }
@@ -1626,6 +1626,10 @@ and (device-aspect-ratio: 3/4) {
 
 .our_works {
     z-index: 1;
+}
+.our_works .rotate_device {
+    color: white;
+    display: none;
 }
 .white_menu .menu_title,
 .white_menu li a {
@@ -1677,7 +1681,7 @@ _:-moz-tree-row(hover),
 .scroll_left,
 .scroll_right {
     box-sizing: border-box;
-    height: 100%;
+    height: calc(100% - 92px);
     position: relative;
     width: 80px;
     z-index: 15;
@@ -2358,6 +2362,7 @@ _:-moz-tree-row(hover),
     .scroll_right,
     .scroll_left {
         width: 40px;
+        height: calc(100% - 45px);
     }
     .scroll_left .arrows,
     .scroll_right .arrows {
@@ -2452,7 +2457,23 @@ and (device-aspect-ratio: 40/71) {
         height: 100%;
     }
 }
-/*Только для 5iPhone*/
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 568px) 
+and (-webkit-device-pixel-ratio: 2) 
+and (device-aspect-ratio: 40/71) 
+and (max-height: 400px) {
+    .scroll_right,
+    .scroll_left,
+    .devices {
+        display: none;
+    }
+    .our_works .rotate_device {
+        display: inline-block;
+        margin-bottom: 66px;
+    }
+}
+/*Только для iPad*/
 @media only screen 
 and (min-device-width : 768px) 
 and (max-device-width : 1024px) 
