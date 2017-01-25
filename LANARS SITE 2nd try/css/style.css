@@ -2868,31 +2868,31 @@ and (device-aspect-ratio: 3/4) {
     display: block;
 }
 .clients_container .client .kairos {
-    background-position: -10px -10px;
+    background-position: -5px -5px;
 }
 .clients_container .octopus {
-     background-position: -10px -238px;
+     background-position: -5px -233px;
 }
 .clients_container .icrc {
-    background-position: -10px -466px;
+    background-position: -5px -461px;
 }
 .clients_container .bergx2 {
-    background-position: -412px -10px;
+    background-position: -407px -5px;
 }
 .clients_container .hsbc {
-   background-position: -412px -238px;
+   background-position: -407px -233px;
 }
 .clients_container .dpd {
-    background-position: -412px -466px;
+    background-position: -407px -461px;
 }
 .clients_container .cat {
-    background-position: -814px -10px;
+    background-position: -809px -5px;
 }
 .clients_container .charj {
-    background-position: -814px -238px;
+    background-position: -809px -233px;
 }
 .clients_container .ptc {
-    background-position: -814px -466px;
+    background-position: -809px -461px;
 }
 .clients_container .client:hover {
     transition: ease;
@@ -3841,7 +3841,7 @@ _:-moz-tree-row(hover),
     }
     .get_in_touch li {
         background: url(../assets/img/sprite_contacts@2x.png);
-        background-size: 32px 2224px;
+        background-size: 32px 224px;
     }
 }
 @media all and (max-width: 768px) {
