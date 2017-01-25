@@ -3558,7 +3558,7 @@ and (max-height: 400px) {
     }
 }
 @media all and (max-width: 570px)
-    and (max-height: 330px) {
+    and (max-height: 310px) {
         .ptc {
             display: none;
         } 
