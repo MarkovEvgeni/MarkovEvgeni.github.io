@@ -1603,6 +1603,7 @@ and (device-aspect-ratio: 40/71) {
     .what_we_do .rotate_device {
         display: inline-block;
         margin-bottom: 66px;
+        vertical-align: middle;
     }
 }
 /*Только для iPad*/
@@ -2812,6 +2813,27 @@ and (device-aspect-ratio: 3/4) {
         .our_team_member_position {
             font-size: 10px;
         }
+}
+
+/*Только для 5iPhone*/
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 568px) 
+and (-webkit-device-pixel-ratio: 2) 
+    and (device-aspect-ratio: 40/71) {
+        .our_team_container_photo {
+            margin-bottom: 44px;
+        }
+}
+@media only screen 
+    and (min-device-width : 320px)
+    and (max-device-width : 568px)
+    and (-webkit-device-pixel-ratio: 2)
+    and (device-aspect-ratio: 40/71) 
+    and (orientation: landscape) {
+       .our_team_container_photo {
+            margin-bottom: 66px;
+        } 
 }
 
 /*===Экран с заказчиками===*/
