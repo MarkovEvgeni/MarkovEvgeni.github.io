@@ -2476,6 +2476,7 @@ and (device-aspect-ratio: 40/71) {
     .our_works .rotate_device {
         display: inline-block;
         margin-bottom: 66px;
+        vertical-align: middle;
     }
 }
 /*Только для iPad*/
@@ -2833,7 +2834,10 @@ and (-webkit-device-pixel-ratio: 2)
     and (orientation: landscape) {
        .our_team_container_photo {
             margin-bottom: 66px;
-        } 
+        }
+        .our_team_member_position {
+            color: red;
+        }
 }
 
 /*===Экран с заказчиками===*/
