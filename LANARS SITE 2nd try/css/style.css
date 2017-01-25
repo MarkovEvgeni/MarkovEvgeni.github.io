@@ -79,7 +79,6 @@ and (device-aspect-ratio: 40/71) {
     }
 }
 
-
 /*===Главное меню - обычное состояние===*/
 
 .clearfix:after {
@@ -795,17 +794,16 @@ and (device-aspect-ratio: 40/71) {
         line-height: 30px;
     }
 }
+
+
+/*iPhone5 fixes*/
 @media only screen
     and (min-device-width : 320px)
     and (max-device-width : 568px)
     and (-webkit-device-pixel-ratio: 2)
     and (device-aspect-ratio: 40/71) {
-        .parallax__group {
-            height: calc(100vh - 66px);
+        .punchline {
             margin-bottom: 66px;
-        }
-        .punchline_screen {
-            height: calc(100vh - 111px);
         }
 }
 @media only screen 
