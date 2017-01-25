@@ -2823,7 +2823,7 @@ and (max-device-width : 568px)
 and (-webkit-device-pixel-ratio: 2) 
     and (device-aspect-ratio: 40/71) {
         .our_team_container_photo {
-            margin-bottom: 44px;
+            margin-bottom: 66px;
         }
 }
 @media only screen 
@@ -2834,9 +2834,6 @@ and (-webkit-device-pixel-ratio: 2)
     and (orientation: landscape) {
        .our_team_container_photo {
             margin-bottom: 88px;
-        }
-        .our_team_member_position {
-            color: red;
         }
 }
 
