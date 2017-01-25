@@ -2456,6 +2456,10 @@ and (device-aspect-ratio: 40/71) {
         width: 100%;
         height: 100%;
     }
+    .arrows,
+    .devices {
+        margin-bottom: 44px;
+    }    
 }
 @media only screen 
 and (min-device-width : 320px) 
@@ -3691,6 +3695,9 @@ and (max-height: 320px) {
 
 /*===Экран с контактами===*/
 
+.contacts .rotate-device {
+    display: none;
+}
 .contacts {
     overflow: hidden;
 }
