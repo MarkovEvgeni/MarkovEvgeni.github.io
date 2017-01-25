@@ -803,7 +803,7 @@ and (device-aspect-ratio: 40/71) {
     and (-webkit-device-pixel-ratio: 2)
     and (device-aspect-ratio: 40/71) {
         .punchline {
-            margin-bottom: 66px;
+            margin-bottom: 44px;
         }
 }
 @media only screen 
@@ -812,12 +812,8 @@ and (device-aspect-ratio: 40/71) {
     and (-webkit-device-pixel-ratio: 2)
     and (device-aspect-ratio: 71/40)
     and (orientation: landscape) {
-        .parallax__group {
-            height: calc(100vh - 88px);
+        .punchline {
             margin-bottom: 88px;
-        }
-        .punchline_screen {
-            height: calc(100vh - 133px);
         }
 }
 
