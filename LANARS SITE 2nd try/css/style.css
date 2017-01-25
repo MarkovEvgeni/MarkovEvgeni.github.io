@@ -3716,9 +3716,30 @@ and (max-height: 320px) {
     }
 }
 
+/*Только для 5iPhone*/
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 568px) 
+and (-webkit-device-pixel-ratio: 2) 
+    and (device-aspect-ratio: 40/71) {
+        .clients_container {
+            margin-bottom: 66px;
+        }
+}
+@media only screen 
+    and (min-device-width : 320px)
+    and (max-device-width : 568px)
+    and (-webkit-device-pixel-ratio: 2)
+    and (device-aspect-ratio: 40/71) 
+    and (orientation: landscape) {
+       .clients_container {
+            margin-bottom: 88px;
+        }
+}
+
 /*===Экран с контактами===*/
 
-.contacts .rotate-device {
+.contacts .rotate_device {
     display: none;
 }
 .contacts {
@@ -4309,9 +4330,7 @@ and (max-height: 320px) {
         height: 100%;
     }
 }
-
 /*Только для iPhone6*/
-
 @media only screen and (min-device-width : 375px) and (max-device-width : 667px) and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 375/667) {
     .contacts_parallax__background {
         transform: none;
@@ -4325,9 +4344,7 @@ and (max-height: 320px) {
         height: calc(100% - 151px);
     }
 }
-
 /*Только для iPhone5*/
-
 @media only screen and (min-device-width : 320px) and (max-device-width : 568px) and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 40/71) {
     .contacts_parallax_background {
         transform: none;
