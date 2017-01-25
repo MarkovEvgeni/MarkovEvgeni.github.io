@@ -4384,6 +4384,8 @@ _:-moz-tree-row(hover),
         }
         .get_in_touch li {
             display: inline-block;
+            height: 40px;
+            min-width: 49%;
         }
         .footer-container {
             bottom: 88px;
