@@ -815,9 +815,6 @@ and (device-aspect-ratio: 40/71) {
         .punchline {
             margin-bottom: 66px;
         }
-        .punchline h1 span {
-            color: red;
-        }
 }
 
 /*===Экран с 3D моделью===*/
@@ -1605,6 +1602,7 @@ and (max-height: 400px) {
     }
     .rotate_device {
         display: inline-block;
+        margin-bottom: 66px;
     }
 }
 /*Только для iPad*/
