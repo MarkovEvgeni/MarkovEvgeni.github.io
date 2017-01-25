@@ -3840,6 +3840,13 @@ _:-moz-tree-row(hover),
     opacity: 1;
 }
 
+@media all 
+    and (-webkit-min-device-pixel-ratio: 2) {
+    .socials_container li {
+        background-image: url(../assets/img/sprite_socials@2x.png);
+        background-size: 35px 205px;
+    }
+}
 @media all and (max-width: 768px) {
     .get_in_touch {
         height: auto;
