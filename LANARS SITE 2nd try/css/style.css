@@ -1592,11 +1592,11 @@ and (device-aspect-ratio: 40/71) {
     }
 }
 @media only screen 
-and (min-device-width : 320px) 
-and (max-device-width : 568px) 
-and (-webkit-device-pixel-ratio: 2) 
-and (device-aspect-ratio: 40/71) 
-and (max-height: 400px) {
+    and (min-device-width : 320px)
+    and (max-device-width : 568px)
+    and (-webkit-device-pixel-ratio: 2)
+    and (device-aspect-ratio: 40/71) 
+    and (orientation: landscape) {
     .slider_container {
         display: none;
     }
@@ -2462,11 +2462,11 @@ and (device-aspect-ratio: 40/71) {
     }    
 }
 @media only screen 
-and (min-device-width : 320px) 
-and (max-device-width : 568px) 
-and (-webkit-device-pixel-ratio: 2) 
-and (device-aspect-ratio: 40/71) 
-and (max-height: 400px) {
+    and (min-device-width : 320px)
+    and (max-device-width : 568px)
+    and (-webkit-device-pixel-ratio: 2)
+    and (device-aspect-ratio: 40/71) 
+    and (orientation: landscape) {
     .scroll_right,
     .scroll_left,
     .devices {
