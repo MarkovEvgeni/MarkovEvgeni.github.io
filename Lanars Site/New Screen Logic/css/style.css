@@ -1,0 +1,307 @@
+.container {
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+}
+.container:before {
+    display: inline-block;
+    vertical-align: middle;
+    content: "";
+    height: 100%;
+}
+.scene {
+    display: inline-block;
+    vertical-align: middle;
+    width: 1000px;
+    height: 540px;
+    overflow: hidden;
+    text-align: left; 
+}
+.control {
+    width: 30%;
+    display: inline-block;
+    height: 100%;
+    overflow: hidden;
+    vertical-align: top;
+}
+.timeline {
+    height: 100%;
+    text-align: left;
+}
+.timeline:after {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+}
+.slides li,
+.timeline li {
+    box-sizing: border-box;
+    height: 70px;
+    position: relative;
+}
+.slides li:hover {
+    cursor: pointer;
+}
+.next_slide,
+.prev_slide {
+    border: 1px solid yellow;
+    height: 20%;
+    box-sizing: border-box;
+}
+.main_zone {
+    height: 60%;
+    box-sizing: border-box;
+}
+.slides li {
+    height: 540px;
+    transition: transform 1s ease-in, opacity 0.5s ease-in 0.2s;
+    will-change: transform, opacity;
+}
+.slides li:hover .number,
+.slides li:hover .name {
+    opacity: 1;
+}
+.slides .slide_1 {
+    transform: translateY(-70px);
+} 
+.slides .slide_2 {
+    transform: translateY(-100%) translateY(-70px);
+}
+.slides .slide_3 {
+    transform: translateY(-200%) translateY(-70px);
+}
+.slides .slide_4 {
+    transform: translateY(-300%) translateY(-70px);
+}
+.slides .slide_5 {
+    transform: translateY(-400%) translateY(-70px);
+}
+.slides .slide_6 {
+    transform: translateY(-500%) translateY(-70px);
+}
+.slides .slide_7 {
+    transform: translateY(-600%) translateY(-70px);
+}
+.z_index_1 {
+    z-index: 7;
+}
+.z_index_2 {
+    z-index: 6;
+}
+.z_index_3 {
+    z-index: 5;
+}
+.z_index_4 {
+    z-index: 4;
+}
+.z_index_5 {
+    z-index: 3;
+}
+.z_index_6 {
+    z-index: 2;
+}
+.z_index_7 {
+    z-index: 1;
+}
+.opacitynone {
+    opacity: 0;
+}
+.line {
+    display: inline-block;
+    vertical-align: middle;
+    background-color: rgb(246, 166, 35);
+    width: 3px;
+    height: 85%;
+    margin-left: 40px;
+}
+.always_visible {
+    height: 70px;
+    text-align: left;
+    vertical-align: top;
+}
+.icon,
+.number,
+.name {
+    display: inline-block
+}
+.icon {
+    background: rgb(216, 216, 216);
+    height: 40px;
+    width: 40px;
+    margin: 10px 0px 0px 20px;
+}
+.number,
+.name {
+    font-family: 'Lato', sans-serif;
+    transition: font-size 0.5s ease;
+    font-size: 14px;
+    margin-top: 10px;
+    opacity: 0.25;
+    transition: opacity 0.5s;
+    vertical-align: top;
+}
+.active .number,
+.active .name {
+    opacity: 1;
+    font-size: 20px;
+}
+.description p {
+    font-family: 'Lato', sans-serif;
+    text-align: left;
+    color: rgba(245, 166, 35, 1);
+    margin: 30px 0 0 90px;
+    transition: opacity 0.5s ease 0.5s;
+    opacity: 0;
+}
+.active .description p {
+    opacity: 1;
+}
+.slides .active_1 {
+    transform: translateY(-100%) translateY(140px);
+}
+.slides .active_2 {
+    transform: translateY(-200%) translateY(140px);
+}
+.slides .active_3 {
+    transform: translateY(-300%) translateY(140px);
+}
+.slides .active_4 {
+    transform: translateY(-400%) translateY(140px);
+}
+.slides .active_5 {
+    transform: translateY(-500%) translateY(140px);
+}
+.slides .active_6 {
+    transform: translateY(-600%) translateY(140px);
+}
+.slides .active_7 {
+    transform: translateY(-700%) translateY(140px);
+}
+.slides .prev_1 {
+    transform: translateY(-100%) translateY(70px);
+}
+.slides .prev_2 {
+    transform: translateY(-200%) translateY(70px);
+}
+.slides .prev_3 {
+    transform: translateY(-300%) translateY(70px);
+}
+.slides .prev_4 {
+    transform: translateY(-400%) translateY(70px);
+}
+.slides .prev_5 {
+    transform: translateY(-500%) translateY(70px);
+}
+.slides .prev_6 {
+    transform: translateY(-600%) translateY(70px);
+}
+.slides .prev_7 {
+    transform: translateY(-700%) translateY(70px);
+}
+.slides .top_1 {
+    transform: translateY(-100%);
+}
+.slides .top_2 {
+    transform: translateY(-200%);
+}
+.slides .top_3 {
+    transform: translateY(-300%);
+}
+.slides .top_4 {
+    transform: translateY(-400%);
+}
+.slides .top_5 {
+    transform: translateY(-500%);
+}
+.slides .top_6 {
+    transform: translateY(-600%);
+}
+.slides .top_7 {
+    transform: translateY(-700%);
+}
+.animation_section {
+    display: inline-block;
+    height: 100%;
+    width: 68%;
+    text-align: right;
+}
+.screen_frame {
+    display: inline-block;
+    width: 500px;
+    height: 100%;
+    text-align: center;
+}
+.frame_background {
+    width: 500px;
+    height: 100%;
+}    
+.sphere {
+    display: inline-block;
+    height: 483px;
+    width: 484px;
+    border-radius: 50%;
+    margin-top: 30px;
+    background: rgba(248,248,250,0.5);
+    background: -webkit-linear-gradient(rgba(248,248,250,0.5) 0%, rgba(227,227,228,0.5) 100%);
+    background: -o-linear-gradient(rgba(248,248,250,0.5) 0%, rgba(227,227,228,0.5) 100%);
+    background: linear-gradient(rgba(248,248,250,0.5) 0%, rgba(227,227,228,0.5) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8f8fa', endColorstr='#e3e3e4', GradientType=0 );
+}
+.pictures_list {
+    transition: transform 1s ease-in;
+}
+.pictures_list li {
+    height: 540px;
+    box-sizing: border-box;
+    width: 500px;
+    opacity: 0.2;
+    text-align: center;
+    transition: opacity 0.8s ease-out;
+}
+.pictures_list li:before {
+    height: 100%;
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+}
+.pictures_list li img {
+    vertical-align: middle;
+    
+}
+.pic_slide_1 {
+    transform: translateY(-540px);
+}
+.pic_slide_2 {
+    transform: translateY(-1080px);
+}
+.pic_slide_3 {
+    transform: translateY(-1620px);
+}
+.pic_slide_4 {
+    transform: translateY(-2160px);
+}
+.pic_slide_5 {
+    transform: translateY(-2700px);
+}
+.pic_slide_6 {
+    transform: translateY(-3240px);
+}
+.pic_slide_1 .pic1 {
+    opacity: 1;
+}
+.pic_slide_2 .pic2 {
+    opacity: 1;
+}
+.pic_slide_3 .pic3 {
+    opacity: 1;
+}
+.pic_slide_4 .pic4 {
+    opacity: 1;
+}
+.pic_slide_5 .pic5 {
+    opacity: 1;
+}
+.pic_slide_6 .pic6 {
+    opacity: 1;
+}
