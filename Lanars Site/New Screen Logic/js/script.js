@@ -2,132 +2,136 @@ document.addEventListener('DOMContentLoaded', function () {
 
 'use strict';
 
-//var index = 1; 
-var arr = [1, 2, 3, 4, 5, 6]
+var index = 1; 
+var arr = [1, 2, 3, 4, 5, 6, 7]
 
 function removeSlidePosition(num) {
     $('.pictures_list').removeClass('pic_slide_' + num);
 }
 function moveToTop (num) {
-    $('.slide_' + num).addClass("top_" + num);
+    $('.slides_list__item_' + num).addClass("top_" + num);
 };
 function removeFromTop (num) {
-    $('.slide_' + num).removeClass("top_" + num);
+    $('.slides_list__item_' + num).removeClass("top_" + num);
 };
 function removeZIndex(num) {
-    $('.slide_' + num).removeClass('z_index_' + num);
+    $('.slides_list__item_' + num).removeClass('z_index_' + num);
 };
 function addZIndex(num) {
-    $('.slide_' + num).addClass('z_index_' + num);
+    $('.slides_list__item_' + num).addClass('z_index_' + num);
 }
 function moveToPrevPart (num) {
-    $('.slide_' + num).addClass("prev_" + num);
+    $('.slides_list__item_' + num).addClass("prev_" + num);
 }
 function removeFromPrevPart (num) {
-    $('.slide_' + num).removeClass("prev_" + num);
+    $('.slides_list__item_' + num).removeClass("prev_" + num);
 }
 function moveToActivePart (num) {
-    $('.slide_' + num).addClass("active_" + num);
-    $('.slide_' + num).addClass("active");
+    $('.slides_list__item_' + num).addClass("active_" + num);
 }
 function removeFromActivePart (num) {
-    $('.slide_' + num).removeClass("active_" + num);
-    $('.slide_' + num).removeClass("active");
+    $('.slides_list__item_' + num).removeClass("active_" + num);
 }
-function addOpacity(num) {
-    $('.slide_' + num).addClass('opacitynone');    
+function makeTransparent(num) {
+    $('.slides_list__item_' + num).addClass('transparent');    
 }
-function removeOpacity(num) {
-    $('.slide_' + num).removeClass('opacitynone');    
+function makeVisible(num) {
+    $('.slides_list__item_' + num).removeClass('transparent');    
+}   
+function makeActive(num) {
+    $('.slides_list__item_' + num).addClass('active');
+    $('.dots__item_' + num).addClass('active');
+}    
+function makeInactive(num) {
+    $('.slides_list__item_' + num).removeClass('active');
+    $('.dots__item_' + num).removeClass('active');
 }
     
     
 function moveButtons(num) {
     
-    var numHide = num - 3;
-    var numFirst = num - 2;
-    var numPrev = num - 1;
-    var numNext = num + 1;
-    var numNext2 = numNext + 1;
+    index = num;
     
-    if (num == 1 || num == 2) {
-        numHide = 0;
-        numFirst = 1;
-    }
-    if (num == 1) {
-        numPrev = 0;
-        num = 0;
-        numNext = 2;
-        numNext2 = 3;
-    }
-    if (num == 2) {
-        numPrev = 0;
-        num = 2;
-        numNext = 3;
-        numNext2 = 4;
-    }
-     
-    var arrHide = arr.slice(0, numHide);
-
+    var numMinusThree = num - 3;
+    if(numMinusThree < 0) {
+        numMinusThree = 0;
+    };
     
-//    Массив значений которые должны быть скрыты
-    $.each(arrHide, function(index, value) {
-        addOpacity(value);
-    });
+    var numMinusTwo = num - 2;
+    if(numMinusTwo < 0) {
+        numMinusTwo = 0;
+    }; 
     
-//  Перемещение первой кнопки на верх списка
-    removeFromPrevPart(numFirst);
-    removeZIndex(numFirst);
-    removeOpacity(numFirst);
-    moveToTop(numFirst);
-    
-//    Положение предыдущей кнопки
-    removeFromTop(numPrev);
-    removeFromActivePart(numPrev);
-    if (numPrev == 0) {
-        $('.slide_' + 1).removeClass("active");
-    }
-    removeOpacity(numPrev);
-    moveToPrevPart(numPrev);
-
-//    Положение текущей кнопки    
     $.each(arr, function(index, value) {
         removeSlidePosition(value);
+        removeZIndex(value);
+        removeFromTop(value);
+        removeFromPrevPart(value);
+        removeFromActivePart(value);
+        makeVisible(value);
+        makeInactive(value);
     });
-    $('.pictures_list').addClass('pic_slide_' + num);
-    removeFromTop(num);
-    removeZIndex(num);
-    removeFromPrevPart(num);
-    moveToActivePart(num);
-    if (num == 0) {
-        $('.pictures_list').addClass('pic_slide_' + 1);
-        $('.slide_' + 1).addClass("active");
-    }
-//    Положение следующей кнопки 
     
-    removeFromPrevPart(numNext);
-    removeFromActivePart(numNext);
-    removeFromActivePart(numNext2);
-    removeOpacity(numNext);
-    addZIndex(numNext);
-    
-//    Положение скрытых кнопок снизу
-    
-    var arrDown = arr.slice(numNext);
-    $.each(arrDown, function(index, value) {
+    var arrHideTop = arr.slice(0, numMinusThree);
+    $.each(arrHideTop, function(index, value) {
+        moveToTop(value);
+    });
+    var arrHideBottom = arr.slice(num + 1);
+    $.each(arrHideBottom, function(index, value) {
         addZIndex(value);
-        addOpacity(value);
     });
+    
+    var arrHide = arrHideTop.concat(arrHideBottom);
+    $.each(arrHide, function(index, value) {
+        makeTransparent(value);
+    });
+    
+    moveToTop(numMinusTwo);
+    moveToPrevPart(num - 1);
+    makeActive(num);
+    addZIndex(num + 1);
+    $('.pictures_list').addClass('pic_slide_' + num);
+    
+    if (num == 1) {
+        return
+    } else {
+        moveToActivePart(num)
+    }
+
 }
 
-(function () {    
-    $.each(arr, function(index, value) {
+(function () {
+    var list = arr.slice(0,6);
+    $.each(list, function(index, value) {
             (function(value) {
-                $('.slide_' + value).on('click', function() {
+                $('.slides_list__item_' + value).on('click', function() {
+                    moveButtons(value)
+                });
+                $('.dots__item_' + value).on('click', function() {
                     moveButtons(value)
                 });
             }) (value);
         });
     })();
 
+$('body').keydown(function(event) {
+    if (event.which == 40) {
+        index++;
+        if (index > 6) {
+            index = 6;
+        };
+        console.log()
+        moveButtons(index);
+    } else if (event.which == 38) {
+        index--;
+        if (index < 1) {
+            index = 1;
+        };
+        moveButtons(index);
+    } else {
+        return
+    }
+})    
+  
+    
 });

@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 minimal-ui">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
@@ -14,114 +15,122 @@
     <script src="js/script.js"></script>
 </head>
 <body>
-    <div class="container">
-        <div class="scene">
-            <div class="control">
-                <ul class="timeline">
-                    <div class="line"></div>
-                </ul>
-                <ul class="slides">
-                    <li class="slide_1 top_1 active">
-                        <div class="always_visible">
-                            <div class="icon"></div>
-                            <div class="number">01</div>
-                            <div class="name">Wireframe</div>
-                        </div>
-                        <div class="description">
-                            <p></p>
-                        </div>
-                    </li>
-                    <li class="slide_2 z_index_2">
-                        <div class="always_visible">
-                            <div class="icon"></div>
-                            <div class="number">02</div>
-                            <div class="name">Design</div>
-                        </div>
-                        <div class="description">
-                            <p>Second step is applying design ideas and making of UI.</p>
-                        </div>
-                    </li>
-                    <li class="slide_3 z_index_3 opacitynone">
-                        <div class="always_visible">
-                            <div class="icon"></div>
-                            <div class="number">03</div>
-                            <div class="name">Development</div>
-                        </div>
-                        <div class="description">
-                            <p>Bringing concept to live by applying the code.</p>
-                        </div>
-                    </li>
-                    <li class="slide_4 z_index_4 opacitynone">
-                        <div class="always_visible">
-                            <div class="icon"></div>
-                            <div class="number">04</div>
-                            <div class="name">QA</div>
-                        </div>
-                        <div class="description">
-                            <p>Quality assurance. To satisfy the customer expectations.</p>
-                        </div>
-                    </li>
-                    <li class="slide_5 z_index_5 opacitynone">
-                        <div class="always_visible">
-                            <div class="icon"></div>
-                            <div class="number">05</div>
-                            <div class="name">Project coordination</div>
-                        </div>
-                        <div class="description">
-                            <p>Quality assurance. To satisfy the customer expectations.</p>
-                        </div>
-                    </li>
-                    <li class="slide_6 z_index_6 opacitynone">
-                        <div class="always_visible">
-                            <div class="icon"></div>
-                            <div class="number">06</div>
-                            <div class="name">Final Result</div>
-                        </div>
-                        <div class="description">
-                            <p>Combination of all steps gives us final result – the Product.</p>
-                        </div>
-                    </li>
-                    <li class="slide_7 z_index_7 opacitynone">
-                        <div class="always_visible">
-                            <div class="icon"></div>
-                            <div class="number">07</div>
-                            <div class="name">Thank You!</div>
-                        </div>
-                        <div class="description">
-                            <p></p>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-            <div class="animation_section">
-                <div class="screen_frame">
-                    <div class="frame_background">
-                        <div class="sphere"></div>
-                    </div>
-                    <ul class="pictures_list pic_slide_1">
-                        <li class="pic1">
-                            <img src="assets/img/Site_we_do_Wireframe.png" alt="">
-                        </li>
-                        <li class="pic2">
-                            <img src="assets/img/Site_we_do_design.png" alt="">
-                        </li>
-                        <li class="pic3">
-                            <img src="assets/img/Site_we_do_development.png" alt="">
-                        </li>
-                        <li class="pic4">
-                            <img src="assets/img/Site_we_do_QA.png" alt="">
-                        </li>
-                        <li class="pic5">
-                            <img src="assets/img/Site_we_do_PorjectCoord.png" alt="">
-                        </li>
-                        <li class="pic6">
-                            <img src="assets/img/Site_we_do_FinalResult.png" alt="">
-                        </li>
-                    </ul>
-                </div>
-                
-            </div>
-        </div>
-    </div>
+   <div class="container">
+       <div class="scene_container">
+           <div class="scene">
+               <div class="animation_container">
+                   <div class="sphere_container">
+                       <div class="sphere"></div>
+                   </div>
+                   <ul class="pictures_list pic_slide_1">
+                       <li>
+                           <img class="pic_1" src="assets/img/Mobile_we_do_wf.png" alt="">
+                       </li>
+                       <li>
+                           <img class="pic_2" src="assets/img/Mobile_we_do_design.png" alt="">
+                       </li>
+                       <li>
+                           <img class="pic_3" src="assets/img/Mobile_we_do_Dev.png" alt="">
+                       </li>
+                       <li>
+                           <img class="pic_4" src="assets/img/Mobile_we_do_QA.png" alt="">
+                       </li>
+                       <li>
+                           <img class="pic_5" src="assets/img/Mobile_we_do_ProjectCoord.png" alt="">
+                       </li>
+                       <li>
+                           <img class="pic_6" src="assets/img/Mobile_we_do_Final.png" alt="">
+                       </li>
+                   </ul>
+               </div>
+           </div>
+       </div>
+       <div class="control_panel_container">
+           <div class="control_panel">
+               <div class="timeline_container">
+                   <div class="timeline"></div>
+                   <ul class="slides_list">
+                       <li class="slides_list__item_1 active">
+                           <div class="slides_list__item__always_visible">
+                               <div class="always_visible__icon"></div>
+                               <div class="always_visible__number">01</div>
+                               <div class="always_visible__name">Wireframe</div>
+                           </div>
+                           <div class="description">
+                               <p>Second step is applying design ideas and making of UI.</p>
+                           </div>
+                       </li>
+                       <li class="slides_list__item_2 z_index_2">
+                           <div class="slides_list__item__always_visible">
+                               <div class="always_visible__icon"></div>
+                               <div class="always_visible__number">02</div>
+                               <div class="always_visible__name">Design</div>
+                           </div>
+                           <div class="description">
+                               <p>Second step is applying design ideas and making of UI.</p>
+                           </div>
+                       </li>
+                       <li class="slides_list__item_3 transparent z_index_3">
+                           <div class="slides_list__item__always_visible">
+                               <div class="always_visible__icon"></div>
+                               <div class="always_visible__number">03</div>
+                               <div class="always_visible__name">Development</div>
+                           </div>
+                           <div class="description">
+                               <p>Bringing concept to live by applying the code.</p>
+                           </div>
+                       </li>
+                       <li class="slides_list__item_4 transparent z_index_4">
+                           <div class="slides_list__item__always_visible">
+                               <div class="always_visible__icon"></div>
+                               <div class="always_visible__number">04</div>
+                               <div class="always_visible__name">QA</div>
+                           </div>
+                           <div class="description">
+                               <p>QA</p>
+                           </div>
+                       </li>
+                       <li class="slides_list__item_5 transparent z_index_5">
+                           <div class="slides_list__item__always_visible">
+                               <div class="always_visible__icon"></div>
+                               <div class="always_visible__number">05</div>
+                               <div class="always_visible__name">Project coordination</div>
+                           </div>
+                           <div class="description">
+                               <p>Second step is applying design ideas and making of UI.</p>
+                           </div>
+                       </li>
+                       <li class="slides_list__item_6 transparent z_index_6">
+                           <div class="slides_list__item__always_visible">
+                               <div class="always_visible__icon"></div>
+                               <div class="always_visible__number">06</div>
+                               <div class="always_visible__name">Final result</div>
+                           </div>
+                           <div class="description">
+                               <p>Combination of all steps gives us final result – the Product.</p>
+                           </div>
+                       </li>
+                       <li class="slides_list__item_7 transparent">
+                           <div class="slides_list__item__always_visible">
+                               <div class="always_visible__icon"></div>
+                               <div class="always_visible__number">07</div>
+                               <div class="always_visible__name">Thank You!</div>
+                           </div>
+                       </li>
+                   </ul>
+               </div>
+           </div>
+       </div>
+       <div class="dots_container">
+           <ul class="dots">
+               <li class="dots__item dots__item_1 active"></li>
+               <li class="dots__item dots__item_2"></li>
+               <li class="dots__item dots__item_3"></li>
+               <li class="dots__item dots__item_4"></li>
+               <li class="dots__item dots__item_5"></li>
+               <li class="dots__item dots__item_6"></li>
+           </ul>
+       </div>
+   </div>
 </body>
 </html>
