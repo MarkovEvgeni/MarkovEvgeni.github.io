@@ -1,0 +1,139 @@
+.clients_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 430px;
+}
+.clients_container__client {
+    border-radius: 5px;
+    box-shadow: 0 2px 8px #eee;
+    box-sizing: border-box;
+    height: 54px;
+    margin: 4px;
+    width: 98px;
+    -webkit-filter: grayscale(100%) opacity(0.8);
+    filter: grayscale(100%) opacity(0.7);
+    -webkit-transition: -webkit-box-shadow 0.3s, transform 0.3s;
+    -moz-transition: -moz-box-shadow 0.3s, transform 0.3s;
+    -ms-transition: box-shadow 0.3s, transform 0.3s;
+    -o-transition: box-shadow 0.3s, transform 0.3s;
+    transition: box-shadow 0.3s, transform 0.3s;
+    -webkit-transform: scale(0.98);
+    -moz-transform: scale(0.98);
+    -ms-transform: scale(0.98);
+    -o-transform: scale(0.98);
+    transform: scale(0.98);
+}
+.clients_container__client:hover {
+    transition: ease;
+    -webkit-box-shadow: 0 0px 12px rgba(255, 193, 104, .54);
+    -moz-box-shadow: 0 0px 12px rgba(255, 193, 104, .54);
+    box-shadow: 0 0px 12px rgba(255, 193, 104, .54);
+    -webkit-transform: scale(1.00);
+    -moz-transform: scale(1.00);
+    -ms-transform: scale(1.00);
+    -o-transform: scale(1.00);
+    transform: scale(1.00);
+    -webkit-filter: none;
+    filter: none;
+}
+.image {
+    background-image: url(../assets/img/sprite_196.png);
+    height: 100%;
+    background-size: 404px 174px;
+}
+.kairos {
+    background-position: -2.5px -5px;
+}
+.cat {
+    background-position: -203.5px -5px;
+}
+.octopus {
+    background-position: -304px -5px;
+}
+.bergx2 {
+    background-position: -103px -5px;
+}
+.hsbc {
+    background-position: -2.5px -61.5px;
+}
+.charj {
+    background-position: -103px -61.5px;
+}
+.icrc {
+    background-position: -203.5px -61.5px;
+}
+.dpd {
+    background-position: -304px -61.5px;
+}
+.ptc {
+    background-position: -2.5px -118px;
+}
+.dean {
+    background-position: -103px -118px;
+}
+.doing {
+    background-position: -203.5px -118px;
+}
+.griswold {
+    background-position: -304px -118px;
+}
+
+@media all and (min-width: 681px) {
+    .clients_container {
+        max-width: 950px;
+    }
+    .clients_container__client {
+        width: 216px;
+        height: 120px;
+        margin: 10px;
+    }
+    .image {
+        background-image: url(../assets/img/sprite_216.png);
+        background-size: auto;
+    }
+    .kairos {
+        background-position: -5px -10px;
+    }
+    .cat {
+        background-position: -226px -10px;
+    }
+    .octopus {
+        background-position: -447px -10px;
+    }
+    .bergx2 {
+        background-position: -673px -10px;
+    }
+    .hsbc {
+        background-position: -5px -130px;
+    }
+    .charj {
+        background-position: -226px -130px;
+    }
+    .icrc {
+        background-position: -447px -130px;
+    }
+    .dpd {
+        background-position: -673px -130px;
+    }
+    .ptc {
+        background-position: -5px -255px;
+    }
+    .dean {
+        background-position: -226px -255px;
+    }
+    .doing {
+        background-position: -447px -255px;
+    }
+    .griswold {
+        background-position: -673px -255px;
+    }
+}
+@media all and (min-width: 681px) 
+    and (-webkit-device-pixel-ratio: 2) {
+        .image {
+            background-image: url(../assets/img/sprite_216@2x.png);
+            background-size: 889px 380px;
+        }
+}
