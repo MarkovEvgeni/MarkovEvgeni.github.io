@@ -43,6 +43,10 @@
     height: 100%;
     background-size: 404px 174px;
 }
+.image a {
+    display: block;
+    height: 100%;
+}
 .kairos {
     background-position: -2.5px -5px;
 }
