@@ -3035,7 +3035,27 @@ and (-webkit-device-pixel-ratio: 2)
             background-size: 889px 380px;
         }
 }
-
+/*iPhone 6*/
+@media only screen 
+    and (min-device-width : 375px) 
+    and (max-device-width : 667px) 
+    and (-webkit-device-pixel-ratio: 2) 
+    and (device-aspect-ratio: 375/667) {
+    .clients_container {
+        margin-bottom: 44px;
+    }
+}
+@media only screen 
+    and (min-device-width : 375px) 
+    and (max-device-width : 667px) 
+    and (-webkit-device-pixel-ratio: 2) 
+    and (device-aspect-ratio: 375/667) 
+    and (orientation: landscape) {
+    .clients_container {
+        margin-bottom: 44px;
+    }
+}
+/*iPhone 5*/
 @media only screen
     and (min-device-width : 320px)
     and (max-device-width : 568px)
@@ -3043,6 +3063,16 @@ and (-webkit-device-pixel-ratio: 2)
     and (device-aspect-ratio: 40/71) {
         .clients_container {
             margin-bottom: 44px;
+        }
+}
+@media only screen
+    and (min-device-width : 320px)
+    and (max-device-width : 568px)
+    and (-webkit-device-pixel-ratio: 2)
+    and (device-aspect-ratio: 40/71) 
+    and (orientation: landscape){
+        .clients_container {
+            margin-bottom: 66px;
         }
 }
     
