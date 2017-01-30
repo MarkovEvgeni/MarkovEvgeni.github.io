@@ -2837,15 +2837,25 @@ and (-webkit-device-pixel-ratio: 2)
             margin-bottom: 88px;
         }
 }
+@media only screen 
+    and (min-device-width : 320px)
+    and (max-device-width : 568px)
+    and (-webkit-device-pixel-ratio: 2)
+    and (device-aspect-ratio: 40/71) 
+    and (orientation: landscape) {
+        .our_team_container_photo {
+            margin-bottom: 88px;
+        }
+}
 
 /*===Экран с заказчиками===*/
 
 .featured .menu_plug {
-    height: 92px;
+    height: 45px;
 }
 .featured .content {
     box-sizing: border-box;
-    height: calc(100vh - 92px);
+    height: calc(100vh - 45px);
     margin: 0 auto;
     max-width: 1334px;
     text-align: center;
@@ -2963,6 +2973,12 @@ and (-webkit-device-pixel-ratio: 2)
 }
 
 @media all and (min-width: 681px) {
+    .featured .menu_plug {
+        height: 92px;
+    }
+    .featured .content {
+        height: calc(100vh - 92px);
+    }
     .clients_container {
         max-width: 950px;
     }
@@ -3020,6 +3036,17 @@ and (-webkit-device-pixel-ratio: 2)
         }
 }
 
+@media only screen
+    and (min-device-width : 320px)
+    and (max-device-width : 568px)
+    and (-webkit-device-pixel-ratio: 2)
+    and (device-aspect-ratio: 40/71) {
+        .clients_container {
+            margin-bottom: 44px;
+        }
+}
+    
+    
 /*===Экран с контактами===*/
 
 .contacts .rotate_device {
