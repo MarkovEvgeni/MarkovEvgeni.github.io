@@ -1,0 +1,239 @@
+.container {
+    box-sizing: border-box;
+    height: 418px;
+    overflow: hidden;
+    width: 320px;
+}
+.background {
+    height: 100%;
+    text-align: center;
+    width: 100%;
+}
+.sphere {
+    border-radius: 50%;
+    display: inline-block;
+    height: 215px;
+    width: 215px;
+    background: rgba(248,248,250,0.5);
+    background: -webkit-linear-gradient(rgba(248,248,250,0.5) 0%, rgba(226,227,228,0.5) 100%);
+    background: -o-linear-gradient(rgba(248,248,250,0.5) 0%, rgba(226,227,228,0.5) 100%);
+    background: linear-gradient(rgba(248,248,250,0.5) 0%, rgba(226,227,228,0.5) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8f8fa', endColorstr='#e2e3e4', GradientType=0 );
+    margin-top: 36px;
+}
+.scrolling_feed {
+    transition: transform 1s ease-out, opacity 0.5s ease-in 0.2s;
+}
+.scrolling_feed__slide {
+    box-sizing: border-box;
+    height: 418px;
+    opacity: 0.2;
+    padding-top: 25px;
+    transition: opacity 0.5s ease-out;
+}
+.scrolling_feed .active {
+    opacity: 1;
+}
+.scrolling_feed__slide .image {
+    box-sizing: border-box;
+    height: 237px;
+    margin: 0 auto 78px;
+    width: 185px;
+}
+.scrolling_feed__slide .text {
+    width: 245px;
+}
+.scrolling_feed__slide .text h1 {
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    margin: 0 0 0 57px;
+}
+.scrolling_feed__slide .text h1 span {
+    font-weight: 400;
+    margin: 0 0 0 17px;
+}
+.scrolling_feed__slide .text p {
+    color: rgb(245, 166, 35);
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    margin: 7px 0 0 57px;
+}
+.image_01 {
+    background-image: url(../assets/img/1.png);
+}
+.image_02 {
+    background-image: url(../assets/img/2.png);
+}
+.image_03 {
+    background-image: url(../assets/img/3.png);
+}
+.image_04 {
+    background-image: url(../assets/img/4.png);
+}
+.image_05 {
+    background-image: url(../assets/img/5.png);
+}
+.image_06 {
+    background-image: url(../assets/img/6.png);
+}
+.active_1 {
+    transform: translateY(-418px);
+}
+.active_2 {
+    transform: translateY(-836px);
+}
+.active_3 {
+    transform: translateY(-1254px);
+}
+.active_4 {
+    transform: translateY(-1672px);
+}
+.active_5 {
+    transform: translateY(-2090px);
+}
+.active_6 {
+    transform: translateY(-2508px);
+}
+.dots_container {
+    box-sizing: border-box;
+    height: 73px;
+    width: 100%;
+    transform: translateY(-2662px);
+    margin: 0 0 10px 0;
+}
+.dots_container_full {
+    display: none;
+}
+.dots_full li,
+.dots li {
+    background: rgb(157, 157, 157);
+    border-radius: 50%;
+    height: 7px;
+    margin: 13px auto;
+    width: 7px;
+    transition: background-color 1s ease, opacity 0.5s ease-in;
+}
+.dots_full li:hover,
+.dots_full .active,
+.dots li:hover,
+.dots .active {
+    background: rgb(245, 166, 35);
+    cursor: pointer;
+}
+.dots .hidden {
+    opacity: 0;
+}
+.dots .hidden:hover {
+    cursor: default;
+}
+
+@media all and (orientation: landscape) {
+    .container {
+        height: 200px;
+        width: 100%;
+    }
+    .sphere {
+        display: inline-block;
+        height: 181px;
+        margin: 0 50px 0 0;
+        vertical-align: middle;
+        width: 181px;
+    }
+    .background {
+        text-align: right;
+    }
+    .background:before {
+        content: "";
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+    }
+    .dots_container {
+        display: none;
+    }
+    .scrolling_feed__slide {
+        height: 200px;
+        padding: 0;
+    }
+    .active_1 {
+        transform: translateY(-200px);
+    }
+    .active_2 {
+        transform: translateY(-400px);
+    }
+    .active_3 {
+        transform: translateY(-600px);
+    }
+    .active_4 {
+        transform: translateY(-800px);
+    }
+    .active_5 {
+        transform: translateY(-1000px);
+    }
+    .active_6 {
+        transform: translateY(-1200px);
+    }
+    .image_01 {
+        background-image: url(../assets/img/M_Lndsc_1_WF.png);
+    }
+    .image_02 {
+        background-image: url(../assets/img/M_Lndsc_2_Dis.png);
+    }
+    .image_03 {
+        background-image: url(../assets/img/M_Lndsc_3_%C2%A0Dev.png);
+    }
+    .image_04 {
+        background-image: url(../assets/img/M_Lndsc_4_QA.png);
+    }
+    .image_05 {
+        background-image: url(../assets/img/M_Lndsc_5_ProjCoor.png);
+    }
+    .image_06 {
+        background-image: url(../assets/img/M_Lndsc_6_FinRes.png);
+    }
+    .scrolling_feed__slide:after {
+        clear: both;
+        content: "";
+        display: block;
+    }
+    .scrolling_feed__slide .image {
+        float: right;
+        height: 200px;
+        margin: 0 40px 0 0;
+        width: 200px;
+    }
+    .scrolling_feed__slide .text {
+        box-sizing: border-box;
+        height: 100%;
+        padding: 57px 0 0 64px;
+        width: 100%;
+    }
+    .scrolling_feed__slide .text h1 {
+        margin: 0;
+        width: 185px;
+    }
+    .scrolling_feed__slide .text p {
+        margin: 20px 0 0 0;
+        width: 185px;
+    }
+    .dots_container_full {
+        display: inline-block;
+        height: 200px;
+        transform: translateY(-1400px);
+        text-align: center;
+        width: 45px;
+    }
+    .dots_container_full:before {
+        content: "";
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+    }
+    .dots_full {
+        display: inline-block;
+        vertical-align: middle;
+    }
+    
+}
