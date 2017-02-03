@@ -21,22 +21,82 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0 minimal-ui">
     
-    <link href="css/reset.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/slick.css">
+    <!-- CDN -->
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Oswald:400,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet">
-    <link href="css/phone.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+    <!-- LIBS -->
+    <link href="css/reset.css" rel="stylesheet">
+    <link href="css/slick.css" rel="stylesheet">
     <script type="text/javascript" src="js/slick.min.js"></script>
     <script src="js/wheel-indicator.js"></script>
-    <script src="js/video-script.js"></script>
-    <script src="js/phone-script.js"></script> 
-    <script src="js/script.js"></script>
-     
+    
+    <!-- CUSTOM MODULES -->
+    <link href="css/phone.css?v=0.0.1" rel="stylesheet">
+    <link href="css/style.css?v=0.0.1" rel="stylesheet">
+
+    <script src="js/video-script.js?v=0.0.1"></script>
+    <script src="js/phone-script.js?v=0.0.1"></script>
+    <script src="js/send.js?v=0.0.1"></script> 
+    <script src="js/popup.js?v=0.0.1"></script>
+    <script src="js/script.js?v=0.0.1"></script>
+
 </head>
 <body>
+    <div class="popup_container">
+        <div class="popup">
+            <div class="popup__header">
+                <p>LET'S KEEP IN TOUCH</p>
+                <div class="close_button">&#10060;</div>
+            </div>
+            <div class="popup__body">
+                <div class="popup__our_contacts">
+                    <div class="our_contacts__heading">Our contacts</div>
+                    <ul class="popup__get_in_touch">
+                        <li>
+                            <a href="https://www.google.ru/maps/place/48%C2%B027'46.2%22N+35%C2%B003'31.6%22E/@48.462846,35.0582405,19z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d48.462846!4d35.058789" target="_blank">Ukraine, Dnipro 48.462846, 35.058789</a>
+                        </li>
+                        <li>
+                            <a href="tel:+380634181201">+380634181201</a>
+                        </li>
+                        <li>
+                            <a href="mailto:hello@lanars.com">hello@lanars.com</a>
+                        </li>
+                        <li>
+                            <a href="skype:cr_maya?add">@cr_maya</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="popup__send_message">
+                    <form>
+                        <p class="send_message__header">Send us a message</p>
+                        <div class="input_group">
+                            <input id="send_message__visitors_name" name="Name" required type="text">
+                            <label for="send_message__visitors_name">Your name</label>
+                        </div>
+                        <div class="input_group">
+                            <input id="send_message__skype" required name="visitors_name" type="text">
+                            <label for="send_message__skype">Skype</label>
+                        </div>
+                        <div class="input_group">
+                            <input id="send_message__email" required name="E-mail" type="email">
+                            <label for="send_message__email">e-mail address</label>
+                        </div>
+                        <div class="input_group">
+                            <input id="send_message__topic" required name="Topic" type="text">
+                            <label for="send_message__topic">Topic</label>
+                        </div>
+                        <div class="textarea_group">
+                            <textarea id="send_message__message" name="Message" required cols="30" rows="8"></textarea>
+                            <label for="send_message__message">Write your message</label>
+                        </div>
+                        <button class="popup__send">SEND</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="menu_container clearfix">
                     <div class="menu_title clearfix">LANARS
                         <div class="hamburger_icon"></div>
@@ -318,7 +378,7 @@
                                     <source src="assets/video/up10.webm" type='video/webm; codecs="vp8"'>
                                 </video>
                             </div>
-                            <div class="our_team_member_name">Arslan Tayliev</div>
+                            <div class="our_team_member_name">Arslan Tayliyev</div>
                             <div class="our_team_member_position">CEO</div>    
                         </div>
                         <div class="our_team_member">
@@ -332,7 +392,7 @@
                                     <source src="assets/video/up5.webm" type='video/webm; codecs="vp8"'>
                                 </video>
                             </div>
-                            <div class="our_team_member_name">Maya Stypan</div>
+                            <div class="our_team_member_name">Maya Styupan</div>
                             <div class="our_team_member_position">HEAD OF SALES</div>    
                         </div>
                         <div class="our_team_member">
@@ -346,7 +406,7 @@
                                     <source src="assets/video/up.webm" type='video/webm; codecs="vp8"'>
                                 </video>
                             </div>
-                            <div class="our_team_member_name">Denys Oliinik</div>
+                            <div class="our_team_member_name">Denys Oliinyk</div>
                             <div class="our_team_member_position">HEAD OF PM DEPARTMENT</div>  
                         </div>
                         <div class="our_team_member">
@@ -368,19 +428,19 @@
                         <div class="our_team_member_photo">
                             <div class="our_team_member_background_photo arslan"> 
                             </div>
-                            <div class="our_team_member_name">Arslan Tayliev</div>
+                            <div class="our_team_member_name">Arslan Tayliyev</div>
                             <div class="our_team_member_position">CEO</div>    
                         </div>
                         <div class="our_team_member_photo">
                             <div class="our_team_member_background_photo maya"> 
                             </div>
-                            <div class="our_team_member_name">Maya Stypan</div>
+                            <div class="our_team_member_name">Maya Styupan</div>
                             <div class="our_team_member_position">HEAD OF SALES</div>    
                         </div>
                         <div class="our_team_member_photo">
                             <div class="our_team_member_background_photo denys"> 
                             </div>
-                            <div class="our_team_member_name">Denys Oliinik</div>
+                            <div class="our_team_member_name">Denys Oliinyk</div>
                             <div class="our_team_member_position">HEAD OF PM DEPARTMENT</div>    
                         </div>
                         <div class="our_team_member_photo">
@@ -493,6 +553,50 @@
                         </div>
                     </div>
                 </div>
+<!--
+                <div class="popup_container">
+                    <div class="popup">
+                        <p class="popup__header">LET'S KEEP IN TOUCH</p>
+                        <div class="popup__body">
+                            <div class="popup__our_contacts">
+                                <div class="our_contacts__heading">Our contacts</div>
+                                <ul class="get_in_touch">
+                                    <li><a href="https://www.google.ru/maps/place/48%C2%B027'46.2%22N+35%C2%B003'31.6%22E/@48.462846,35.0582405,19z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d48.462846!4d35.058789" target="_blank">Ukraine, Dnipro 48.462846, 35.058789</a></li>
+                                    <li><a href="tel:+380634181201">+380634181201</a></li>
+                                    <li><a href="mailto:hello@lanars.com">hello@lanars.com</a></li>
+                                    <li><a href="skype:cr_maya?add">@cr_maya</a></li>
+                                </ul>
+                            </div>
+                            <div class="popup__send_message">
+                                <form>
+                                    <p class="send_message__header">Send us a message</p>
+                                    <div class="input_group">
+                                        <input id="send_message__visitors_name" name="Name" required type="text">
+                                        <label for="send_message__visitors_name">Your name</label>
+                                    </div>
+                                    <div class="input_group">
+                                        <input id="send_message__skype" required name="visitors_name" type="text">
+                                        <label for="send_message__skype">Skype</label>
+                                    </div>
+                                    <div class="input_group">
+                                        <input id="send_message__email" required name="E-mail" type="email">
+                                        <label for="send_message__email">e-mail address</label>
+                                    </div>
+                                    <div class="input_group">
+                                        <input id="send_message__topic" required name="Topic" type="text">
+                                        <label for="send_message__topic">Topic</label>
+                                    </div>
+                                    <div class="textarea_group">
+                                        <textarea id="send_message__message" name="Message" required cols="30" rows="8"></textarea>
+                                        <label for="send_message__message">Write your message</label>
+                                    </div>
+                                    <button class="popup__send">SEND</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+-->
             </div>
         </div>
     </div>
