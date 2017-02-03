@@ -1,0 +1,8 @@
+.popup_container {
+    font-family: "Lato", sans-serif;
+}
+.popup {
+    box-sizing: border-box;
+    border: 1px solid red;
+    height: 418px;
+}

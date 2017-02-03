@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 minimal-ui">
+    <title>Contact form</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/popup.js"></script>
+</head>
+<body>
+    <div class="popup_container">
+        <div class="popup">
+            <p class="popup__header">LET'S KEEP IN TOUCH</p>
+            <div class="popup__body">
+                <div class="popup__our_contacts">
+                    <div class="our_contacts__heading">Our contacts</div>
+                    <ul class="get_in_touch">
+                        <li>
+                            <a href="https://www.google.ru/maps/place/48%C2%B027'46.2%22N+35%C2%B003'31.6%22E/@48.462846,35.0582405,19z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d48.462846!4d35.058789" target="_blank">Ukraine, Dnipro 48.462846, 35.058789</a>
+                        </li>
+                        <li>
+                            <a href="tel:+380634181201">+380634181201</a>
+                        </li>
+                        <li>
+                            <a href="mailto:hello@lanars.com">hello@lanars.com</a>
+                        </li>
+                        <li>
+                            <a href="skype:cr_maya?add">@cr_maya</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="popup__send_message">
+                    <form>
+                        <p class="send_message__header">Send us a message</p>
+                        <div class="input_group">
+                            <input id="send_message__visitors_name" name="Name" required type="text">
+                            <label for="send_message__visitors_name">Your name</label>
+                        </div>
+                        <div class="input_group">
+                            <input id="send_message__skype" required name="visitors_name" type="text">
+                            <label for="send_message__skype">Skype</label>
+                        </div>
+                        <div class="input_group">
+                            <input id="send_message__email" required name="E-mail" type="email">
+                            <label for="send_message__email">e-mail address</label>
+                        </div>
+                        <div class="input_group">
+                            <input id="send_message__topic" required name="Topic" type="text">
+                            <label for="send_message__topic">Topic</label>
+                        </div>
+                        <div class="textarea_group">
+                            <textarea id="send_message__message" name="Message" required cols="30" rows="8"></textarea>
+                            <label for="send_message__message">Write your message</label>
+                        </div>
+                        <button class="popup__send">SEND</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
