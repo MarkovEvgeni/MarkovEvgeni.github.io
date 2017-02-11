@@ -1,0 +1,36 @@
+.easy {
+    border-bottom: 2px solid $gold;
+    .easy_container {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin: 10px 0;
+        .easy_container__item {
+            background-color: $black;
+            width: 30%;
+            min-width: 280px;
+            padding: 10px;
+            margin: 10px;
+        }
+        .easy_container__item__image {
+            width: 50%;
+            padding-top: 50%;
+            background-color: $gold;
+            margin: 0 auto;
+        }
+        .easy_container__item__heading {
+            color: $white;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            padding: 10px 0;
+            text-align: center;
+        }
+        p {
+            color: $white;
+            min-height: 90px;
+        }
+        .button_container {
+            margin: 10px 0;
+        }
+    }
+}

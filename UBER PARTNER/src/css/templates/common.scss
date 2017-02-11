@@ -1,0 +1,100 @@
+html {
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+}
+section {
+    padding: 10px;
+}
+p {
+    font-size: 1rem;
+    text-align: justify;
+    text-indent: 1em;
+    padding: 10px 0;
+}
+p span {
+    color: $gold;
+    text-transform: uppercase;
+}
+.wrapper {
+    margin: 0 auto;
+    max-width: 1280px;
+}
+.heading {
+    max-width: 90%;
+    color: $gold;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.2rem;
+    margin: 0 auto;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 10px 0;
+}
+.button_container {
+    text-align: center;
+}
+.button {
+    display: inline-block;
+}
+.button a {
+    box-sizing: border-box;
+    display: block;
+    text-transform: uppercase;
+    padding:10px 10px;
+    font-size: 1rem;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.6s ease;
+}
+.button a:hover {
+    cursor: pointer;    
+}
+.button_gold a {
+    background-color: $gold;
+    color: $black;
+}
+.button_gold a:hover {
+    background-color: $black;
+    color: $white;
+}
+.button_white a {
+    background-color: $white;
+    border: 1px solid $gold;
+    color: $black;
+}
+.button_white a:hover {
+    background-color: $gold;
+    color: $black;
+}
+input {
+    box-sizing: border-box;
+    height: 40px;
+    display: block;
+    min-width: 300px;
+    max-width: 500px;
+    margin: 10px auto;
+    padding: 0 20px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+}
+input:focus,
+input:active {
+    outline: none;
+    border: 2px solid $black;
+}
+textarea {
+    box-sizing: border-box;
+    height: 300px;
+    display: block;
+    min-width: 300px;
+    max-width: 500px;
+    margin: 10px auto;
+    resize: none;
+    padding: 20px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+}
+textarea:focus,
+textarea:active {
+    outline: none;
+    border: 1px solid $black;
+}

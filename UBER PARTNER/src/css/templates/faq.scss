@@ -1,0 +1,31 @@
+.faq {
+    background-color: $grey;
+    border-bottom: 2px solid $gold;
+    .questions_container {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin: 10px 0;
+        .question {
+            width: 30%;
+            min-width: 280px;
+            margin: 10px;
+            .question_header {
+                padding: 10px;
+                display: flex;
+                align-items: center;
+                background-color: $black;
+                color: $white;
+                p {
+                    text-align: center;
+                }
+            }
+            .question_body {
+                padding: 10px;
+                display: flex;
+                align-items: center;
+                background-color: $white;
+            }
+        }
+    }
+}
