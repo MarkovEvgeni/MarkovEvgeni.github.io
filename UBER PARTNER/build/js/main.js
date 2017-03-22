@@ -1,1 +1,1 @@
-document.addEventListener("DOMContentLoaded",function(){"use strict"});
+document.addEventListener("DOMContentLoaded",function(){"use strict";console.log("hello!"),$(".slider_container").slick({speed:300,slidesToShow:1,adaptiveHeight:!0,autoplay:!0,prevArrow:'<div class="slick-prev">&lsaquo;</div>',nextArrow:'<div class="slick-next">&rsaquo;</div>'})});

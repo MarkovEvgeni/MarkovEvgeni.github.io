@@ -1,4 +1,6 @@
 header {
+    position: relative;
+    z-index: 1000;
     .minified {
         display: flex;
         background-color: $grey;
@@ -28,6 +30,7 @@ header {
         height: 0px;
         overflow: hidden;
         transition: all .6s ease;
+        z-index: 2000;
         ul {
             background-color: $white;
             li {

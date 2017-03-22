@@ -6,13 +6,18 @@ document.addEventListener('DOMContentLoaded', function () {
     //Third party components
     //
 
+
     //
     //Custom components
     //
-
+    
+    
+    
     //
     //Custom components typescript
     //
+    
+    //= custom/custom.js
 
     //= ts/tscript.js
 
