@@ -11,12 +11,50 @@
         background-color: $black;
         margin: 5px;
         padding: 5px;
-        width: 24%;
+        width: 32%;
         box-sizing: border-box;
         min-width: 300px;
         .advanages_container__item__image {
             padding-top: 100%;
             background-color: bisque;
+            background-color: $gold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            .image {
+                position: absolute;
+                top: 10%;
+                left: 10%;
+                background-size: cover;
+                width: 80%;
+                height: 80%;
+            }
+            .registration {
+                background-image: url(../assets/img/documents.svg);
+            }
+            .cashless {
+                background-image: url(../assets/img/credit_card.svg);
+            }
+            .time {
+                background-image: url(../assets/img/time.svg);
+            }
+            .percent {
+                background-image: url(../assets/img/percent.svg);
+            }
+            .fuel {
+                background-image: url(../assets/img/fuel.svg);
+                top: 0%;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+            .uniqa {
+                background-image: url(../assets/img/uniqa.svg);
+            }
+        }
+        .uniqa_container~p {
+            text-align: left;
         }
         .advanages_container__item__heading {
             color: $white;

@@ -1,6 +1,20 @@
 .promo {
     border-bottom: 2px solid $gold;
+    overflow: hidden;
     .button_container {
         margin: 20px 0;
+    }
+    img {
+        width: 100%;
+    }
+    .uber_1 {
+        float: left;
+        width: 300px;
+        margin: 10px 20px 5px 0;
+    }
+    .uber_2 {
+        float: right;
+        width: 300px;
+        margin: 10px 0 5px 20px;
     }
 }
