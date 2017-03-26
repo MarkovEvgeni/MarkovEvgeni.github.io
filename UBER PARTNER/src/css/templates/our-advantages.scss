@@ -11,9 +11,10 @@
         background-color: $black;
         margin: 5px;
         padding: 5px;
-        width: 32%;
+//        width: 32%;
         box-sizing: border-box;
-        min-width: 300px;
+        width: 230px;
+        border-radius: 10px;
         .advanages_container__item__image {
             padding-top: 100%;
             background-color: bisque;
@@ -22,6 +23,7 @@
             justify-content: center;
             align-items: center;
             position: relative;
+            border-radius: 10px;
             .image {
                 position: absolute;
                 top: 10%;
@@ -55,16 +57,47 @@
         }
         .uniqa_container~p {
             text-align: left;
+            text-indent: 0;
         }
         .advanages_container__item__heading {
             color: $white;
             text-align: center;
             text-transform: uppercase;
-            padding: 5px 0;
+            padding: 10px 0;
         }
         p {
             color: $white;
             padding: 5px;
+        }
+    }
+}
+@media all and (min-width: 550px) {
+    .our_advantages {
+        .advanages_container__item {
+            .advanages_container__item__image {
+                margin: 20px auto 10px;
+                width: 80%;
+                padding-top: 80%;
+            }
+        }
+    }
+}
+@media all and (min-width: 880px) {
+    .our_advantages {
+        .advanages_container__item {
+            width: 30%;
+            max-width: 280px;
+            .advanages_container__item__image {
+                width: 60%;
+                padding-top: 60%;
+            }
+        }
+    }
+}
+@media all and (min-width: 1130px) {
+    .our_advantages {
+        .advanages_container__item {
+            margin: 5px 20px;
         }
     }
 }
