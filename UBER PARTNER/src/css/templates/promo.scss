@@ -47,6 +47,7 @@
 }
 @media all and (min-width: 970px) {
     .promo {
+        padding-bottom: 40px;
         .flex_container_2 {
             display: flex;
             justify-content: space-around;
@@ -66,7 +67,6 @@
 }
 @media all and (min-width: 1080px) {
     .promo {
-        padding-bottom: 40px;
         .flex_container_1 {
             display: flex;
             justify-content: space-around;

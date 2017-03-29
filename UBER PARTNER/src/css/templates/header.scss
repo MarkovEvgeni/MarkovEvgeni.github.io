@@ -92,14 +92,17 @@ header:hover {
                 display: flex;
                 flex-wrap: nowrap;
                 background: none;
+                align-items: stretch;
                 li {
                     background: none;
+                    height: 100%;
                     a {
                         height: 100%;
                         display: flex;
                         padding: 0 10px;
                         justify-content: center;
                         align-items: center;
+                        align-content: center;
                         font-size: .9rem;
                         font-weight: bold;
                     }
