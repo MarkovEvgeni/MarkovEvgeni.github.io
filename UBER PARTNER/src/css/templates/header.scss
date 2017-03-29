@@ -73,6 +73,7 @@ header:hover {
         background-color: $grey;
         width: 100%;
         opacity: 0.6;
+        align-items: stretch;
         .minified {
             background: none;
             .menu_button {
@@ -91,7 +92,6 @@ header:hover {
                 display: flex;
                 flex-wrap: nowrap;
                 background: none;
-                align-items: stretch;
                 li {
                     background: none;
                     a {
