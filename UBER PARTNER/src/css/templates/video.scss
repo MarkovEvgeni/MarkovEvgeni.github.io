@@ -2,7 +2,7 @@
     border-bottom: 2px solid black;
     .video_container {
         position: relative;
-        padding-top: calc(56.25% - 20px);
+        padding-top: calc((100% - 20px) * 0.5625);
         margin: 10px;
         width: calc(100% - 20px);
         iframe {

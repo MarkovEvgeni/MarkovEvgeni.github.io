@@ -1,15 +1,15 @@
 .requirements {
-    background-color: $black;
+    background-color: $white;
     border-bottom: 1px solid transparent;
     padding: 10px;
     .heading {
-        color: $white;
+        color: $black;
         span {
             color: $gold;
         }
     }
     p {
-        color: $white;
+        color: $black;
         max-width: 800px;
         margin: 0 auto;
     }
@@ -17,8 +17,8 @@
         margin: 20px 0;
     }
     .button_gold a:hover {
-        background-color: $white;
-        color: $black;
+        background-color: $black;
+        color: $white;
     }
     ul {
         list-style: disc outside;

@@ -6,6 +6,10 @@
     }
     img {
         width: 100%;
+        -webkit-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
+        box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
+        border-radius: 5px;
     }
 //    .flex_container {
 //        display: flex;
@@ -50,9 +54,13 @@
         .uber_2 {
             float: none;
             flex-shrink: 0;
+            margin-top: 0;
         }
         .uber_2+p {
-            padding: 5px 0;
+            display: flex;
+            align-items: center;
+            margin: 0;
+            padding: 0;
         }
     }
 }
@@ -65,9 +73,13 @@
         .uber_1 {
             float: none;
             flex-shrink: 0;
+            margin-top: 0;
         }
         .uber_1+p {
-            padding: 5px 0;
+            display: flex;
+            align-items: center;
+            margin: 0;
+            padding: 0;
         }
 
     }
