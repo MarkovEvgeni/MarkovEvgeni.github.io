@@ -6,31 +6,95 @@
         flex-wrap: wrap;
         margin: 10px 0;
         .easy_container__item {
-            background-color: $black;
-            width: 30%;
-            min-width: 280px;
-            padding: 10px;
+            background-color: $white;
+            max-width: 320px;
+            padding: 20px;
             margin: 10px;
+            border: 3px solid $black;
+            border-radius: 15px;
         }
         .easy_container__item__image {
-            width: 50%;
-            padding-top: 50%;
+            width: 60%;
+            padding-top: 60%;
             background-color: $gold;
             margin: 0 auto;
+            position: relative;
+            border: 3px solid $black;
+            border-radius: 15px;
+            box-sizing: border-box;
         }
         .easy_container__item__heading {
-            color: $white;
+            color: $gold;
             font-size: 1.2rem;
             text-transform: uppercase;
             padding: 10px 0;
             text-align: center;
+            font-weight: bold;
+        }
+        .meeting {
+            background-image: url(../assets/img/meeting.svg);
+            background-size: cover;
+            height: 80%;
+            width: 80%;
+            top: 10%;
+            left: 10%;
+            position: absolute;
+        }
+        .form {
+            background-image: url(../assets/img/form.svg);
+            background-size: cover;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            position: absolute;
+        }
+        .mail {
+            background-image: url(../assets/img/mail.svg);
+            background-size: cover;
+            height: 80%;
+            width: 80%;
+            top: 10%;
+            left: 10%;
+            position: absolute;
         }
         p {
-            color: $white;
+            color: $black;
             min-height: 90px;
+            text-align: left;
         }
         .button_container {
             margin: 10px 0;
         }
     }
+}
+@media all and (min-width: 480px) {
+    .easy {
+        .easy_container {
+            .easy_container__item {
+                margin: 10px 50px;
+                .easy_container__item__image {
+                    width: 80%;
+                    padding-top: 80%;
+                }
+            }
+        }
+    }
+}
+@media all and (min-width: 865px) {
+    .easy {
+        .easy_container {
+            .easy_container__item {
+                margin: 5px;
+                width: 28%;
+                min-width: 250px;
+                box-sizing: border-box;
+                .easy_container__item__image {
+                    width: 70%;
+                    padding-top: 70%;
+                }
+            }
+        }
+    }
+    
 }

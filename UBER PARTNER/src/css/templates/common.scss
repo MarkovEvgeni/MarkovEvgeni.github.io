@@ -25,8 +25,8 @@ p span {
     max-width: 90%;
     color: $gold;
     font-family: 'Oswald', sans-serif;
-    font-size: 1.2rem;
-    line-height: 2.2;
+    font-size: 1.7rem;
+    line-height: 1.4;
     margin: 0 auto;
     text-align: center;
     text-transform: uppercase;
@@ -104,5 +104,7 @@ textarea:active {
     border: 2px solid $black;
 }
 @media all and (min-width:480px) {
-//    input,
+    .heading {
+        line-height: 2.2;
+    }
 }
