@@ -123,7 +123,7 @@
     width: 50px;
     cursor: pointer;
     background: rgba(255, 255, 255, 0.2);
-    top: 175px;
+    top: calc((100% * 0.5) - 25px);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -154,9 +154,11 @@
     background-image: url(../assets/img/right.svg);
     background-size: cover;
 }
+/*
 @media all and (min-width: 768px) {
     .slick-arrow {
         top: calc((100% * 0.5) - 25px);
     }
 }
+*/
 

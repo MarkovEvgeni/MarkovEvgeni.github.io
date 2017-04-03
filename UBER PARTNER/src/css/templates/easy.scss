@@ -1,5 +1,6 @@
 .easy {
     border-bottom: 2px solid $gold;
+    border-top: 2px solid $gold;
     .easy_container {
         display: flex;
         justify-content: space-around;
@@ -16,7 +17,7 @@
         .easy_container__item__image {
             width: 60%;
             padding-top: 60%;
-            background-color: $gold;
+//            background-color: $gold;
             margin: 0 auto;
             position: relative;
             border: 3px solid $black;
