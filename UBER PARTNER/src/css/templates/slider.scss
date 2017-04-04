@@ -25,6 +25,22 @@
                 left: 0;
                 bottom: 60px;
             }
+            p.connect {
+                top: 10%;
+                height: auto;
+                text-transform: uppercase;
+                font-size: 1.8rem;
+                font-weight: bold;
+                text-indent: 0;
+            }
+            p.earn {
+                top: 25%;
+                height: auto;
+                text-transform: uppercase;
+                font-size: 1.6rem;
+                font-weight: bold;
+                text-indent: 0;
+            }
             .button_container {
                 position: absolute;
                 bottom: 20px;
@@ -41,7 +57,7 @@
             background-image: url(../assets/img/480.jpg);
         }
         .slide__2 {
-            background-image: url(../assets/img/odessa-2.jpg);
+            background-image: url(../assets/img/black-photo-xs.jpg);
         }
         .slide__3 {
             background-image: url(../assets/img/odessa-3.jpg);
@@ -60,9 +76,19 @@
             .slide {
                 height: auto;
                 padding-top: calc(0.6 * 100vw);
+                p.connect {
+                    font-size: 2.2rem;
+                }
+                p.earn {
+                 top: 30%;
+                 font-size: 2.0rem;
+                }
             }
             .slide__1 {
                 background-image: url(../assets/img/768.jpg);
+            }
+            .slide__2 {
+                background-image: url(../assets/img/black-photo-sm.jpg);
             }
         }
     }
@@ -83,6 +109,12 @@
                     left: 0;
                     text-indent: 0;
                 }
+                p.connect {
+                    font-size: 3rem;
+                }
+                p.earn {
+                    font-size: 2.4rem;
+                }
                 .button_container {
                     .button {
                         a {
@@ -97,6 +129,9 @@
             .slide__1 {
                 background-image: url(../assets/img/992.jpg);
             }
+            .slide__2 {
+                background-image: url(../assets/img/black-photo-md.jpg);
+            }
         }
     }
 }
@@ -110,9 +145,19 @@
                     font-size: 3.5rem;
 
                 }
+                p.connect {
+                    top: 5%;
+                    font-size: 3.6rem;
+                }
+                p.earn {
+                    font-size: 3.0rem;
+                }
             }
             .slide__1 {
                 background-image: url(../assets/img/max.jpg);
+            }
+            .slide__2 {
+                background-image: url(../assets/img/black-photo.jpg);
             }
         }
     }

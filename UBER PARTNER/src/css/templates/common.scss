@@ -23,7 +23,8 @@ p span {
 }
 .heading {
     max-width: 90%;
-    color: $gold;
+//    color: $gold;
+    color: #0631af;
     font-family: 'Oswald', sans-serif;
     font-size: 1.7rem;
     line-height: 1.4;
@@ -52,7 +53,8 @@ p span {
     cursor: pointer;    
 }
 .button_gold a {
-    background-color: $gold;
+//    background-color: $gold;
+    background-color: #6d87d6;
     color: $black;
 }
 .button_gold a:hover {
