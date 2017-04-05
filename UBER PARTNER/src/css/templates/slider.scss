@@ -11,7 +11,6 @@
             height: auto;
             padding-top: calc(100vw);
             background-size: cover;
-            text-align: center;
             justify-content: center;
             align-items: flex-end;
             position: relative;
@@ -63,7 +62,7 @@
             background-image: url(../assets/img/odessa-3.jpg);
         }
         .slide__4 {
-            background-image: url(../assets/img/odessa-4.jpg);
+            background-image: url(../assets/img/duk-xs.jpg);
         }
         .slide__5 {
             background-image: url(../assets/img/odessa-5.jpg);
@@ -89,6 +88,9 @@
             }
             .slide__2 {
                 background-image: url(../assets/img/black-photo-sm.jpg);
+            }
+            .slide__4 {
+                background-image: url(../assets/img/duk-sm.jpg);
             }
         }
     }
@@ -132,6 +134,9 @@
             .slide__2 {
                 background-image: url(../assets/img/black-photo-md.jpg);
             }
+            .slide__4 {
+                background-image: url(../assets/img/duk-md.jpg);
+            }
         }
     }
 }
@@ -158,6 +163,9 @@
             }
             .slide__2 {
                 background-image: url(../assets/img/black-photo.jpg);
+            }
+            .slide__4 {
+                background-image: url(../assets/img/duk.jpg);
             }
         }
     }
