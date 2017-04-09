@@ -1,8 +1,11 @@
 .promo {
-    border-bottom: 2px solid $gold;
+    border-bottom: 2px solid $black;
     overflow: hidden;
     .button_container {
         margin: 20px 0;
+    }
+    b {
+        font-weight: bold;
     }
     img {
         width: 100%;

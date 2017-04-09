@@ -10,12 +10,13 @@
     .advanages_container__item {
 //        background-color: $black;
         border: 3px solid $black;
-        margin: 5px;
+        margin: 10px 5px;
         padding: 5px;
 //        width: 32%;
         box-sizing: border-box;
         width: 230px;
         border-radius: 10px;
+        box-shadow: 3px 3px 10px 0 rgba(0, 0, 0, 0.75), -3px -1px 5px 0 rgba(0, 0, 0, .75);
         .advanages_container__item__image {
             padding-top: 100%;
             background-color: bisque;
