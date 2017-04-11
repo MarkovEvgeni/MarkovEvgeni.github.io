@@ -1,4 +1,26 @@
 .queue {
-    border-bottom: 2px solid $gold;
+    border-bottom: 2px solid $black;
     background-color: $grey;
+    .button_gold a {
+        text-decoration:none;
+        text-align:center;
+        padding:7px 10px;
+        border:solid 3px #000969;
+        -webkit-border-radius:10px;
+        -moz-border-radius:10px; 
+        border-radius: 10px;
+        font:14px Arial, Helvetica, sans-serif;
+        font-weight:bold;
+        color:#ffffff;
+        background-color:#6d87d6;
+        background-image: -moz-linear-gradient(top, #6d87d6 0%, #192aa5 100%);
+        background-image: -webkit-linear-gradient(top, #6d87d6 0%, #192aa5 100%);
+        background-image: -o-linear-gradient(top, #6d87d6 0%, #192aa5 100%);
+        background-image: -ms-linear-gradient(top, #6d87d6 0% ,#192aa5 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#192aa5', endColorstr='#192aa5',GradientType=0 );
+        background-image: linear-gradient(top, #6d87d6 0% ,#192aa5 100%);
+        -webkit-box-shadow:0px 0px 2px #bababa; -moz-box-shadow: 0px 0px 2px #bababa; box-shadow:0px 0px 2px #bababa;
+        text-shadow: 0px 0px 2px #bababa;
+        filter: dropshadow(color=#bababa, offx=0, offy=0);
+    }
 }
