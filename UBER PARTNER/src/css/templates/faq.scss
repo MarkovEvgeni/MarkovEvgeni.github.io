@@ -13,7 +13,9 @@
             border: 1px solid black;
             background-color: $white;
             .question_header {
+                box-sizing: border-box;
                 padding: 10px;
+                height: 90px;
                 display: flex;
                 align-items: center;
                 background-color: $black;
