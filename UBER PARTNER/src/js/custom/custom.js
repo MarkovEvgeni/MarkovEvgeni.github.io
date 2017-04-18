@@ -7,6 +7,26 @@ $('.slider_container').slick({
     nextArrow: '<div class="slick-next"></div>'
 });
 
+var header = document.getElementsByTagName('header')[0];
+var headerPosition;
+var throttled = false;
+
+window.onscroll = function() {
+    header.classList.add('transparent_header');
+    headerPosition = window.pageYOffset || document.documentElement.scrollTop;
+    if (!throttled) {
+        throttled = true;
+        setTimeout(function() {
+            if (headerPosition == window.pageYOffset || document.documentElement.scrollTop) {
+                header.classList.remove('transparent_header');
+            } else {
+            }
+        }, 400);
+        setTimeout(function() {
+            throttled = false;
+        }, 100);
+    }
+} 
 
 $(".maxified ul li").on("click","a", function (event) {
     

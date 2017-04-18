@@ -92,9 +92,9 @@ gulp.task('css:build', function () {
     gulp.src(path.src.css)
         .pipe(rigger())
         .pipe(sass())
-        .pipe(uncss({
-            html: ['build/index.html']    
-        }))
+//        .pipe(uncss({
+//            html: ['build/index.html']    
+//        }))
         .pipe(autoprefixer({
             browsers: ['last 2 versions', '> 1%']
         }))
