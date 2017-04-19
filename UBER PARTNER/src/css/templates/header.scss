@@ -6,7 +6,7 @@ header {
     position: fixed;
     width: 100%;
     z-index: 1000;
-    transition: opacity 0.4s;
+    transition: opacity 0.4s ease;
     .minified {
         display: flex;
         background-color: $grey;
