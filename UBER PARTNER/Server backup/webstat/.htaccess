@@ -1,0 +1,7 @@
+AuthType Basic
+AuthName "/www/uberin.od.ua/webstat"
+AuthUserFile /var/www/taras181/data/etc/90046929.passwd
+DirectoryIndex index.html
+<Limit GET POST>
+	require valid-user
+</Limit>

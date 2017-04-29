@@ -66,14 +66,14 @@ gulp.task('html:build', function () {
 });
 
 gulp.task('ts:build', function () {
-    return gulp.src(path.src.ts)
-        .pipe(rigger())
-        .pipe(sourcemaps.init())
-        .pipe(typescript({
-            noImplicitAny: true
-        }))
-        .pipe(sourcemaps.write())
-        .pipe(gulp.dest(path.build.ts));
+//    return gulp.src(path.src.ts)
+//        .pipe(rigger())
+//        .pipe(sourcemaps.init())
+//        .pipe(typescript({
+//            noImplicitAny: true
+//        }))
+//        .pipe(sourcemaps.write())
+//        .pipe(gulp.dest(path.build.ts));
 });
 
 gulp.task('js:build', ['ts:build'], function () {

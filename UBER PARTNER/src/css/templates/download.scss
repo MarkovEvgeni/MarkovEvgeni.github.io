@@ -5,10 +5,14 @@
         display: flex;
         justify-content: space-around;
         .download_button_container__item {
+            a {
+                display: block;
+                height: 100%;
+                cursor: pointer;
+            }
             width: 30%;
             min-width: 150px;
             margin: 0 5px;
-            cursor: pointer;
             .image {
                 width: 100%;
                 padding-top: 32.6%;

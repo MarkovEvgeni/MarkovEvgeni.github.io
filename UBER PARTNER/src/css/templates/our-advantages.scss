@@ -18,7 +18,7 @@
         border-radius: 10px;
         box-shadow: 3px 3px 10px 0 rgba(0, 0, 0, 0.75), -3px -1px 5px 0 rgba(0, 0, 0, .75);
         .advanages_container__item__image {
-            padding-top: 100%;
+            padding-top: calc(100% - 6px);
             background-color: bisque;
             background-color: $white;
             display: flex;
