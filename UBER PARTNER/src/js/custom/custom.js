@@ -23,6 +23,17 @@ headerButton.on('click', function() {
     headerJquery.toggleClass('open');
 })
 
+var mapIframed = $('.address .preventer');
+
+mapIframed.on('click', function() {
+    mapIframed.css("display", "none");
+});
+
+$('.address .map').on('mouseleave', function() {
+    mapIframed.css("display", "block");
+});
+
+
 
 submitButtonFirst.on('click', function(e) {
     e.preventDefault();
