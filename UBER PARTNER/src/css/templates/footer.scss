@@ -29,12 +29,18 @@ footer {
                         background-image: url(../assets/img/sprite.png);
                         background-size: 32px 224px;
                         background-position: 0 -50px;
+                        flex-shrink: 0;
                     }
                     .image_mail {
                         background-position: 0 -236px;
                     }
                     .image_geotag {
                         background-position: 0 -176px;
+                    }
+                    .image_insta {
+                        background-image: url(../assets/img/insta.svg);
+                        background-position: 0 0;
+                        background-size: cover;
                     }
                     p {
                         color: $black;
