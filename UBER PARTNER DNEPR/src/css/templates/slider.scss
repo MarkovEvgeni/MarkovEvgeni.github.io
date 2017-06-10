@@ -1,0 +1,159 @@
+.slider {
+    padding: 0;
+    position: relative;
+    z-index: 100;
+    .slider_container {
+        width: 100%;
+        position: relative;
+        margin: 0 auto;
+        .slide {
+            height: auto;
+            padding-top: calc(100vw);
+            background-size: cover;
+            position: relative;
+            .text_container {
+                position: absolute;
+                top: 25%;
+                width: 100%;
+                text-align: center;
+            }
+            p {
+                display: inline-block;
+                text-transform: uppercase;
+                font-size: 1.6rem;
+                font-weight: bold;
+                color: $white;
+                text-align: center;
+                text-shadow: 1px 1px 2px rgba(0, 0, 0, 1);
+                background-color: rgba(0,0,0,.4);
+                text-indent: 0;
+                margin: 0;
+                line-height: 1.2;
+                padding: 10px;
+            }
+            span {
+                white-space: nowrap;
+                color: $white;
+            }
+            span.uber {
+                color: $gold;
+            }
+            .button_container {
+                position: absolute;
+                bottom: 10%;
+                width: 100%;
+                .button {
+                    a {
+                        border-radius: 5px;
+                        border: 1px solid $white;
+                        padding: 10px;
+                    }
+                }
+            }
+        }
+        .slide__1 {
+            background-image: url(../assets/img/slide_1_xs.jpg);
+        }
+        .slide__2 {
+            background-image: url(../assets/img/black-photo-xs.jpg);
+        }
+        .slide__3 {
+            background-image: url(../assets/img/slide-3-xs.jpg);
+        }
+//        .slide__4 {
+//            background-image: url(../assets/img/duk-xs.jpg);
+//        }
+//        .slide__5 {
+//            background-image: url(../assets/img/odessa-5.jpg);
+//        }
+    }
+}
+@media all and (min-width: 480px) {
+    .slider {
+        .slider_container {
+            .slide {
+                height: auto;
+                padding-top: calc(0.6 * 100vw);
+                p {
+                    font-size: 2.2rem;
+                }
+            }
+            .slide__1 {
+                background-image: url(../assets/img/slide_1_sm.jpg);
+            }
+            .slide__2 {
+                background-image: url(../assets/img/black-photo-sm.jpg);
+            }
+            .slide__3 {
+                background-image: url(../assets/img/slide-3-sm.jpg);
+            }
+        }
+    }
+}
+@media all and (min-width: 768px) {
+    .slider {
+        .slider_container {
+            .slide {
+                height: auto;
+                padding-top: calc(0.5625 * 100vw);
+                position: relative;
+                p {
+                    font-size: 2.6rem;
+                    text-align: center;
+                    top: 15%;
+                    left: 0;
+                    text-indent: 0;
+                }
+                p.connect {
+                    line-height: 1.4;
+                    font-size: 3rem;
+                }
+                .button_container {
+                    .button {
+                        a {
+                            border-radius: 5px;
+                            border: 1px solid $white;
+                            font-weight: bold;
+                            padding: 15px;
+                        }
+                    }
+                }
+            }
+            .slide__1 {
+                background-image: url(../assets/img/slide_1_md.jpg);
+            }
+            .slide__2 {
+                background-image: url(../assets/img/black-photo-md.jpg);
+            }
+            .slide__3 {
+                background-image: url(../assets/img/slide-3-md.jpg);
+            }
+        }
+    }
+}
+@media all and (min-width: 992px) {
+    .slider {
+        .slider_container {
+            .slide {
+                height: auto;
+                padding-top: calc(0.4 * 100vw);
+                p {
+                    font-size: 3.5rem;
+
+                }
+                p.connect {
+                    font-size: 3.5rem;
+                }
+            }
+            .slide__1 {
+                background-image: url(../assets/img/slide_1.jpg);
+            }
+            .slide__2 {
+                background-image: url(../assets/img/black-photo.jpg);
+            }
+            .slide__3 {
+                background-image: url(../assets/img/slide-3.jpg);
+            }
+        }
+    }
+}
