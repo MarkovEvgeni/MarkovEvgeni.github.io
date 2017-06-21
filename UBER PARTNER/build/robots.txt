@@ -1,4 +1,5 @@
 User-agent: *
+Host: www.uberin.od.ua
 Allow: /
 Allow: /assets*
 Allow: /index.html*
