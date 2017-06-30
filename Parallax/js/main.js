@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",function(){"use strict";console.log("test");var e=document.getElementsByTagName("video")[0];setTimeout(function(){e.play()},100)});
