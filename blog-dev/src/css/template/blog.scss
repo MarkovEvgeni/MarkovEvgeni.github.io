@@ -1,0 +1,176 @@
+.blog {
+    font-family: 'Space Monoregular';
+    color: rgb(61, 66, 72);
+    font-size: 14px;
+    .clearfix::after {
+        clear: both;
+        content: "";
+        display: block;
+    }
+    h1 {
+        font-family: 'Space Monobold';
+        font-size: 32px;
+        text-transform: uppercase;
+        text-align: center;
+        padding: 6px;
+    }
+    .signature {
+        margin: 5px auto 30px;
+        text-align: center;
+    }
+    .signature:first-letter {
+        text-transform: capitalize;
+        transition: background-color 0.5s ease;
+    }
+    .search {
+        text-align: center;
+        input {
+            border: none;
+            border-bottom: 1px solid rgb(61, 66, 72);
+            width: 250px;
+            outline: none;
+            -webkit-appearance: none;
+            margin-bottom: 50px;
+        }
+        input[placeholder] {
+            text-align: center;
+            color: rgb(61, 66, 72);
+            font-family: 'Space Monobold';
+            padding: 5px 0;
+        }
+        input::-webkit-input-placeholder{
+            text-align: center;
+            color: rgb(61, 66, 72);
+            font-family: 'Space Monobold';
+            padding: 5px 0;
+        }
+        input::-moz-placeholder{
+            text-align: center;
+            color: rgb(61, 66, 72);
+            font-family: 'Space Monobold';
+            padding: 5px 0;
+        }
+        input:-moz-placeholder{
+            text-align: center;
+            color: rgb(61, 66, 72);
+            font-family: 'Space Monobold';
+            padding: 5px 0;
+        }
+        input:-ms-input-placeholder {
+            text-align: center;
+            color: rgb(61, 66, 72);
+            font-family: 'Space Monobold';
+            padding: 5px 0;
+        }
+        input::-webkit-input-placeholder {
+            text-align: center;
+            color: rgb(61, 66, 72);
+            font-family: 'Space Monobold';
+            padding: 5px 0;
+        }
+    }
+    .selector__thumb {
+        padding: 10px 0;
+        font-family: 'Space Monobold';
+        transition: background-color 0.5s ease;
+        overflow: hidden;
+        .selector {
+            white-space: nowrap;
+            transition: transform 0.5s ease-in-out;
+            display: flex;
+            width: 133.3%;
+            .selector__item {
+                float: left;
+                width: 25%;
+                text-align: right;
+                padding: 20px 5px;
+                cursor: pointer;
+                opacity: 0.6;
+                transition: opacity, text-align 0.3s ease;
+                flex-shrink: none;
+            }
+            .selector__item:hover {
+                opacity: 1;
+            }
+            .selector__item.active {
+                text-align: center;
+                opacity: 1;
+            }
+            .selector__item.prev {
+                text-align: left;
+            }
+        }
+    }
+    .selector__thumb.latest {
+        background-color: rgb(177, 171, 212);
+        .selector {
+            transform: translateX(25%);
+        }
+    }
+    .selector__thumb.tech {
+        background-color: rgb(211, 229, 246);
+        .selector {
+            transform: translateX(0%);
+        }
+    }
+    .selector__thumb.design {
+        background-color: rgb(211, 246, 206);
+        .selector {
+            transform: translateX(-25%);
+        }
+    }
+    .selector__thumb.marketing {
+        background-color: rgb(255, 245, 80);
+        .selector {
+            transform: translateX(-50%);
+        }
+    }
+    .latest_articles {
+        padding: 10px 10px 35px 10px;
+        .latest_articles__item {
+            .article__photo {
+                width: 100%;
+                padding-top: 100%;
+                position: relative;
+                img {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .article__date {
+                margin: 5px 0 7px;
+                padding: 4px 0;
+                color: rgba(52, 57, 66, 0.7)
+            }
+            .article__name {
+                font-family: 'Space Monobold';
+                color: rgb(52, 57, 66);
+                line-height: 1.6;
+                margin-bottom: 6px;
+            }
+            .article__link {
+                margin-bottom: 24px;
+                a {
+                    display: block;
+                    padding: 4px 0;
+                    height: 100%;
+                    cursor: pointer;
+                    text-decoration: none;
+                    color: rgb(52, 57, 66);
+                    span {
+                        display: inline-block;
+                        transition: transform 0.3s ease;
+                    }
+                }
+                a:hover {
+                    span {
+                        transform: translateX(75%);
+                    }
+                }
+            }
+        }
+    }
+}
