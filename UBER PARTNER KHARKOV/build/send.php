@@ -1,6 +1,6 @@
 <?php
     if((isset($_POST['name'])&&$_POST['name']!="")&&(isset($_POST['telephone'])&&$_POST['telephone']!="")){
-        $to = 'support@uberin.od.ua, tarasuberin@gmail.com'; //Почта получателя, через запятую можно указать сколько угодно адресов
+        $to = 'info@uberin.kh.ua, tarasuberin@gmail.com'; //Почта получателя, через запятую можно указать сколько угодно адресов
         $subject = 'Новая заявка'; //Заголовок сообщения
         $message = '
                 <html>
