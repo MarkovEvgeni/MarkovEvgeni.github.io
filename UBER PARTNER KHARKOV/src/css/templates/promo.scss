@@ -32,6 +32,15 @@
 //        flex-shrink: 0;
 //        margin: 10px 20px 5px 0px;
     }
+    a {
+        cursor: pointer;
+        font-weight: bold;
+        text-decoration: none;
+        color: #0631af;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
 }
 @media all and (min-width: 550px) {
     .promo {
