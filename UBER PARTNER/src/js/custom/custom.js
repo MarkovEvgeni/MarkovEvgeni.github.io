@@ -206,3 +206,15 @@ $(".easy_container .button_container .button").on("click","a", function (event) 
         $('body,html').animate({scrollTop: top}, 1500);
     
 });
+
+$('#city_select').on('change', function() {
+    if ($('#city_select').val() == 'town_dnepr') {
+        window.open('http://uberin.dp.ua/');
+    } else if ($('#city_select').val() == 'town_kharkov') {
+        window.open('http://uberin.kh.ua/');
+    }  else if ($('#city_select').val() == 'town_zaporozhye') {
+        window.open('http://uberin.zp.ua/');
+    } else if ($('#city_select').val() == 'town_odessa') {
+        window.open('http://uberin.od.ua/');
+    }
+});
