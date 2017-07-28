@@ -1,6 +1,6 @@
 AuthType Basic
-AuthName "/www/uberin.kh.ua/webstat"
-AuthUserFile /var/www/taras181/data/etc/90059789.passwd
+AuthName "/www/uberin.zp.ua/webstat"
+AuthUserFile /var/www/taras181/data/etc/88880578.passwd
 DirectoryIndex index.html
 <Limit GET POST>
 	require valid-user
