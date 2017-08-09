@@ -1,73 +1,38 @@
 section.banner {
-    background: rgba(169,3,41,1);
-background: -moz-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
-background: -webkit-gradient(left top, right top, color-stop(0%, rgba(169,3,41,1)), color-stop(44%, rgba(143,2,34,1)), color-stop(100%, rgba(109,0,25,1)));
-background: -webkit-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
-background: -o-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
-background: -ms-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
-background: linear-gradient(to right, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', endColorstr='#6d0019', GradientType=1 );
+  background: rgba(255,175,75,1);
+  background: -moz-linear-gradient(top, rgba(255,175,75,1) 0%, rgba(255,146,10,1) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,175,75,1)), color-stop(100%, rgba(255,146,10,1)));
+  background: -webkit-linear-gradient(top, rgba(255,175,75,1) 0%, rgba(255,146,10,1) 100%);
+  background: -o-linear-gradient(top, rgba(255,175,75,1) 0%, rgba(255,146,10,1) 100%);
+  background: -ms-linear-gradient(top, rgba(255,175,75,1) 0%, rgba(255,146,10,1) 100%);
+  background: linear-gradient(to bottom, rgba(255,175,75,1) 0%, rgba(255,146,10,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffaf4b', endColorstr='#ff920a', GradientType=0 );
+  padding: 15px 0;
+  overflow: hidden;
     h1 {
         color: white;
         font-weight: bold;
         font-size: 20px;
-        overflow: hidden;
-        height: 26px;
-        display: flex;
-        justify-content: center;
-        .static {
-            height: 26px;
-            display: inline-flex;
-            align-items: center;
-            width: 160px;
-        }
-        .dynamic {
-            height: 26px;
-            position: relative;
-            display: inline-flex;
-            align-items: center;
-            width: 150px;
-            margin-left: 3px;
-            ul {
-                position: absolute;
-                top: 0;
-                left: 0;
-                animation: animate 7s ease forwards infinite;
-                li { 
-                    height: 26px;
-                    display: flex;
-                    align-items: center;
-                }
-            }
-        }
+        animation: marqueeScroll 20s infinite ease;
+        display: inline-block;
+        padding-left: 105%;
+        width: 415px;
+  }
+} 
+@media all and (min-width: 480px) {
+  section.banner {
+    padding: 20px 0;
+    h1 {
+      font-size: 24px;
+      animation: marqueeScroll 15s infinite linear;
     }
+  }
 }
-@keyframes animate {
-    0% {
-        transform: translateY(0%);
-    }
-    12.5% {
-        transform: translateY(0%);
-    }
-    25% {
-        transform: translateY(-20%);
-    }
-    37.5% {
-        transform: translateY(-20%);
-    }
-    50% {
-        transform: translateY(-40%);
-    }
-    62.5% {
-        transform: translateY(-40%);
-    }
-    75% {
-        transform: translateY(-60%);
-    }
-    87.5% {
-        transform: translateY(-60%);
-    }
-    100% {
-        transform: translateY(-80%);
-    }
+@keyframes marqueeScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
