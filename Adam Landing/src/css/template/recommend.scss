@@ -1,0 +1,140 @@
+.first_screen {
+  width: 100%;
+  height: 100vh;
+  border: 1px solid red;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $maincolor;
+}
+.first_screen__background {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.first_screen__background__mask {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,0.5);
+background: -moz-radial-gradient(center, ellipse cover, rgba(0,0,0,0.5) 0%, rgba(0,0,0,1) 49%, rgba(0,0,0,1) 100%);
+background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(0,0,0,0.5)), color-stop(49%, rgba(0,0,0,1)), color-stop(100%, rgba(0,0,0,1)));
+background: -webkit-radial-gradient(center, ellipse cover, rgba(0,0,0,0.5) 0%, rgba(0,0,0,1) 49%, rgba(0,0,0,1) 100%);
+background: -o-radial-gradient(center, ellipse cover, rgba(0,0,0,0.5) 0%, rgba(0,0,0,1) 49%, rgba(0,0,0,1) 100%);
+background: -ms-radial-gradient(center, ellipse cover, rgba(0,0,0,0.5) 0%, rgba(0,0,0,1) 49%, rgba(0,0,0,1) 100%);
+background: radial-gradient(ellipse at center, rgba(0,0,0,0.5) 0%, rgba(0,0,0,1) 49%, rgba(0,0,0,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000', GradientType=1 );
+  z-index: 2;
+}
+.first_screen__background img {
+  width: 100%;
+  min-width: 600px;
+  position: relative;
+  z-index: 1;
+}
+.second_screen {
+  background: yellow;
+  width: 100%;
+  height: 100vh;
+}
+.first_screen__mask {
+  background: black;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  z-index: 2;
+  animation: opacitychanges 8s ease 1s forwards;
+}
+
+@keyframes opacitychanges {
+  10% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  70% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 0.1;
+  }
+}
+@keyframes opacitychangesglow {
+  10% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  70% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 0.7;
+  }
+}
+
+.first_screen__glow {
+  width: 150%;
+  padding-top: 150%;
+  position: absolute;
+  min-width: 600px;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 3;
+  border-radius: 50%;
+  background: rgba(33,128,81,1);
+  background: -moz-radial-gradient(center, ellipse cover, rgba(33,128,81,1) 0%, rgba(32,128,82,0) 100%);
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(33,128,81,1)), color-stop(100%, rgba(32,128,82,0)));
+  background: -webkit-radial-gradient(center, ellipse cover, rgba(33,128,81,1) 0%, rgba(32,128,82,0) 100%);
+  background: -o-radial-gradient(center, ellipse cover, rgba(33,128,81,1) 0%, rgba(32,128,82,0) 100%);
+  background: -ms-radial-gradient(center, ellipse cover, rgba(33,128,81,1) 0%, rgba(32,128,82,0) 100%);
+  background: radial-gradient(ellipse at center, rgba(33,128,81,1) 0%, rgba(32,128,82,0) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#218051', endColorstr='#208052', GradientType=1 );
+  opacity: 0;
+  animation: opacitychangesglow 8s ease 1s forwards;
+}
+
+
+
+
+
+
+
+
+.point_of_light { 
+  background: green;
+  width: 20%;
+  padding-top: 100%;
+  min-width: 160px;
+  max-width: 300px;
+  border-radius: 50%;
+  animation: shadow 4s ease 2s forwards;
+}
+@keyframes shadoglow {
+  from {
+    box-shadow: 0px 0px 0px 0px rgba(0,0,0,1);
+  }
+  to {
+    box-shadow: 0px 0px 40px 0px rgba(0,0,0,1);
+  }
+}
