@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
   
   function insertGif() {
-    $('.second_screen .second_screen__gif_container').append('<img src="/assets/img/second.gif" alt="">');
+    $('.second_screen .second_screen__gif_container').append('<img src="https://raw.githubusercontent.com/MarkovEvgeni/MarkovEvgeni.github.io/master/Adam%20Landing/build/assets/img/second.gif" alt="">');
   }
   
 });
