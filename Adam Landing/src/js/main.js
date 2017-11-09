@@ -1,6 +1,11 @@
+//= third_party/jquery-3.2.1.min.js
+//= third_party/jquery.easing.1.3.js
+
 document.addEventListener('DOMContentLoaded', function () {
   
   'use strict';
+  
+  console.log(jQuery);
   
   setTimeout(function() {
     var glow = document.getElementsByClassName('first_screen__glow');
@@ -18,24 +23,22 @@ document.addEventListener('DOMContentLoaded', function () {
     firstScreen[0].classList.add('animation_finished');
     secondScreen[0].classList.add('animation_finished');
     var scrollHeight = document.documentElement.clientHeight;
-    scrollScreen(scrollHeight);
+    jQueryScroll(scrollHeight);
+  }
+
+  
+  function jQueryScroll(scrollHeightValue) {
+    $('body,html').animate(
+      {
+        scrollTop: scrollHeightValue
+      },
+      1500,
+      'easeInOutCubic'
+    ).promise().then(insertGif);
   }
   
-  function scrollScreen(scrollHeightValue) {
-    var currentScroll = window.pageYOffset;
-    var scrollScreenInterval = setInterval(function () {
-      if (currentScroll + 4 < scrollHeightValue) {
-        window.scrollBy(0, 4);
-        currentScroll += 4;
-      } else {
-        clearInterval(scrollScreenInterval);
-        window.scrollBy({
-          left: 0,
-          top: document.documentElement.clientHeight,
-          behavior: 'smooth'
-        });
-      }
-    }, 4);
-    return;
-  } 
+  function insertGif() {
+    $('.second_screen .second_screen__gif_container').append('<img src="/assets/img/second.gif" alt="">');
+  }
+  
 });
