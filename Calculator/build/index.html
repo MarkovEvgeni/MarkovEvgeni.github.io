@@ -1,0 +1,2672 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript" src="js/main.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="screen_selector">
+      <div class="screen_selector__item">Home</div>
+      <div class="screen_selector__item">Energy</div>
+      <div class="screen_selector__item">Chiller</div>
+      <div class="screen_selector__item">Pump</div>
+      <div class="screen_selector__item">Financials</div>
+    </div>
+    <div class="primary_secondary_pump_selector">
+      <div class="primary_secondary_pump_selector__heading">
+        Plant Design
+      </div>
+      <div class="primary_secondary_pump__button primary">Primary</div>
+      <div class="primary_secondary_pump__button secondary">Secondary</div>
+    </div>
+    <div class="chiller_cooling_selector">
+      <div class="chiller_cooling_selecto__heading">
+        Chiller Cooling
+      </div>
+      <div class="chiller_cooling_selector_button air">Air Cooled</div>
+      <div class="chiller_cooling_selector_button water">Water Cooled</div>
+    </div>
+    <div class="region_selector">
+      <div class="region_selector__heading">
+        Climate Region
+      </div>
+      <div class="region_selector__button select_button">
+        North East
+      </div>
+      <div class="region_selector__button select_button">
+        Central
+      </div>
+      <div class="region_selector__button select_button">
+        East North Central
+      </div>
+      <div class="region_selector__button select_button">
+        West North Central
+      </div>
+      <div class="region_selector__button select_button">
+        South East
+      </div>
+      <div class="region_selector__button select_button">
+        South
+      </div>
+      <div class="region_selector__button select_button">
+        South West
+      </div>
+      <div class="region_selector__button select_button">
+        Mountain
+      </div>
+      <div class="region_selector__button select_button">
+        North West
+      </div>
+      <div class="region_selector__button select_button">
+        West
+      </div>
+      <div class="custom_region_selector__button select_button">
+        Custom Region
+      </div>
+      <div class="average_us_selector__button select_button">
+        Average US
+      </div>
+    </div>
+    <form id="calculateForm" action="">
+      <div class="inputs_container">
+        <div class="inputs_container__item">
+          <label for="electricity_cost">
+            <div class="inputs_container__item__name">
+              Electricity Cost (Average)
+            </div>
+          </label>
+          <input required name="electricity_cost" id="electricity_cost" type="text" class="inputs_container__item__input" value="0.1">
+          <div class="inputs_container__item__unit">
+            $/kWh
+          </div>
+        </div>
+        <div class="inputs_container__item">
+          <label for="plant_load">
+            <div class="inputs_container__item__name">
+              Chilled Water Plant Load (Design Cooling Load)
+            </div>
+          </label>
+          <input id="plant_load" name="plant_load" type="text" class="inputs_container__item__input" value="5000">
+          <div class="inputs_container__item__unit">
+            tons
+          </div>
+        </div>
+        <div class="inputs_container__item">
+          <label for="number_of_chillers">
+            <div class="inputs_container__item__name">
+              Number Of Chillers
+            </div>
+          </label>
+          <input id="number_of_chillers" name="number_of_chillers" type="text" class="inputs_container__item__input" value="5">
+          <div class="inputs_container__item__unit">
+            pcs.
+          </div>
+        </div>
+        <div class="inputs_container__item">
+          <label for="operating_hours_day">
+            <div class="inputs_container__item__name">
+              Operating Hours / Day
+            </div>
+          </label>
+          <input id="operating_hours_day" name="operating_hours_day" type="text" class="inputs_container__item__input" value="12">
+          <div class="inputs_container__item__unit">
+            hours
+          </div>
+        </div>
+        <div class="inputs_container__item">
+          <label for="operating_days_week">
+            <div class="inputs_container__item__name">
+              Operating Days / Week
+            </div>
+          </label>
+          <input id="operating_days_week" name="operating_days_week" type="text" class="inputs_container__item__input" value="6">
+          <div class="inputs_container__item__unit">
+            days
+          </div>
+        </div>
+        <div class="inputs_container__item">
+          <label for="iplv">
+            <div class="inputs_container__item__name">
+              Chiller Design Integrated Part Load Value (IPLV)
+            </div>
+          </label>
+          <input id="iplv" name="iplv" type="text" class="inputs_container__item__input" value="0.6">
+          <div class="inputs_container__item__unit">
+            kW/ton
+          </div>
+        </div>
+        <div class="inputs_container__item primary_pump_head">
+          <label for="actual_pump_head">
+            <div class="inputs_container__item__name">
+              Actual Primary Pump Head (Design)
+            </div>
+          </label>
+          <input id="actual_pump_head" name="actual_pump_head" type="text" class="inputs_container__item__input" value="100">
+          <div class="inputs_container__item__unit">
+            ft.
+          </div>
+        </div>
+        <div class="inputs_container__item secondary_pump_head">
+          <label for="secondary_pump_head">
+            <div class="inputs_container__item__name">
+              Actual Secondary Pump Head (Design)
+            </div>
+          </label>
+          <input id="secondary_pump_head" name="secondary_pump_head" type="text" class="inputs_container__item__input">
+          <div class="inputs_container__item__unit">
+            ft.
+          </div>
+        </div>
+        <div class="inputs_container__item">
+          <label for="motor_efficiency">
+            <div class="inputs_container__item__name">
+              Pump, VFD, Motor Efficiency (Average)
+            </div>
+          </label>
+          <input id="motor_efficiency" name="motor_efficiency" type="text" class="inputs_container__item__input" value="70">
+          <div class="inputs_container__item__unit">
+            %
+          </div>
+        </div>
+        <div class="inputs_container__item">
+          <label for="design_delta">
+            <div class="inputs_container__item__name">
+              Design Delta T
+            </div>
+          </label>
+          <input id="design_delta" name="design_delta" type="text" class="inputs_container__item__input" value="14">
+          <div class="inputs_container__item__unit">
+            °F
+          </div>
+        </div>
+        <div class="inputs_container__item">
+          <label for="actual_delta">
+            <div class="inputs_container__item__name">
+              Actual Delta T (Prior Energy Valve Installation)
+            </div>
+          </label>
+          <input id="actual_delta" name="actual_delta" type="text" class="inputs_container__item__input" value="6">
+          <div class="inputs_container__item__unit">
+            °F
+          </div>
+        </div>
+        <div class="inputs_container__item">
+          <label for="future_delta">
+            <div class="inputs_container__item__name">
+              Future Delta T (Energy Valve Delta T Manager Setting)
+            </div>
+          </label>
+          <input id="future_delta" name="future_delta" type="text" class="inputs_container__item__input" value="20">
+          <div class="inputs_container__item__unit">
+            °F
+          </div>
+        </div>
+      </div>
+      <input type="submit">
+    </form>
+    <div class="screen_container">
+      <div class="screen home">
+        <div class="flex_table annual_energy_costs_table">
+          <div class="flex_row heading">
+            ANNUAL ENERGY COSTS
+          </div>
+          <div class="flex_row table_headings">
+            <div class="table_headings__item flex_column">
+              <div class="table_headings__item__name">DELTA T</div>
+              <div class="table_headings__item__measurement">&deg;F</div>
+            </div>
+            <div class="table_headings__item flex_column">
+              <div class="table_headings__item__name">AVG</div>
+              <div class="table_headings__item__measurement">GPM</div>
+            </div>
+            <div class="table_headings__item flex_column">
+              <div class="table_headings__item__name">AVG</div>
+              <div class="table_headings__item__measurement">Tons</div>
+            </div>
+            <div class="table_headings__item flex_column">
+              <div class="table_headings__item__name">PUMPING</div>
+              <div class="table_headings__item__measurement">Cost</div>
+            </div>
+            <div class="table_headings__item flex_column">
+              <div class="table_headings__item__name">CHILLER</div>
+              <div class="table_headings__item__measurement">Cost</div>
+            </div>
+            <div class="table_headings__item flex_column">
+              <div class="table_headings__item__name">TOTAL</div>
+              <div class="table_headings__item__measurement">Cost</div>
+            </div>
+            <div class="table_headings__item flex_column">
+              <div class="table_headings__item__name">ENERGY</div>
+              <div class="table_headings__item__measurement">kWh</div>
+            </div>
+          </div>
+          <div class="flex_row">
+            <div class="flex_row">2</div>
+            <div class="flex_row">8571</div>
+            <div class="flex_row">714</div>
+            <div class="flex_row">76284,36</div>
+            <div class="flex_row">1275078.71</div>
+            <div class="flex_row">1351363.07</div>
+            <div class="flex_row">13513631</div>
+          </div>
+          <div class="flex_row"></div>
+          <div class="flex_row"></div>
+          <div class="flex_row"></div>
+          <div class="flex_row"></div>
+          <div class="flex_row"></div>
+          <div class="flex_row"></div>
+          <div class="flex_row"></div>
+        </div>
+      </div>
+      <div class="screen energy">
+        <form action="">
+          <div class="energy_screen__container">
+            <div class="energy_screen__container__table first">
+              <div class="energy_screen__container__table__line first">
+                <div class="energy_screen__container__table__line__column first">Operating Hours / Day</div>
+                <div class="energy_screen__container__table__line__column second">12</div>
+                <div class="energy_screen__container__table__line__column third">hours</div>
+              </div>
+              <div class="energy_screen__container__table__line second">
+                <div class="energy_screen__container__table__line__column first">Operating Days / Week</div>
+                <div class="energy_screen__container__table__line__column second">6</div>
+                <div class="energy_screen__container__table__line__column third">days</div>
+              </div>
+              <div class="energy_screen__container__table__line third">
+                <div class="energy_screen__container__table__line__column first">Annual Operating Hours</div>
+                <div class="energy_screen__container__table__line__column second"></div>
+                <div class="energy_screen__container__table__line__column third">hours</div>
+              </div>
+            </div>
+            <div class="energy_screen__container__table second">
+              <div class="energy_screen__container__table__line first">
+                <div class="energy_screen__container__table__line__column first">Point</div>
+                <div class="energy_screen__container__table__line__column second">Bin</div>
+                <div class="energy_screen__container__table__line__column third">Load</div>
+                <div class="energy_screen__container__table__line__column fourth">% of Operating Time</div>
+                <div class="energy_screen__container__table__line__column fifth">Operating Hours</div>
+              </div>
+              <div class="energy_screen__container__table__line second operating_hours_calc">
+                <div class="energy_screen__container__table__line__column first">A</div>
+                <div class="energy_screen__container__table__line__column second">Design</div>
+                <div class="energy_screen__container__table__line__column third">100%</div>
+                <div class="energy_screen__container__table__line__column fourth">
+                  <input type="text" value="45">
+                  <span>%</span>
+                </div>
+                <div class="energy_screen__container__table__line__column fifth"></div>
+              </div>
+              <div class="energy_screen__container__table__line third operating_hours_calc">
+                <div class="energy_screen__container__table__line__column first">B</div>
+                <div class="energy_screen__container__table__line__column second">Peak</div>
+                <div class="energy_screen__container__table__line__column third">75%</div>
+                <div class="energy_screen__container__table__line__column fourth">
+                  <input type="text" value="28">
+                  <span>%</span>
+                </div>
+                <div class="energy_screen__container__table__line__column fifth"></div>
+              </div>
+              <div class="energy_screen__container__table__line fourth operating_hours_calc">
+                <div class="energy_screen__container__table__line__column first">C</div>
+                <div class="energy_screen__container__table__line__column second">Low</div>
+                <div class="energy_screen__container__table__line__column third">50%</div>
+                <div class="energy_screen__container__table__line__column fourth">
+                  <input type="text" value="9">
+                  <span>%</span>
+                </div>
+                <div class="energy_screen__container__table__line__column fifth"></div>
+              </div>
+              <div class="energy_screen__container__table__line fifth">
+                <div class="energy_screen__container__table__line__column first">D</div>
+                <div class="energy_screen__container__table__line__column second">Min</div>
+                <div class="energy_screen__container__table__line__column third">25%</div>
+                <div class="energy_screen__container__table__line__column fourth">
+                  <div class="calculated_value"></div>
+                  <span>%</span>
+                </div>
+                <div class="energy_screen__container__table__line__column fifth"></div>
+              </div>
+              <div class="energy_screen__container__table__line sixth">
+                <div class="energy_screen__container__table__line__column first"></div>
+                <div class="energy_screen__container__table__line__column second"></div>
+                <div class="energy_screen__container__table__line__column third"></div>
+                <div class="energy_screen__container__table__line__column fourth"></div>
+                <div class="energy_screen__container__table__line__column fifth"></div>
+              </div>
+            </div>
+            <div class="energy_screen__container__table third">
+              <div class="energy_screen__container__table__line first">
+                <div class="energy_screen__container__table__line__column first">Climate Region</div>
+                <div class="energy_screen__container__table__line__column second">Cooling Degree Days</div>
+                <div class="energy_screen__container__table__line__column third">Humidity Adjustment</div>
+                <div class="energy_screen__container__table__line__column fourth">Multiplier</div>
+              </div>
+              <div class="energy_screen__container__table__line static second">
+                <div class="energy_screen__container__table__line__column first">North East</div>
+                <div class="energy_screen__container__table__line__column second">1034</div>
+                <div class="energy_screen__container__table__line__column third">
+                  <div class="value">30</div>
+                  <span>%</span>
+                </div>
+                <div class="energy_screen__container__table__line__column fourth"></div>
+              </div>
+              <div class="energy_screen__container__table__line static third">
+                <div class="energy_screen__container__table__line__column first">Central</div>
+                <div class="energy_screen__container__table__line__column second">1090</div>
+                <div class="energy_screen__container__table__line__column third">
+                  <div class="value">30</div>
+                  <span>%</span>
+                </div>
+                <div class="energy_screen__container__table__line__column fourth"></div>
+              </div>
+              <div class="energy_screen__container__table__line static fourth">
+                <div class="energy_screen__container__table__line__column first">East North Central</div>
+                <div class="energy_screen__container__table__line__column second">975</div>
+                <div class="energy_screen__container__table__line__column third">
+                  <div class="value">30</div>
+                  <span>%</span>
+                </div>
+                <div class="energy_screen__container__table__line__column fourth"></div>
+              </div>
+              <div class="energy_screen__container__table__line static fifth">
+                <div class="energy_screen__container__table__line__column first">West North Central</div>
+                <div class="energy_screen__container__table__line__column second">1123</div>
+                <div class="energy_screen__container__table__line__column third">
+                  <div class="value">15</div>
+                  <span>%</span>
+                </div>
+                <div class="energy_screen__container__table__line__column fourth"></div>
+              </div>
+              <div class="energy_screen__container__table__line static sixth">
+                <div class="energy_screen__container__table__line__column first">South East</div>
+                <div class="energy_screen__container__table__line__column second">2264</div>
+                <div class="energy_screen__container__table__line__column third">
+                  <div class="value">30</div>
+                  <span>%</span>
+                </div>
+                <div class="energy_screen__container__table__line__column fourth"></div>
+              </div>
+              <div class="energy_screen__container__table__line static seventh">
+                <div class="energy_screen__container__table__line__column first">South</div>
+                <div class="energy_screen__container__table__line__column second">2004</div>
+                <div class="energy_screen__container__table__line__column third">
+                  <div class="value">30</div>
+                  <span>%</span>
+                </div>
+                <div class="energy_screen__container__table__line__column fourth"></div>
+              </div>
+              <div class="energy_screen__container__table__line static eight">
+                <div class="energy_screen__container__table__line__column first">South West</div>
+                <div class="energy_screen__container__table__line__column second">2750</div>
+                <div class="energy_screen__container__table__line__column third">
+                  <div class="value">5</div>
+                  <span>%</span>
+                </div>
+                <div class="energy_screen__container__table__line__column fourth"></div>
+              </div>
+              <div class="energy_screen__container__table__line static ninth">
+                <div class="energy_screen__container__table__line__column first">Mountain</div>
+                <div class="energy_screen__container__table__line__column second">1450</div>
+                <div class="energy_screen__container__table__line__column third">
+                  <div class="value">5</div>
+                  <span>%</span>
+                </div>
+                <div class="energy_screen__container__table__line__column fourth"></div>
+              </div>
+              <div class="energy_screen__container__table__line static tenth">
+                <div class="energy_screen__container__table__line__column first">North West</div>
+                <div class="energy_screen__container__table__line__column second">720</div>
+                <div class="energy_screen__container__table__line__column third">
+                  <div class="value">5</div>
+                  <span>%</span>
+                </div>
+                <div class="energy_screen__container__table__line__column fourth"></div>
+              </div>
+              <div class="energy_screen__container__table__line static eleventh">
+                <div class="energy_screen__container__table__line__column first">West</div>
+                <div class="energy_screen__container__table__line__column second">1850</div>
+                <div class="energy_screen__container__table__line__column third">
+                  <div class="value">5</div>
+                  <span>%</span>
+                </div>
+                <div class="energy_screen__container__table__line__column fourth"></div>
+              </div>
+              <div class="energy_screen__container__table__line twelfth custom">
+                <div class="energy_screen__container__table__line__column first">Custom Region</div>
+                <div class="energy_screen__container__table__line__column second">
+                  <input type="text">
+                </div>
+                <div class="energy_screen__container__table__line__column third">
+                  <input type="text">
+                  <span>%</span>
+                </div>
+                <div class="energy_screen__container__table__line__column fourth"></div>
+              </div>
+              <div class="energy_screen__container__table__line thirteenth average">
+                <div class="energy_screen__container__table__line__column first">Average US</div>
+                <div class="energy_screen__container__table__line__column second"></div>
+                <div class="energy_screen__container__table__line__column third">
+                  <div class="value"></div>
+                  <span>%</span>
+                </div>
+                <div class="energy_screen__container__table__line__column fourth"></div>
+              </div>
+              <div class="energy_screen__container__table__line fourteenth">
+                <div class="energy_screen__container__table__line__column first"></div>
+                <div class="energy_screen__container__table__line__column second"></div>
+                <div class="energy_screen__container__table__line__column third">
+                  Selected Value
+                </div>
+                <div class="energy_screen__container__table__line__column fourth"></div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="screen chiller">
+        <div class="chiller_screen__container__table__line__colum">
+          <input id="kw3_condenser_pump" type="text" value="0.030">
+          <input id="kw4_cooling_tower" type="text" value="0.080">
+          <input id="kw5_chiller_controls" type="text" value="0.005">
+          <input id="kw6_transmission_oil_pump" type="text" value="0.010">
+          <input id="chiller_cycling_percent" type="text" value="0">
+        </div>
+      </div>
+      <div class="screen pump">
+        <div class="pump_screen_container">
+          <div class="inputs_container__item">
+            <label for="pump_design_factor">
+              <div class="inputs_container__item__name">
+                Pump Design Factor
+              </div>
+            </label>
+            <input required name="pump_design_factor" id="pump_design_factor" type="text" class="inputs_container__item__input" value="100">
+            <div class="inputs_container__item__unit">
+              %
+            </div>
+          </div>
+          <div class="inputs_container__item">
+            <label for="minimum_pump_head">
+              <div class="inputs_container__item__name">
+                Minimum Pump Head
+              </div>
+            </label>
+            <input required name="minimum_pump_head" id="minimum_pump_head" type="text" class="inputs_container__item__input">
+            <div class="inputs_container__item__unit">
+              ft
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="screen financials">
+        Financials
+      </div>
+    </div>
+    <div class="calculations_container">
+      <div class="calculations_container__header annual_energy_costs">
+        Annual Energy Costs
+      </div>
+      <div class="calculations_container__sub_header annual_energy_costs">
+        <div class="">DELTA T</div>
+        <div class="">TOTAL</div>
+        <div class="">Energy</div>
+      </div>
+      <div class="calculations_container__table annual_energy_costs">
+        <div class="calculations_row">
+          <div class="column delta_t calculable_value"></div>
+          <div class="column total calculable_value"></div>
+          <div class="column energy calculable_value"></div>
+        </div>
+        <div class="calculations_row">
+          <div class="column delta_t calculable_value"></div>
+          <div class="column total calculable_value"></div>
+          <div class="column energy calculable_value"></div>
+        </div>
+        <div class="calculations_row">
+          <div class="column delta_t calculable_value"></div>
+          <div class="column total calculable_value"></div>
+          <div class="column energy calculable_value"></div>
+        </div>
+        <div class="calculations_row">
+          <div class="column delta_t calculable_value"></div>
+          <div class="column total calculable_value"></div>
+          <div class="column energy calculable_value"></div>
+        </div>
+        <div class="calculations_row">
+          <div class="column delta_t calculable_value"></div>
+          <div class="column total calculable_value"></div>
+          <div class="column energy calculable_value"></div>
+        </div>
+        <div class="calculations_row">
+          <div class="column delta_t calculable_value"></div>
+          <div class="column total calculable_value"></div>
+          <div class="column energy calculable_value"></div>
+        </div>
+      </div>
+      <div class="calculations_container__header annual_energy_savings">
+        <h2>Annual Energy Savings for changing Delta T</h2>
+      </div>
+      <div class="calculations_container__row annual_energy_savings">
+        <div class="calculations_container__row__item monetary_value">
+          <div class="calculations_container__row__item__subitem name">
+             Energy Savings Pumping Cost $
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item monetary_value">
+          <div class="calculations_container__row__item__subitem name">
+            Energy Savings Chiller Cost $
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item monetary_value">
+          <div class="calculations_container__row__item__subitem name">
+            Energy Savings Total Cost $
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item percent_value">
+          <div class="calculations_container__row__item__subitem name">
+            Energy Savings Pumping Cost %
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item percent_value">
+          <div class="calculations_container__row__item__subitem name">
+            Energy Savings Chiller Cost %
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item percent_value">
+          <div class="calculations_container__row__item__subitem name">
+            Energy Savings Total Cost %
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item ann_carb_diox_avoided">
+          <div class="calculations_container__row__item__subitem name">
+            Annual Carbon Dioxide Avoided
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item tree_seedl_grown_gr">
+          <div class="calculations_container__row__item__subitem name">
+            Number of Tree Seedlings Grown for 10 Years
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item houses_electrcity_use_equiv">
+          <div class="calculations_container__row__item__subitem name">
+            Equivalent to Number of Houses' Annual Electricity Use
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+      </div>
+      <div class="calculations_container__header operating_hours">
+        Operating Hours
+      </div>
+      <div class="calculations_container__row operating_hours">
+        <div class="calculations_container__row__item annual_operating_hours">
+          <div class="calculations_container__row__item__subitem name">
+            Annual Operating Hours
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value"></div>
+        </div>
+        <div class="calculations_container__row__item min_percent_of_operating_time">
+          <div class="calculations_container__row__item__subitem name">
+            Min Percent of Operating time
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value"></div>
+        </div>
+        <div class="calculations_container__row__item design_operating_hours all_operating_hours operating_hours">
+          <div class="calculations_container__row__item__subitem name">
+            Design Operating Hours
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value"></div>
+        </div>
+        <div class="calculations_container__row__item peak_operating_hours all_operating_hours operating_hours">
+          <div class="calculations_container__row__item__subitem name">
+            Peak Operating Hours
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value"></div>
+        </div>
+        <div class="calculations_container__row__item low_operating_hours all_operating_hours operating_hours">
+          <div class="calculations_container__row__item__subitem name">
+            Low Operating Hours
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value"></div>
+        </div>
+        <div class="calculations_container__row__item min_operating_hours all_operating_hours">
+          <div class="calculations_container__row__item__subitem name">
+            Min Operating Hours
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value"></div>
+        </div>
+      </div>
+      <div class="calculations_container__header regions_calculable_values">
+        Regions Calculable
+      </div>
+      <div class="calculations_container__row regions_calculable_values">
+        <div class="calculations_container__row__item average_us_cooling_degree_days">
+          <div class="calculations_container__row__item__subitem name">
+            Average US Cooling Degree Days
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item average_us_humidity_adjustments">
+          <div class="calculations_container__row__item__subitem name">
+            Average US Humidity Adjustments
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item selected_multiplier_value">
+          <div class="calculations_container__row__item__subitem name">
+            Selected Multiplier Value
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+      </div>
+      <div class="calculations_container__header multipliers">
+        <h2>Multipliers</h2>
+      </div>
+      <div class="calculations_container__row multipliers">
+        <div class="calculations_container__row__item north_east">
+          <div class="calculations_container__row__item__subitem name">North East</div>
+          <div class="calculations_container__row__item__subitem calculable_value not_custom_average_value"></div>
+        </div>
+        <div class="calculations_container__row__item central">
+          <div class="calculations_container__row__item__subitem name">Central</div>
+          <div class="calculations_container__row__item__subitem calculable_value not_custom_average_value"></div>
+        </div>
+        <div class="calculations_container__row__item east_north_central">
+          <div class="calculations_container__row__item__subitem name">East North Central</div>
+          <div class="calculations_container__row__item__subitem calculable_value not_custom_average_value"></div>
+        </div>
+        <div class="calculations_container__row__item west_north_central">
+          <div class="calculations_container__row__item__subitem name">West North Central</div>
+          <div class="calculations_container__row__item__subitem calculable_value not_custom_average_value"></div>
+        </div>
+        <div class="calculations_container__row__item south_east">
+          <div class="calculations_container__row__item__subitem name">South East</div>
+          <div class="calculations_container__row__item__subitem calculable_value not_custom_average_value"></div>
+        </div>
+        <div class="calculations_container__row__item south">
+          <div class="calculations_container__row__item__subitem name">South</div>
+          <div class="calculations_container__row__item__subitem calculable_value not_custom_average_value"></div>
+        </div>
+        <div class="calculations_container__row__item south_west">
+          <div class="calculations_container__row__item__subitem name">South West</div>
+          <div class="calculations_container__row__item__subitem calculable_value not_custom_average_value"></div>
+        </div>
+        <div class="calculations_container__row__item mountain">
+          <div class="calculations_container__row__item__subitem name">Mountain</div>
+          <div class="calculations_container__row__item__subitem calculable_value not_custom_average_value"></div>
+        </div>
+        <div class="calculations_container__row__item north_west">
+          <div class="calculations_container__row__item__subitem name">North West</div>
+          <div class="calculations_container__row__item__subitem calculable_value not_custom_average_value"></div>
+        </div>
+        <div class="calculations_container__row__item west">
+          <div class="calculations_container__row__item__subitem name">West</div>
+          <div class="calculations_container__row__item__subitem calculable_value not_custom_average_value"></div>
+        </div>
+        <div class="calculations_container__row__item custom_region">
+          <div class="calculations_container__row__item__subitem name">Custom Region</div>
+          <div class="calculations_container__row__item__subitem calculable_value"></div>
+        </div>
+        <div class="calculations_container__row__item average_us">
+          <div class="calculations_container__row__item__subitem name">Average US</div>
+          <div class="calculations_container__row__item__subitem calculable_value"></div>
+        </div>
+      </div>
+      <div class="calculations_container__header aggregation_energy_consumption">
+        Aggregation of Energy Consumption
+      </div>
+      <div class="calculations_container__sub_header kw_ton">
+        [kW/ton]
+      </div>
+      <div class="calculations_container__row aggregation_energy_kw_ton">
+        <div class="calculations_container__row__item chiller_cooling">
+          <div class="calculations_container__row__item__subitem name">
+            Chiller Cooling
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item plant_design">
+          <div class="calculations_container__row__item__subitem name">
+            Plant Design
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item kw_2">
+          <div class="calculations_container__row__item__subitem name">
+          
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item total_chiller_energy_consumption">
+          <div class="calculations_container__row__item__subitem name">
+            Total Chiller Plant Energy Consumption
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item kw_3">
+          <div class="calculations_container__row__item__subitem name">
+            
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item">
+          <div class="calculations_container__row__item__subitem name">
+          
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+      </div>
+      <div class="calculations_container__sub_header ratio">
+        Ratio
+      </div>
+      <div class="calculations_container__row energy_consumption_ratio">
+        <div class="calculations_container__row__item single_ratio">
+          <div class="calculations_container__row__item__subitem name">
+            KW1 Compressor
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item kw_2 single_ratio">
+          <div class="calculations_container__row__item__subitem name">
+            
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item kw_3 single_ratio">
+          <div class="calculations_container__row__item__subitem name">
+            
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item kw_4 single_ratio">
+          <div class="calculations_container__row__item__subitem name">
+            
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item single_ratio">
+          <div class="calculations_container__row__item__subitem name">
+            KW5 Chiller Controls
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item single_ratio">
+          <div class="calculations_container__row__item__subitem name">
+            KW6 Transmission Oil Pump and Heater
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item total_ratio">
+          <div class="calculations_container__row__item__subitem name">
+            Total Chiller Plant Energy Consumption
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+      </div>
+      <div class="calculations_container__header actual_delta_t_usage">
+        Actual Delta T Energy Usage
+      </div>
+      <div class="calculations_container__row actual_delta_t_usage">
+        <div class="calculations_container__row__item chiller">
+          <div class="calculations_container__row__item__subitem name">Chiller</div>
+          <div class="calculations_container__row__item__subitem calculable_value"></div>
+        </div>
+        <div class="calculations_container__row__item chiller_kw_1">
+          <div class="calculations_container__row__item__subitem name">Chiller-KW1 Compressor</div>
+          <div class="calculations_container__row__item__subitem calculable_value"></div>
+        </div>
+        <div class="calculations_container__row__item chiller_kw_2">
+          <div class="calculations_container__row__item__subitem name"></div>
+          <div class="calculations_container__row__item__subitem calculable_value"></div>
+        </div>
+        <div class="calculations_container__row__item chiller_kw_3">
+          <div class="calculations_container__row__item__subitem name"></div>
+          <div class="calculations_container__row__item__subitem calculable_value"></div>
+        </div>
+        <div class="calculations_container__row__item chiller_kw_4">
+          <div class="calculations_container__row__item__subitem name"></div>
+          <div class="calculations_container__row__item__subitem calculable_value"></div>
+        </div>
+        <div class="calculations_container__row__item chiller_kw_5">
+          <div class="calculations_container__row__item__subitem name">Chiller-KW5 Chiller Controls</div>
+          <div class="calculations_container__row__item__subitem calculable_value"></div>
+        </div>
+        <div class="calculations_container__row__item chiller_kw_6">
+          <div class="calculations_container__row__item__subitem name">Chiller-KW6 Transmission Oil Pump and Heater</div>
+          <div class="calculations_container__row__item__subitem calculable_value"></div>
+        </div>
+        <div class="calculations_container__row__item pump">
+          <div class="calculations_container__row__item__subitem name">Pump</div>
+          <div class="calculations_container__row__item__subitem calculable_value"></div>
+        </div>
+        <div class="calculations_container__row__item total">
+          <div class="calculations_container__row__item__subitem name">Total</div>
+          <div class="calculations_container__row__item__subitem calculable_value"></div>
+        </div>
+      </div>
+      <div class="calculations_container__header design_chilled_water water_distribution_flow">
+        Design Chilled Water Distribution Flow
+      </div>
+      <div class="calculations_container__row design_chilled_water water_distribution_flow">
+        <div class="calculations_container__row__item 100_percent flow_gpm">
+          <div class="calculations_container__row__item__subitem name">
+            100% Flow[GPM]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item minimum_pump_head">
+          <div class="calculations_container__row__item__subitem name">
+            Minimum Pump Head
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item minimum_pump_head_flow">
+          <div class="calculations_container__row__item__subitem name">
+            Minimum Pump Flow [GPM]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item 75_percent flow_gpm designed_gpm_calculable">
+          <div class="calculations_container__row__item__subitem name">
+            75% Flow [GPM]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item 50_percent flow_gpm designed_gpm_calculable">
+          <div class="calculations_container__row__item__subitem name">
+            50% Flow [GPM]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item 25_percent flow_gpm designed_gpm_calculable">
+          <div class="calculations_container__row__item__subitem name">
+           25% Flow [GPM]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item 100_percent head_ft">
+          <div class="calculations_container__row__item__subitem name">
+           100% Head [ft]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item 75_percent head_ft">
+          <div class="calculations_container__row__item__subitem name">
+           75% Head [ft]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item 50_percent head_ft">
+          <div class="calculations_container__row__item__subitem name">
+           50% Head [ft]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item 25_percent head_ft">
+          <div class="calculations_container__row__item__subitem name">
+           25% Head [ft]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item 100_percent power_hp">
+          <div class="calculations_container__row__item__subitem name">
+           100% Power HP
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item 75_percent power_hp">
+          <div class="calculations_container__row__item__subitem name">
+           75% Power HP
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item 50_percent power_hp">
+          <div class="calculations_container__row__item__subitem name">
+           50% Power HP
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item 25_percent power_hp">
+          <div class="calculations_container__row__item__subitem name">
+           25% Power HP
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item 100_percent power_kw">
+          <div class="calculations_container__row__item__subitem name">
+           100 Load Power [kW]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item minimum_pump power_hp">
+          <div class="calculations_container__row__item__subitem name">
+           Minimum Pump Head Power [HP]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item minimum_pump power_kw">
+          <div class="calculations_container__row__item__subitem name">
+           Minimum Pump Head Power Power [kW]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item pump_costs">
+          <div class="calculations_container__row__item__subitem name">
+           Pump costs
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item annual_gal">
+          <div class="calculations_container__row__item__subitem name">
+           Annual Gal.
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item energy_kwh">
+          <div class="calculations_container__row__item__subitem name">
+           Energy [kWh]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item avg_gpm">
+          <div class="calculations_container__row__item__subitem name">
+           Avg GPM
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+      </div>
+      <div class="calculations_container__header delta_t_pump_calculations">
+        Delta T Pump Calculations
+      </div>
+      <div class="calculations_container__sub_header delta_t_pump_calculations">
+        Delta T First
+      </div>
+      <div class="calculations_container__row delta_t_calculations_row">
+        <div class="calculations_container__row__item flow_gpm">
+          <div class="calculations_container__row__item__subitem name">
+            100% Load Flow [GPM]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item flow_gpm">
+          <div class="calculations_container__row__item__subitem name">
+            75% Load Flow [GPM]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item flow_gpm">
+          <div class="calculations_container__row__item__subitem name">
+            50% Load Flow [GPM]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item flow_gpm">
+          <div class="calculations_container__row__item__subitem name">
+            25% Load Flow [GPM]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item head_ft">
+          <div class="calculations_container__row__item__subitem name">
+            100% Load Head [ft]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item head_ft">
+          <div class="calculations_container__row__item__subitem name">
+            75% Load Head [ft]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item head_ft">
+          <div class="calculations_container__row__item__subitem name">
+            50% Load Head [ft]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item head_ft">
+          <div class="calculations_container__row__item__subitem name">
+            25% Load Head [ft]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item power_hp">
+          <div class="calculations_container__row__item__subitem name">
+            100% Load Power [HP]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item power_hp">
+          <div class="calculations_container__row__item__subitem name">
+            75% Load Power [HP]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item power_hp">
+          <div class="calculations_container__row__item__subitem name">
+            50% Load Power [HP]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item power_hp">
+          <div class="calculations_container__row__item__subitem name">
+            25% Load Power [HP]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item pump_cost">
+          <div class="calculations_container__row__item__subitem name">
+            Pump costs
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item annual_gal">
+          <div class="calculations_container__row__item__subitem name">
+            Annual Gal.
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item avg_gpm">
+          <div class="calculations_container__row__item__subitem name">
+            Avg GPM
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item energy_kwh">
+          <div class="calculations_container__row__item__subitem name">
+            Energy [kWh]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div> 
+      </div>
+      <div class="calculations_container__sub_header delta_t_pump_calculations">
+        Delta T Second
+      </div>
+      <div class="calculations_container__row delta_t_calculations_row">
+        <div class="calculations_container__row__item flow_gpm">
+          <div class="calculations_container__row__item__subitem name">
+            100% Load Flow [GPM]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item flow_gpm">
+          <div class="calculations_container__row__item__subitem name">
+            75% Load Flow [GPM]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item flow_gpm">
+          <div class="calculations_container__row__item__subitem name">
+            50% Load Flow [GPM]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item flow_gpm">
+          <div class="calculations_container__row__item__subitem name">
+            25% Load Flow [GPM]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item head_ft">
+          <div class="calculations_container__row__item__subitem name">
+            100% Load Head [ft]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item head_ft">
+          <div class="calculations_container__row__item__subitem name">
+            75% Load Head [ft]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item head_ft">
+          <div class="calculations_container__row__item__subitem name">
+            50% Load Head [ft]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item head_ft">
+          <div class="calculations_container__row__item__subitem name">
+            25% Load Head [ft]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item power_hp">
+          <div class="calculations_container__row__item__subitem name">
+            100% Load Power [HP]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item power_hp">
+          <div class="calculations_container__row__item__subitem name">
+            75% Load Power [HP]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item power_hp">
+          <div class="calculations_container__row__item__subitem name">
+            50% Load Power [HP]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item power_hp">
+          <div class="calculations_container__row__item__subitem name">
+            25% Load Power [HP]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item pump_cost">
+          <div class="calculations_container__row__item__subitem name">
+            Pump costs
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item annual_gal">
+          <div class="calculations_container__row__item__subitem name">
+            Annual Gal.
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item avg_gpm">
+          <div class="calculations_container__row__item__subitem name">
+            Avg GPM
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item energy_kwh">
+          <div class="calculations_container__row__item__subitem name">
+            Energy [kWh]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div> 
+      </div>
+      <div class="calculations_container__sub_header delta_t_pump_calculations">
+        Delta T Third
+      </div>
+      <div class="calculations_container__row delta_t_calculations_row">
+        <div class="calculations_container__row__item flow_gpm">
+          <div class="calculations_container__row__item__subitem name">
+            100% Load Flow [GPM]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item flow_gpm">
+          <div class="calculations_container__row__item__subitem name">
+            75% Load Flow [GPM]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item flow_gpm">
+          <div class="calculations_container__row__item__subitem name">
+            50% Load Flow [GPM]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item flow_gpm">
+          <div class="calculations_container__row__item__subitem name">
+            25% Load Flow [GPM]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item head_ft">
+          <div class="calculations_container__row__item__subitem name">
+            100% Load Head [ft]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item head_ft">
+          <div class="calculations_container__row__item__subitem name">
+            75% Load Head [ft]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item head_ft">
+          <div class="calculations_container__row__item__subitem name">
+            50% Load Head [ft]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item head_ft">
+          <div class="calculations_container__row__item__subitem name">
+            25% Load Head [ft]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item power_hp">
+          <div class="calculations_container__row__item__subitem name">
+            100% Load Power [HP]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item power_hp">
+          <div class="calculations_container__row__item__subitem name">
+            75% Load Power [HP]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item power_hp">
+          <div class="calculations_container__row__item__subitem name">
+            50% Load Power [HP]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item power_hp">
+          <div class="calculations_container__row__item__subitem name">
+            25% Load Power [HP]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item pump_cost">
+          <div class="calculations_container__row__item__subitem name">
+            Pump costs
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item annual_gal">
+          <div class="calculations_container__row__item__subitem name">
+            Annual Gal.
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item avg_gpm">
+          <div class="calculations_container__row__item__subitem name">
+            Avg GPM
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item energy_kwh">
+          <div class="calculations_container__row__item__subitem name">
+            Energy [kWh]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div> 
+      </div>
+      <div class="calculations_container__sub_header delta_t_pump_calculations">
+        Delta T Fourth
+      </div>
+      <div class="calculations_container__row delta_t_calculations_row">
+        <div class="calculations_container__row__item flow_gpm">
+          <div class="calculations_container__row__item__subitem name">
+            100% Load Flow [GPM]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item flow_gpm">
+          <div class="calculations_container__row__item__subitem name">
+            75% Load Flow [GPM]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item flow_gpm">
+          <div class="calculations_container__row__item__subitem name">
+            50% Load Flow [GPM]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item flow_gpm">
+          <div class="calculations_container__row__item__subitem name">
+            25% Load Flow [GPM]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item head_ft">
+          <div class="calculations_container__row__item__subitem name">
+            100% Load Head [ft]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item head_ft">
+          <div class="calculations_container__row__item__subitem name">
+            75% Load Head [ft]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item head_ft">
+          <div class="calculations_container__row__item__subitem name">
+            50% Load Head [ft]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item head_ft">
+          <div class="calculations_container__row__item__subitem name">
+            25% Load Head [ft]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item power_hp">
+          <div class="calculations_container__row__item__subitem name">
+            100% Load Power [HP]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item power_hp">
+          <div class="calculations_container__row__item__subitem name">
+            75% Load Power [HP]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item power_hp">
+          <div class="calculations_container__row__item__subitem name">
+            50% Load Power [HP]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item power_hp">
+          <div class="calculations_container__row__item__subitem name">
+            25% Load Power [HP]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item pump_cost">
+          <div class="calculations_container__row__item__subitem name">
+            Pump costs
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item annual_gal">
+          <div class="calculations_container__row__item__subitem name">
+            Annual Gal.
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item avg_gpm">
+          <div class="calculations_container__row__item__subitem name">
+            Avg GPM
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item energy_kwh">
+          <div class="calculations_container__row__item__subitem name">
+            Energy [kWh]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div> 
+      </div>
+      <div class="calculations_container__sub_header delta_t_pump_calculations">
+        Delta T Fifth
+      </div>
+      <div class="calculations_container__row delta_t_calculations_row">
+        <div class="calculations_container__row__item flow_gpm">
+          <div class="calculations_container__row__item__subitem name">
+            100% Load Flow [GPM]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item flow_gpm">
+          <div class="calculations_container__row__item__subitem name">
+            75% Load Flow [GPM]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item flow_gpm">
+          <div class="calculations_container__row__item__subitem name">
+            50% Load Flow [GPM]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item flow_gpm">
+          <div class="calculations_container__row__item__subitem name">
+            25% Load Flow [GPM]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item head_ft">
+          <div class="calculations_container__row__item__subitem name">
+            100% Load Head [ft]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item head_ft">
+          <div class="calculations_container__row__item__subitem name">
+            75% Load Head [ft]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item head_ft">
+          <div class="calculations_container__row__item__subitem name">
+            50% Load Head [ft]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item head_ft">
+          <div class="calculations_container__row__item__subitem name">
+            25% Load Head [ft]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item power_hp">
+          <div class="calculations_container__row__item__subitem name">
+            100% Load Power [HP]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item power_hp">
+          <div class="calculations_container__row__item__subitem name">
+            75% Load Power [HP]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item power_hp">
+          <div class="calculations_container__row__item__subitem name">
+            50% Load Power [HP]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item power_hp">
+          <div class="calculations_container__row__item__subitem name">
+            25% Load Power [HP]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item pump_cost">
+          <div class="calculations_container__row__item__subitem name">
+            Pump costs
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item annual_gal">
+          <div class="calculations_container__row__item__subitem name">
+            Annual Gal.
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item avg_gpm">
+          <div class="calculations_container__row__item__subitem name">
+            Avg GPM
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item energy_kwh">
+          <div class="calculations_container__row__item__subitem name">
+            Energy [kWh]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div> 
+      </div>
+      <div class="calculations_container__sub_header delta_t_pump_calculations">
+        Delta T Sixth
+      </div>
+      <div class="calculations_container__row delta_t_calculations_row">
+        <div class="calculations_container__row__item flow_gpm">
+          <div class="calculations_container__row__item__subitem name">
+            100% Load Flow [GPM]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item flow_gpm">
+          <div class="calculations_container__row__item__subitem name">
+            75% Load Flow [GPM]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item flow_gpm">
+          <div class="calculations_container__row__item__subitem name">
+            50% Load Flow [GPM]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item flow_gpm">
+          <div class="calculations_container__row__item__subitem name">
+            25% Load Flow [GPM]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item head_ft">
+          <div class="calculations_container__row__item__subitem name">
+            100% Load Head [ft]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item head_ft">
+          <div class="calculations_container__row__item__subitem name">
+            75% Load Head [ft]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item head_ft">
+          <div class="calculations_container__row__item__subitem name">
+            50% Load Head [ft]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item head_ft">
+          <div class="calculations_container__row__item__subitem name">
+            25% Load Head [ft]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item power_hp">
+          <div class="calculations_container__row__item__subitem name">
+            100% Load Power [HP]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item power_hp">
+          <div class="calculations_container__row__item__subitem name">
+            75% Load Power [HP]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item power_hp">
+          <div class="calculations_container__row__item__subitem name">
+            50% Load Power [HP]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item power_hp">
+          <div class="calculations_container__row__item__subitem name">
+            25% Load Power [HP]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item pump_cost">
+          <div class="calculations_container__row__item__subitem name">
+            Pump costs
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item annual_gal">
+          <div class="calculations_container__row__item__subitem name">
+            Annual Gal.
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item avg_gpm">
+          <div class="calculations_container__row__item__subitem name">
+            Avg GPM
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item energy_kwh">
+          <div class="calculations_container__row__item__subitem name">
+            Energy [kWh]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div> 
+      </div>
+      <div class="calculations_container__header delta_t_chiller_calculations">
+        Delta T Chiller Calculations
+      </div>
+      <div class="calculations_container__sub_header delta_t_chiller_calculations">Delta T First</div>
+      <div class="calculations_container__row delta_t_chiller_calculations_row">
+        <div class="calculations_container__row__item chiller_tons 100_percent">
+          <div class="calculations_container__row__item__subitem name">
+            100% Load Tons
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item chiller_tons 75_percent">
+          <div class="calculations_container__row__item__subitem name">
+            75% Load Tons
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item chiller_tons 50_percent">
+          <div class="calculations_container__row__item__subitem name">
+            50% Load Tons
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item chiller_tons 25_percent">
+          <div class="calculations_container__row__item__subitem name">
+            25% Load Tons
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item chiller_chillers_quantity 100_percent">
+          <div class="calculations_container__row__item__subitem name">
+            100% Load Chillers On
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item chiller_chillers_quantity 75_percent">
+          <div class="calculations_container__row__item__subitem name">
+            75% Load Chillers On
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item chiller_chillers_quantity 50_percent">
+          <div class="calculations_container__row__item__subitem name">
+            50% Load Chillers On
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item chiller_chillers_quantity 25_percent">
+          <div class="calculations_container__row__item__subitem name">
+            25% Load Chillers On
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item chiller_power_kw 100_percent">
+          <div class="calculations_container__row__item__subitem name">
+            100% Load Power [kW]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item chiller_power_kw 75_percent">
+          <div class="calculations_container__row__item__subitem name">
+            75% Load Power [kW]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item chiller_power_kw 50_percent">
+          <div class="calculations_container__row__item__subitem name">
+            50% Load Power [kW]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item chiller_power_kw 25_percent">
+          <div class="calculations_container__row__item__subitem name">
+            25% Load Power [kW]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item chiller_costs">
+          <div class="calculations_container__row__item__subitem name">
+            Chiller Costs
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item chiller_avg_tonnage">
+          <div class="calculations_container__row__item__subitem name">
+            Avg Tonnage
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item plant_kw_ton">
+          <div class="calculations_container__row__item__subitem name">
+            Plant kw/ton
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item chiller_energy_kwh">
+          <div class="calculations_container__row__item__subitem name">
+            Energy [kWh]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+      </div>
+      <div class="calculations_container__sub_header delta_t_chiller_calculations">Delta T Second</div>
+      <div class="calculations_container__row delta_t_chiller_calculations_row">
+        <div class="calculations_container__row__item chiller_tons 100_percent">
+          <div class="calculations_container__row__item__subitem name">
+            100% Load Tons
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item chiller_tons 75_percent">
+          <div class="calculations_container__row__item__subitem name">
+            75% Load Tons
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item chiller_tons 50_percent">
+          <div class="calculations_container__row__item__subitem name">
+            50% Load Tons
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item chiller_tons 25_percent">
+          <div class="calculations_container__row__item__subitem name">
+            25% Load Tons
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item chiller_chillers_quantity 100_percent">
+          <div class="calculations_container__row__item__subitem name">
+            100% Load Chillers On
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item chiller_chillers_quantity 75_percent">
+          <div class="calculations_container__row__item__subitem name">
+            75% Load Chillers On
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item chiller_chillers_quantity 50_percent">
+          <div class="calculations_container__row__item__subitem name">
+            50% Load Chillers On
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item chiller_chillers_quantity 25_percent">
+          <div class="calculations_container__row__item__subitem name">
+            25% Load Chillers On
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item chiller_power_kw 100_percent">
+          <div class="calculations_container__row__item__subitem name">
+            100% Load Power [kW]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item chiller_power_kw 75_percent">
+          <div class="calculations_container__row__item__subitem name">
+            75% Load Power [kW]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item chiller_power_kw 50_percent">
+          <div class="calculations_container__row__item__subitem name">
+            50% Load Power [kW]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item chiller_power_kw 25_percent">
+          <div class="calculations_container__row__item__subitem name">
+            25% Load Power [kW]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item chiller_costs">
+          <div class="calculations_container__row__item__subitem name">
+            Chiller Costs
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item chiller_avg_tonnage">
+          <div class="calculations_container__row__item__subitem name">
+            Avg Tonnage
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item plant_kw_ton">
+          <div class="calculations_container__row__item__subitem name">
+            Plant kw/ton
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item chiller_energy_kwh">
+          <div class="calculations_container__row__item__subitem name">
+            Energy [kWh]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+      </div>
+      <div class="calculations_container__sub_header delta_t_chiller_calculations">Delta T Third</div>
+      <div class="calculations_container__row delta_t_chiller_calculations_row">
+        <div class="calculations_container__row__item chiller_tons 100_percent">
+          <div class="calculations_container__row__item__subitem name">
+            100% Load Tons
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item chiller_tons 75_percent">
+          <div class="calculations_container__row__item__subitem name">
+            75% Load Tons
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item chiller_tons 50_percent">
+          <div class="calculations_container__row__item__subitem name">
+            50% Load Tons
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item chiller_tons 25_percent">
+          <div class="calculations_container__row__item__subitem name">
+            25% Load Tons
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item chiller_chillers_quantity 100_percent">
+          <div class="calculations_container__row__item__subitem name">
+            100% Load Chillers On
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item chiller_chillers_quantity 75_percent">
+          <div class="calculations_container__row__item__subitem name">
+            75% Load Chillers On
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item chiller_chillers_quantity 50_percent">
+          <div class="calculations_container__row__item__subitem name">
+            50% Load Chillers On
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item chiller_chillers_quantity 25_percent">
+          <div class="calculations_container__row__item__subitem name">
+            25% Load Chillers On
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item chiller_power_kw 100_percent">
+          <div class="calculations_container__row__item__subitem name">
+            100% Load Power [kW]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item chiller_power_kw 75_percent">
+          <div class="calculations_container__row__item__subitem name">
+            75% Load Power [kW]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item chiller_power_kw 50_percent">
+          <div class="calculations_container__row__item__subitem name">
+            50% Load Power [kW]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item chiller_power_kw 25_percent">
+          <div class="calculations_container__row__item__subitem name">
+            25% Load Power [kW]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item chiller_costs">
+          <div class="calculations_container__row__item__subitem name">
+            Chiller Costs
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item chiller_avg_tonnage">
+          <div class="calculations_container__row__item__subitem name">
+            Avg Tonnage
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item plant_kw_ton">
+          <div class="calculations_container__row__item__subitem name">
+            Plant kw/ton
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item chiller_energy_kwh">
+          <div class="calculations_container__row__item__subitem name">
+            Energy [kWh]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+      </div>
+      <div class="calculations_container__sub_header delta_t_chiller_calculations">Delta T Fourth</div>
+      <div class="calculations_container__row delta_t_chiller_calculations_row">
+        <div class="calculations_container__row__item chiller_tons 100_percent">
+          <div class="calculations_container__row__item__subitem name">
+            100% Load Tons
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item chiller_tons 75_percent">
+          <div class="calculations_container__row__item__subitem name">
+            75% Load Tons
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item chiller_tons 50_percent">
+          <div class="calculations_container__row__item__subitem name">
+            50% Load Tons
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item chiller_tons 25_percent">
+          <div class="calculations_container__row__item__subitem name">
+            25% Load Tons
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item chiller_chillers_quantity 100_percent">
+          <div class="calculations_container__row__item__subitem name">
+            100% Load Chillers On
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item chiller_chillers_quantity 75_percent">
+          <div class="calculations_container__row__item__subitem name">
+            75% Load Chillers On
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item chiller_chillers_quantity 50_percent">
+          <div class="calculations_container__row__item__subitem name">
+            50% Load Chillers On
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item chiller_chillers_quantity 25_percent">
+          <div class="calculations_container__row__item__subitem name">
+            25% Load Chillers On
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item chiller_power_kw 100_percent">
+          <div class="calculations_container__row__item__subitem name">
+            100% Load Power [kW]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item chiller_power_kw 75_percent">
+          <div class="calculations_container__row__item__subitem name">
+            75% Load Power [kW]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item chiller_power_kw 50_percent">
+          <div class="calculations_container__row__item__subitem name">
+            50% Load Power [kW]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item chiller_power_kw 25_percent">
+          <div class="calculations_container__row__item__subitem name">
+            25% Load Power [kW]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item chiller_costs">
+          <div class="calculations_container__row__item__subitem name">
+            Chiller Costs
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item chiller_avg_tonnage">
+          <div class="calculations_container__row__item__subitem name">
+            Avg Tonnage
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item plant_kw_ton">
+          <div class="calculations_container__row__item__subitem name">
+            Plant kw/ton
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item chiller_energy_kwh">
+          <div class="calculations_container__row__item__subitem name">
+            Energy [kWh]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+      </div>
+      <div class="calculations_container__sub_header delta_t_chiller_calculations">Delta T Fifth</div>
+      <div class="calculations_container__row delta_t_chiller_calculations_row">
+        <div class="calculations_container__row__item chiller_tons 100_percent">
+          <div class="calculations_container__row__item__subitem name">
+            100% Load Tons
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item chiller_tons 75_percent">
+          <div class="calculations_container__row__item__subitem name">
+            75% Load Tons
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item chiller_tons 50_percent">
+          <div class="calculations_container__row__item__subitem name">
+            50% Load Tons
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item chiller_tons 25_percent">
+          <div class="calculations_container__row__item__subitem name">
+            25% Load Tons
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item chiller_chillers_quantity 100_percent">
+          <div class="calculations_container__row__item__subitem name">
+            100% Load Chillers On
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item chiller_chillers_quantity 75_percent">
+          <div class="calculations_container__row__item__subitem name">
+            75% Load Chillers On
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item chiller_chillers_quantity 50_percent">
+          <div class="calculations_container__row__item__subitem name">
+            50% Load Chillers On
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item chiller_chillers_quantity 25_percent">
+          <div class="calculations_container__row__item__subitem name">
+            25% Load Chillers On
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item chiller_power_kw 100_percent">
+          <div class="calculations_container__row__item__subitem name">
+            100% Load Power [kW]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item chiller_power_kw 75_percent">
+          <div class="calculations_container__row__item__subitem name">
+            75% Load Power [kW]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item chiller_power_kw 50_percent">
+          <div class="calculations_container__row__item__subitem name">
+            50% Load Power [kW]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item chiller_power_kw 25_percent">
+          <div class="calculations_container__row__item__subitem name">
+            25% Load Power [kW]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item chiller_costs">
+          <div class="calculations_container__row__item__subitem name">
+            Chiller Costs
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item chiller_avg_tonnage">
+          <div class="calculations_container__row__item__subitem name">
+            Avg Tonnage
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item plant_kw_ton">
+          <div class="calculations_container__row__item__subitem name">
+            Plant kw/ton
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item chiller_energy_kwh">
+          <div class="calculations_container__row__item__subitem name">
+            Energy [kWh]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+      </div>
+      <div class="calculations_container__sub_header delta_t_chiller_calculations">Delta T Sixth</div>
+      <div class="calculations_container__row delta_t_chiller_calculations_row">
+        <div class="calculations_container__row__item chiller_tons 100_percent">
+          <div class="calculations_container__row__item__subitem name">
+            100% Load Tons
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item chiller_tons 75_percent">
+          <div class="calculations_container__row__item__subitem name">
+            75% Load Tons
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item chiller_tons 50_percent">
+          <div class="calculations_container__row__item__subitem name">
+            50% Load Tons
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item chiller_tons 25_percent">
+          <div class="calculations_container__row__item__subitem name">
+            25% Load Tons
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item chiller_chillers_quantity 100_percent">
+          <div class="calculations_container__row__item__subitem name">
+            100% Load Chillers On
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item chiller_chillers_quantity 75_percent">
+          <div class="calculations_container__row__item__subitem name">
+            75% Load Chillers On
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item chiller_chillers_quantity 50_percent">
+          <div class="calculations_container__row__item__subitem name">
+            50% Load Chillers On
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item chiller_chillers_quantity 25_percent">
+          <div class="calculations_container__row__item__subitem name">
+            25% Load Chillers On
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item chiller_power_kw 100_percent">
+          <div class="calculations_container__row__item__subitem name">
+            100% Load Power [kW]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item chiller_power_kw 75_percent">
+          <div class="calculations_container__row__item__subitem name">
+            75% Load Power [kW]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item chiller_power_kw 50_percent">
+          <div class="calculations_container__row__item__subitem name">
+            50% Load Power [kW]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item chiller_power_kw 25_percent">
+          <div class="calculations_container__row__item__subitem name">
+            25% Load Power [kW]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item chiller_costs">
+          <div class="calculations_container__row__item__subitem name">
+            Chiller Costs
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item chiller_avg_tonnage">
+          <div class="calculations_container__row__item__subitem name">
+            Avg Tonnage
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item plant_kw_ton">
+          <div class="calculations_container__row__item__subitem name">
+            Plant kw/ton
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+        <div class="calculations_container__row__item chiller_energy_kwh">
+          <div class="calculations_container__row__item__subitem name">
+            Energy [kWh]
+          </div>
+          <div class="calculations_container__row__item__subitem calculable_value">
+            
+          </div>
+        </div>
+      </div>  
+    </div>
+</body>
+</html>
