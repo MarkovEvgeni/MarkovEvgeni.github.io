@@ -8,13 +8,40 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="screen_selector">
-      <div class="screen_selector__item">Home</div>
-      <div class="screen_selector__item">Energy</div>
-      <div class="screen_selector__item">Chiller</div>
-      <div class="screen_selector__item">Pump</div>
-      <div class="screen_selector__item">Financials</div>
-    </div>
+    <header>
+      <div class="wrapper">
+        <div class="header_logo_container">
+          <div class="griswold_logo"></div>
+        </div>
+        <div class="header_menu__container">
+          <div class="header_menu__container__button">
+            <div class="header_menu__container__button__g_container"></div>
+            <div class="header_menu__container__button__hamburger"></div>
+            <div class="header_menu__container__button__hamburger_pressed"></div>
+          </div>
+          <div class="header_menu__container__options">
+            <div class="header_menu__container__options__item">
+              <p>Calculator</p>
+            </div>
+            <div class="header_menu__container__options__item">
+              <p>Home</p>
+            </div>
+            <div class="header_menu__container__options__item">
+              <p>Energy</p>
+            </div>
+            <div class="header_menu__container__options__item">
+              <p>Chiller</p>
+            </div>
+            <div class="header_menu__container__options__item">
+              <p>Pump</p>
+            </div>
+            <div class="header_menu__container__options__item">
+              <p>Financials</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
     <div class="primary_secondary_pump_selector">
       <div class="primary_secondary_pump_selector__heading">
         Plant Design
@@ -208,6 +235,7 @@
       <input type="submit">
     </form>
     <div class="screen_container">
+      <div class="screen calculator"></div>
       <div class="screen home">
         <div class="flex_table annual_energy_costs_table">
           <div class="flex_row heading">
