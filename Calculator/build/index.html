@@ -42,6 +42,2279 @@
         </div>
       </div>
     </header>
+    <div class="displayed_screens_container">
+      <div class="wrapper">
+        <div class="title">Calculator</div>
+        <div class="project_info_container">
+          <div class="project_info_container__title">
+            Project
+          </div>
+          <div class="project_info_container__name_container">
+            <label for="project_name">Project name:</label>
+            <input type="text" id="project_name">
+          </div>
+          <div class="project_info_container__tech_info_container">
+            <label for="project_tech_info">Technical Information:</label>
+            <input type="text" id="project_tech_info">
+          </div>
+          <div class="project_info_container__selectors_container">
+            <div class="selectors_container__item regions_selector">
+              <div class="selectors_container__item__name">Climat region</div>
+              <div class="selectors_container__item__box">
+                <div class="selectors_container__item__name__box__title">
+                  <p></p>
+                  <div class="arrow"></div>
+                </div>
+                <div class="selectors_container__item__name__box__options">
+                  <div class="option usual">North East</div>
+                  <div class="option usual">Central</div>
+                  <div class="option usual">East North Central</div>
+                  <div class="option usual">West North Central</div>
+                  <div class="option usual">South East</div>
+                  <div class="option usual">South</div>
+                  <div class="option usual">South West</div>
+                  <div class="option usual">Mountain</div>
+                  <div class="option usual">North West</div>
+                  <div class="option usual">West</div>
+                  <div class="option custom">Custom Region</div>
+                  <div class="option average">Average US</div>
+                </div>
+              </div>
+            </div>
+            <div class="selectors_container__item chiller_cooling">
+              <div class="selectors_container__item__name">Chiller cooling</div>
+              <div class="selectors_container__item__box">
+                <div class="selectors_container__item__name__box__title">
+                  <p></p>
+                  <div class="arrow"></div>
+                </div>
+                <div class="selectors_container__item__name__box__options">
+                  <div class="option water_cooled">Water Cooled</div>
+                  <div class="option air_cooled">Air Cooled</div>
+                </div>
+              </div>
+            </div>
+            <div class="selectors_container__item plant_design">
+              <div class="selectors_container__item__name">Plant design</div>
+              <div class="selectors_container__item__box">
+                <div class="selectors_container__item__name__box__title">
+                  <p></p>
+                  <div class="arrow"></div>
+                </div>
+                <div class="selectors_container__item__name__box__options">
+                  <div class="option primary">Variable Primary</div>
+                  <div class="option secondary">Primary / Secondary</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="screen calculator">
+          <form id="calculateForm" action="">
+            <div class="inputs_container_heading">
+              <span>Input data </span>
+              <span>for calculations here:</span>
+            </div>
+            <div class="main_options_inputs_container">
+              <div class="main_options_inputs_container__item">
+                <div class="item__name">
+                  <label for="electricity_cost">
+                    <div class="primary">Electricity Cost</div>
+                    <div class="secondary">Average</div>
+                  </label>
+                </div>
+                <input type="number" id="electricity_cost" name="electricity_cost" value="0.1">
+                <div class="item__measurement">
+                  <div class="name">Measurement unit:</div> 
+                  <div class="unit">$ / kWhour</div>
+                </div>
+              </div>
+              <div class="main_options_inputs_container__item">
+                <div class="item__name">
+                  <label for="plant_load">
+                    <div class="primary">Chilled Water Plant Load</div>
+                    <div class="secondary">Design Cooling Load</div>
+                  </label>
+                </div>
+                <input id="plant_load" name="plant_load" type="number" class="inputs_container__item__input" value="5000">
+                <div class="item__measurement">
+                  <div class="name">Measurement unit:</div> 
+                  <div class="unit">tons</div>
+                </div>
+              </div>
+              <div class="main_options_inputs_container__item">
+                <div class="item__name">
+                  <label for="number_of_chillers">
+                    <div class="primary">Number Of Chillers</div>
+                    <div class="secondary"> </div>
+                  </label>
+                </div>
+                <input id="number_of_chillers" name="number_of_chillers" type="number" class="inputs_container__item__input" value="5">
+                <div class="item__measurement">
+                  <div class="name">Measurement unit:</div> 
+                  <div class="unit">pcs.</div>
+                </div>
+              </div>
+              <div class="main_options_inputs_container__item">
+                <div class="item__name">
+                  <label for="operating_hours_day">
+                    <div class="primary">Operating Hours / Day</div>
+                    <div class="secondary"> </div>
+                  </label>
+                </div>
+                <input id="operating_hours_day" name="operating_hours_day" type="number" class="inputs_container__item__input" value="12">
+                <div class="item__measurement">
+                  <div class="name">Measurement unit:</div> 
+                  <div class="unit">hours</div>
+                </div>
+              </div>
+              <div class="main_options_inputs_container__item">
+                <div class="item__name">
+                  <label for="operating_days_week">
+                    <div class="primary">Operating Days / Week</div>
+                    <div class="secondary"> </div>
+                  </label>
+                </div>
+                <input id="operating_days_week" name="operating_days_week" type="number" class="inputs_container__item__input" value="6">
+                <div class="item__measurement">
+                  <div class="name">Measurement unit:</div> 
+                  <div class="unit">days</div>
+                </div>
+              </div>
+              <div class="main_options_inputs_container__item">
+                <div class="item__name">
+                  <label for="iplv">
+                    <div class="primary">Chiller Design Integrated Part Load Values</div>
+                    <div class="secondary">IPLV</div>
+                  </label>
+                </div>
+                <input id="iplv" name="iplv" type="number" class="inputs_container__item__input" value="0.6">
+                <div class="item__measurement">
+                  <div class="name">Measurement unit:</div> 
+                  <div class="unit">kW/ton</div>
+                </div>
+              </div>
+              <div class="main_options_inputs_container__item actual_pump_head_container">
+                <div class="item__name">
+                  <label for="actual_pump_head">
+                    <div class="primary"></div>
+                    <div class="secondary">Design</div>
+                  </label>
+                </div>
+                <input id="actual_pump_head" name="actual_pump_head" type="number" class="inputs_container__item__input" value="100">
+                <div class="item__measurement">
+                  <div class="name">Measurement unit:</div> 
+                  <div class="unit">ft.</div>
+                </div>
+              </div>
+              <div class="main_options_inputs_container__item">
+                <div class="item__name">
+                  <label for="motor_efficiency">
+                    <div class="primary">Pump, VFD, Motor Efficiency</div>
+                    <div class="secondary">Average</div>
+                  </label>
+                </div>
+                <input id="motor_efficiency" name="motor_efficiency" type="number" class="inputs_container__item__input" value="70">
+                <div class="item__measurement">
+                  <div class="name">Measurement unit:</div> 
+                  <div class="unit">%</div>
+                </div>
+              </div>
+              <div class="main_options_inputs_container__item">
+                <div class="item__name">
+                  <label for="design_delta">
+                    <div class="primary">Design Delta T</div>
+                    <div class="secondary"> </div>
+                  </label>
+                </div>
+                <input id="design_delta" name="design_delta" type="number" class="inputs_container__item__input" value="14">
+                <div class="item__measurement">
+                  <div class="name">Measurement unit:</div> 
+                  <div class="unit">&#8457;</div>
+                </div>
+              </div>
+              <div class="main_options_inputs_container__item">
+                <div class="item__name">
+                  <label for="actual_delta">
+                    <div class="primary">Actual Delta T</div>
+                    <div class="secondary">Prior Energy Valve Installation</div>
+                  </label>
+                </div>
+                <input id="actual_delta" name="actual_delta" type="number" class="inputs_container__item__input" value="6">
+                <div class="item__measurement">
+                  <div class="name">Measurement unit:</div> 
+                  <div class="unit">&#8457;</div>
+                </div>
+              </div>
+              <div class="main_options_inputs_container__item">
+                <div class="item__name">
+                  <label for="testing">
+                    <div class="primary">Future Delta T</div>
+                    <div class="secondary">Energy Valve Delta T Manager Setting</div>
+                  </label>
+                </div>
+                <input id="future_delta" name="future_delta" type="number" class="inputs_container__item__input" value="20">
+                <div class="item__measurement">
+                  <div class="name">Measurement unit:</div> 
+                  <div class="unit">&#8457;</div>
+                </div>
+              </div>
+            </div>
+            <div class="submit_button_container">
+              <div class="submit_button_container__counter_container">
+                <div class="text_container">
+                  <span></span>
+                  <p>&nbsp;fields filled</p>
+                </div>
+                <div class="indicator_container">
+                  <div class="indicator indicator_false">
+                    <div class="circle"></div>
+                  </div>
+                  <div class="indicator indicator_true">
+                    <div class="circle"></div>
+                  </div>
+                </div>
+              </div>
+              <input type="submit">
+            </div>
+          </form>
+        </div>
+        <div class="screen home">
+          <div class="screen__contain">
+            <div class="table_container_displayed annual_energy_costs">
+              <div class="table_container_displayed_wrapper">
+                <div class="flex_table">
+                  <div class="flex_table__row heading">Annual energy costs</div>
+                  <div class="flex_table__row subheading">
+                    <div class="flex_table__cell first">
+                      <div class="name">Delta T</div>
+                      <div class="measurement">&#8457;</div>
+                    </div>
+                    <div class="flex_table__cell second">
+                      <div class="name">GPM</div>
+                      <div class="measurement">Average</div>
+                    </div>
+                    <div class="flex_table__cell third">
+                      <div class="name">Tons</div>
+                      <div class="measurement">Average</div>
+                    </div>
+                    <div class="flex_table__cell fourth">
+                      <div class="name">Pumping</div>
+                      <div class="measurement">Cost</div>
+                    </div>
+                    <div class="flex_table__cell fifth">
+                      <div class="name">Chiller</div>
+                      <div class="measurement">Cost</div>
+                    </div>
+                    <div class="flex_table__cell sixth">
+                      <div class="name">Total</div>
+                      <div class="measurement">Cost</div>
+                    </div>
+                    <div class="flex_table__cell seventh">
+                      <div class="name">Energy</div>
+                      <div class="measurement">kWh</div>
+                    </div>
+                  </div>
+                  <div class="flex_table__row">
+                    <div class="flex_table__cell first">2
+                    </div>
+                    <div class="flex_table__cell second">
+                    </div>
+                    <div class="flex_table__cell third">
+                    </div>
+                    <div class="flex_table__cell fourth">
+                    </div>
+                    <div class="flex_table__cell fifth">
+                    </div>
+                    <div class="flex_table__cell sixth">
+                    </div>
+                    <div class="flex_table__cell seventh">
+                    </div>
+                  </div>
+                  <div class="flex_table__row">
+                    <div class="flex_table__cell first">6
+                    </div>
+                    <div class="flex_table__cell second">
+                    </div>
+                    <div class="flex_table__cell third">
+                    </div>
+                    <div class="flex_table__cell fourth">
+                    </div>
+                    <div class="flex_table__cell fifth">
+                    </div>
+                    <div class="flex_table__cell sixth">
+                    </div>
+                    <div class="flex_table__cell seventh">
+                    </div>
+                  </div>
+                  <div class="flex_table__row">
+                    <div class="flex_table__cell first">10
+                    </div>
+                    <div class="flex_table__cell second">
+                    </div>
+                    <div class="flex_table__cell third">
+                    </div>
+                    <div class="flex_table__cell fourth">
+                    </div>
+                    <div class="flex_table__cell fifth">
+                    </div>
+                    <div class="flex_table__cell sixth">
+                    </div>
+                    <div class="flex_table__cell seventh">
+                    </div>
+                  </div>
+                  <div class="flex_table__row">
+                    <div class="flex_table__cell first">14
+                    </div>
+                    <div class="flex_table__cell second">
+                    </div>
+                    <div class="flex_table__cell third">
+                    </div>
+                    <div class="flex_table__cell fourth">
+                    </div>
+                    <div class="flex_table__cell fifth">
+                    </div>
+                    <div class="flex_table__cell sixth">
+                    </div>
+                    <div class="flex_table__cell seventh">
+                    </div>
+                  </div>
+                  <div class="flex_table__row">
+                    <div class="flex_table__cell first">14
+                    </div>
+                    <div class="flex_table__cell second">
+                    </div>
+                    <div class="flex_table__cell third">
+                    </div>
+                    <div class="flex_table__cell fourth">
+                    </div>
+                    <div class="flex_table__cell fifth">
+                    </div>
+                    <div class="flex_table__cell sixth">
+                    </div>
+                    <div class="flex_table__cell seventh">
+                    </div>
+                  </div>
+                  <div class="flex_table__row no_bottom_border">
+                    <div class="flex_table__cell first">20
+                    </div>
+                    <div class="flex_table__cell second">
+                    </div>
+                    <div class="flex_table__cell third">
+                    </div>
+                    <div class="flex_table__cell fourth">
+                    </div>
+                    <div class="flex_table__cell fifth">
+                    </div>
+                    <div class="flex_table__cell sixth">
+                    </div>
+                    <div class="flex_table__cell seventh">
+                    </div>
+                  </div>
+                  <div class="flex_table__row total">
+                    <div class="flex_table__cell first">
+                      <div class="top">
+                        Annual Energy Savings
+                      </div>
+                      <div class="bottom">
+                        <p>for changing Delta T from <span class="min">6</span> to <span class="max">2</span></p>
+                      </div>
+                    </div>
+                    <div class="flex_table__cell fourth">
+                      <div class="">
+                        <span>%</span>
+                        <p></p>
+                      </div>
+                      <div class="">
+                        <span>$</span>
+                        <p></p>
+                      </div>
+                    </div>
+                    <div class="flex_table__cell fifth">
+                      <div class="">
+                        <span>%</span>
+                        <p></p>
+                      </div>
+                      <div class="">
+                        <span>$</span>
+                        <p></p>
+                      </div>
+                    </div>
+                    <div class="flex_table__cell sixth">
+                      <div class="">
+                        <span>%</span>
+                        <p></p>
+                      </div>
+                      <div class="">
+                        <span>$</span>
+                        <p></p>
+                      </div>
+                    </div>
+                    <div class="flex_table__cell seventh">
+                      <div class="">%</div>
+                      <div class="">$</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="table_container_displayed input_financials">
+              <div class="table_container_displayed_wrapper">
+                <div class="flex_table">
+                  <div class="flex_table__row subheading">
+                    <div class="flex_table__cell first">
+                      Input financials
+                    </div>
+                    <div class="flex_table__cell second">
+                    </div>
+                    <div class="flex_table__cell third">
+                      Value
+                    </div>
+                    <div class="flex_table__cell fourth">
+                      Unit
+                    </div>
+                  </div>
+                  <div class="flex_table__row">
+                    <div class="flex_table__cell first">
+                      Incremental Investment for Energy Valves
+                    </div>
+                    <div class="flex_table__cell second">
+                    </div>
+                    <div class="flex_table__cell third">
+                      <input type="number" id="incremental_investment_for_energy_valves" value="250000">
+                    </div>
+                    <div class="flex_table__cell fourth">
+                      $
+                    </div>
+                  </div>
+                  <div class="flex_table__row">
+                    <div class="flex_table__cell first">
+                      Discount Rate
+                    </div>
+                    <div class="flex_table__cell second">
+                    </div>
+                    <div class="flex_table__cell third">
+                      <input type="number" id="discount_rate" value="10">
+                    </div>
+                    <div class="flex_table__cell fourth">
+                      %
+                    </div>
+                  </div>
+                  <div class="flex_table__row">
+                    <div class="flex_table__cell first">
+                      Annual Inflation Rate on Energy Costs
+                    </div>
+                    <div class="flex_table__cell second">
+                    </div>
+                    <div class="flex_table__cell third">
+                      <input type="text" id="annual_inflation_rate_on_energy_costs" value="3">
+                    </div>
+                    <div class="flex_table__cell fourth">
+                      %
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="table_container_displayed financial_analysis">
+              <div class="table_container_displayed_wrapper">
+                <div class="flex_table">
+                  <div class="flex_table__row heading">
+                    Financial analysis results
+                  </div>
+                  <div class="flex_table__row">
+                    <div class="flex_table__cell first">
+                      Investment Horizon
+                    </div>
+                    <div class="flex_table__cell second">
+                    </div>
+                    <div class="flex_table__cell third">
+                      5 years
+                    </div>
+                    <div class="flex_table__cell fourth">
+                      10 years
+                    </div>
+                    <div class="flex_table__cell fifth">
+                      15 years
+                    </div>
+                    <div class="flex_table__cell sixth">
+                      20 years
+                    </div>
+                  </div>
+                  <div class="flex_table__row">
+                    <div class="flex_table__cell first">
+                      Savings-Invstment Ratio (SIR)
+                    </div>
+                    <div class="flex_table__cell second">
+                    </div>
+                    <div class="flex_table__cell third">
+                    </div>
+                    <div class="flex_table__cell fourth">
+                    </div>
+                    <div class="flex_table__cell fifth">
+                    </div>
+                    <div class="flex_table__cell sixth">
+                    </div>
+                  </div>
+                  <div class="flex_table__row">
+                    <div class="flex_table__cell first">
+                      Net Present Value (NPV)
+                    </div>
+                    <div class="flex_table__cell second">
+                    </div>
+                    <div class="flex_table__cell third">
+                      <span>$</span>
+                    </div>
+                    <div class="flex_table__cell fourth">
+                      <span>$</span>
+                    </div>
+                    <div class="flex_table__cell fifth">
+                      <span>$</span>
+                    </div>
+                    <div class="flex_table__cell sixth">
+                      <span>$</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="table_container_displayed gas_equivalents">
+              <div class="table_container_displayed_wrapper">
+                <div class="flex_table">
+                  <div class="flex_table__row subheading">
+                    <div class="flex_table__cell first">
+                      Greenhouse gas equivalents
+                    </div>
+                    <div class="flex_table__cell second">
+                    </div>
+                    <div class="flex_table__cell third">
+                      Value
+                    </div>
+                    <div class="flex_table__cell fourth">
+                      Unit
+                    </div>
+                  </div>
+                  <div class="flex_table__row">
+                    <div class="flex_table__cell first">
+                      Annual Carbon Dioxide Avoided
+                    </div>
+                    <div class="flex_table__cell second">
+                    </div>
+                    <div class="flex_table__cell third">
+                    </div>
+                    <div class="flex_table__cell fourth">
+                      pounds
+                    </div>
+                  </div>
+                  <div class="flex_table__row">
+                    <div class="flex_table__cell first">
+                      Number of Tree Seedlings Grown for 10 Years
+                    </div>
+                    <div class="flex_table__cell second">
+                    </div>
+                    <div class="flex_table__cell third">
+                    </div>
+                    <div class="flex_table__cell fourth">
+                      seedlings
+                    </div>
+                  </div>
+                  <div class="flex_table__row">
+                    <div class="flex_table__cell first">
+                      Equivalent to Number of Houses’ Annual Electricity Use
+                    </div>
+                    <div class="flex_table__cell second">
+                    </div>
+                    <div class="flex_table__cell third">
+                    </div>
+                    <div class="flex_table__cell fourth">
+                      homes
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="screen energy">
+          <div class="screen__contain">
+            <div class="table_container_displayed operating_hours">
+              <div class="table_container_displayed_wrapper">
+                <div class="flex_table">
+                  <div class="flex_table__row hours_day">
+                    <div class="flex_table__cell first">
+                      Operating Hours / Day
+                    </div>
+                    <div class="flex_table__cell second">
+                    </div>
+                    <div class="flex_table__cell third">
+                    </div>
+                    <div class="flex_table__cell fourth">
+                    </div>
+                    <div class="flex_table__cell fifth">
+                      hours
+                    </div>
+                  </div>
+                  <div class="flex_table__row days_week no_bottom_border">
+                    <div class="flex_table__cell first">
+                      Operating Days / Week
+                    </div>
+                    <div class="flex_table__cell second">
+                    </div>
+                    <div class="flex_table__cell third">
+                    </div>
+                    <div class="flex_table__cell fourth">
+                    </div>
+                    <div class="flex_table__cell fifth">
+                      days
+                    </div>
+                  </div>
+                  <div class="flex_table__row total">
+                    <div class="flex_table__cell first">
+                      Annual operating hours
+                    </div>
+                    <div class="flex_table__cell second">
+                    </div>
+                    <div class="flex_table__cell third">
+                    </div>
+                    <div class="flex_table__cell fourth">
+                    </div>
+                    <div class="flex_table__cell fifth">
+                      hours
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="table_container_displayed operating_hours_summary">
+              <div class="table_container_displayed_wrapper">
+                <div class="flex_table">
+                  <div class="flex_table__row subheading">
+                    <div class="flex_table__cell first">
+                      Point
+                    </div>
+                    <div class="flex_table__cell second">
+                      Bin
+                    </div>
+                    <div class="flex_table__cell third">
+                      Load
+                    </div>
+                    <div class="flex_table__cell fourth">
+                      % of Operating time
+                    </div>
+                    <div class="flex_table__cell fifth">
+                      Operating hours
+                    </div>
+                  </div>
+                  <div class="flex_table__row">
+                    <div class="flex_table__cell first">
+                      A
+                    </div>
+                    <div class="flex_table__cell second">
+                      Design
+                    </div>
+                    <div class="flex_table__cell third">
+                      100 %
+                    </div>
+                    <div class="flex_table__cell fourth">
+                      <input type="number" value="45">
+                      <span>%</span>
+                    </div>
+                    <div class="flex_table__cell fifth operating_hours_calc">
+                    </div>
+                  </div>
+                  <div class="flex_table__row">
+                    <div class="flex_table__cell first">
+                      B
+                    </div>
+                    <div class="flex_table__cell second">
+                      Peak
+                    </div>
+                    <div class="flex_table__cell third">
+                      75 %
+                    </div>
+                    <div class="flex_table__cell fourth">
+                      <input type="number" value="28">
+                      <span>%</span>
+                    </div>
+                    <div class="flex_table__cell fifth operating_hours_calc">
+                    </div>
+                  </div>
+                  <div class="flex_table__row">
+                    <div class="flex_table__cell first">
+                      C
+                    </div>
+                    <div class="flex_table__cell second">
+                      Low
+                    </div>
+                    <div class="flex_table__cell third">
+                      50 %
+                    </div>
+                    <div class="flex_table__cell fourth">
+                      <input type="number" value="9">
+                      <span>%</span>
+                    </div>
+                    <div class="flex_table__cell fifth operating_hours_calc">
+                    </div>
+                  </div>
+                  <div class="flex_table__row min_hours no_bottom_border">
+                    <div class="flex_table__cell first">
+                      D
+                    </div>
+                    <div class="flex_table__cell second">
+                      Min
+                    </div>
+                    <div class="flex_table__cell third">
+                      25 %
+                    </div>
+                    <div class="flex_table__cell fourth">
+                      <p></p>
+                      <span>%</span>
+                    </div>
+                    <div class="flex_table__cell fifth">
+                    </div>
+                  </div>
+                  <div class="flex_table__row total">
+                    <div class="flex_table__cell first">
+                      Summary
+                    </div>
+                    <div class="flex_table__cell second">
+                    </div>
+                    <div class="flex_table__cell third">
+                    </div>
+                    <div class="flex_table__cell fourth">
+                      <p></p>
+                      <span>%</span>
+                    </div>
+                    <div class="flex_table__cell fifth">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="table_container_displayed regions">
+              <div class="table_container_displayed_wrapper">
+                <div class="flex_table">
+                  <div class="flex_table__row subheading">
+                    <div class="flex_table__cell first">Climate Region</div>
+                    <div class="flex_table__cell second"></div>
+                    <div class="flex_table__cell third">
+                    <div class="name">
+                      Cooling Degree
+                    </div>
+                    <div class="measurement">
+                      Days
+                    </div>
+                    </div>
+                    <div class="flex_table__cell fourth">Humidity Adjustment</div>
+                    <div class="flex_table__cell fifth">Multiplier</div>
+                  </div>
+                  <div class="flex_table__row">
+                    <div class="flex_table__cell first">North East</div>
+                    <div class="flex_table__cell second"></div>
+                    <div class="flex_table__cell third single_cdd">1034</div>
+                    <div class="flex_table__cell fourth single_ha">
+                      <p>30</p>
+                      <span>%</span>
+                    </div>
+                    <div class="flex_table__cell fifth single_multiplier"></div>
+                  </div>
+                  <div class="flex_table__row">
+                    <div class="flex_table__cell first">Central</div>
+                    <div class="flex_table__cell second"></div>
+                    <div class="flex_table__cell third single_cdd">1090</div>
+                    <div class="flex_table__cell fourth single_ha">
+                      <p>30</p>
+                      <span>%</span>
+                    </div>
+                    <div class="flex_table__cell fifth single_multiplier"></div>
+                  </div>
+                  <div class="flex_table__row">
+                    <div class="flex_table__cell first">East North Central</div>
+                    <div class="flex_table__cell second"></div>
+                    <div class="flex_table__cell third single_cdd">975</div>
+                    <div class="flex_table__cell fourth single_ha">
+                      <p>30</p>
+                      <span>%</span>
+                    </div>
+                    <div class="flex_table__cell fifth single_multiplier"></div>
+                  </div>
+                  <div class="flex_table__row">
+                    <div class="flex_table__cell first">West North Central</div>
+                    <div class="flex_table__cell second"></div>
+                    <div class="flex_table__cell third single_cdd">1123</div>
+                    <div class="flex_table__cell fourth single_ha">
+                      <p>15</p>
+                      <span>%</span>
+                    </div>
+                    <div class="flex_table__cell fifth single_multiplier"></div>
+                  </div>
+                  <div class="flex_table__row">
+                    <div class="flex_table__cell first">South East</div>
+                    <div class="flex_table__cell second"></div>
+                    <div class="flex_table__cell third single_cdd">2264</div>
+                    <div class="flex_table__cell fourth single_ha">
+                      <p>30</p>
+                      <span>%</span>
+                    </div>
+                    <div class="flex_table__cell fifth single_multiplier"></div>
+                  </div>
+                  <div class="flex_table__row">
+                    <div class="flex_table__cell first">South</div>
+                    <div class="flex_table__cell second"></div>
+                    <div class="flex_table__cell third single_cdd">2004</div>
+                    <div class="flex_table__cell fourth single_ha">
+                      <p>30</p>
+                      <span>%</span>
+                    </div>
+                    <div class="flex_table__cell fifth single_multiplier"></div>
+                  </div>
+                  <div class="flex_table__row">
+                    <div class="flex_table__cell first">South West</div>
+                    <div class="flex_table__cell second"></div>
+                    <div class="flex_table__cell third single_cdd">2750</div>
+                    <div class="flex_table__cell fourth single_ha">
+                      <p>5</p>
+                      <span>%</span>
+                    </div>
+                    <div class="flex_table__cell fifth single_multiplier"></div>
+                  </div>
+                  <div class="flex_table__row">
+                    <div class="flex_table__cell first">Mountain</div>
+                    <div class="flex_table__cell second"></div>
+                    <div class="flex_table__cell third single_cdd">1450</div>
+                    <div class="flex_table__cell fourth single_ha">
+                      <p>5</p>
+                      <span>%</span>
+                    </div>
+                    <div class="flex_table__cell fifth single_multiplier"></div>
+                  </div>
+                  <div class="flex_table__row">
+                    <div class="flex_table__cell first">North West</div>
+                    <div class="flex_table__cell second"></div>
+                    <div class="flex_table__cell third single_cdd">720</div>
+                    <div class="flex_table__cell fourth single_ha">
+                      <p>5</p>
+                      <span>%</span>
+                    </div>
+                    <div class="flex_table__cell fifth single_multiplier"></div>
+                  </div>
+                  <div class="flex_table__row">
+                    <div class="flex_table__cell first">West</div>
+                    <div class="flex_table__cell second"></div>
+                    <div class="flex_table__cell third single_cdd">1850</div>
+                    <div class="flex_table__cell fourth single_ha">
+                      <p>5</p>
+                      <span>%</span>
+                    </div>
+                    <div class="flex_table__cell fifth single_multiplier"></div>
+                  </div>
+                  <div class="flex_table__row no_bottom_border custom_region">
+                    <div class="flex_table__cell first">Custom Region</div>
+                    <div class="flex_table__cell second"></div>
+                    <div class="flex_table__cell third">
+                      <input type="number" id="custom_cooling_degree_days" value="800">
+                    </div>
+                    <div class="flex_table__cell fourth ">
+                      <input type="number" id="custom_humidity_adjustment" value="0">
+                    </div>
+                    <div class="flex_table__cell fifth"></div>
+                  </div>
+                  <div class="flex_table__row average_us total">
+                    <div class="flex_table__cell first">Average US</div>
+                    <div class="flex_table__cell second"></div>
+                    <div class="flex_table__cell third average_cdd"></div>
+                    <div class="flex_table__cell fourth average_ha">
+                      <p></p>
+                      <span>%</span>
+                    </div>
+                    <div class="flex_table__cell fifth"></div>
+                  </div>
+                  <div class="flex_table__row summary">
+                    <div class="flex_table__cell first">Selected value</div>
+                    <div class="flex_table__cell second"></div>
+                    <div class="flex_table__cell third"></div>
+                    <div class="flex_table__cell fourth"></div>
+                    <div class="flex_table__cell fifth"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="screen chiller">
+          <div class="screen__contain">
+            <div class="table_container_displayed energy_consumption_aggregation">
+              <div class="table_container_displayed_wrapper">
+                <div class="flex_table">
+                  <div class="flex_table__row subheading">
+                    <div class="flex_table__cell first">Aggregation of Energy Consumption</div>
+                    <div class="flex_table__cell second"></div>
+                    <div class="flex_table__cell third">kW/ton</div>
+                    <div class="flex_table__cell fourth">Ratio</div>
+                  </div>
+                  <div class="flex_table__row kw1">
+                    <div class="flex_table__cell first">KW1 Compressor</div>
+                    <div class="flex_table__cell second"></div>
+                    <div class="flex_table__cell third"></div>
+                    <div class="flex_table__cell fourth">
+                      <span>%</span>
+                    </div>
+                  </div>
+                  <div class="flex_table__row kw2">
+                    <div class="flex_table__cell first">KW2 Constant Speed Primary Pump</div>
+                    <div class="flex_table__cell second"></div>
+                    <div class="flex_table__cell third">
+                    </div>
+                    <div class="flex_table__cell fourth">
+                      <span>%</span>
+                    </div>
+                  </div>
+                  <div class="flex_table__row kw3">
+                    <div class="flex_table__cell first">KW3 Condenser Pump</div>
+                    <div class="flex_table__cell second"></div>
+                    <div class="flex_table__cell third">
+                      <input type="number" value="0.030" id="kw3_condenser_pump">
+                    </div>
+                    <div class="flex_table__cell fourth">
+                      <span>%</span>
+                    </div>
+                  </div>
+                  <div class="flex_table__row kw4">
+                    <div class="flex_table__cell first">KW4 Cooling Tower Fan</div>
+                    <div class="flex_table__cell second"></div>
+                    <div class="flex_table__cell third">
+                      <input type="number" id="kw4_cooling_tower" value="0.080">
+                    </div>
+                    <div class="flex_table__cell fourth">
+                      <span>%</span>
+                    </div>
+                  </div>
+                  <div class="flex_table__row kw5">
+                    <div class="flex_table__cell first">KW5 Chiller Controls</div>
+                    <div class="flex_table__cell second"></div>
+                    <div class="flex_table__cell third">
+                      <input type="number" id="kw5_chiller_controls" value="0.005">
+                    </div>
+                    <div class="flex_table__cell fourth">
+                      <span>%</span>
+                    </div>
+                  </div>
+                  <div class="flex_table__row no_bottom_border kw6">
+                    <div class="flex_table__cell first">KW6 Transmission Oil Pump and Heater</div>
+                    <div class="flex_table__cell second"></div>
+                    <div class="flex_table__cell third">
+                      <input id="kw6_transmission_oil_pump" type="number" value="0.010">
+                    </div>
+                    <div class="flex_table__cell fourth">
+                      <span>%</span>
+                    </div>
+                  </div>
+                  <div class="flex_table__row total">
+                    <div class="flex_table__cell first">Total Chiller Plant Energy Consumption</div>
+                    <div class="flex_table__cell second"></div>
+                    <div class="flex_table__cell third"></div>
+                    <div class="flex_table__cell fourth">
+                      <span>%</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="table_container_displayed chiller_cycling_percent">
+              <div class="table_container_displayed_wrapper">
+                <div class="flex_table">
+                  <div class="flex_table__row">
+                    <div class="flex_table__cell first">Chiller cycling percent</div>
+                    <div class="flex_table__cell second"></div>
+                    <div class="flex_table__cell third">
+                      <label>
+                        <input id="chiller_cycling_percent" type="number" value="0">
+                        <span>%</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="table_container_displayed energy_usage_delta_t">
+              <div class="table_container_displayed_wrapper">
+                <div class="flex_table">
+                  <div class="flex_table__row subheading">
+                    <div class="flex_table__cell first">
+                      Chiller energy usage at delta t [&#8457;]
+                    </div>
+                    <div class="flex_table__cell second"></div>
+                    <div class="flex_table__cell third"></div>
+                    <div class="flex_table__cell fourth"></div>
+                    <div class="flex_table__cell fifth"></div>
+                    <div class="flex_table__cell sixth"></div>
+                    <div class="flex_table__cell seventh"></div>
+                    <div class="flex_table__cell eighth"></div>
+                    <div class="flex_table__cell ninth delta_t_value"></div>
+                  </div>
+                  <div class="flex_table__row sub_subheading">
+                    <div class="flex_table__cell first">
+                      <div class="name">Load</div>
+                      <div class="measurement">%</div>
+                    </div>
+                    <div class="flex_table__cell second">
+                      <div class="name">Time</div>
+                      <div class="measurement">%</div>
+                    </div>
+                    <div class="flex_table__cell third">
+                      <div class="name">Time</div>
+                      <div class="measurement">Hours</div>
+                    </div>
+                    <div class="flex_table__cell fourth">
+                      <div class="name">Flow</div>
+                      <div class="measurement">GPM</div>
+                    </div>
+                    <div class="flex_table__cell fifth">
+                      <div class="name">Tons</div>
+                      <div class="measurement"></div>
+                    </div>
+                    <div class="flex_table__cell sixth">
+                      <div class="name">Chillers On</div>
+                      <div class="measurement"></div>
+                    </div>
+                    <div class="flex_table__cell seventh">
+                      <div class="name">Power</div>
+                      <div class="measurement">kW</div>
+                    </div>
+                    <div class="flex_table__cell eighth"></div>
+                    <div class="flex_table__cell ninth"></div>
+                  </div>
+                  <div class="flex_table__row">
+                    <div class="flex_table__cell first">100</div>
+                    <div class="flex_table__cell second"></div>
+                    <div class="flex_table__cell third"></div>
+                    <div class="flex_table__cell fourth"></div>
+                    <div class="flex_table__cell fifth"></div>
+                    <div class="flex_table__cell sixth"></div>
+                    <div class="flex_table__cell seventh"></div>
+                    <div class="flex_table__cell eighth">Chiller costs</div>
+                    <div class="flex_table__cell ninth"></div>
+                  </div>
+                  <div class="flex_table__row">
+                    <div class="flex_table__cell first">75</div>
+                    <div class="flex_table__cell second"></div>
+                    <div class="flex_table__cell third"></div>
+                    <div class="flex_table__cell fourth"></div>
+                    <div class="flex_table__cell fifth"></div>
+                    <div class="flex_table__cell sixth"></div>
+                    <div class="flex_table__cell seventh"></div>
+                    <div class="flex_table__cell eighth">Average Tonnage</div>
+                    <div class="flex_table__cell ninth"></div>
+                  </div>
+                  <div class="flex_table__row">
+                    <div class="flex_table__cell first">50</div>
+                    <div class="flex_table__cell second"></div>
+                    <div class="flex_table__cell third"></div>
+                    <div class="flex_table__cell fourth"></div>
+                    <div class="flex_table__cell fifth"></div>
+                    <div class="flex_table__cell sixth"></div>
+                    <div class="flex_table__cell seventh"></div>
+                    <div class="flex_table__cell eighth">Plant kW/ton</div>
+                    <div class="flex_table__cell ninth"></div>
+                  </div>
+                  <div class="flex_table__row">
+                    <div class="flex_table__cell first">25</div>
+                    <div class="flex_table__cell second"></div>
+                    <div class="flex_table__cell third"></div>
+                    <div class="flex_table__cell fourth"></div>
+                    <div class="flex_table__cell fifth"></div>
+                    <div class="flex_table__cell sixth"></div>
+                    <div class="flex_table__cell seventh"></div>
+                    <div class="flex_table__cell eighth">Energy [kWh]</div>
+                    <div class="flex_table__cell ninth"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="table_container_displayed energy_usage_delta_t">
+              <div class="table_container_displayed_wrapper">
+                <div class="flex_table">
+                  <div class="flex_table__row subheading">
+                    <div class="flex_table__cell first">
+                      Chiller energy usage at delta t [&#8457;]
+                    </div>
+                    <div class="flex_table__cell second"></div>
+                    <div class="flex_table__cell third"></div>
+                    <div class="flex_table__cell fourth"></div>
+                    <div class="flex_table__cell fifth"></div>
+                    <div class="flex_table__cell sixth"></div>
+                    <div class="flex_table__cell seventh"></div>
+                    <div class="flex_table__cell eighth"></div>
+                    <div class="flex_table__cell ninth delta_t_value"></div>
+                  </div>
+                  <div class="flex_table__row sub_subheading">
+                    <div class="flex_table__cell first">
+                      <div class="name">Load</div>
+                      <div class="measurement">%</div>
+                    </div>
+                    <div class="flex_table__cell second">
+                      <div class="name">Time</div>
+                      <div class="measurement">%</div>
+                    </div>
+                    <div class="flex_table__cell third">
+                      <div class="name">Time</div>
+                      <div class="measurement">Hours</div>
+                    </div>
+                    <div class="flex_table__cell fourth">
+                      <div class="name">Flow</div>
+                      <div class="measurement">GPM</div>
+                    </div>
+                    <div class="flex_table__cell fifth">
+                      <div class="name">Tons</div>
+                      <div class="measurement"></div>
+                    </div>
+                    <div class="flex_table__cell sixth">
+                      <div class="name">Chillers On</div>
+                      <div class="measurement"></div>
+                    </div>
+                    <div class="flex_table__cell seventh">
+                      <div class="name">Power</div>
+                      <div class="measurement">kW</div>
+                    </div>
+                    <div class="flex_table__cell eighth"></div>
+                    <div class="flex_table__cell ninth"></div>
+                  </div>
+                  <div class="flex_table__row">
+                    <div class="flex_table__cell first">100</div>
+                    <div class="flex_table__cell second"></div>
+                    <div class="flex_table__cell third"></div>
+                    <div class="flex_table__cell fourth"></div>
+                    <div class="flex_table__cell fifth"></div>
+                    <div class="flex_table__cell sixth"></div>
+                    <div class="flex_table__cell seventh"></div>
+                    <div class="flex_table__cell eighth">Chiller costs</div>
+                    <div class="flex_table__cell ninth"></div>
+                  </div>
+                  <div class="flex_table__row">
+                    <div class="flex_table__cell first">75</div>
+                    <div class="flex_table__cell second"></div>
+                    <div class="flex_table__cell third"></div>
+                    <div class="flex_table__cell fourth"></div>
+                    <div class="flex_table__cell fifth"></div>
+                    <div class="flex_table__cell sixth"></div>
+                    <div class="flex_table__cell seventh"></div>
+                    <div class="flex_table__cell eighth">Average Tonnage</div>
+                    <div class="flex_table__cell ninth"></div>
+                  </div>
+                  <div class="flex_table__row">
+                    <div class="flex_table__cell first">50</div>
+                    <div class="flex_table__cell second"></div>
+                    <div class="flex_table__cell third"></div>
+                    <div class="flex_table__cell fourth"></div>
+                    <div class="flex_table__cell fifth"></div>
+                    <div class="flex_table__cell sixth"></div>
+                    <div class="flex_table__cell seventh"></div>
+                    <div class="flex_table__cell eighth">Plant kW/ton</div>
+                    <div class="flex_table__cell ninth"></div>
+                  </div>
+                  <div class="flex_table__row">
+                    <div class="flex_table__cell first">25</div>
+                    <div class="flex_table__cell second"></div>
+                    <div class="flex_table__cell third"></div>
+                    <div class="flex_table__cell fourth"></div>
+                    <div class="flex_table__cell fifth"></div>
+                    <div class="flex_table__cell sixth"></div>
+                    <div class="flex_table__cell seventh"></div>
+                    <div class="flex_table__cell eighth">Energy [kWh]</div>
+                    <div class="flex_table__cell ninth"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="table_container_displayed energy_usage_delta_t">
+              <div class="table_container_displayed_wrapper">
+                <div class="flex_table">
+                  <div class="flex_table__row subheading">
+                    <div class="flex_table__cell first">
+                      Chiller energy usage at delta t [&#8457;]
+                    </div>
+                    <div class="flex_table__cell second"></div>
+                    <div class="flex_table__cell third"></div>
+                    <div class="flex_table__cell fourth"></div>
+                    <div class="flex_table__cell fifth"></div>
+                    <div class="flex_table__cell sixth"></div>
+                    <div class="flex_table__cell seventh"></div>
+                    <div class="flex_table__cell eighth"></div>
+                    <div class="flex_table__cell ninth delta_t_value"></div>
+                  </div>
+                  <div class="flex_table__row sub_subheading">
+                    <div class="flex_table__cell first">
+                      <div class="name">Load</div>
+                      <div class="measurement">%</div>
+                    </div>
+                    <div class="flex_table__cell second">
+                      <div class="name">Time</div>
+                      <div class="measurement">%</div>
+                    </div>
+                    <div class="flex_table__cell third">
+                      <div class="name">Time</div>
+                      <div class="measurement">Hours</div>
+                    </div>
+                    <div class="flex_table__cell fourth">
+                      <div class="name">Flow</div>
+                      <div class="measurement">GPM</div>
+                    </div>
+                    <div class="flex_table__cell fifth">
+                      <div class="name">Tons</div>
+                      <div class="measurement"></div>
+                    </div>
+                    <div class="flex_table__cell sixth">
+                      <div class="name">Chillers On</div>
+                      <div class="measurement"></div>
+                    </div>
+                    <div class="flex_table__cell seventh">
+                      <div class="name">Power</div>
+                      <div class="measurement">kW</div>
+                    </div>
+                    <div class="flex_table__cell eighth"></div>
+                    <div class="flex_table__cell ninth"></div>
+                  </div>
+                  <div class="flex_table__row">
+                    <div class="flex_table__cell first">100</div>
+                    <div class="flex_table__cell second"></div>
+                    <div class="flex_table__cell third"></div>
+                    <div class="flex_table__cell fourth"></div>
+                    <div class="flex_table__cell fifth"></div>
+                    <div class="flex_table__cell sixth"></div>
+                    <div class="flex_table__cell seventh"></div>
+                    <div class="flex_table__cell eighth">Chiller costs</div>
+                    <div class="flex_table__cell ninth"></div>
+                  </div>
+                  <div class="flex_table__row">
+                    <div class="flex_table__cell first">75</div>
+                    <div class="flex_table__cell second"></div>
+                    <div class="flex_table__cell third"></div>
+                    <div class="flex_table__cell fourth"></div>
+                    <div class="flex_table__cell fifth"></div>
+                    <div class="flex_table__cell sixth"></div>
+                    <div class="flex_table__cell seventh"></div>
+                    <div class="flex_table__cell eighth">Average Tonnage</div>
+                    <div class="flex_table__cell ninth"></div>
+                  </div>
+                  <div class="flex_table__row">
+                    <div class="flex_table__cell first">50</div>
+                    <div class="flex_table__cell second"></div>
+                    <div class="flex_table__cell third"></div>
+                    <div class="flex_table__cell fourth"></div>
+                    <div class="flex_table__cell fifth"></div>
+                    <div class="flex_table__cell sixth"></div>
+                    <div class="flex_table__cell seventh"></div>
+                    <div class="flex_table__cell eighth">Plant kW/ton</div>
+                    <div class="flex_table__cell ninth"></div>
+                  </div>
+                  <div class="flex_table__row">
+                    <div class="flex_table__cell first">25</div>
+                    <div class="flex_table__cell second"></div>
+                    <div class="flex_table__cell third"></div>
+                    <div class="flex_table__cell fourth"></div>
+                    <div class="flex_table__cell fifth"></div>
+                    <div class="flex_table__cell sixth"></div>
+                    <div class="flex_table__cell seventh"></div>
+                    <div class="flex_table__cell eighth">Energy [kWh]</div>
+                    <div class="flex_table__cell ninth"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="table_container_displayed energy_usage_delta_t">
+              <div class="table_container_displayed_wrapper">
+                <div class="flex_table">
+                  <div class="flex_table__row subheading">
+                    <div class="flex_table__cell first">
+                      Chiller energy usage at delta t [&#8457;]
+                    </div>
+                    <div class="flex_table__cell second"></div>
+                    <div class="flex_table__cell third"></div>
+                    <div class="flex_table__cell fourth"></div>
+                    <div class="flex_table__cell fifth"></div>
+                    <div class="flex_table__cell sixth"></div>
+                    <div class="flex_table__cell seventh"></div>
+                    <div class="flex_table__cell eighth"></div>
+                    <div class="flex_table__cell ninth delta_t_value"></div>
+                  </div>
+                  <div class="flex_table__row sub_subheading">
+                    <div class="flex_table__cell first">
+                      <div class="name">Load</div>
+                      <div class="measurement">%</div>
+                    </div>
+                    <div class="flex_table__cell second">
+                      <div class="name">Time</div>
+                      <div class="measurement">%</div>
+                    </div>
+                    <div class="flex_table__cell third">
+                      <div class="name">Time</div>
+                      <div class="measurement">Hours</div>
+                    </div>
+                    <div class="flex_table__cell fourth">
+                      <div class="name">Flow</div>
+                      <div class="measurement">GPM</div>
+                    </div>
+                    <div class="flex_table__cell fifth">
+                      <div class="name">Tons</div>
+                      <div class="measurement"></div>
+                    </div>
+                    <div class="flex_table__cell sixth">
+                      <div class="name">Chillers On</div>
+                      <div class="measurement"></div>
+                    </div>
+                    <div class="flex_table__cell seventh">
+                      <div class="name">Power</div>
+                      <div class="measurement">kW</div>
+                    </div>
+                    <div class="flex_table__cell eighth"></div>
+                    <div class="flex_table__cell ninth"></div>
+                  </div>
+                  <div class="flex_table__row">
+                    <div class="flex_table__cell first">100</div>
+                    <div class="flex_table__cell second"></div>
+                    <div class="flex_table__cell third"></div>
+                    <div class="flex_table__cell fourth"></div>
+                    <div class="flex_table__cell fifth"></div>
+                    <div class="flex_table__cell sixth"></div>
+                    <div class="flex_table__cell seventh"></div>
+                    <div class="flex_table__cell eighth">Chiller costs</div>
+                    <div class="flex_table__cell ninth"></div>
+                  </div>
+                  <div class="flex_table__row">
+                    <div class="flex_table__cell first">75</div>
+                    <div class="flex_table__cell second"></div>
+                    <div class="flex_table__cell third"></div>
+                    <div class="flex_table__cell fourth"></div>
+                    <div class="flex_table__cell fifth"></div>
+                    <div class="flex_table__cell sixth"></div>
+                    <div class="flex_table__cell seventh"></div>
+                    <div class="flex_table__cell eighth">Average Tonnage</div>
+                    <div class="flex_table__cell ninth"></div>
+                  </div>
+                  <div class="flex_table__row">
+                    <div class="flex_table__cell first">50</div>
+                    <div class="flex_table__cell second"></div>
+                    <div class="flex_table__cell third"></div>
+                    <div class="flex_table__cell fourth"></div>
+                    <div class="flex_table__cell fifth"></div>
+                    <div class="flex_table__cell sixth"></div>
+                    <div class="flex_table__cell seventh"></div>
+                    <div class="flex_table__cell eighth">Plant kW/ton</div>
+                    <div class="flex_table__cell ninth"></div>
+                  </div>
+                  <div class="flex_table__row">
+                    <div class="flex_table__cell first">25</div>
+                    <div class="flex_table__cell second"></div>
+                    <div class="flex_table__cell third"></div>
+                    <div class="flex_table__cell fourth"></div>
+                    <div class="flex_table__cell fifth"></div>
+                    <div class="flex_table__cell sixth"></div>
+                    <div class="flex_table__cell seventh"></div>
+                    <div class="flex_table__cell eighth">Energy [kWh]</div>
+                    <div class="flex_table__cell ninth"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="table_container_displayed energy_usage_delta_t">
+              <div class="table_container_displayed_wrapper">
+                <div class="flex_table">
+                  <div class="flex_table__row subheading">
+                    <div class="flex_table__cell first">
+                      Chiller energy usage at delta t [&#8457;]
+                    </div>
+                    <div class="flex_table__cell second"></div>
+                    <div class="flex_table__cell third"></div>
+                    <div class="flex_table__cell fourth"></div>
+                    <div class="flex_table__cell fifth"></div>
+                    <div class="flex_table__cell sixth"></div>
+                    <div class="flex_table__cell seventh"></div>
+                    <div class="flex_table__cell eighth"></div>
+                    <div class="flex_table__cell ninth delta_t_value"></div>
+                  </div>
+                  <div class="flex_table__row sub_subheading">
+                    <div class="flex_table__cell first">
+                      <div class="name">Load</div>
+                      <div class="measurement">%</div>
+                    </div>
+                    <div class="flex_table__cell second">
+                      <div class="name">Time</div>
+                      <div class="measurement">%</div>
+                    </div>
+                    <div class="flex_table__cell third">
+                      <div class="name">Time</div>
+                      <div class="measurement">Hours</div>
+                    </div>
+                    <div class="flex_table__cell fourth">
+                      <div class="name">Flow</div>
+                      <div class="measurement">GPM</div>
+                    </div>
+                    <div class="flex_table__cell fifth">
+                      <div class="name">Tons</div>
+                      <div class="measurement"></div>
+                    </div>
+                    <div class="flex_table__cell sixth">
+                      <div class="name">Chillers On</div>
+                      <div class="measurement"></div>
+                    </div>
+                    <div class="flex_table__cell seventh">
+                      <div class="name">Power</div>
+                      <div class="measurement">kW</div>
+                    </div>
+                    <div class="flex_table__cell eighth"></div>
+                    <div class="flex_table__cell ninth"></div>
+                  </div>
+                  <div class="flex_table__row">
+                    <div class="flex_table__cell first">100</div>
+                    <div class="flex_table__cell second"></div>
+                    <div class="flex_table__cell third"></div>
+                    <div class="flex_table__cell fourth"></div>
+                    <div class="flex_table__cell fifth"></div>
+                    <div class="flex_table__cell sixth"></div>
+                    <div class="flex_table__cell seventh"></div>
+                    <div class="flex_table__cell eighth">Chiller costs</div>
+                    <div class="flex_table__cell ninth"></div>
+                  </div>
+                  <div class="flex_table__row">
+                    <div class="flex_table__cell first">75</div>
+                    <div class="flex_table__cell second"></div>
+                    <div class="flex_table__cell third"></div>
+                    <div class="flex_table__cell fourth"></div>
+                    <div class="flex_table__cell fifth"></div>
+                    <div class="flex_table__cell sixth"></div>
+                    <div class="flex_table__cell seventh"></div>
+                    <div class="flex_table__cell eighth">Average Tonnage</div>
+                    <div class="flex_table__cell ninth"></div>
+                  </div>
+                  <div class="flex_table__row">
+                    <div class="flex_table__cell first">50</div>
+                    <div class="flex_table__cell second"></div>
+                    <div class="flex_table__cell third"></div>
+                    <div class="flex_table__cell fourth"></div>
+                    <div class="flex_table__cell fifth"></div>
+                    <div class="flex_table__cell sixth"></div>
+                    <div class="flex_table__cell seventh"></div>
+                    <div class="flex_table__cell eighth">Plant kW/ton</div>
+                    <div class="flex_table__cell ninth"></div>
+                  </div>
+                  <div class="flex_table__row">
+                    <div class="flex_table__cell first">25</div>
+                    <div class="flex_table__cell second"></div>
+                    <div class="flex_table__cell third"></div>
+                    <div class="flex_table__cell fourth"></div>
+                    <div class="flex_table__cell fifth"></div>
+                    <div class="flex_table__cell sixth"></div>
+                    <div class="flex_table__cell seventh"></div>
+                    <div class="flex_table__cell eighth">Energy [kWh]</div>
+                    <div class="flex_table__cell ninth"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="table_container_displayed energy_usage_delta_t">
+              <div class="table_container_displayed_wrapper">
+                <div class="flex_table">
+                  <div class="flex_table__row subheading">
+                    <div class="flex_table__cell first">
+                      Chiller energy usage at delta t [&#8457;]
+                    </div>
+                    <div class="flex_table__cell second"></div>
+                    <div class="flex_table__cell third"></div>
+                    <div class="flex_table__cell fourth"></div>
+                    <div class="flex_table__cell fifth"></div>
+                    <div class="flex_table__cell sixth"></div>
+                    <div class="flex_table__cell seventh"></div>
+                    <div class="flex_table__cell eighth"></div>
+                    <div class="flex_table__cell ninth delta_t_value"></div>
+                  </div>
+                  <div class="flex_table__row sub_subheading">
+                    <div class="flex_table__cell first">
+                      <div class="name">Load</div>
+                      <div class="measurement">%</div>
+                    </div>
+                    <div class="flex_table__cell second">
+                      <div class="name">Time</div>
+                      <div class="measurement">%</div>
+                    </div>
+                    <div class="flex_table__cell third">
+                      <div class="name">Time</div>
+                      <div class="measurement">Hours</div>
+                    </div>
+                    <div class="flex_table__cell fourth">
+                      <div class="name">Flow</div>
+                      <div class="measurement">GPM</div>
+                    </div>
+                    <div class="flex_table__cell fifth">
+                      <div class="name">Tons</div>
+                      <div class="measurement"></div>
+                    </div>
+                    <div class="flex_table__cell sixth">
+                      <div class="name">Chillers On</div>
+                      <div class="measurement"></div>
+                    </div>
+                    <div class="flex_table__cell seventh">
+                      <div class="name">Power</div>
+                      <div class="measurement">kW</div>
+                    </div>
+                    <div class="flex_table__cell eighth"></div>
+                    <div class="flex_table__cell ninth"></div>
+                  </div>
+                  <div class="flex_table__row">
+                    <div class="flex_table__cell first">100</div>
+                    <div class="flex_table__cell second"></div>
+                    <div class="flex_table__cell third"></div>
+                    <div class="flex_table__cell fourth"></div>
+                    <div class="flex_table__cell fifth"></div>
+                    <div class="flex_table__cell sixth"></div>
+                    <div class="flex_table__cell seventh"></div>
+                    <div class="flex_table__cell eighth">Chiller costs</div>
+                    <div class="flex_table__cell ninth"></div>
+                  </div>
+                  <div class="flex_table__row">
+                    <div class="flex_table__cell first">75</div>
+                    <div class="flex_table__cell second"></div>
+                    <div class="flex_table__cell third"></div>
+                    <div class="flex_table__cell fourth"></div>
+                    <div class="flex_table__cell fifth"></div>
+                    <div class="flex_table__cell sixth"></div>
+                    <div class="flex_table__cell seventh"></div>
+                    <div class="flex_table__cell eighth">Average Tonnage</div>
+                    <div class="flex_table__cell ninth"></div>
+                  </div>
+                  <div class="flex_table__row">
+                    <div class="flex_table__cell first">50</div>
+                    <div class="flex_table__cell second"></div>
+                    <div class="flex_table__cell third"></div>
+                    <div class="flex_table__cell fourth"></div>
+                    <div class="flex_table__cell fifth"></div>
+                    <div class="flex_table__cell sixth"></div>
+                    <div class="flex_table__cell seventh"></div>
+                    <div class="flex_table__cell eighth">Plant kW/ton</div>
+                    <div class="flex_table__cell ninth"></div>
+                  </div>
+                  <div class="flex_table__row">
+                    <div class="flex_table__cell first">25</div>
+                    <div class="flex_table__cell second"></div>
+                    <div class="flex_table__cell third"></div>
+                    <div class="flex_table__cell fourth"></div>
+                    <div class="flex_table__cell fifth"></div>
+                    <div class="flex_table__cell sixth"></div>
+                    <div class="flex_table__cell seventh"></div>
+                    <div class="flex_table__cell eighth">Energy [kWh]</div>
+                    <div class="flex_table__cell ninth"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="screen pump">
+          <div class="screen__contain">
+            <div class="table_container_displayed design_factors">
+              <div class="table_container_displayed_wrapper">
+                <div class="flex_table">
+                  <div class="flex_table__row">
+                    <div class="flex_table__cell first">Pump Design Factor</div>
+                    <div class="flex_table__cell second"></div>
+                    <div class="flex_table__cell third">
+                      <label>
+                        <input type="number" id="pump_design_factor" value="100">
+                        <span>%</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="table_container_displayed design_chilled_water_distribution_flow">
+              <div class="table_container_displayed_wrapper">
+                <div class="flex_table">
+                  <div class="flex_table__row heading">
+                    <div class="flex_table__cell first">Design chilled water distribution flow</div>
+                    <div class="flex_table__cell second"></div>
+                    <div class="flex_table__cell third"></div>
+                    <div class="flex_table__cell fourth"></div>
+                    <div class="flex_table__cell fifth"></div>
+                    <div class="flex_table__cell sixth"></div>
+                    <div class="flex_table__cell seventh"></div>
+                    <div class="flex_table__cell eighth"></div>
+                    <div class="flex_table__cell ninth"></div>
+                  </div>
+                  <div class="flex_table__row subheading">
+                    <div class="flex_table__cell first">
+                      <div class="name">Load</div>
+                      <div class="measurement">%</div>
+                    </div>
+                    <div class="flex_table__cell second">
+                      <div class="name">Time</div>
+                      <div class="measurement">%</div>
+                    </div>
+                    <div class="flex_table__cell third">
+                      <div class="name">Time</div>
+                      <div class="measurement">Hours</div>
+                    </div>
+                    <div class="flex_table__cell fourth">
+                      <div class="name">Flow</div>
+                      <div class="measurement">GPM</div>
+                    </div>
+                    <div class="flex_table__cell fifth">
+                      <div class="name">Head</div>
+                      <div class="measurement">ft</div>
+                    </div>
+                    <div class="flex_table__cell sixth">
+                      <div class="name">Power</div>
+                      <div class="measurement">HP</div>
+                    </div>
+                    <div class="flex_table__cell seventh">
+                      <div class="name">Power</div>
+                      <div class="measurement">kW</div>
+                    </div>
+                    <div class="flex_table__cell eighth"></div>
+                    <div class="flex_table__cell ninth"></div>
+                  </div>
+                  <div class="flex_table__row">
+                    <div class="flex_table__cell first">100</div>
+                    <div class="flex_table__cell second"></div>
+                    <div class="flex_table__cell third"></div>
+                    <div class="flex_table__cell fourth"></div>
+                    <div class="flex_table__cell fifth"></div>
+                    <div class="flex_table__cell sixth"></div>
+                    <div class="flex_table__cell seventh"></div>
+                    <div class="flex_table__cell eighth">Pump costs</div>
+                    <div class="flex_table__cell ninth">
+                      <span>$</span>
+                      <p></p>
+                    </div>
+                  </div>
+                  <div class="flex_table__row">
+                    <div class="flex_table__cell first">75</div>
+                    <div class="flex_table__cell second"></div>
+                    <div class="flex_table__cell third"></div>
+                    <div class="flex_table__cell fourth"></div>
+                    <div class="flex_table__cell fifth"></div>
+                    <div class="flex_table__cell sixth"></div>
+                    <div class="flex_table__cell seventh"></div>
+                    <div class="flex_table__cell eighth">Annual Gal.</div>
+                    <div class="flex_table__cell ninth"></div>
+                  </div>
+                  <div class="flex_table__row">
+                    <div class="flex_table__cell first">50</div>
+                    <div class="flex_table__cell second"></div>
+                    <div class="flex_table__cell third"></div>
+                    <div class="flex_table__cell fourth"></div>
+                    <div class="flex_table__cell fifth"></div>
+                    <div class="flex_table__cell sixth"></div>
+                    <div class="flex_table__cell seventh"></div>
+                    <div class="flex_table__cell eighth">Avg GPM</div>
+                    <div class="flex_table__cell ninth"></div>
+                  </div>
+                  <div class="flex_table__row">
+                    <div class="flex_table__cell first">25</div>
+                    <div class="flex_table__cell second"></div>
+                    <div class="flex_table__cell third"></div>
+                    <div class="flex_table__cell fourth"></div>
+                    <div class="flex_table__cell fifth"></div>
+                    <div class="flex_table__cell sixth"></div>
+                    <div class="flex_table__cell seventh"></div>
+                    <div class="flex_table__cell eighth">Energy [kWh]</div>
+                    <div class="flex_table__cell ninth"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="table_container_displayed min_pump">
+              <div class="table_container_displayed_wrapper">
+                <div class="flex_table">
+                  <div class="flex_table__row heading">
+                    <div class="flex_table__cell first">Minimum Pump head [ft]</div>
+                    <div class="flex_table__cell second"></div>
+                    <div class="flex_table__cell third"></div>
+                    <div class="flex_table__cell fourth"></div>
+                    <div class="flex_table__cell fifth"></div>
+                    <div class="flex_table__cell sixth"></div>
+                    <div class="flex_table__cell seventh">
+                    </div>
+                  </div>
+                  <div class="flex_table__row subheading">
+                    <div class="flex_table__cell first">
+                      <div class="name">Flow</div>
+                      <div class="measurement">GPM</div>
+                    </div>
+                    <div class="flex_table__cell second">
+                    </div>
+                    <div class="flex_table__cell third">
+                      <div class="name">Head</div>
+                      <div class="measurement">ft</div>
+                    </div>
+                    <div class="flex_table__cell fourth">
+                    </div>
+                    <div class="flex_table__cell fifth">
+                      <div class="name">Power</div>
+                      <div class="measurement">HP</div>
+                    </div>
+                    <div class="flex_table__cell sixth">
+                    </div>
+                    <div class="flex_table__cell seventh">
+                      <div class="name">Power</div>
+                      <div class="measurement">kW</div>
+                    </div>
+                  </div>
+                  <div class="flex_table__row">
+                    <div class="flex_table__cell first">1</div>
+                    <div class="flex_table__cell second"></div>
+                    <div class="flex_table__cell third">1</div>
+                    <div class="flex_table__cell fourth"></div>
+                    <div class="flex_table__cell fifth">1</div>
+                    <div class="flex_table__cell sixth"></div>
+                    <div class="flex_table__cell seventh">1</div>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="table_container_displayed design_chilled_water_distribution_flow_delta_t">
+              <div class="table_container_displayed_wrapper">
+                <div class="flex_table">
+                  <div class="flex_table__row heading">
+                    <div class="flex_table__cell first">Design chilled water distribution flow at Delta T [&#8457;]</div>
+                    <div class="flex_table__cell second"></div>
+                    <div class="flex_table__cell third"></div>
+                    <div class="flex_table__cell fourth"></div>
+                    <div class="flex_table__cell fifth"></div>
+                    <div class="flex_table__cell sixth"></div>
+                    <div class="flex_table__cell seventh"></div>
+                    <div class="flex_table__cell eighth"></div>
+                  </div>
+                  <div class="flex_table__row subheading">
+                    <div class="flex_table__cell first">
+                      <div class="name">Load</div>
+                      <div class="measurement">%</div>
+                    </div>
+                    <div class="flex_table__cell second">
+                      <div class="name">Time</div>
+                      <div class="measurement">%</div>
+                    </div>
+                    <div class="flex_table__cell third">
+                      <div class="name">Time</div>
+                      <div class="measurement">Hours</div>
+                    </div>
+                    <div class="flex_table__cell fourth">
+                      <div class="name">Flow</div>
+                      <div class="measurement">GPM</div>
+                    </div>
+                    <div class="flex_table__cell fifth">
+                      <div class="name">Head</div>
+                      <div class="measurement">ft</div>
+                    </div>
+                    <div class="flex_table__cell sixth">
+                      <div class="name">Power</div>
+                      <div class="measurement">HP</div>
+                    </div>
+                    <div class="flex_table__cell seventh">
+                    </div>
+                    <div class="flex_table__cell eighth"></div>
+                    <div class="flex_table__cell ninth"></div>
+                  </div>
+                  <div class="flex_table__row">
+                    <div class="flex_table__cell first">100</div>
+                    <div class="flex_table__cell second"></div>
+                    <div class="flex_table__cell third"></div>
+                    <div class="flex_table__cell fourth"></div>
+                    <div class="flex_table__cell fifth"></div>
+                    <div class="flex_table__cell sixth"></div>
+                    <div class="flex_table__cell seventh">Pump costs</div>
+                    <div class="flex_table__cell eighth">
+                      <span>$</span>
+                      <p></p>
+                    </div>
+                  </div>
+                  <div class="flex_table__row">
+                    <div class="flex_table__cell first">75</div>
+                    <div class="flex_table__cell second"></div>
+                    <div class="flex_table__cell third"></div>
+                    <div class="flex_table__cell fourth"></div>
+                    <div class="flex_table__cell fifth"></div>
+                    <div class="flex_table__cell sixth"></div>
+                    <div class="flex_table__cell seventh">Annual Gal.</div>
+                    <div class="flex_table__cell eighth"></div>
+                  </div>
+                  <div class="flex_table__row">
+                    <div class="flex_table__cell first">50</div>
+                    <div class="flex_table__cell second"></div>
+                    <div class="flex_table__cell third"></div>
+                    <div class="flex_table__cell fourth"></div>
+                    <div class="flex_table__cell fifth"></div>
+                    <div class="flex_table__cell sixth"></div>
+                    <div class="flex_table__cell seventh">Avg GPM</div>
+                    <div class="flex_table__cell eighth"></div>
+                  </div>
+                  <div class="flex_table__row">
+                    <div class="flex_table__cell first">25</div>
+                    <div class="flex_table__cell second"></div>
+                    <div class="flex_table__cell third"></div>
+                    <div class="flex_table__cell fourth"></div>
+                    <div class="flex_table__cell fifth"></div>
+                    <div class="flex_table__cell sixth"></div>
+                    <div class="flex_table__cell seventh">Energy [kWh]</div>
+                    <div class="flex_table__cell eighth"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="table_container_displayed design_chilled_water_distribution_flow_delta_t">
+              <div class="table_container_displayed_wrapper">
+                <div class="flex_table">
+                  <div class="flex_table__row heading">
+                    <div class="flex_table__cell first">Design chilled water distribution flow at Delta T [&#8457;]</div>
+                    <div class="flex_table__cell second"></div>
+                    <div class="flex_table__cell third"></div>
+                    <div class="flex_table__cell fourth"></div>
+                    <div class="flex_table__cell fifth"></div>
+                    <div class="flex_table__cell sixth"></div>
+                    <div class="flex_table__cell seventh"></div>
+                    <div class="flex_table__cell eighth"></div>
+                  </div>
+                  <div class="flex_table__row subheading">
+                    <div class="flex_table__cell first">
+                      <div class="name">Load</div>
+                      <div class="measurement">%</div>
+                    </div>
+                    <div class="flex_table__cell second">
+                      <div class="name">Time</div>
+                      <div class="measurement">%</div>
+                    </div>
+                    <div class="flex_table__cell third">
+                      <div class="name">Time</div>
+                      <div class="measurement">Hours</div>
+                    </div>
+                    <div class="flex_table__cell fourth">
+                      <div class="name">Flow</div>
+                      <div class="measurement">GPM</div>
+                    </div>
+                    <div class="flex_table__cell fifth">
+                      <div class="name">Head</div>
+                      <div class="measurement">ft</div>
+                    </div>
+                    <div class="flex_table__cell sixth">
+                      <div class="name">Power</div>
+                      <div class="measurement">HP</div>
+                    </div>
+                    <div class="flex_table__cell seventh">
+                    </div>
+                    <div class="flex_table__cell eighth"></div>
+                    <div class="flex_table__cell ninth"></div>
+                  </div>
+                  <div class="flex_table__row">
+                    <div class="flex_table__cell first">100</div>
+                    <div class="flex_table__cell second"></div>
+                    <div class="flex_table__cell third"></div>
+                    <div class="flex_table__cell fourth"></div>
+                    <div class="flex_table__cell fifth"></div>
+                    <div class="flex_table__cell sixth"></div>
+                    <div class="flex_table__cell seventh">Pump costs</div>
+                    <div class="flex_table__cell eighth">
+                      <span>$</span>
+                      <p></p>
+                    </div>
+                  </div>
+                  <div class="flex_table__row">
+                    <div class="flex_table__cell first">75</div>
+                    <div class="flex_table__cell second"></div>
+                    <div class="flex_table__cell third"></div>
+                    <div class="flex_table__cell fourth"></div>
+                    <div class="flex_table__cell fifth"></div>
+                    <div class="flex_table__cell sixth"></div>
+                    <div class="flex_table__cell seventh">Annual Gal.</div>
+                    <div class="flex_table__cell eighth"></div>
+                  </div>
+                  <div class="flex_table__row">
+                    <div class="flex_table__cell first">50</div>
+                    <div class="flex_table__cell second"></div>
+                    <div class="flex_table__cell third"></div>
+                    <div class="flex_table__cell fourth"></div>
+                    <div class="flex_table__cell fifth"></div>
+                    <div class="flex_table__cell sixth"></div>
+                    <div class="flex_table__cell seventh">Avg GPM</div>
+                    <div class="flex_table__cell eighth"></div>
+                  </div>
+                  <div class="flex_table__row">
+                    <div class="flex_table__cell first">25</div>
+                    <div class="flex_table__cell second"></div>
+                    <div class="flex_table__cell third"></div>
+                    <div class="flex_table__cell fourth"></div>
+                    <div class="flex_table__cell fifth"></div>
+                    <div class="flex_table__cell sixth"></div>
+                    <div class="flex_table__cell seventh">Energy [kWh]</div>
+                    <div class="flex_table__cell eighth"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="table_container_displayed design_chilled_water_distribution_flow_delta_t">
+              <div class="table_container_displayed_wrapper">
+                <div class="flex_table">
+                  <div class="flex_table__row heading">
+                    <div class="flex_table__cell first">Design chilled water distribution flow at Delta T [&#8457;]</div>
+                    <div class="flex_table__cell second"></div>
+                    <div class="flex_table__cell third"></div>
+                    <div class="flex_table__cell fourth"></div>
+                    <div class="flex_table__cell fifth"></div>
+                    <div class="flex_table__cell sixth"></div>
+                    <div class="flex_table__cell seventh"></div>
+                    <div class="flex_table__cell eighth"></div>
+                  </div>
+                  <div class="flex_table__row subheading">
+                    <div class="flex_table__cell first">
+                      <div class="name">Load</div>
+                      <div class="measurement">%</div>
+                    </div>
+                    <div class="flex_table__cell second">
+                      <div class="name">Time</div>
+                      <div class="measurement">%</div>
+                    </div>
+                    <div class="flex_table__cell third">
+                      <div class="name">Time</div>
+                      <div class="measurement">Hours</div>
+                    </div>
+                    <div class="flex_table__cell fourth">
+                      <div class="name">Flow</div>
+                      <div class="measurement">GPM</div>
+                    </div>
+                    <div class="flex_table__cell fifth">
+                      <div class="name">Head</div>
+                      <div class="measurement">ft</div>
+                    </div>
+                    <div class="flex_table__cell sixth">
+                      <div class="name">Power</div>
+                      <div class="measurement">HP</div>
+                    </div>
+                    <div class="flex_table__cell seventh">
+                    </div>
+                    <div class="flex_table__cell eighth"></div>
+                    <div class="flex_table__cell ninth"></div>
+                  </div>
+                  <div class="flex_table__row">
+                    <div class="flex_table__cell first">100</div>
+                    <div class="flex_table__cell second"></div>
+                    <div class="flex_table__cell third"></div>
+                    <div class="flex_table__cell fourth"></div>
+                    <div class="flex_table__cell fifth"></div>
+                    <div class="flex_table__cell sixth"></div>
+                    <div class="flex_table__cell seventh">Pump costs</div>
+                    <div class="flex_table__cell eighth">
+                      <span>$</span>
+                      <p></p>
+                    </div>
+                  </div>
+                  <div class="flex_table__row">
+                    <div class="flex_table__cell first">75</div>
+                    <div class="flex_table__cell second"></div>
+                    <div class="flex_table__cell third"></div>
+                    <div class="flex_table__cell fourth"></div>
+                    <div class="flex_table__cell fifth"></div>
+                    <div class="flex_table__cell sixth"></div>
+                    <div class="flex_table__cell seventh">Annual Gal.</div>
+                    <div class="flex_table__cell eighth"></div>
+                  </div>
+                  <div class="flex_table__row">
+                    <div class="flex_table__cell first">50</div>
+                    <div class="flex_table__cell second"></div>
+                    <div class="flex_table__cell third"></div>
+                    <div class="flex_table__cell fourth"></div>
+                    <div class="flex_table__cell fifth"></div>
+                    <div class="flex_table__cell sixth"></div>
+                    <div class="flex_table__cell seventh">Avg GPM</div>
+                    <div class="flex_table__cell eighth"></div>
+                  </div>
+                  <div class="flex_table__row">
+                    <div class="flex_table__cell first">25</div>
+                    <div class="flex_table__cell second"></div>
+                    <div class="flex_table__cell third"></div>
+                    <div class="flex_table__cell fourth"></div>
+                    <div class="flex_table__cell fifth"></div>
+                    <div class="flex_table__cell sixth"></div>
+                    <div class="flex_table__cell seventh">Energy [kWh]</div>
+                    <div class="flex_table__cell eighth"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="table_container_displayed design_chilled_water_distribution_flow_delta_t">
+              <div class="table_container_displayed_wrapper">
+                <div class="flex_table">
+                  <div class="flex_table__row heading">
+                    <div class="flex_table__cell first">Design chilled water distribution flow at Delta T [&#8457;]</div>
+                    <div class="flex_table__cell second"></div>
+                    <div class="flex_table__cell third"></div>
+                    <div class="flex_table__cell fourth"></div>
+                    <div class="flex_table__cell fifth"></div>
+                    <div class="flex_table__cell sixth"></div>
+                    <div class="flex_table__cell seventh"></div>
+                    <div class="flex_table__cell eighth"></div>
+                  </div>
+                  <div class="flex_table__row subheading">
+                    <div class="flex_table__cell first">
+                      <div class="name">Load</div>
+                      <div class="measurement">%</div>
+                    </div>
+                    <div class="flex_table__cell second">
+                      <div class="name">Time</div>
+                      <div class="measurement">%</div>
+                    </div>
+                    <div class="flex_table__cell third">
+                      <div class="name">Time</div>
+                      <div class="measurement">Hours</div>
+                    </div>
+                    <div class="flex_table__cell fourth">
+                      <div class="name">Flow</div>
+                      <div class="measurement">GPM</div>
+                    </div>
+                    <div class="flex_table__cell fifth">
+                      <div class="name">Head</div>
+                      <div class="measurement">ft</div>
+                    </div>
+                    <div class="flex_table__cell sixth">
+                      <div class="name">Power</div>
+                      <div class="measurement">HP</div>
+                    </div>
+                    <div class="flex_table__cell seventh">
+                    </div>
+                    <div class="flex_table__cell eighth"></div>
+                    <div class="flex_table__cell ninth"></div>
+                  </div>
+                  <div class="flex_table__row">
+                    <div class="flex_table__cell first">100</div>
+                    <div class="flex_table__cell second"></div>
+                    <div class="flex_table__cell third"></div>
+                    <div class="flex_table__cell fourth"></div>
+                    <div class="flex_table__cell fifth"></div>
+                    <div class="flex_table__cell sixth"></div>
+                    <div class="flex_table__cell seventh">Pump costs</div>
+                    <div class="flex_table__cell eighth">
+                      <span>$</span>
+                      <p></p>
+                    </div>
+                  </div>
+                  <div class="flex_table__row">
+                    <div class="flex_table__cell first">75</div>
+                    <div class="flex_table__cell second"></div>
+                    <div class="flex_table__cell third"></div>
+                    <div class="flex_table__cell fourth"></div>
+                    <div class="flex_table__cell fifth"></div>
+                    <div class="flex_table__cell sixth"></div>
+                    <div class="flex_table__cell seventh">Annual Gal.</div>
+                    <div class="flex_table__cell eighth"></div>
+                  </div>
+                  <div class="flex_table__row">
+                    <div class="flex_table__cell first">50</div>
+                    <div class="flex_table__cell second"></div>
+                    <div class="flex_table__cell third"></div>
+                    <div class="flex_table__cell fourth"></div>
+                    <div class="flex_table__cell fifth"></div>
+                    <div class="flex_table__cell sixth"></div>
+                    <div class="flex_table__cell seventh">Avg GPM</div>
+                    <div class="flex_table__cell eighth"></div>
+                  </div>
+                  <div class="flex_table__row">
+                    <div class="flex_table__cell first">25</div>
+                    <div class="flex_table__cell second"></div>
+                    <div class="flex_table__cell third"></div>
+                    <div class="flex_table__cell fourth"></div>
+                    <div class="flex_table__cell fifth"></div>
+                    <div class="flex_table__cell sixth"></div>
+                    <div class="flex_table__cell seventh">Energy [kWh]</div>
+                    <div class="flex_table__cell eighth"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="table_container_displayed design_chilled_water_distribution_flow_delta_t">
+              <div class="table_container_displayed_wrapper">
+                <div class="flex_table">
+                  <div class="flex_table__row heading">
+                    <div class="flex_table__cell first">Design chilled water distribution flow at Delta T [&#8457;]</div>
+                    <div class="flex_table__cell second"></div>
+                    <div class="flex_table__cell third"></div>
+                    <div class="flex_table__cell fourth"></div>
+                    <div class="flex_table__cell fifth"></div>
+                    <div class="flex_table__cell sixth"></div>
+                    <div class="flex_table__cell seventh"></div>
+                    <div class="flex_table__cell eighth"></div>
+                  </div>
+                  <div class="flex_table__row subheading">
+                    <div class="flex_table__cell first">
+                      <div class="name">Load</div>
+                      <div class="measurement">%</div>
+                    </div>
+                    <div class="flex_table__cell second">
+                      <div class="name">Time</div>
+                      <div class="measurement">%</div>
+                    </div>
+                    <div class="flex_table__cell third">
+                      <div class="name">Time</div>
+                      <div class="measurement">Hours</div>
+                    </div>
+                    <div class="flex_table__cell fourth">
+                      <div class="name">Flow</div>
+                      <div class="measurement">GPM</div>
+                    </div>
+                    <div class="flex_table__cell fifth">
+                      <div class="name">Head</div>
+                      <div class="measurement">ft</div>
+                    </div>
+                    <div class="flex_table__cell sixth">
+                      <div class="name">Power</div>
+                      <div class="measurement">HP</div>
+                    </div>
+                    <div class="flex_table__cell seventh">
+                    </div>
+                    <div class="flex_table__cell eighth"></div>
+                    <div class="flex_table__cell ninth"></div>
+                  </div>
+                  <div class="flex_table__row">
+                    <div class="flex_table__cell first">100</div>
+                    <div class="flex_table__cell second"></div>
+                    <div class="flex_table__cell third"></div>
+                    <div class="flex_table__cell fourth"></div>
+                    <div class="flex_table__cell fifth"></div>
+                    <div class="flex_table__cell sixth"></div>
+                    <div class="flex_table__cell seventh">Pump costs</div>
+                    <div class="flex_table__cell eighth">
+                      <span>$</span>
+                      <p></p>
+                    </div>
+                  </div>
+                  <div class="flex_table__row">
+                    <div class="flex_table__cell first">75</div>
+                    <div class="flex_table__cell second"></div>
+                    <div class="flex_table__cell third"></div>
+                    <div class="flex_table__cell fourth"></div>
+                    <div class="flex_table__cell fifth"></div>
+                    <div class="flex_table__cell sixth"></div>
+                    <div class="flex_table__cell seventh">Annual Gal.</div>
+                    <div class="flex_table__cell eighth"></div>
+                  </div>
+                  <div class="flex_table__row">
+                    <div class="flex_table__cell first">50</div>
+                    <div class="flex_table__cell second"></div>
+                    <div class="flex_table__cell third"></div>
+                    <div class="flex_table__cell fourth"></div>
+                    <div class="flex_table__cell fifth"></div>
+                    <div class="flex_table__cell sixth"></div>
+                    <div class="flex_table__cell seventh">Avg GPM</div>
+                    <div class="flex_table__cell eighth"></div>
+                  </div>
+                  <div class="flex_table__row">
+                    <div class="flex_table__cell first">25</div>
+                    <div class="flex_table__cell second"></div>
+                    <div class="flex_table__cell third"></div>
+                    <div class="flex_table__cell fourth"></div>
+                    <div class="flex_table__cell fifth"></div>
+                    <div class="flex_table__cell sixth"></div>
+                    <div class="flex_table__cell seventh">Energy [kWh]</div>
+                    <div class="flex_table__cell eighth"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="table_container_displayed design_chilled_water_distribution_flow_delta_t">
+              <div class="table_container_displayed_wrapper">
+                <div class="flex_table">
+                  <div class="flex_table__row heading">
+                    <div class="flex_table__cell first">Design chilled water distribution flow at Delta T [&#8457;]</div>
+                    <div class="flex_table__cell second"></div>
+                    <div class="flex_table__cell third"></div>
+                    <div class="flex_table__cell fourth"></div>
+                    <div class="flex_table__cell fifth"></div>
+                    <div class="flex_table__cell sixth"></div>
+                    <div class="flex_table__cell seventh"></div>
+                    <div class="flex_table__cell eighth"></div>
+                  </div>
+                  <div class="flex_table__row subheading">
+                    <div class="flex_table__cell first">
+                      <div class="name">Load</div>
+                      <div class="measurement">%</div>
+                    </div>
+                    <div class="flex_table__cell second">
+                      <div class="name">Time</div>
+                      <div class="measurement">%</div>
+                    </div>
+                    <div class="flex_table__cell third">
+                      <div class="name">Time</div>
+                      <div class="measurement">Hours</div>
+                    </div>
+                    <div class="flex_table__cell fourth">
+                      <div class="name">Flow</div>
+                      <div class="measurement">GPM</div>
+                    </div>
+                    <div class="flex_table__cell fifth">
+                      <div class="name">Head</div>
+                      <div class="measurement">ft</div>
+                    </div>
+                    <div class="flex_table__cell sixth">
+                      <div class="name">Power</div>
+                      <div class="measurement">HP</div>
+                    </div>
+                    <div class="flex_table__cell seventh">
+                    </div>
+                    <div class="flex_table__cell eighth"></div>
+                    <div class="flex_table__cell ninth"></div>
+                  </div>
+                  <div class="flex_table__row">
+                    <div class="flex_table__cell first">100</div>
+                    <div class="flex_table__cell second"></div>
+                    <div class="flex_table__cell third"></div>
+                    <div class="flex_table__cell fourth"></div>
+                    <div class="flex_table__cell fifth"></div>
+                    <div class="flex_table__cell sixth"></div>
+                    <div class="flex_table__cell seventh">Pump costs</div>
+                    <div class="flex_table__cell eighth">
+                      <span>$</span>
+                      <p></p>
+                    </div>
+                  </div>
+                  <div class="flex_table__row">
+                    <div class="flex_table__cell first">75</div>
+                    <div class="flex_table__cell second"></div>
+                    <div class="flex_table__cell third"></div>
+                    <div class="flex_table__cell fourth"></div>
+                    <div class="flex_table__cell fifth"></div>
+                    <div class="flex_table__cell sixth"></div>
+                    <div class="flex_table__cell seventh">Annual Gal.</div>
+                    <div class="flex_table__cell eighth"></div>
+                  </div>
+                  <div class="flex_table__row">
+                    <div class="flex_table__cell first">50</div>
+                    <div class="flex_table__cell second"></div>
+                    <div class="flex_table__cell third"></div>
+                    <div class="flex_table__cell fourth"></div>
+                    <div class="flex_table__cell fifth"></div>
+                    <div class="flex_table__cell sixth"></div>
+                    <div class="flex_table__cell seventh">Avg GPM</div>
+                    <div class="flex_table__cell eighth"></div>
+                  </div>
+                  <div class="flex_table__row">
+                    <div class="flex_table__cell first">25</div>
+                    <div class="flex_table__cell second"></div>
+                    <div class="flex_table__cell third"></div>
+                    <div class="flex_table__cell fourth"></div>
+                    <div class="flex_table__cell fifth"></div>
+                    <div class="flex_table__cell sixth"></div>
+                    <div class="flex_table__cell seventh">Energy [kWh]</div>
+                    <div class="flex_table__cell eighth"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="screen financials">
+          <div class="screen__contain">
+            FINANCIALS
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--
     <div class="primary_secondary_pump_selector">
       <div class="primary_secondary_pump_selector__heading">
         Plant Design
@@ -49,6 +2322,8 @@
       <div class="primary_secondary_pump__button primary">Primary</div>
       <div class="primary_secondary_pump__button secondary">Secondary</div>
     </div>
+    -->
+    <!--
     <div class="chiller_cooling_selector">
       <div class="chiller_cooling_selecto__heading">
         Chiller Cooling
@@ -56,6 +2331,8 @@
       <div class="chiller_cooling_selector_button air">Air Cooled</div>
       <div class="chiller_cooling_selector_button water">Water Cooled</div>
     </div>
+    -->
+    <!--
     <div class="region_selector">
       <div class="region_selector__heading">
         Climate Region
@@ -97,8 +2374,10 @@
         Average US
       </div>
     </div>
-    <form id="calculateForm" action="">
-      <div class="inputs_container">
+    -->
+    <!--<form id="calculateForm" action="">-->
+    <!--  <div class="inputs_container">-->
+    <!--
         <div class="inputs_container__item">
           <label for="electricity_cost">
             <div class="inputs_container__item__name">
@@ -110,6 +2389,8 @@
             $/kWh
           </div>
         </div>
+    -->
+    <!--
         <div class="inputs_container__item">
           <label for="plant_load">
             <div class="inputs_container__item__name">
@@ -121,6 +2402,8 @@
             tons
           </div>
         </div>
+    -->
+    <!--
         <div class="inputs_container__item">
           <label for="number_of_chillers">
             <div class="inputs_container__item__name">
@@ -132,6 +2415,8 @@
             pcs.
           </div>
         </div>
+    -->
+    <!--
         <div class="inputs_container__item">
           <label for="operating_hours_day">
             <div class="inputs_container__item__name">
@@ -143,6 +2428,8 @@
             hours
           </div>
         </div>
+    -->
+    <!--
         <div class="inputs_container__item">
           <label for="operating_days_week">
             <div class="inputs_container__item__name">
@@ -154,6 +2441,8 @@
             days
           </div>
         </div>
+    -->
+    <!--
         <div class="inputs_container__item">
           <label for="iplv">
             <div class="inputs_container__item__name">
@@ -165,6 +2454,8 @@
             kW/ton
           </div>
         </div>
+    -->
+    <!--
         <div class="inputs_container__item primary_pump_head">
           <label for="actual_pump_head">
             <div class="inputs_container__item__name">
@@ -176,6 +2467,8 @@
             ft.
           </div>
         </div>
+    -->
+    <!--
         <div class="inputs_container__item secondary_pump_head">
           <label for="secondary_pump_head">
             <div class="inputs_container__item__name">
@@ -187,6 +2480,8 @@
             ft.
           </div>
         </div>
+    -->
+    <!--
         <div class="inputs_container__item">
           <label for="motor_efficiency">
             <div class="inputs_container__item__name">
@@ -198,6 +2493,8 @@
             %
           </div>
         </div>
+    -->
+    <!--
         <div class="inputs_container__item">
           <label for="design_delta">
             <div class="inputs_container__item__name">
@@ -209,6 +2506,8 @@
             °F
           </div>
         </div>
+    -->
+    <!--
         <div class="inputs_container__item">
           <label for="actual_delta">
             <div class="inputs_container__item__name">
@@ -220,6 +2519,8 @@
             °F
           </div>
         </div>
+    -->
+    <!--
         <div class="inputs_container__item">
           <label for="future_delta">
             <div class="inputs_container__item__name">
@@ -231,69 +2532,22 @@
             °F
           </div>
         </div>
-      </div>
+    -->
+    <!--  </div>-->
+    <!--
       <input type="submit">
     </form>
+    -->
     <div class="screen_container">
-      <div class="screen calculator"></div>
+    <!--  <div class="screen calculator"></div>-->
       <div class="screen home">
-        <div class="flex_table annual_energy_costs_table">
-          <div class="flex_row heading">
-            ANNUAL ENERGY COSTS
-          </div>
-          <div class="flex_row table_headings">
-            <div class="table_headings__item flex_column">
-              <div class="table_headings__item__name">DELTA T</div>
-              <div class="table_headings__item__measurement">&deg;F</div>
-            </div>
-            <div class="table_headings__item flex_column">
-              <div class="table_headings__item__name">AVG</div>
-              <div class="table_headings__item__measurement">GPM</div>
-            </div>
-            <div class="table_headings__item flex_column">
-              <div class="table_headings__item__name">AVG</div>
-              <div class="table_headings__item__measurement">Tons</div>
-            </div>
-            <div class="table_headings__item flex_column">
-              <div class="table_headings__item__name">PUMPING</div>
-              <div class="table_headings__item__measurement">Cost</div>
-            </div>
-            <div class="table_headings__item flex_column">
-              <div class="table_headings__item__name">CHILLER</div>
-              <div class="table_headings__item__measurement">Cost</div>
-            </div>
-            <div class="table_headings__item flex_column">
-              <div class="table_headings__item__name">TOTAL</div>
-              <div class="table_headings__item__measurement">Cost</div>
-            </div>
-            <div class="table_headings__item flex_column">
-              <div class="table_headings__item__name">ENERGY</div>
-              <div class="table_headings__item__measurement">kWh</div>
-            </div>
-          </div>
-          <div class="flex_row">
-            <div class="flex_row">2</div>
-            <div class="flex_row">8571</div>
-            <div class="flex_row">714</div>
-            <div class="flex_row">76284,36</div>
-            <div class="flex_row">1275078.71</div>
-            <div class="flex_row">1351363.07</div>
-            <div class="flex_row">13513631</div>
-          </div>
-          <div class="flex_row"></div>
-          <div class="flex_row"></div>
-          <div class="flex_row"></div>
-          <div class="flex_row"></div>
-          <div class="flex_row"></div>
-          <div class="flex_row"></div>
-          <div class="flex_row"></div>
-        </div>
         <div class="finance_input_containers">
-          <input type="text" id="incremental_investment_for_energy_valves" value="250000">
-          <input type="text" id="discount_rate" value="10">
-          <input type="text" id="annual_inflation_rate_on_energy_costs" value="3">
+    <!--      <input type="text" id="incremental_investment_for_energy_valves" value="250000">-->
+    <!--      <input type="text" id="discount_rate" value="10">-->
+    <!--      <input type="text" id="annual_inflation_rate_on_energy_costs" value="3">-->
         </div>
       </div>
+    <!--
       <div class="screen energy">
         <form action="">
           <div class="energy_screen__container">
@@ -499,6 +2753,8 @@
           </div>
         </form>
       </div>
+    -->
+    <!--
       <div class="screen chiller">
         <div class="chiller_screen__container__table__line__colum">
           <input id="kw3_condenser_pump" type="text" value="0.030">
@@ -508,6 +2764,8 @@
           <input id="chiller_cycling_percent" type="text" value="0">
         </div>
       </div>
+    -->
+    <!--
       <div class="screen pump">
         <div class="pump_screen_container">
           <div class="inputs_container__item">
@@ -534,6 +2792,7 @@
           </div>
         </div>
       </div>
+    -->
       <div class="screen financials">
         <div class="table_container">
           <input type="text" id="finance_rate" value="10">
