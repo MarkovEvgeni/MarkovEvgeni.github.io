@@ -950,16 +950,18 @@
                     <div class="flex_table__cell first">KW1 Compressor</div>
                     <div class="flex_table__cell second"></div>
                     <div class="flex_table__cell third"></div>
-                    <div class="flex_table__cell fourth">
+                    <div class="flex_table__cell fourth calc_ratio_value">
+                      <p></p>
                       <span>%</span>
                     </div>
                   </div>
                   <div class="flex_table__row kw2">
                     <div class="flex_table__cell first">KW2 Constant Speed Primary Pump</div>
                     <div class="flex_table__cell second"></div>
-                    <div class="flex_table__cell third">
+                    <div class="flex_table__cell third calc">
                     </div>
-                    <div class="flex_table__cell fourth">
+                    <div class="flex_table__cell fourth calc_ratio_value">
+                      <p></p>
                       <span>%</span>
                     </div>
                   </div>
@@ -969,7 +971,8 @@
                     <div class="flex_table__cell third">
                       <input type="number" value="0.030" id="kw3_condenser_pump">
                     </div>
-                    <div class="flex_table__cell fourth">
+                    <div class="flex_table__cell fourth calc_ratio_value">
+                      <p></p>
                       <span>%</span>
                     </div>
                   </div>
@@ -979,7 +982,8 @@
                     <div class="flex_table__cell third">
                       <input type="number" id="kw4_cooling_tower" value="0.080">
                     </div>
-                    <div class="flex_table__cell fourth">
+                    <div class="flex_table__cell fourth calc_ratio_value">
+                      <p></p>
                       <span>%</span>
                     </div>
                   </div>
@@ -989,7 +993,8 @@
                     <div class="flex_table__cell third">
                       <input type="number" id="kw5_chiller_controls" value="0.005">
                     </div>
-                    <div class="flex_table__cell fourth">
+                    <div class="flex_table__cell fourth calc_ratio_value">
+                      <p></p>
                       <span>%</span>
                     </div>
                   </div>
@@ -999,7 +1004,8 @@
                     <div class="flex_table__cell third">
                       <input id="kw6_transmission_oil_pump" type="number" value="0.010">
                     </div>
-                    <div class="flex_table__cell fourth">
+                    <div class="flex_table__cell fourth calc_ratio_value">
+                      <p></p>
                       <span>%</span>
                     </div>
                   </div>
@@ -1007,7 +1013,8 @@
                     <div class="flex_table__cell first">Total Chiller Plant Energy Consumption</div>
                     <div class="flex_table__cell second"></div>
                     <div class="flex_table__cell third"></div>
-                    <div class="flex_table__cell fourth">
+                    <div class="flex_table__cell fourth total_ratio_value">
+                      <p></p>
                       <span>%</span>
                     </div>
                   </div>
@@ -1078,49 +1085,49 @@
                     <div class="flex_table__cell eighth"></div>
                     <div class="flex_table__cell ninth"></div>
                   </div>
-                  <div class="flex_table__row">
+                  <div class="flex_table__row calc">
                     <div class="flex_table__cell first">100</div>
                     <div class="flex_table__cell second"></div>
                     <div class="flex_table__cell third"></div>
                     <div class="flex_table__cell fourth"></div>
-                    <div class="flex_table__cell fifth"></div>
-                    <div class="flex_table__cell sixth"></div>
-                    <div class="flex_table__cell seventh"></div>
+                    <div class="flex_table__cell fifth chiller_tons"></div>
+                    <div class="flex_table__cell sixth chiller_chillers_quantity"></div>
+                    <div class="flex_table__cell seventh chiller_power_kw"></div>
                     <div class="flex_table__cell eighth">Chiller costs</div>
-                    <div class="flex_table__cell ninth"></div>
+                    <div class="flex_table__cell ninth chiller_costs"></div>
                   </div>
-                  <div class="flex_table__row">
+                  <div class="flex_table__row calc">
                     <div class="flex_table__cell first">75</div>
                     <div class="flex_table__cell second"></div>
                     <div class="flex_table__cell third"></div>
                     <div class="flex_table__cell fourth"></div>
-                    <div class="flex_table__cell fifth"></div>
-                    <div class="flex_table__cell sixth"></div>
-                    <div class="flex_table__cell seventh"></div>
+                    <div class="flex_table__cell fifth chiller_tons"></div>
+                    <div class="flex_table__cell sixth chiller_chillers_quantity"></div>
+                    <div class="flex_table__cell seventh chiller_power_kw"></div>
                     <div class="flex_table__cell eighth">Average Tonnage</div>
-                    <div class="flex_table__cell ninth"></div>
+                    <div class="flex_table__cell ninth avg_tonnage"></div>
                   </div>
-                  <div class="flex_table__row">
+                  <div class="flex_table__row calc">
                     <div class="flex_table__cell first">50</div>
                     <div class="flex_table__cell second"></div>
                     <div class="flex_table__cell third"></div>
                     <div class="flex_table__cell fourth"></div>
-                    <div class="flex_table__cell fifth"></div>
-                    <div class="flex_table__cell sixth"></div>
-                    <div class="flex_table__cell seventh"></div>
+                    <div class="flex_table__cell fifth chiller_tons"></div>
+                    <div class="flex_table__cell sixth chiller_chillers_quantity"></div>
+                    <div class="flex_table__cell seventh chiller_power_kw"></div>
                     <div class="flex_table__cell eighth">Plant kW/ton</div>
-                    <div class="flex_table__cell ninth"></div>
+                    <div class="flex_table__cell ninth plant_kwt"></div>
                   </div>
-                  <div class="flex_table__row">
+                  <div class="flex_table__row calc">
                     <div class="flex_table__cell first">25</div>
                     <div class="flex_table__cell second"></div>
                     <div class="flex_table__cell third"></div>
                     <div class="flex_table__cell fourth"></div>
-                    <div class="flex_table__cell fifth"></div>
-                    <div class="flex_table__cell sixth"></div>
-                    <div class="flex_table__cell seventh"></div>
+                    <div class="flex_table__cell fifth chiller_tons"></div>
+                    <div class="flex_table__cell sixth chiller_chillers_quantity"></div>
+                    <div class="flex_table__cell seventh chiller_power_kw"></div>
                     <div class="flex_table__cell eighth">Energy [kWh]</div>
-                    <div class="flex_table__cell ninth"></div>
+                    <div class="flex_table__cell ninth energy_kwh"></div>
                   </div>
                 </div>
               </div>
@@ -1173,49 +1180,49 @@
                     <div class="flex_table__cell eighth"></div>
                     <div class="flex_table__cell ninth"></div>
                   </div>
-                  <div class="flex_table__row">
+                  <div class="flex_table__row calc">
                     <div class="flex_table__cell first">100</div>
                     <div class="flex_table__cell second"></div>
                     <div class="flex_table__cell third"></div>
                     <div class="flex_table__cell fourth"></div>
-                    <div class="flex_table__cell fifth"></div>
-                    <div class="flex_table__cell sixth"></div>
-                    <div class="flex_table__cell seventh"></div>
+                    <div class="flex_table__cell fifth chiller_tons"></div>
+                    <div class="flex_table__cell sixth chiller_chillers_quantity"></div>
+                    <div class="flex_table__cell seventh chiller_power_kw"></div>
                     <div class="flex_table__cell eighth">Chiller costs</div>
-                    <div class="flex_table__cell ninth"></div>
+                    <div class="flex_table__cell ninth chiller_costs"></div>
                   </div>
-                  <div class="flex_table__row">
+                  <div class="flex_table__row calc">
                     <div class="flex_table__cell first">75</div>
                     <div class="flex_table__cell second"></div>
                     <div class="flex_table__cell third"></div>
                     <div class="flex_table__cell fourth"></div>
-                    <div class="flex_table__cell fifth"></div>
-                    <div class="flex_table__cell sixth"></div>
-                    <div class="flex_table__cell seventh"></div>
+                    <div class="flex_table__cell fifth chiller_tons"></div>
+                    <div class="flex_table__cell sixth chiller_chillers_quantity"></div>
+                    <div class="flex_table__cell seventh chiller_power_kw"></div>
                     <div class="flex_table__cell eighth">Average Tonnage</div>
-                    <div class="flex_table__cell ninth"></div>
+                    <div class="flex_table__cell ninth avg_tonnage"></div>
                   </div>
-                  <div class="flex_table__row">
+                  <div class="flex_table__row calc">
                     <div class="flex_table__cell first">50</div>
                     <div class="flex_table__cell second"></div>
                     <div class="flex_table__cell third"></div>
                     <div class="flex_table__cell fourth"></div>
-                    <div class="flex_table__cell fifth"></div>
-                    <div class="flex_table__cell sixth"></div>
-                    <div class="flex_table__cell seventh"></div>
+                    <div class="flex_table__cell fifth chiller_tons"></div>
+                    <div class="flex_table__cell sixth chiller_chillers_quantity"></div>
+                    <div class="flex_table__cell seventh chiller_power_kw"></div>
                     <div class="flex_table__cell eighth">Plant kW/ton</div>
-                    <div class="flex_table__cell ninth"></div>
+                    <div class="flex_table__cell ninth plant_kwt"></div>
                   </div>
-                  <div class="flex_table__row">
+                  <div class="flex_table__row calc">
                     <div class="flex_table__cell first">25</div>
                     <div class="flex_table__cell second"></div>
                     <div class="flex_table__cell third"></div>
                     <div class="flex_table__cell fourth"></div>
-                    <div class="flex_table__cell fifth"></div>
-                    <div class="flex_table__cell sixth"></div>
-                    <div class="flex_table__cell seventh"></div>
+                    <div class="flex_table__cell fifth chiller_tons"></div>
+                    <div class="flex_table__cell sixth chiller_chillers_quantity"></div>
+                    <div class="flex_table__cell seventh chiller_power_kw"></div>
                     <div class="flex_table__cell eighth">Energy [kWh]</div>
-                    <div class="flex_table__cell ninth"></div>
+                    <div class="flex_table__cell ninth energy_kwh"></div>
                   </div>
                 </div>
               </div>
@@ -1268,49 +1275,49 @@
                     <div class="flex_table__cell eighth"></div>
                     <div class="flex_table__cell ninth"></div>
                   </div>
-                  <div class="flex_table__row">
+                  <div class="flex_table__row calc">
                     <div class="flex_table__cell first">100</div>
                     <div class="flex_table__cell second"></div>
                     <div class="flex_table__cell third"></div>
                     <div class="flex_table__cell fourth"></div>
-                    <div class="flex_table__cell fifth"></div>
-                    <div class="flex_table__cell sixth"></div>
-                    <div class="flex_table__cell seventh"></div>
+                    <div class="flex_table__cell fifth chiller_tons"></div>
+                    <div class="flex_table__cell sixth chiller_chillers_quantity"></div>
+                    <div class="flex_table__cell seventh chiller_power_kw"></div>
                     <div class="flex_table__cell eighth">Chiller costs</div>
-                    <div class="flex_table__cell ninth"></div>
+                    <div class="flex_table__cell ninth chiller_costs"></div>
                   </div>
-                  <div class="flex_table__row">
+                  <div class="flex_table__row calc">
                     <div class="flex_table__cell first">75</div>
                     <div class="flex_table__cell second"></div>
                     <div class="flex_table__cell third"></div>
                     <div class="flex_table__cell fourth"></div>
-                    <div class="flex_table__cell fifth"></div>
-                    <div class="flex_table__cell sixth"></div>
-                    <div class="flex_table__cell seventh"></div>
+                    <div class="flex_table__cell fifth chiller_tons"></div>
+                    <div class="flex_table__cell sixth chiller_chillers_quantity"></div>
+                    <div class="flex_table__cell seventh chiller_power_kw"></div>
                     <div class="flex_table__cell eighth">Average Tonnage</div>
-                    <div class="flex_table__cell ninth"></div>
+                    <div class="flex_table__cell ninth avg_tonnage"></div>
                   </div>
-                  <div class="flex_table__row">
+                  <div class="flex_table__row calc">
                     <div class="flex_table__cell first">50</div>
                     <div class="flex_table__cell second"></div>
                     <div class="flex_table__cell third"></div>
                     <div class="flex_table__cell fourth"></div>
-                    <div class="flex_table__cell fifth"></div>
-                    <div class="flex_table__cell sixth"></div>
-                    <div class="flex_table__cell seventh"></div>
+                    <div class="flex_table__cell fifth chiller_tons"></div>
+                    <div class="flex_table__cell sixth chiller_chillers_quantity"></div>
+                    <div class="flex_table__cell seventh chiller_power_kw"></div>
                     <div class="flex_table__cell eighth">Plant kW/ton</div>
-                    <div class="flex_table__cell ninth"></div>
+                    <div class="flex_table__cell ninth plant_kwt"></div>
                   </div>
-                  <div class="flex_table__row">
+                  <div class="flex_table__row calc">
                     <div class="flex_table__cell first">25</div>
                     <div class="flex_table__cell second"></div>
                     <div class="flex_table__cell third"></div>
                     <div class="flex_table__cell fourth"></div>
-                    <div class="flex_table__cell fifth"></div>
-                    <div class="flex_table__cell sixth"></div>
-                    <div class="flex_table__cell seventh"></div>
+                    <div class="flex_table__cell fifth chiller_tons"></div>
+                    <div class="flex_table__cell sixth chiller_chillers_quantity"></div>
+                    <div class="flex_table__cell seventh chiller_power_kw"></div>
                     <div class="flex_table__cell eighth">Energy [kWh]</div>
-                    <div class="flex_table__cell ninth"></div>
+                    <div class="flex_table__cell ninth energy_kwh"></div>
                   </div>
                 </div>
               </div>
@@ -1363,49 +1370,49 @@
                     <div class="flex_table__cell eighth"></div>
                     <div class="flex_table__cell ninth"></div>
                   </div>
-                  <div class="flex_table__row">
+                  <div class="flex_table__row calc">
                     <div class="flex_table__cell first">100</div>
                     <div class="flex_table__cell second"></div>
                     <div class="flex_table__cell third"></div>
                     <div class="flex_table__cell fourth"></div>
-                    <div class="flex_table__cell fifth"></div>
-                    <div class="flex_table__cell sixth"></div>
-                    <div class="flex_table__cell seventh"></div>
+                    <div class="flex_table__cell fifth chiller_tons"></div>
+                    <div class="flex_table__cell sixth chiller_chillers_quantity"></div>
+                    <div class="flex_table__cell seventh chiller_power_kw"></div>
                     <div class="flex_table__cell eighth">Chiller costs</div>
-                    <div class="flex_table__cell ninth"></div>
+                    <div class="flex_table__cell ninth chiller_costs"></div>
                   </div>
-                  <div class="flex_table__row">
+                  <div class="flex_table__row calc">
                     <div class="flex_table__cell first">75</div>
                     <div class="flex_table__cell second"></div>
                     <div class="flex_table__cell third"></div>
                     <div class="flex_table__cell fourth"></div>
-                    <div class="flex_table__cell fifth"></div>
-                    <div class="flex_table__cell sixth"></div>
-                    <div class="flex_table__cell seventh"></div>
+                    <div class="flex_table__cell fifth chiller_tons"></div>
+                    <div class="flex_table__cell sixth chiller_chillers_quantity"></div>
+                    <div class="flex_table__cell seventh chiller_power_kw"></div>
                     <div class="flex_table__cell eighth">Average Tonnage</div>
-                    <div class="flex_table__cell ninth"></div>
+                    <div class="flex_table__cell ninth avg_tonnage"></div>
                   </div>
-                  <div class="flex_table__row">
+                  <div class="flex_table__row calc">
                     <div class="flex_table__cell first">50</div>
                     <div class="flex_table__cell second"></div>
                     <div class="flex_table__cell third"></div>
                     <div class="flex_table__cell fourth"></div>
-                    <div class="flex_table__cell fifth"></div>
-                    <div class="flex_table__cell sixth"></div>
-                    <div class="flex_table__cell seventh"></div>
+                    <div class="flex_table__cell fifth chiller_tons"></div>
+                    <div class="flex_table__cell sixth chiller_chillers_quantity"></div>
+                    <div class="flex_table__cell seventh chiller_power_kw"></div>
                     <div class="flex_table__cell eighth">Plant kW/ton</div>
-                    <div class="flex_table__cell ninth"></div>
+                    <div class="flex_table__cell ninth plant_kwt"></div>
                   </div>
-                  <div class="flex_table__row">
+                  <div class="flex_table__row calc">
                     <div class="flex_table__cell first">25</div>
                     <div class="flex_table__cell second"></div>
                     <div class="flex_table__cell third"></div>
                     <div class="flex_table__cell fourth"></div>
-                    <div class="flex_table__cell fifth"></div>
-                    <div class="flex_table__cell sixth"></div>
-                    <div class="flex_table__cell seventh"></div>
+                    <div class="flex_table__cell fifth chiller_tons"></div>
+                    <div class="flex_table__cell sixth chiller_chillers_quantity"></div>
+                    <div class="flex_table__cell seventh chiller_power_kw"></div>
                     <div class="flex_table__cell eighth">Energy [kWh]</div>
-                    <div class="flex_table__cell ninth"></div>
+                    <div class="flex_table__cell ninth energy_kwh"></div>
                   </div>
                 </div>
               </div>
@@ -1458,49 +1465,49 @@
                     <div class="flex_table__cell eighth"></div>
                     <div class="flex_table__cell ninth"></div>
                   </div>
-                  <div class="flex_table__row">
+                  <div class="flex_table__row calc">
                     <div class="flex_table__cell first">100</div>
                     <div class="flex_table__cell second"></div>
                     <div class="flex_table__cell third"></div>
                     <div class="flex_table__cell fourth"></div>
-                    <div class="flex_table__cell fifth"></div>
-                    <div class="flex_table__cell sixth"></div>
-                    <div class="flex_table__cell seventh"></div>
+                    <div class="flex_table__cell fifth chiller_tons"></div>
+                    <div class="flex_table__cell sixth chiller_chillers_quantity"></div>
+                    <div class="flex_table__cell seventh chiller_power_kw"></div>
                     <div class="flex_table__cell eighth">Chiller costs</div>
-                    <div class="flex_table__cell ninth"></div>
+                    <div class="flex_table__cell ninth chiller_costs"></div>
                   </div>
-                  <div class="flex_table__row">
+                  <div class="flex_table__row calc">
                     <div class="flex_table__cell first">75</div>
                     <div class="flex_table__cell second"></div>
                     <div class="flex_table__cell third"></div>
                     <div class="flex_table__cell fourth"></div>
-                    <div class="flex_table__cell fifth"></div>
-                    <div class="flex_table__cell sixth"></div>
-                    <div class="flex_table__cell seventh"></div>
+                    <div class="flex_table__cell fifth chiller_tons"></div>
+                    <div class="flex_table__cell sixth chiller_chillers_quantity"></div>
+                    <div class="flex_table__cell seventh chiller_power_kw"></div>
                     <div class="flex_table__cell eighth">Average Tonnage</div>
-                    <div class="flex_table__cell ninth"></div>
+                    <div class="flex_table__cell ninth avg_tonnage"></div>
                   </div>
-                  <div class="flex_table__row">
+                  <div class="flex_table__row calc">
                     <div class="flex_table__cell first">50</div>
                     <div class="flex_table__cell second"></div>
                     <div class="flex_table__cell third"></div>
                     <div class="flex_table__cell fourth"></div>
-                    <div class="flex_table__cell fifth"></div>
-                    <div class="flex_table__cell sixth"></div>
-                    <div class="flex_table__cell seventh"></div>
+                    <div class="flex_table__cell fifth chiller_tons"></div>
+                    <div class="flex_table__cell sixth chiller_chillers_quantity"></div>
+                    <div class="flex_table__cell seventh chiller_power_kw"></div>
                     <div class="flex_table__cell eighth">Plant kW/ton</div>
-                    <div class="flex_table__cell ninth"></div>
+                    <div class="flex_table__cell ninth plant_kwt"></div>
                   </div>
-                  <div class="flex_table__row">
+                  <div class="flex_table__row calc">
                     <div class="flex_table__cell first">25</div>
                     <div class="flex_table__cell second"></div>
                     <div class="flex_table__cell third"></div>
                     <div class="flex_table__cell fourth"></div>
-                    <div class="flex_table__cell fifth"></div>
-                    <div class="flex_table__cell sixth"></div>
-                    <div class="flex_table__cell seventh"></div>
+                    <div class="flex_table__cell fifth chiller_tons"></div>
+                    <div class="flex_table__cell sixth chiller_chillers_quantity"></div>
+                    <div class="flex_table__cell seventh chiller_power_kw"></div>
                     <div class="flex_table__cell eighth">Energy [kWh]</div>
-                    <div class="flex_table__cell ninth"></div>
+                    <div class="flex_table__cell ninth energy_kwh"></div>
                   </div>
                 </div>
               </div>
@@ -1553,49 +1560,49 @@
                     <div class="flex_table__cell eighth"></div>
                     <div class="flex_table__cell ninth"></div>
                   </div>
-                  <div class="flex_table__row">
+                  <div class="flex_table__row calc">
                     <div class="flex_table__cell first">100</div>
                     <div class="flex_table__cell second"></div>
                     <div class="flex_table__cell third"></div>
                     <div class="flex_table__cell fourth"></div>
-                    <div class="flex_table__cell fifth"></div>
-                    <div class="flex_table__cell sixth"></div>
-                    <div class="flex_table__cell seventh"></div>
+                    <div class="flex_table__cell fifth chiller_tons"></div>
+                    <div class="flex_table__cell sixth chiller_chillers_quantity"></div>
+                    <div class="flex_table__cell seventh chiller_power_kw"></div>
                     <div class="flex_table__cell eighth">Chiller costs</div>
-                    <div class="flex_table__cell ninth"></div>
+                    <div class="flex_table__cell ninth chiller_costs"></div>
                   </div>
-                  <div class="flex_table__row">
+                  <div class="flex_table__row calc">
                     <div class="flex_table__cell first">75</div>
                     <div class="flex_table__cell second"></div>
                     <div class="flex_table__cell third"></div>
                     <div class="flex_table__cell fourth"></div>
-                    <div class="flex_table__cell fifth"></div>
-                    <div class="flex_table__cell sixth"></div>
-                    <div class="flex_table__cell seventh"></div>
+                    <div class="flex_table__cell fifth chiller_tons"></div>
+                    <div class="flex_table__cell sixth chiller_chillers_quantity"></div>
+                    <div class="flex_table__cell seventh chiller_power_kw"></div>
                     <div class="flex_table__cell eighth">Average Tonnage</div>
-                    <div class="flex_table__cell ninth"></div>
+                    <div class="flex_table__cell ninth  avg_tonnage"></div>
                   </div>
-                  <div class="flex_table__row">
+                  <div class="flex_table__row calc">
                     <div class="flex_table__cell first">50</div>
                     <div class="flex_table__cell second"></div>
                     <div class="flex_table__cell third"></div>
                     <div class="flex_table__cell fourth"></div>
-                    <div class="flex_table__cell fifth"></div>
-                    <div class="flex_table__cell sixth"></div>
-                    <div class="flex_table__cell seventh"></div>
+                    <div class="flex_table__cell fifth chiller_tons"></div>
+                    <div class="flex_table__cell sixth chiller_chillers_quantity"></div>
+                    <div class="flex_table__cell seventh chiller_power_kw"></div>
                     <div class="flex_table__cell eighth">Plant kW/ton</div>
-                    <div class="flex_table__cell ninth"></div>
+                    <div class="flex_table__cell ninth plant_kwt"></div>
                   </div>
-                  <div class="flex_table__row">
+                  <div class="flex_table__row calc">
                     <div class="flex_table__cell first">25</div>
                     <div class="flex_table__cell second"></div>
                     <div class="flex_table__cell third"></div>
                     <div class="flex_table__cell fourth"></div>
-                    <div class="flex_table__cell fifth"></div>
-                    <div class="flex_table__cell sixth"></div>
-                    <div class="flex_table__cell seventh"></div>
+                    <div class="flex_table__cell fifth chiller_tons"></div>
+                    <div class="flex_table__cell sixth chiller_chillers_quantity"></div>
+                    <div class="flex_table__cell seventh chiller_power_kw"></div>
                     <div class="flex_table__cell eighth">Energy [kWh]</div>
-                    <div class="flex_table__cell ninth"></div>
+                    <div class="flex_table__cell ninth energy_kwh"></div>
                   </div>
                 </div>
               </div>
@@ -1666,52 +1673,52 @@
                     <div class="flex_table__cell eighth"></div>
                     <div class="flex_table__cell ninth"></div>
                   </div>
-                  <div class="flex_table__row 100">
+                  <div class="flex_table__row 100 calc">
                     <div class="flex_table__cell first">100</div>
                     <div class="flex_table__cell second"></div>
                     <div class="flex_table__cell third"></div>
                     <div class="flex_table__cell fourth"></div>
                     <div class="flex_table__cell fifth"></div>
                     <div class="flex_table__cell sixth"></div>
-                    <div class="flex_table__cell seventh"></div>
+                    <div class="flex_table__cell seventh power_100_kw"></div>
                     <div class="flex_table__cell eighth">Pump costs</div>
                     <div class="flex_table__cell ninth">
                       <span>$</span>
                       <p></p>
                     </div>
                   </div>
-                  <div class="flex_table__row 75">
+                  <div class="flex_table__row 75 calc">
                     <div class="flex_table__cell first">75</div>
                     <div class="flex_table__cell second"></div>
                     <div class="flex_table__cell third"></div>
-                    <div class="flex_table__cell fourth"></div>
+                    <div class="flex_table__cell fourth rest_designed_flow_val"></div>
                     <div class="flex_table__cell fifth"></div>
                     <div class="flex_table__cell sixth"></div>
                     <div class="flex_table__cell seventh"></div>
                     <div class="flex_table__cell eighth">Annual Gal.</div>
-                    <div class="flex_table__cell ninth"></div>
+                    <div class="flex_table__cell ninth ann_gal_displayed"></div>
                   </div>
-                  <div class="flex_table__row 50">
+                  <div class="flex_table__row 50 calc">
                     <div class="flex_table__cell first">50</div>
                     <div class="flex_table__cell second"></div>
                     <div class="flex_table__cell third"></div>
-                    <div class="flex_table__cell fourth"></div>
+                    <div class="flex_table__cell fourth rest_designed_flow_val"></div>
                     <div class="flex_table__cell fifth"></div>
                     <div class="flex_table__cell sixth"></div>
                     <div class="flex_table__cell seventh"></div>
                     <div class="flex_table__cell eighth">Avg GPM</div>
-                    <div class="flex_table__cell ninth"></div>
+                    <div class="flex_table__cell ninth avg_gpm"></div>
                   </div>
-                  <div class="flex_table__row 25">
+                  <div class="flex_table__row 25 calc">
                     <div class="flex_table__cell first">25</div>
                     <div class="flex_table__cell second"></div>
                     <div class="flex_table__cell third"></div>
-                    <div class="flex_table__cell fourth"></div>
+                    <div class="flex_table__cell fourth rest_designed_flow_val"></div>
                     <div class="flex_table__cell fifth"></div>
                     <div class="flex_table__cell sixth"></div>
                     <div class="flex_table__cell seventh"></div>
                     <div class="flex_table__cell eighth">Energy [kWh]</div>
-                    <div class="flex_table__cell ninth"></div>
+                    <div class="flex_table__cell ninth energy_kwh_displayed"></div>
                   </div>
                 </div>
               </div>
@@ -1726,7 +1733,7 @@
                     <div class="flex_table__cell fourth"></div>
                     <div class="flex_table__cell fifth"></div>
                     <div class="flex_table__cell sixth"></div>
-                    <div class="flex_table__cell seventh">
+                    <div class="flex_table__cell seventh min_pump_value">
                     </div>
                   </div>
                   <div class="flex_table__row subheading">
@@ -1753,14 +1760,14 @@
                       <div class="measurement">kW</div>
                     </div>
                   </div>
-                  <div class="flex_table__row">
-                    <div class="flex_table__cell first">1</div>
+                  <div class="flex_table__row ">
+                    <div class="flex_table__cell first min_pump_flow_displayed_value"></div>
                     <div class="flex_table__cell second"></div>
-                    <div class="flex_table__cell third">1</div>
+                    <div class="flex_table__cell third"></div>
                     <div class="flex_table__cell fourth"></div>
-                    <div class="flex_table__cell fifth">1</div>
+                    <div class="flex_table__cell fifth min_power_hp_displayed_value"></div>
                     <div class="flex_table__cell sixth"></div>
-                    <div class="flex_table__cell seventh">1</div>
+                    <div class="flex_table__cell seventh min_power_kw_displayed_value"></div>
                     </div>
                 </div>
               </div>
@@ -1808,48 +1815,48 @@
                     <div class="flex_table__cell eighth"></div>
                     <div class="flex_table__cell ninth"></div>
                   </div>
-                  <div class="flex_table__row">
+                  <div class="flex_table__row calc">
                     <div class="flex_table__cell first">100</div>
                     <div class="flex_table__cell second"></div>
                     <div class="flex_table__cell third"></div>
-                    <div class="flex_table__cell fourth"></div>
-                    <div class="flex_table__cell fifth"></div>
-                    <div class="flex_table__cell sixth"></div>
+                    <div class="flex_table__cell fourth flow_gpm"></div>
+                    <div class="flex_table__cell fifth head_ft"></div>
+                    <div class="flex_table__cell sixth power_hp"></div>
                     <div class="flex_table__cell seventh">Pump costs</div>
-                    <div class="flex_table__cell eighth">
+                    <div class="flex_table__cell eighth pump_costs">
                       <span>$</span>
                       <p></p>
                     </div>
                   </div>
-                  <div class="flex_table__row">
+                  <div class="flex_table__row calc">
                     <div class="flex_table__cell first">75</div>
                     <div class="flex_table__cell second"></div>
                     <div class="flex_table__cell third"></div>
-                    <div class="flex_table__cell fourth"></div>
-                    <div class="flex_table__cell fifth"></div>
-                    <div class="flex_table__cell sixth"></div>
+                    <div class="flex_table__cell fourth flow_gpm"></div>
+                    <div class="flex_table__cell fifth head_ft"></div>
+                    <div class="flex_table__cell sixth power_hp"></div>
                     <div class="flex_table__cell seventh">Annual Gal.</div>
-                    <div class="flex_table__cell eighth"></div>
+                    <div class="flex_table__cell eighth annual_gal"></div>
                   </div>
-                  <div class="flex_table__row">
+                  <div class="flex_table__row calc">
                     <div class="flex_table__cell first">50</div>
                     <div class="flex_table__cell second"></div>
                     <div class="flex_table__cell third"></div>
-                    <div class="flex_table__cell fourth"></div>
-                    <div class="flex_table__cell fifth"></div>
-                    <div class="flex_table__cell sixth"></div>
+                    <div class="flex_table__cell fourth flow_gpm"></div>
+                    <div class="flex_table__cell fifth head_ft"></div>
+                    <div class="flex_table__cell sixth power_hp"></div>
                     <div class="flex_table__cell seventh">Avg GPM</div>
-                    <div class="flex_table__cell eighth"></div>
+                    <div class="flex_table__cell eighth avg_gpm"></div>
                   </div>
-                  <div class="flex_table__row">
+                  <div class="flex_table__row calc">
                     <div class="flex_table__cell first">25</div>
                     <div class="flex_table__cell second"></div>
                     <div class="flex_table__cell third"></div>
-                    <div class="flex_table__cell fourth"></div>
-                    <div class="flex_table__cell fifth"></div>
-                    <div class="flex_table__cell sixth"></div>
+                    <div class="flex_table__cell fourth flow_gpm"></div>
+                    <div class="flex_table__cell fifth head_ft"></div>
+                    <div class="flex_table__cell sixth power_hp"></div>
                     <div class="flex_table__cell seventh">Energy [kWh]</div>
-                    <div class="flex_table__cell eighth"></div>
+                    <div class="flex_table__cell eighth energy_kwh"></div>
                   </div>
                 </div>
               </div>
@@ -1897,48 +1904,48 @@
                     <div class="flex_table__cell eighth"></div>
                     <div class="flex_table__cell ninth"></div>
                   </div>
-                  <div class="flex_table__row">
+                  <div class="flex_table__row calc">
                     <div class="flex_table__cell first">100</div>
                     <div class="flex_table__cell second"></div>
                     <div class="flex_table__cell third"></div>
-                    <div class="flex_table__cell fourth"></div>
-                    <div class="flex_table__cell fifth"></div>
-                    <div class="flex_table__cell sixth"></div>
+                    <div class="flex_table__cell fourth flow_gpm"></div>
+                    <div class="flex_table__cell fifth head_ft"></div>
+                    <div class="flex_table__cell sixth power_hp"></div>
                     <div class="flex_table__cell seventh">Pump costs</div>
-                    <div class="flex_table__cell eighth">
+                    <div class="flex_table__cell eighth pump_costs">
                       <span>$</span>
                       <p></p>
                     </div>
                   </div>
-                  <div class="flex_table__row">
+                  <div class="flex_table__row calc">
                     <div class="flex_table__cell first">75</div>
                     <div class="flex_table__cell second"></div>
                     <div class="flex_table__cell third"></div>
-                    <div class="flex_table__cell fourth"></div>
-                    <div class="flex_table__cell fifth"></div>
-                    <div class="flex_table__cell sixth"></div>
+                    <div class="flex_table__cell fourth flow_gpm"></div>
+                    <div class="flex_table__cell fifth head_ft"></div>
+                    <div class="flex_table__cell sixth power_hp"></div>
                     <div class="flex_table__cell seventh">Annual Gal.</div>
-                    <div class="flex_table__cell eighth"></div>
+                    <div class="flex_table__cell eighth annual_gal"></div>
                   </div>
-                  <div class="flex_table__row">
+                  <div class="flex_table__row calc">
                     <div class="flex_table__cell first">50</div>
                     <div class="flex_table__cell second"></div>
                     <div class="flex_table__cell third"></div>
-                    <div class="flex_table__cell fourth"></div>
-                    <div class="flex_table__cell fifth"></div>
-                    <div class="flex_table__cell sixth"></div>
+                    <div class="flex_table__cell fourth flow_gpm"></div>
+                    <div class="flex_table__cell fifth head_ft"></div>
+                    <div class="flex_table__cell sixth power_hp"></div>
                     <div class="flex_table__cell seventh">Avg GPM</div>
-                    <div class="flex_table__cell eighth"></div>
+                    <div class="flex_table__cell eighth avg_gpm"></div>
                   </div>
-                  <div class="flex_table__row">
+                  <div class="flex_table__row calc">
                     <div class="flex_table__cell first">25</div>
                     <div class="flex_table__cell second"></div>
                     <div class="flex_table__cell third"></div>
-                    <div class="flex_table__cell fourth"></div>
-                    <div class="flex_table__cell fifth"></div>
-                    <div class="flex_table__cell sixth"></div>
+                    <div class="flex_table__cell fourth flow_gpm"></div>
+                    <div class="flex_table__cell fifth head_ft"></div>
+                    <div class="flex_table__cell sixth power_hp"></div>
                     <div class="flex_table__cell seventh">Energy [kWh]</div>
-                    <div class="flex_table__cell eighth"></div>
+                    <div class="flex_table__cell eighth energy_kwh"></div>
                   </div>
                 </div>
               </div>
@@ -1986,48 +1993,48 @@
                     <div class="flex_table__cell eighth"></div>
                     <div class="flex_table__cell ninth"></div>
                   </div>
-                  <div class="flex_table__row">
+                  <div class="flex_table__row calc">
                     <div class="flex_table__cell first">100</div>
                     <div class="flex_table__cell second"></div>
                     <div class="flex_table__cell third"></div>
-                    <div class="flex_table__cell fourth"></div>
-                    <div class="flex_table__cell fifth"></div>
-                    <div class="flex_table__cell sixth"></div>
+                    <div class="flex_table__cell fourth flow_gpm"></div>
+                    <div class="flex_table__cell fifth head_ft"></div>
+                    <div class="flex_table__cell sixth power_hp"></div>
                     <div class="flex_table__cell seventh">Pump costs</div>
-                    <div class="flex_table__cell eighth">
+                    <div class="flex_table__cell eighth pump_costs">
                       <span>$</span>
                       <p></p>
                     </div>
                   </div>
-                  <div class="flex_table__row">
+                  <div class="flex_table__row calc">
                     <div class="flex_table__cell first">75</div>
                     <div class="flex_table__cell second"></div>
                     <div class="flex_table__cell third"></div>
-                    <div class="flex_table__cell fourth"></div>
-                    <div class="flex_table__cell fifth"></div>
-                    <div class="flex_table__cell sixth"></div>
+                    <div class="flex_table__cell fourth flow_gpm"></div>
+                    <div class="flex_table__cell fifth head_ft"></div>
+                    <div class="flex_table__cell sixth power_hp"></div>
                     <div class="flex_table__cell seventh">Annual Gal.</div>
-                    <div class="flex_table__cell eighth"></div>
+                    <div class="flex_table__cell eighth annual_gal"></div>
                   </div>
-                  <div class="flex_table__row">
+                  <div class="flex_table__row calc">
                     <div class="flex_table__cell first">50</div>
                     <div class="flex_table__cell second"></div>
                     <div class="flex_table__cell third"></div>
-                    <div class="flex_table__cell fourth"></div>
-                    <div class="flex_table__cell fifth"></div>
-                    <div class="flex_table__cell sixth"></div>
+                    <div class="flex_table__cell fourth flow_gpm"></div>
+                    <div class="flex_table__cell fifth head_ft"></div>
+                    <div class="flex_table__cell sixth power_hp"></div>
                     <div class="flex_table__cell seventh">Avg GPM</div>
-                    <div class="flex_table__cell eighth"></div>
+                    <div class="flex_table__cell eighth avg_gpm"></div>
                   </div>
-                  <div class="flex_table__row">
+                  <div class="flex_table__row calc">
                     <div class="flex_table__cell first">25</div>
                     <div class="flex_table__cell second"></div>
                     <div class="flex_table__cell third"></div>
-                    <div class="flex_table__cell fourth"></div>
-                    <div class="flex_table__cell fifth"></div>
-                    <div class="flex_table__cell sixth"></div>
+                    <div class="flex_table__cell fourth flow_gpm"></div>
+                    <div class="flex_table__cell fifth head_ft"></div>
+                    <div class="flex_table__cell sixth power_hp"></div>
                     <div class="flex_table__cell seventh">Energy [kWh]</div>
-                    <div class="flex_table__cell eighth"></div>
+                    <div class="flex_table__cell eighth energy_kwh"></div>
                   </div>
                 </div>
               </div>
@@ -2075,48 +2082,48 @@
                     <div class="flex_table__cell eighth"></div>
                     <div class="flex_table__cell ninth"></div>
                   </div>
-                  <div class="flex_table__row">
+                  <div class="flex_table__row calc">
                     <div class="flex_table__cell first">100</div>
                     <div class="flex_table__cell second"></div>
                     <div class="flex_table__cell third"></div>
-                    <div class="flex_table__cell fourth"></div>
-                    <div class="flex_table__cell fifth"></div>
-                    <div class="flex_table__cell sixth"></div>
+                    <div class="flex_table__cell fourth flow_gpm"></div>
+                    <div class="flex_table__cell fifth head_ft"></div>
+                    <div class="flex_table__cell sixth power_hp"></div>
                     <div class="flex_table__cell seventh">Pump costs</div>
-                    <div class="flex_table__cell eighth">
+                    <div class="flex_table__cell eighth pump_costs">
                       <span>$</span>
                       <p></p>
                     </div>
                   </div>
-                  <div class="flex_table__row">
+                  <div class="flex_table__row calc">
                     <div class="flex_table__cell first">75</div>
                     <div class="flex_table__cell second"></div>
                     <div class="flex_table__cell third"></div>
-                    <div class="flex_table__cell fourth"></div>
-                    <div class="flex_table__cell fifth"></div>
-                    <div class="flex_table__cell sixth"></div>
+                    <div class="flex_table__cell fourth flow_gpm"></div>
+                    <div class="flex_table__cell fifth head_ft"></div>
+                    <div class="flex_table__cell sixth power_hp"></div>
                     <div class="flex_table__cell seventh">Annual Gal.</div>
-                    <div class="flex_table__cell eighth"></div>
+                    <div class="flex_table__cell eighth annual_gal"></div>
                   </div>
-                  <div class="flex_table__row">
+                  <div class="flex_table__row calc">
                     <div class="flex_table__cell first">50</div>
                     <div class="flex_table__cell second"></div>
                     <div class="flex_table__cell third"></div>
-                    <div class="flex_table__cell fourth"></div>
-                    <div class="flex_table__cell fifth"></div>
-                    <div class="flex_table__cell sixth"></div>
+                    <div class="flex_table__cell fourth flow_gpm"></div>
+                    <div class="flex_table__cell fifth head_ft"></div>
+                    <div class="flex_table__cell sixth power_hp"></div>
                     <div class="flex_table__cell seventh">Avg GPM</div>
-                    <div class="flex_table__cell eighth"></div>
+                    <div class="flex_table__cell eighth avg_gpm"></div>
                   </div>
-                  <div class="flex_table__row">
+                  <div class="flex_table__row calc">
                     <div class="flex_table__cell first">25</div>
                     <div class="flex_table__cell second"></div>
                     <div class="flex_table__cell third"></div>
-                    <div class="flex_table__cell fourth"></div>
-                    <div class="flex_table__cell fifth"></div>
-                    <div class="flex_table__cell sixth"></div>
+                    <div class="flex_table__cell fourth flow_gpm"></div>
+                    <div class="flex_table__cell fifth head_ft"></div>
+                    <div class="flex_table__cell sixth power_hp"></div>
                     <div class="flex_table__cell seventh">Energy [kWh]</div>
-                    <div class="flex_table__cell eighth"></div>
+                    <div class="flex_table__cell eighth energy_kwh"></div>
                   </div>
                 </div>
               </div>
@@ -2164,48 +2171,48 @@
                     <div class="flex_table__cell eighth"></div>
                     <div class="flex_table__cell ninth"></div>
                   </div>
-                  <div class="flex_table__row">
+                  <div class="flex_table__row calc">
                     <div class="flex_table__cell first">100</div>
                     <div class="flex_table__cell second"></div>
                     <div class="flex_table__cell third"></div>
-                    <div class="flex_table__cell fourth"></div>
-                    <div class="flex_table__cell fifth"></div>
-                    <div class="flex_table__cell sixth"></div>
+                    <div class="flex_table__cell fourth flow_gpm"></div>
+                    <div class="flex_table__cell fifth head_ft"></div>
+                    <div class="flex_table__cell sixth power_hp"></div>
                     <div class="flex_table__cell seventh">Pump costs</div>
-                    <div class="flex_table__cell eighth">
+                    <div class="flex_table__cell eighth pump_costs">
                       <span>$</span>
                       <p></p>
                     </div>
                   </div>
-                  <div class="flex_table__row">
+                  <div class="flex_table__row calc">
                     <div class="flex_table__cell first">75</div>
                     <div class="flex_table__cell second"></div>
                     <div class="flex_table__cell third"></div>
-                    <div class="flex_table__cell fourth"></div>
-                    <div class="flex_table__cell fifth"></div>
-                    <div class="flex_table__cell sixth"></div>
+                    <div class="flex_table__cell fourth flow_gpm"></div>
+                    <div class="flex_table__cell fifth head_ft"></div>
+                    <div class="flex_table__cell sixth power_hp"></div>
                     <div class="flex_table__cell seventh">Annual Gal.</div>
-                    <div class="flex_table__cell eighth"></div>
+                    <div class="flex_table__cell eighth annual_gal"></div>
                   </div>
-                  <div class="flex_table__row">
+                  <div class="flex_table__row calc">
                     <div class="flex_table__cell first">50</div>
                     <div class="flex_table__cell second"></div>
                     <div class="flex_table__cell third"></div>
-                    <div class="flex_table__cell fourth"></div>
-                    <div class="flex_table__cell fifth"></div>
-                    <div class="flex_table__cell sixth"></div>
+                    <div class="flex_table__cell fourth flow_gpm"></div>
+                    <div class="flex_table__cell fifth head_ft"></div>
+                    <div class="flex_table__cell sixth power_hp"></div>
                     <div class="flex_table__cell seventh">Avg GPM</div>
-                    <div class="flex_table__cell eighth"></div>
+                    <div class="flex_table__cell eighth avg_gpm"></div>
                   </div>
-                  <div class="flex_table__row">
+                  <div class="flex_table__row calc">
                     <div class="flex_table__cell first">25</div>
                     <div class="flex_table__cell second"></div>
                     <div class="flex_table__cell third"></div>
-                    <div class="flex_table__cell fourth"></div>
-                    <div class="flex_table__cell fifth"></div>
-                    <div class="flex_table__cell sixth"></div>
+                    <div class="flex_table__cell fourth flow_gpm"></div>
+                    <div class="flex_table__cell fifth head_ft"></div>
+                    <div class="flex_table__cell sixth power_hp"></div>
                     <div class="flex_table__cell seventh">Energy [kWh]</div>
-                    <div class="flex_table__cell eighth"></div>
+                    <div class="flex_table__cell eighth energy_kwh"></div>
                   </div>
                 </div>
               </div>
@@ -2253,48 +2260,48 @@
                     <div class="flex_table__cell eighth"></div>
                     <div class="flex_table__cell ninth"></div>
                   </div>
-                  <div class="flex_table__row">
+                  <div class="flex_table__row calc">
                     <div class="flex_table__cell first">100</div>
                     <div class="flex_table__cell second"></div>
                     <div class="flex_table__cell third"></div>
-                    <div class="flex_table__cell fourth"></div>
-                    <div class="flex_table__cell fifth"></div>
-                    <div class="flex_table__cell sixth"></div>
+                    <div class="flex_table__cell fourth flow_gpm"></div>
+                    <div class="flex_table__cell fifth head_ft"></div>
+                    <div class="flex_table__cell sixth power_hp"></div>
                     <div class="flex_table__cell seventh">Pump costs</div>
-                    <div class="flex_table__cell eighth">
+                    <div class="flex_table__cell eighth pump_costs">
                       <span>$</span>
                       <p></p>
                     </div>
                   </div>
-                  <div class="flex_table__row">
+                  <div class="flex_table__row calc">
                     <div class="flex_table__cell first">75</div>
                     <div class="flex_table__cell second"></div>
                     <div class="flex_table__cell third"></div>
-                    <div class="flex_table__cell fourth"></div>
-                    <div class="flex_table__cell fifth"></div>
-                    <div class="flex_table__cell sixth"></div>
+                    <div class="flex_table__cell fourth flow_gpm"></div>
+                    <div class="flex_table__cell fifth head_ft"></div>
+                    <div class="flex_table__cell sixth power_hp"></div>
                     <div class="flex_table__cell seventh">Annual Gal.</div>
-                    <div class="flex_table__cell eighth"></div>
+                    <div class="flex_table__cell eighth annual_gal"></div>
                   </div>
-                  <div class="flex_table__row">
+                  <div class="flex_table__row calc">
                     <div class="flex_table__cell first">50</div>
                     <div class="flex_table__cell second"></div>
                     <div class="flex_table__cell third"></div>
-                    <div class="flex_table__cell fourth"></div>
-                    <div class="flex_table__cell fifth"></div>
-                    <div class="flex_table__cell sixth"></div>
+                    <div class="flex_table__cell fourth flow_gpm"></div>
+                    <div class="flex_table__cell fifth head_ft"></div>
+                    <div class="flex_table__cell sixth power_hp"></div>
                     <div class="flex_table__cell seventh">Avg GPM</div>
-                    <div class="flex_table__cell eighth"></div>
+                    <div class="flex_table__cell eighth avg_gpm"></div>
                   </div>
-                  <div class="flex_table__row">
+                  <div class="flex_table__row calc">
                     <div class="flex_table__cell first">25</div>
                     <div class="flex_table__cell second"></div>
                     <div class="flex_table__cell third"></div>
-                    <div class="flex_table__cell fourth"></div>
-                    <div class="flex_table__cell fifth"></div>
-                    <div class="flex_table__cell sixth"></div>
+                    <div class="flex_table__cell fourth flow_gpm"></div>
+                    <div class="flex_table__cell fifth head_ft"></div>
+                    <div class="flex_table__cell sixth power_hp"></div>
                     <div class="flex_table__cell seventh">Energy [kWh]</div>
-                    <div class="flex_table__cell eighth"></div>
+                    <div class="flex_table__cell eighth energy_kwh"></div>
                   </div>
                 </div>
               </div>
