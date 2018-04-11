@@ -1,0 +1,141 @@
+.simple {
+  position: relative;
+  .wrapper {
+    position: relative;
+  }
+  .pseudo_selector_container {
+    border-bottom: 2px solid rgba(0,0,0,0.12);
+    z-index: 5;
+    .pseudo_selector__head {
+      color: $orange;
+    }
+    .pseudo_selector__head.active + .pseudo_selector__body {
+      max-height: 500px;
+      transition: max-height 0.5s ease-in;
+    }
+    .pseudo_selector__body {
+      top: 58px;
+      background: $white;
+      will-change: max-height;
+    }
+  }
+  .info_container {
+    position: relative;
+    z-index: 2;
+    padding: 1.7rem 1rem 1.5rem;
+    p {
+      font-size: 0.93rem;
+      color: $grey;
+      line-height: 1.1;
+    }
+    p:first-child {
+      margin-bottom: 1.7rem;
+    }
+  }
+  .simple_section_slider {
+    position: relative;
+    z-index: 2;
+    .item {
+      outline: none;
+    }
+    background: $white;
+    margin-right: 1rem;
+    width: calc(100% - 1rem);
+    border-radius: 3px;
+    box-shadow: 0 0 8px 0 rgba(32, 32, 32, 0.12);
+    h3 {
+      font-size: 1.25rem;
+      font-weight: 500;
+      color: $grey;
+      text-transform: uppercase;
+      text-align: right;
+      padding: 1.5rem 2.2rem 0 0;
+    }
+    h3.moto {
+      color: $light-grey;
+      padding: 0 2.2rem 0 0;
+    }
+    .image_container {
+      padding: 3rem 2rem 2.375rem;
+      img {
+        width: 100%;
+      }
+    }
+    h4 {
+      width: 100%;
+      padding: 1.125rem 2.25rem;
+      box-sizing: border-box;
+      color: $grey;
+      display: block;
+      border-top: 2px solid rgba(0,0,0,0.12);
+      border-bottom: 2px solid rgba(0,0,0,0.12);
+      font-weight: 500;
+      font-size: 1.25rem;
+    }
+    .info {
+      padding: 2.25rem 2.25rem 3.125rem;
+      .info_line {
+        max-width: 300px;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: stretch;
+        margin: 0.4rem 0;
+        .info_line__name {
+          font-size: 1.06rem;
+          color: $grey;
+          line-height: 1;
+          padding-right: 1.5rem;
+        }
+        .info_line__value {
+          color: $black;
+          font-size: 0.93rem;
+          width: 70px;
+          display: flex;
+          flex-shrink: 0;
+          align-items: center;
+        }
+      }
+      .size {
+        display: none;
+      }
+    }
+  }
+  .hint {
+    padding: 1.5rem 2rem;
+    position: relative;
+    p {
+      font-size: 0.93rem;
+      color: black;
+      position: relative;
+      z-index: 3;
+      opacity: 0.48;
+      line-height: 1.1;
+    }
+  }
+  .hint:after {
+    display: block;
+    content: '';
+    height: 2px;
+    position: absolute;
+    z-index: 1;
+    background: $greyline;
+    top: 50%;
+    right: 0;
+    width: calc(100% - 1rem);
+    height: 2px;
+    transform: translateY(-3px);
+    border-radius: 5px;
+  }
+}
+.simple:after {
+  display: block;
+  position: absolute;
+  z-index: 1;
+  content: url(../../assets/img/lightning_logo.svg);
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  max-width: 100%;
+  filter: grayscale(1);
+}
