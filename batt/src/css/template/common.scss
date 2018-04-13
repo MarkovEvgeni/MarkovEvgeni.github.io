@@ -9,8 +9,13 @@ body {
   background: linear-gradient(rgba(255,255,255,1) 0%, rgba(230,230,230,1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e6e6e6', GradientType=0 );
 }
+body.ios {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  cursor: pointer;
+}
 .pseudo_selector_container {
   position: relative;
+  transform: translateZ(0);
   .pseudo_selector__head {
     text-transform: uppercase;
     font-weight: 500;
@@ -48,6 +53,8 @@ body {
     overflow: hidden;
     transition: max-height 0.3s ease-out;
     position: absolute;
+    transform: translateZ(0);
+    will-change: max-width;
     z-index: 10;
     width: 100%;
     .item {
@@ -93,6 +100,33 @@ body {
 @media all and (min-width: 760px) {
   .wrapper {
     margin: 0 auto;
+    padding: 0 1rem;
     max-width: 1360px;
+  }
+  .pseudo_selector_container {
+    .pseudo_selector__head {
+      p {
+        font-size: 1.5rem;
+        color: $gold;
+      }
+    }
+    .pseudo_selector__head:after {
+      border-left: 8px solid transparent;
+	  border-right: 8px solid transparent;
+	  border-top: 8px solid $gold;
+      right: 10px;
+    }
+    .pseudo_selector__body {
+      top: 68px;
+      .item.selected {
+        color: $gold;
+      }
+    }
+  }
+}
+@media all and (min-width: 900px) {
+  .wrapper {
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 }

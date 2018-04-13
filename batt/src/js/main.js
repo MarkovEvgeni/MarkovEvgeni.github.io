@@ -6,6 +6,23 @@ document.addEventListener('DOMContentLoaded', function () {
     //= third_party/slick.min.js
     //= third_party/jquery.validate.min.js
   
+  
+//  Detect iOS device
+  
+  var iOS = !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
+  var body = $('body');
+  
+  function detectIOS() {
+    console.log(iOS);
+    if (iOS) {
+      body.addClass('ios');
+    } else {
+      return;
+    }
+  }
+  
+  detectIOS();
+  
 //    Sliders
   
     $('.top_section__slider').slick({
@@ -13,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
       arrows: false,
       responsive: [
         {
-          breakpoint: 600,
+          breakpoint: 761,
           settings: {
             dots: true,
             appendDots: $('.top-section .dots_container'),
@@ -25,7 +42,18 @@ document.addEventListener('DOMContentLoaded', function () {
   
     $('.simple_section_slider').slick({
       dots: false,
-      arrows: false
+      arrows: true,
+      appendArrows: $('.simple .hint .arrows'),
+      prevArrow: '<div class="slick-prev slick-button"></div>',
+      nextArrow: '<div class="slick-next slick-button"></div>',
+      responsive: [
+        {
+          breakpoint: 760,
+          settings: {
+            arrows: false,
+          }
+        }
+      ]
     });
   
     $('.simple_section_slider').on('afterChange', function(slick, currentSlide) {
@@ -40,7 +68,18 @@ document.addEventListener('DOMContentLoaded', function () {
   
     $('.standard_section_slider').slick({
       dots: false,
-      arrows: false
+      arrows: true,
+      appendArrows: $('.standard .arrows'),
+      prevArrow: '<div class="slick-prev slick-button"></div>',
+      nextArrow: '<div class="slick-next slick-button"></div>',
+      responsive: [
+        {
+          breakpoint: 760,
+          settings: {
+            arrows: false,
+          }
+        }
+      ]
     });
   
 //    Form validation
@@ -61,7 +100,7 @@ document.addEventListener('DOMContentLoaded', function () {
   
 //    Custom selectors
   
-  var body = $('body');
+  
   var customSelectors = $('.pseudo_selector__head');
   var customSelectorOptions = $('.pseudo_selector__body .item');
   var simpleOptions = $('.simple .pseudo_selector__body .item');

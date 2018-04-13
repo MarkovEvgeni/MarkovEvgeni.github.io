@@ -1,13 +1,29 @@
 .simple {
   position: relative;
+  .back_image {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    width: 80%;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%) translateY(0%);
+    max-width: 300px;
+    filter: grayscale(1);
+    img {
+      width: 100%;
+    }
+  }
   .wrapper {
     position: relative;
   }
   .pseudo_selector_container {
     border-bottom: 2px solid rgba(0,0,0,0.12);
     z-index: 5;
+    position: relative;
     .pseudo_selector__head {
       color: $orange;
+      position: relative;
     }
     .pseudo_selector__head.active + .pseudo_selector__body {
       max-height: 500px;
@@ -112,6 +128,9 @@
       opacity: 0.48;
       line-height: 1.1;
     }
+    .arrows {
+      display: none;
+    }
   }
   .hint:after {
     display: block;
@@ -128,14 +147,167 @@
     border-radius: 5px;
   }
 }
-.simple:after {
-  display: block;
-  position: absolute;
-  z-index: 1;
-  content: url(../../assets/img/lightning_logo.svg);
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%);
-  max-width: 100%;
-  filter: grayscale(1);
+@media all and (min-width: 760px) {
+  .simple {
+    .wrapper {
+      position: relative;
+      border-top: 1px solid transparent;
+      border-bottom: 1px solid transparent;
+    }
+    .pseudo_selector_container {
+      margin-top: 12rem;
+      margin-left: calc(60% + 1rem);
+      border-bottom: 4px solid rgba(232,157,35,0.24);
+      margin-bottom: 6rem;
+      transform: translateX(-5%);
+      .pseudo_selector__head {
+        color: $gold;
+      }
+      .pseudo_selector__head:after {
+        right: -5px;
+      }
+      .pseudo_selector__body {
+        top: 68px;
+        box-shadow: 0 8px 32px 0 rgba(80,80,80,.12);
+      }
+    }
+    .simple_section_slider {
+      position: absolute;
+      top: 10%;
+      left: 0;
+      transform: translateX(10%) translateY(2%);
+      width: 50%;
+      max-width: 640px;
+      .info {
+        .size {
+          margin-top: 1rem;
+          display: block;
+        }
+      }
+    }
+    .info_container {
+      margin-left: 60%;
+      transform: translateX(-5%);
+    }
+    .hint {
+      margin-bottom: 220px;
+      p {
+        display: none;
+      }
+      .arrows {
+        display: flex;
+        width: 100%;
+        justify-content: flex-end;
+        position: relative;
+        z-index: 2;
+        .slick-button {
+          width: 72px;
+          height: 72px;
+          background-image: url(../assets/img/arrow.svg);
+          opacity: 0.5;
+          cursor: pointer;
+          transition: opacity 0.2s ease;
+        }
+        .slick-button:hover {
+          opacity: 0.75;
+        }
+        .slick-button:active {
+          opacity: 1;
+        }
+        .slick-button.slick-prev {
+          transform: rotate(180deg);
+        }
+      }
+    }
+    .hint:after {
+      height: 5px;
+      top: 35%;
+    }
+    .back_image {
+      max-width: 500px;
+      left: 0;
+      top: auto;
+      bottom: 0;
+      transform: translateX(10%) translateY(0%);
+    }
+  }
+}
+@media all and (min-width: 900px) {
+  .simple {
+    .simple_section_slider {
+      max-width: 450px;
+      h3 {
+        text-align: left;
+        padding: 1.5rem 0 0 2.2rem;
+      }
+      h3.moto {
+        padding: 0 0 0 2.2rem;
+      }
+      .image_container {
+        img {
+          width: 80%;
+          margin: 0 auto;
+        }
+      }
+    }
+    .hint {
+      margin-bottom: 240px;
+    }
+    .info_container {
+      padding-right: 0;
+      transform: none;
+    }
+    .pseudo_selector_container {
+      transform: none;
+      .pseudo_selector__head:after {
+        right: 10px;
+      }
+    }
+  }
+}
+@media all and (min-width: 950px) {
+  .simple {
+    .info_container {
+      margin-left: 55%;
+    }
+    .pseudo_selector_container {
+      margin-left: calc(55% + 1rem);
+    }
+  }
+}
+@media all and (min-width: 1100px) {
+  .simple {
+    .simple_section_slider {
+      max-width: 640px;
+      width: 40%;
+      transform: translateX(20%);
+      .image_container {
+        img {
+          width: 100%;
+          max-width: 360px;
+        }
+      }
+    }
+    .info_container {
+      margin-left: 55%;
+      max-width: 512px;
+    }
+    .pseudo_selector_container {
+      margin-left: calc(55% + 1rem);
+      max-width: 400px;
+    }
+    .hint {
+      margin-bottom: 280px;
+      .arrows {
+        padding-right: 10%;
+        box-sizing: border-box;
+      }
+    }
+  }
+  .simple:after {
+    left: 10%;
+    top: auto;
+    bottom: 0;
+    transform: translateX(0) translateY(0);
+  }
 }
