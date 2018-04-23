@@ -112,6 +112,10 @@
           align-items: center;
         }
       }
+      .info_line:nth-of-type(4),
+      .info_line:nth-of-type(5) {
+        display: none;
+      }
       .size {
         display: none;
       }
@@ -264,7 +268,7 @@
       .slick-button {
         width: 72px;
         height: 72px;
-        background-image: url(../../assets/img/arrow.svg);
+        background-image: url(../assets/img/arrow.svg);
         opacity: 0.5;
         cursor: pointer;
         transition: opacity 0.2s ease;
@@ -301,7 +305,7 @@
       box-shadow: 0 -12px 32px 0 rgba(80, 80, 80, 0.08);
       .pseudo_selector__body {
         width: calc(100% - 6rem);
-        top: 100px;
+        top: 84px;
       }
     }
     .first_container {
@@ -355,6 +359,9 @@
     .pseudo_selector_container {
       width: 560px;
       padding-right: 5rem;
+      .pseudo_selector__body {
+        width: 432px;
+      }
     }
     .first_container {
       width: 560px;

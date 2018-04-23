@@ -13,13 +13,12 @@ document.addEventListener('DOMContentLoaded', function () {
   var body = $('body');
   
   function detectIOS() {
-    console.log(iOS);
     if (iOS) {
       body.addClass('ios');
     } else {
       return;
     }
-  }
+  };
   
   detectIOS();
   

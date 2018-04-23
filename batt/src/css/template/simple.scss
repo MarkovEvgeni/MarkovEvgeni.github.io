@@ -112,6 +112,10 @@
           align-items: center;
         }
       }
+      .info_line:nth-of-type(4),
+      .info_line:nth-of-type(5) {
+        display: none;
+      }
       .size {
         display: none;
       }
