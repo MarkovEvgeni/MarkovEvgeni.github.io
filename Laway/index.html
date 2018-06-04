@@ -5,6 +5,7 @@
     <title>Document</title>
     <script type="text/javascript" src="js/main.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:400,500&amp;subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -21,15 +22,15 @@
       </a>
       <div class="menu_section">
         <ul class="main_menu">
-          <li><a class="section_selector" href="">Категории</a></li>
-          <li><a class="section_selector" href="">Задания</a></li>
-          <li><a class="section_selector" href="">Награды</a></li>
-          <li><a class="section_selector" href="">Рейтинг</a></li>
-          <li><a class="section_selector" href="">Эфир</a></li>
-          <li><a class="section_selector" href="">Партнерам</a></li>
+          <li><a class="section_selector" href="#categories_section">Категории</a></li>
+          <li><a class="section_selector" href="#tasks_section">Задания</a></li>
+          <li><a class="section_selector" href="#honours_section">Награды</a></li>
+          <li><a class="section_selector" href="#rating_section">Рейтинг</a></li>
+          <li><a class="section_selector" href="#air_section">Эфир</a></li>
+          <li><a class="section_selector" href="#partners_section">Партнерам</a></li>
         </ul>
         <div class="contacts_section">
-          <a class="section_selector" href="">Контакты</a>
+          <a class="section_selector" href="#contacts_section">Контакты</a>
           <div class="contacts">
             <a href="mailto:lawaylaway@gmail.com">lawaylaway@gmail.com</a>
             <a href="tel:+380930332463">+38 093 033 24 63</a>
@@ -306,9 +307,13 @@
         </div>    
       </div>
     </div>
-    <footer>
+    <footer id="contacts_section">
       <div class="background_image">
-        <img src="assets/img/footer_back.png" alt="">
+        <div class="body_container">
+          <div class="circle"></div>
+          <div class="figure"></div>
+          <div class="figure"></div>
+        </div>
       </div>
       <div class="wrapper">
         <div class="top">
@@ -331,12 +336,12 @@
             <div class="heading">Разделы</div>
             <div class="body">
               <ul>
-                <li><a href="">Категории</a></li>
-                <li><a href="">Задания</a></li>
-                <li><a href="">Награды</a></li>
-                <li><a href="">Рейтинг</a></li>
-                <li><a href="">Эфир</a></li>
-                <li><a href="">Партнерам</a></li>
+                <li><a class="section_selector" href="#categories_section">Категории</a></li>
+                <li><a class="section_selector" href="#tasks_section">Задания</a></li>
+                <li><a class="section_selector" href="#honours_section">Награды</a></li>
+                <li><a class="section_selector" href="#rating_section">Рейтинг</a></li>
+                <li><a class="section_selector" href="#air_section">Эфир</a></li>
+                <li><a class="section_selector" href="#partners_section">Партнерам</a></li>
               </ul>
             </div>
           </div>
