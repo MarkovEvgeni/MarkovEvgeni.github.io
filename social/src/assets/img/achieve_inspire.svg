@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="105" height="111" viewBox="0 0 105 111">
+    <defs>
+        <path id="b" d="M42.367-.09l28.676 16.382a8 8 0 0 1 4.032 6.946v32.619a8 8 0 0 1-4.032 6.946L42.367 79.185a8 8 0 0 1-7.937 0L5.754 62.803a8 8 0 0 1-4.031-6.946V23.238a8 8 0 0 1 4.031-6.946L34.43-.09a8 8 0 0 1 7.937 0z"/>
+        <filter id="a" width="165.4%" height="160.7%" x="-32.7%" y="-30.3%" filterUnits="objectBoundingBox">
+            <feOffset in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="8"/>
+            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0.71372549 0 0 0 0 0.752941176 0 0 0 0 0.815686275 0 0 0 0.32 0"/>
+        </filter>
+        <linearGradient id="c" x1="7.706%" x2="95.037%" y1="76.311%" y2="22.18%">
+            <stop offset="0%" stop-color="#F5A4FF"/>
+            <stop offset="47.165%" stop-color="#FBC9D3"/>
+            <stop offset="100%" stop-color="#FFE1B7"/>
+        </linearGradient>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <g transform="rotate(-180 45.501 47.12)">
+            <use fill="#000" filter="url(#a)" xlink:href="#b"/>
+            <use fill="#FFF" xlink:href="#b"/>
+        </g>
+        <path fill="url(#c)" d="M42.572 9.154l22 12.147a8 8 0 0 1 4.133 7.003v23.683a8 8 0 0 1-4.133 7.004l-22 12.146a8 8 0 0 1-7.734 0l-22-12.146a8 8 0 0 1-4.133-7.004V28.304a8 8 0 0 1 4.133-7.003l22-12.147a8 8 0 0 1 7.734 0z" transform="translate(14 15)"/>
+        <g transform="translate(35 44.54)">
+            <rect width="32.702" height="21.801" x="2.18" y="2.18" fill="#FFF" rx="1"/>
+            <rect width="4.36" height="2.18" x="26.161" y="3.27" fill="#CAD3E3" rx="1"/>
+            <path fill="#F7CEFD" d="M1 6.54h20.804l2.191 2.18h9.887a1 1 0 0 1 1 1v8.901a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V7.541a1 1 0 0 1 1-1z"/>
+            <rect width="4.36" height="13.081" y="6.54" fill="#818A98" rx=".3"/>
+            <rect width="4.36" height="2.18" x="4.36" fill="#B6C0D0" rx=".3"/>
+            <path fill="#818A97" d="M20.105 26.161h-5.337a2 2 0 0 1-1.111-.337L10.9 23.98h13.08l-2.766 1.844a2 2 0 0 1-1.11.336z"/>
+            <circle cx="28.341" cy="17.441" r="1.09" fill="#FF5F3C"/>
+        </g>
+        <g transform="translate(45.9 38)">
+            <path fill="#818A97" d="M4.67 4.36h3.747a.5.5 0 0 1 .448.277L10.9 8.72H2.18l2.041-4.083a.5.5 0 0 1 .447-.277z"/>
+            <rect width="13.081" height="6.54" fill="#B6C0D0" rx=".3"/>
+            <rect width="10.901" height="4.36" x="1.09" y="1.09" fill="#FFF" rx=".3"/>
+        </g>
+        <g transform="translate(43.72 48.9)">
+            <circle cx="8.72" cy="8.72" r="8.72" fill="#44B8FF"/>
+            <circle cx="8.72" cy="8.72" r="6.54" fill="#B8E7FF"/>
+            <circle cx="8.72" cy="8.72" r="3.27" fill="#F6FCFF"/>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="112" height="112" viewBox="0 0 112 112">
+    <defs>
+        <path id="b" d="M65.634 79.132H27.366c-7.444-.025-13.473-6.054-13.498-13.498V27.366c.025-7.444 6.054-13.473 13.498-13.498h38.268c7.444.025 13.473 6.054 13.498 13.498v38.268c-.025 7.444-6.054 13.473-13.498 13.498z"/>
+        <filter id="a" width="173.5%" height="173.5%" x="-36.8%" y="-36.8%" filterUnits="objectBoundingBox">
+            <feOffset in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="8"/>
+            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0.71372549 0 0 0 0 0.752941176 0 0 0 0 0.815686275 0 0 0 0.32 0"/>
+        </filter>
+        <linearGradient id="c" x1="42.994%" x2="50%" y1="0%" y2="100%">
+            <stop offset="0%" stop-color="#6281FB"/>
+            <stop offset="100%" stop-color="#F3CEFF"/>
+        </linearGradient>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <g fill-rule="nonzero">
+            <g transform="rotate(-45 63.071 40.636)">
+                <use fill="#000" filter="url(#a)" xlink:href="#b"/>
+                <use fill="#FFF" fill-rule="evenodd" xlink:href="#b"/>
+            </g>
+            <path fill="url(#c)" d="M61.452 72H31.548C25.73 71.98 21.019 67.27 21 61.452V31.548C21.02 25.73 25.73 21.019 31.548 21h29.904c5.818.02 10.529 4.73 10.548 10.548v29.904C71.98 67.27 67.27 71.981 61.452 72z" transform="rotate(135 48.929 53.364)"/>
+        </g>
+        <path fill="#FFF" d="M59.054 41h.713a2.227 2.227 0 1 1 0 4.454h-.713v13.42a5.881 5.881 0 0 1-11.762 0V41h11.762z"/>
+        <path fill="#FDFCFC" d="M47.292 49.908h11.762v8.967a5.881 5.881 0 0 1-11.762 0v-8.967z"/>
+        <path fill="#FEEBD4" d="M59.054 48.424h-3.669a.742.742 0 0 1 0-1.485h3.669v1.485zM59.054 52.878h-2.199a.742.742 0 0 1 0-1.485h2.199v1.485zM59.054 57.332h-.728a.742.742 0 1 1 0-1.485h.728v1.485z"/>
+        <g>
+            <path fill="#F9FAFF" d="M39.94 42.485h11.762V60.36a5.881 5.881 0 0 1-11.762 0V46.939h-.713a2.227 2.227 0 1 1 0-4.454h.713z"/>
+            <path fill="#DAE0FE" d="M39.94 51.393h11.762v8.967a5.881 5.881 0 0 1-11.762 0v-8.967z"/>
+            <path fill="#FEEBD4" d="M39.94 48.424h3.669a.742.742 0 0 1 0 1.485H39.94v-1.485zM39.94 52.878h2.199a.742.742 0 0 1 0 1.485H39.94v-1.485zM39.94 57.332h.728a.742.742 0 0 1 0 1.485h-.728v-1.485z"/>
+        </g>
+        <g transform="translate(47.292 55.847)">
+            <path fill="#FFFFE3" d="M25.328 1.485H2.607c-.625 0-1.134.497-1.136 1.116-.028 3.621 1.231 7.04 3.546 9.63 2.348 2.62 5.49 4.076 8.85 4.101h.082c6.85 0 12.458-6.132 12.515-13.716a1.132 1.132 0 0 0-1.136-1.131z"/>
+            <rect width="27.935" height="2.969" fill="#8B89BE" rx="1.485"/>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,261 @@
+.mobile_menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  max-width: 100vw;
+  min-height: 100vh;
+  z-index: 10;
+  transform: translateY(-100%) translateZ(0);
+  transition: transform 0.3s ease-in-out 0.1s;
+  will-change: transform;
+  background: rgba(58,10,155,1);
+  background: -webkit-linear-gradient(bottom left, rgba(58,10,155,1) 0%, rgba(193,79,251,1) 100%);
+  background: -o-linear-gradient(bottom left, rgba(58,10,155,1) 0%, rgba(193,79,251,1) 100%);
+  background: linear-gradient(to top right, rgba(58,10,155,1) 0%, rgba(193,79,251,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3a0a9b', endColorstr='#c14ffb', GradientType=1 );
+  font-family: 'Montserrat', 'Arial', sans-serif;
+  overflow: hidden;
+  .wrapper {
+    -webkit-overflow-scrolling: touch;
+    text-align: center;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: 100%;
+    position: relative;
+    z-index: 2;
+  }
+  .main_menu {
+    margin: 0;
+    display: inline-block;
+    >li {
+      >a {
+        color: $white;
+        font-size: 2.125rem;
+        font-weight: bold;
+        text-decoration: none;
+        opacity: 0.5;
+        line-height: 1.6;
+        transition: opacity 0.3s ease;
+      }
+      >a:hover {
+        opacity: 1;
+      }
+    }
+  }
+  .contacts_section {
+    margin-bottom: 100px;
+    >a {
+      color: $white;
+      font-size: 2.125rem;
+      font-weight: bold;
+      text-decoration: none;
+      opacity: 0.5;
+      line-height: 1.6;
+      transition: opacity 0.3s ease;
+    }
+    >a:hover {
+      opacity: 1;
+    }
+    .contacts {
+      flex-direction: column;
+      flex-wrap: nowrap;
+      align-items: center;
+      display: none;
+      >a {
+        font-size: 1.5rem;
+        line-height: 1.5;
+        font-weight: bold;
+        opacity: 0.5;
+        transition: opacity 0.3s ease;
+        color: $white;
+        text-decoration: none;
+      }
+      >a:hover {
+        opacity: 1;
+      }
+      .social_links {
+        display: flex;
+        flex-wrap: nowrap;
+        li {
+          padding: 8px;
+          a {
+            width: 42px;
+            height: 42px;
+            display: block;
+            opacity: 0.7;
+            transition: opacity 0.3s ease;
+            img {
+              width: 100%;
+            }
+          }
+          a:hover {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+  .laway_link {
+    display: block;
+    width: 156px;
+    margin: 32px auto 46px;
+    img {
+      width: 100%;
+    }
+  }
+  .mobile_circle {
+    width: 260px;
+    height: 260px;
+    border: 140px solid rgba(255,255,255,0.1);
+    position: absolute;
+    top: 100vh;
+    right: 0;
+    border-radius: 50%;
+    transform: translateX(50%) translateY(-50%);
+  }
+  .mobile_square {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) translateX(-60%) rotate(45deg);
+    width: 100vw;
+    height: 100vw;
+    max-width: 600px;
+    max-height: 600px;
+    border-radius: 50px;
+    border: 2px solid rgba(255,255,255,0.2);
+  }
+  .mobile_square.filled {
+    background: rgba(255,255,255,0.2);
+    border: none;
+  }
+  .figure_right,
+  .mobile_square:nth-of-type(4),
+  .mobile_square:nth-of-type(5) {
+    display: none;
+//    left: 50%;
+//    left: 100vw;
+//    top: 100vh;
+//    transform: translateY(-50%) translateX(-50%) rotate(45deg);
+  }
+  .back_figure {
+    position: absolute;
+    height: 300px;
+    width: 640px;
+    border-radius: 140px/140px 140px 100px 140px;
+    left: 50%;
+    background: rgba(255,255,255,0.2);
+    top: 0;
+    transform-origin: 50% 100%;
+    transform: rotate(15deg) skewY(5deg) skewX(30deg) translateX(-80%) translateY(-20%);
+  }
+}
+.mobile_menu.opened {
+  transform: translateY(0) translateZ(0);
+  overflow: hidden;
+}
+@media all and (min-width: 760px) {
+  .mobile_menu {
+    .wrapper {
+      overflow: visible;
+    }
+    .laway_link {
+      width: 104px;
+      margin: 42px 0 108px;
+    }
+    .menu_section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: center;
+    }
+    .main_menu { 
+      width: 100%;
+      margin-bottom: 130px;
+    }
+    .contacts_section {
+      margin-bottom: 0;
+      >a {
+        opacity: 1;
+        margin-bottom: 22px;
+      }
+      .contacts {
+        display: flex;
+      }
+    }
+    .back_figure {
+      transform: rotate(5deg) skewY(5deg) skewX(30deg) translateX(-120%) translateY(-25%);
+    }
+    .figure_right,
+    .mobile_square:nth-of-type(4),
+    .mobile_square:nth-of-type(5) {
+      display: block;
+    }
+    .figure_right {
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 400px;
+      height: 300px;
+      background: rgba(255,255,255,0.2);
+      border-radius: 50px;
+      transform: skewY(10deg) skewX(40deg) translateX(50%) translateY(-50%);
+    }
+    .mobile_square:nth-of-type(3) {
+      max-width: 1300px;
+      max-height: 1300px;
+      z-index: 1;
+    }
+    .mobile_square:nth-of-type(4) {
+      top: 100vh;
+      width: 30vw;
+      height: 30vw;
+      left: 50%;
+      transform: translateY(-40%) translateX(-50%) rotate(45deg);
+    }
+    .mobile_square:nth-of-type(5) {
+      width: 70vw;
+      height: 70vw;
+      transform: translateY(-10%) translateX(-50%) rotate(45deg);
+    }
+  }
+}
+@media all and (min-width: 990px) {
+  .mobile_menu {
+    .menu_section {
+      flex-wrap: nowrap;
+    }
+    .main_menu {
+      margin: 0;
+      text-align: left;
+      width: auto;
+    }
+    .contacts_section {
+      >a {
+        margin-bottom: 20px;
+        display: block;
+        text-align: left;
+      }
+      .contacts {
+        align-items: flex-start;
+        .social_links {
+          margin-top: 24px;
+          li:first-child {
+            padding-left: 0;
+          }
+          li:last-child {
+            padding-right: 0;
+          }
+        }
+      }
+    }
+  }
+}
+@media all and (min-width: 1100px) {
+  .mobile_menu {
+    .mobile_square:nth-of-type(5) {
+      transform: translateY(-30%) translateX(-70%) rotate(45deg);
+    }
+  }
+}
